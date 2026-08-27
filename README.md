@@ -1,10 +1,44 @@
 # LuxUmbra Slides
 
+> A Python full-stack AI presentation platform for outline generation, in-browser editing, and editable PPTX export.
+
+`Python 3.12+` · `FastAPI` · `React 19` · `Vite` · `PostgreSQL` · `Redis`
+
+[中文](#中文) | [English](#english) | [Table of Contents](#table-of-contents)
+
+`中文概览` · [核心能力](#核心能力) · [快速开始](#快速开始) · [Highlights](#highlights) · [Quick Start](#quick-start)
+
+## Table of Contents
+
+**中文**
+
+- [项目简介](#中文)
+- [核心能力](#核心能力)
+- [技术栈](#技术栈)
+- [系统结构](#系统结构)
+- [快速开始](#快速开始)
+- [默认端口](#默认端口)
+- [项目定位](#项目定位)
+
+**English**
+
+- [Introduction](#english)
+- [Highlights](#highlights)
+- [Tech Stack](#tech-stack)
+- [Project Structure](#project-structure)
+- [Quick Start](#quick-start)
+- [Default Ports](#default-ports)
+- [Positioning](#positioning)
+
+<a id="中文"></a>
+
+## 中文
+
 LuxUmbra Slides 是一个面向中文场景的 AI 演示文稿生成与编辑平台。它支持从主题、长文本和文档材料生成结构化大纲，再通过异步任务并发产出完整页面，最终导出为可继续编辑的原生 PPTX。
 
 项目采用 Python 全栈架构：后端基于 FastAPI、LangChain、LangGraph、ARQ 与 python-pptx，前端基于 React、TypeScript 与 Vite。系统围绕“先生成可控大纲，再逐页生成内容，再在线编辑和导出”的工作流设计，重点解决生成速度、可编辑性、结构一致性与导出质量问题。
 
-## 核心能力
+### 核心能力
 
 - 多入口生成：支持主题、长文本、PDF、Word、Markdown、TXT 等输入方式
 - 大纲先行：先生成结构化大纲，支持修改标题、要点、顺序和页数
@@ -13,14 +47,14 @@ LuxUmbra Slides 是一个面向中文场景的 AI 演示文稿生成与编辑平
 - 原生导出：导出为可继续编辑的 PPTX，而不是整页截图
 - 质量校验：导出前执行结构、溢出、边界与内容完整性检查
 
-## 技术栈
+### 技术栈
 
 - Backend: FastAPI, SQLAlchemy, Alembic, ARQ, Redis, PostgreSQL
 - AI: LangChain, LangGraph, DeepSeek-compatible API
 - Rendering: python-pptx, FontTools
 - Frontend: React, TypeScript, Vite, Tailwind CSS, React Query, Zustand
 
-## 系统结构
+### 系统结构
 
 - `backend/`: Python API、异步任务、领域逻辑、PPTX 渲染与测试
 - `frontend/`: Web 客户端、编辑器界面、预览与交互逻辑
@@ -28,7 +62,7 @@ LuxUmbra Slides 是一个面向中文场景的 AI 演示文稿生成与编辑平
 
 `shared/` 是项目运行所需的配置源。前端直接读取主题与布局定义，后端也依赖同一套 JSON 做生成、校验和导出，因此它不是演示素材目录，而是系统的一部分。
 
-## 运行方式
+### 快速开始
 
 1. 启动基础依赖
 2. 安装前后端依赖
@@ -44,17 +78,84 @@ make dev-worker
 make dev-web
 ```
 
-## 默认端口
+### 默认端口
 
 - Frontend: `http://127.0.0.1:39173`
 - API: `http://127.0.0.1:39800`
 - PostgreSQL: `127.0.0.1:39432`
 - Redis: `127.0.0.1:39379`
 
-## 项目定位
+### 项目定位
 
 LuxUmbra Slides 关注的不是一次性生成静态页面，而是构建一个完整的 AI 文稿工作流：输入材料、生成大纲、并发出稿、人工编辑、质量校验、最终导出。这使它更适合需要“可生成、可修改、可交付”的真实业务场景。
 
-## Attribution
+### 说明
 
-This repository is a customized and independently maintained LuxUmbra-branded distribution of an AI presentation workflow project. If you publish it externally, please make sure your usage complies with the original upstream license and attribution requirements.
+本仓库是一个使用 LuxUmbra 品牌维护的 AI 演示文稿工作流项目发布版本。对外发布时，请确认你的使用方式符合上游项目许可证和署名要求。
+
+[Back to top](#luxumbra-slides)
+
+<a id="english"></a>
+
+## English
+
+LuxUmbra Slides is an AI presentation generation and editing platform built for Chinese-language workflows. It turns topics, long-form text, and uploaded documents into structured outlines, generates full slide decks concurrently, and exports editable native PPTX files.
+
+The project uses a Python full-stack architecture. The backend is built with FastAPI, LangChain, LangGraph, ARQ, and python-pptx, while the frontend uses React, TypeScript, and Vite. The system is designed around a controlled workflow: outline first, slide generation second, online editing next, and export at the end.
+
+### Highlights
+
+- Multi-source input: create decks from topics, long text, PDF, Word, Markdown, and TXT
+- Outline-first workflow: review and edit structure before generating full slides
+- Concurrent generation: page-level async jobs with Redis and SSE progress updates
+- In-browser editing: edit text, switch layouts, change themes, replace images, and apply AI edits
+- Editable export: export real PPTX objects instead of full-slide screenshots
+- Quality gates: validate structure, overflow, boundaries, and content consistency before export
+
+### Tech Stack
+
+- Backend: FastAPI, SQLAlchemy, Alembic, ARQ, Redis, PostgreSQL
+- AI: LangChain, LangGraph, DeepSeek-compatible API
+- Rendering: python-pptx, FontTools
+- Frontend: React, TypeScript, Vite, Tailwind CSS, React Query, Zustand
+
+### Project Structure
+
+- `backend/`: Python API, async jobs, domain logic, PPTX rendering, and tests
+- `frontend/`: Web client, editor UI, preview, and interaction logic
+- `shared/`: Shared themes, layouts, sample deck data, and layout presets
+
+The `shared/` directory is part of the runtime source of truth. The frontend reads theme and layout definitions directly, and the backend uses the same JSON files for generation, validation, and export.
+
+### Quick Start
+
+1. Start infrastructure services
+2. Install backend and frontend dependencies
+3. Configure `backend/.env`
+4. Start the API, worker, and frontend
+
+```bash
+make up
+make install
+make migrate
+make dev-api
+make dev-worker
+make dev-web
+```
+
+### Default Ports
+
+- Frontend: `http://127.0.0.1:39173`
+- API: `http://127.0.0.1:39800`
+- PostgreSQL: `127.0.0.1:39432`
+- Redis: `127.0.0.1:39379`
+
+### Positioning
+
+LuxUmbra Slides is not just a one-shot slide generator. It is designed as a complete AI document workflow covering input ingestion, outline creation, concurrent drafting, human editing, quality validation, and final PPTX delivery.
+
+### Attribution
+
+This repository is a LuxUmbra-branded distribution of an AI presentation workflow project. Please make sure any public use complies with the original upstream license and attribution requirements.
+
+[Back to top](#luxumbra-slides)
