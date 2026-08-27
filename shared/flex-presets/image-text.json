@@ -1,0 +1,42 @@
+{
+  "id": "image-text",
+  "name": "图左文右",
+  "description": "横向：左侧图片，右侧标题+正文",
+  "tree": {
+    "type": "row",
+    "id": "root",
+    "gap_pt": 16,
+    "ratios": [38, 62],
+    "grow": 1.0,
+    "children": [
+      {
+        "type": "block",
+        "id": "leaf-image",
+        "block_id": "image",
+        "grow": 1.0
+      },
+      {
+        "type": "column",
+        "id": "text-col",
+        "gap_pt": 16,
+        "grow": 1.0,
+        "children": [
+          {
+            "type": "block",
+            "id": "leaf-title",
+            "block_id": "title",
+            "grow": 0.5,
+            "text_style": "title"
+          },
+          {
+            "type": "block",
+            "id": "leaf-body",
+            "block_id": "body",
+            "grow": 1.5,
+            "text_style": "bullet"
+          }
+        ]
+      }
+    ]
+  }
+}

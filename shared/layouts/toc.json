@@ -1,0 +1,56 @@
+{
+  "id": "toc",
+  "name": "目录",
+  "usage": "列出全文章节，帮助听众建立整体预期",
+  "slots": [
+    {
+      "id": "title",
+      "accepts": [
+        "text"
+      ],
+      "text_style": "title",
+      "required": true,
+      "rect": {
+        "x": 0.075,
+        "y": 0.1037,
+        "w": 0.85,
+        "h": 0.115
+      },
+      "capacity": {
+        "max_lines": 1,
+        "max_chars": 20
+      }
+    },
+    {
+      "id": "items",
+      "accepts": [
+        "bullets"
+      ],
+      "text_style": "bullet",
+      "required": true,
+      "rect": {
+        "x": 0.075,
+        "y": 0.26,
+        "w": 0.85,
+        "h": 0.62
+      },
+      "capacity": {
+        "max_items": 8,
+        "max_chars_per_item": 28,
+        "max_lines": 8
+      }
+    }
+  ],
+  "decorations": [
+    {
+      "type": "rule",
+      "rect": {
+        "x": 0.075,
+        "y": 0.226,
+        "w": 0.85,
+        "h": 0.0019
+      },
+      "color": "line"
+    }
+  ]
+}

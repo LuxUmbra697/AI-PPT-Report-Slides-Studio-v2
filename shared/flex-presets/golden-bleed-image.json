@@ -1,0 +1,66 @@
+{
+  "id": "golden-bleed-image",
+  "name": "出血图左文右（golden）",
+  "description": "锁住页面安全区与出血行为的基准树；expected_rects 由 backend solve 产出",
+  "tree": {
+    "type": "row",
+    "id": "root",
+    "gap_pt": 24,
+    "ratios": [
+      40,
+      60
+    ],
+    "grow": 1.0,
+    "children": [
+      {
+        "type": "block",
+        "id": "leaf-image",
+        "block_id": "image",
+        "grow": 1.0,
+        "bleed": true
+      },
+      {
+        "type": "column",
+        "id": "text-col",
+        "gap_pt": 16,
+        "grow": 1.0,
+        "children": [
+          {
+            "type": "block",
+            "id": "leaf-title",
+            "block_id": "title",
+            "grow": 0.5,
+            "text_style": "title"
+          },
+          {
+            "type": "block",
+            "id": "leaf-body",
+            "block_id": "body",
+            "grow": 1.5,
+            "text_style": "bullet"
+          }
+        ]
+      }
+    ]
+  },
+  "expected_rects": {
+    "image": {
+      "x": 0.0,
+      "y": 0.0,
+      "w": 0.4008333333333334,
+      "h": 1.0
+    },
+    "title": {
+      "x": 0.4258333333333334,
+      "y": 0.07777777777777778,
+      "w": 0.52,
+      "h": 0.20277777777777778
+    },
+    "body": {
+      "x": 0.4258333333333334,
+      "y": 0.3101851851851852,
+      "w": 0.52,
+      "h": 0.6083333333333334
+    }
+  }
+}

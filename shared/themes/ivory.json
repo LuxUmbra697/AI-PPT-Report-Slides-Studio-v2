@@ -1,0 +1,199 @@
+{
+  "id": "ivory",
+  "name": "米白商务",
+  "description": "浅底、靠色、衬线标题，适合汇报与提案",
+  "palette": {
+    "background": "#FBFAF6",
+    "surface": "#FFFFFF",
+    "ink": "#1A1917",
+    "ink_soft": "#4A463E",
+    "ink_muted": "#8A8478",
+    "accent": "#B4432B",
+    "accent_soft": "#F0E4DF",
+    "line": "#E2DCD0",
+    "line_strong": "#CFC6B4",
+    "chart_series": [
+      "#B4432B",
+      "#3F6B5E",
+      "#C08A2E",
+      "#5A6478",
+      "#8C6A55",
+      "#4A463E"
+    ]
+  },
+  "fonts": {
+    "display": {
+      "web": "'Instrument Serif', 'Songti SC', 'STSong', serif",
+      "pptx_latin": "Georgia",
+      "pptx_east_asian": "宋体"
+    },
+    "body": {
+      "web": "'Manrope Variable', 'PingFang SC', 'Microsoft YaHei', sans-serif",
+      "pptx_latin": "Arial",
+      "pptx_east_asian": "微软雅黑"
+    }
+  },
+  "text_styles": {
+    "display": {
+      "font": "display",
+      "size_pt": 54,
+      "line_height": 1.22,
+      "weight": 400,
+      "letter_spacing_pt": 0,
+      "color": "ink"
+    },
+    "title": {
+      "font": "display",
+      "size_pt": 34,
+      "line_height": 1.28,
+      "weight": 400,
+      "letter_spacing_pt": 0,
+      "color": "ink"
+    },
+    "subtitle": {
+      "font": "body",
+      "size_pt": 19,
+      "line_height": 1.45,
+      "weight": 600,
+      "letter_spacing_pt": 0,
+      "color": "ink_soft"
+    },
+    "body": {
+      "font": "body",
+      "size_pt": 15,
+      "line_height": 1.65,
+      "weight": 400,
+      "letter_spacing_pt": 0,
+      "color": "ink_soft"
+    },
+    "bullet": {
+      "font": "body",
+      "size_pt": 16,
+      "line_height": 1.62,
+      "weight": 400,
+      "letter_spacing_pt": 0,
+      "color": "ink_soft"
+    },
+    "caption": {
+      "font": "body",
+      "size_pt": 11,
+      "line_height": 1.5,
+      "weight": 600,
+      "letter_spacing_pt": 1.6,
+      "color": "accent"
+    },
+    "kpi_value": {
+      "font": "display",
+      "size_pt": 46,
+      "line_height": 1.1,
+      "weight": 400,
+      "letter_spacing_pt": 0,
+      "color": "accent"
+    },
+    "kpi_label": {
+      "font": "body",
+      "size_pt": 14,
+      "line_height": 1.4,
+      "weight": 600,
+      "letter_spacing_pt": 0,
+      "color": "ink"
+    },
+    "kpi_note": {
+      "font": "body",
+      "size_pt": 12,
+      "line_height": 1.5,
+      "weight": 400,
+      "letter_spacing_pt": 0,
+      "color": "ink_muted"
+    },
+    "table_header": {
+      "font": "body",
+      "size_pt": 13,
+      "line_height": 1.4,
+      "weight": 600,
+      "letter_spacing_pt": 0,
+      "color": "ink"
+    },
+    "table_cell": {
+      "font": "body",
+      "size_pt": 13,
+      "line_height": 1.4,
+      "weight": 400,
+      "letter_spacing_pt": 0,
+      "color": "ink_soft"
+    },
+    "chart_label": {
+      "font": "body",
+      "size_pt": 11,
+      "line_height": 1.3,
+      "weight": 400,
+      "letter_spacing_pt": 0,
+      "color": "ink_muted"
+    }
+  },
+  "shape": {
+    "radius_pt": 0,
+    "border_width_pt": 1,
+    "bullet_marker": "rule"
+  },
+  "ambient": [
+    {
+      "motif": "glow",
+      "color": "accent_soft",
+      "strength": 0.35,
+      "cx": 0.9,
+      "cy": 0.14,
+      "radius_pt": 260,
+      "layers": 4
+    },
+    {
+      "motif": "hairline_grid",
+      "color": "line_strong",
+      "strength": 0.4,
+      "columns": 4,
+      "thickness_pt": 0.5,
+      "avoid_content": true
+    },
+    {
+      "motif": "edge_band",
+      "color": "accent",
+      "strength": 1,
+      "edge": "top",
+      "thickness_pt": 4,
+      "start": 0,
+      "end": 0.14
+    },
+    {
+      "motif": "corner_bracket",
+      "color": "accent",
+      "strength": 0.35,
+      "corner": "bottom_right",
+      "size_pt": 84,
+      "thickness_pt": 1,
+      "inset_pt": 20,
+      "scope": [
+        "cover",
+        "section"
+      ]
+    },
+    {
+      "motif": "watermark",
+      "color": "line_strong",
+      "strength": 0.42,
+      "size_pt": 108,
+      "align": "right",
+      "font": "display",
+      "weight": 400,
+      "avoid_content": true,
+      "rect": {
+        "x": 0.75,
+        "y": 0.8,
+        "w": 0.24,
+        "h": 0.19
+      },
+      "scope": [
+        "content"
+      ]
+    }
+  ]
+}

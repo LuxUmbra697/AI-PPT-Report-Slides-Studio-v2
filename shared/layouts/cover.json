@@ -1,0 +1,73 @@
+{
+  "id": "cover",
+  "name": "封面",
+  "usage": "整份文稿的第一页，承载主标题与一句话定位",
+  "slots": [
+    {
+      "id": "eyebrow",
+      "accepts": [
+        "text"
+      ],
+      "text_style": "caption",
+      "required": false,
+      "rect": {
+        "x": 0.075,
+        "y": 0.3,
+        "w": 0.55,
+        "h": 0.05
+      },
+      "capacity": {
+        "max_lines": 1,
+        "max_chars": 24
+      }
+    },
+    {
+      "id": "title",
+      "accepts": [
+        "text"
+      ],
+      "text_style": "display",
+      "required": true,
+      "rect": {
+        "x": 0.075,
+        "y": 0.365,
+        "w": 0.72,
+        "h": 0.25
+      },
+      "capacity": {
+        "max_lines": 2,
+        "max_chars": 30
+      }
+    },
+    {
+      "id": "subtitle",
+      "accepts": [
+        "text"
+      ],
+      "text_style": "subtitle",
+      "required": false,
+      "rect": {
+        "x": 0.075,
+        "y": 0.63,
+        "w": 0.6,
+        "h": 0.12
+      },
+      "capacity": {
+        "max_lines": 2,
+        "max_chars": 48
+      }
+    }
+  ],
+  "decorations": [
+    {
+      "type": "rule",
+      "rect": {
+        "x": 0.075,
+        "y": 0.845,
+        "w": 0.1,
+        "h": 0.005
+      },
+      "color": "accent"
+    }
+  ]
+}

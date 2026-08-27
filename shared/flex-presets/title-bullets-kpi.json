@@ -1,0 +1,54 @@
+{
+  "id": "title-bullets-kpi",
+  "name": "标题 + 要点 + 指标",
+  "description": "上标题，中要点，下三列 KPI",
+  "tree": {
+    "type": "column",
+    "id": "root",
+    "gap_pt": 14,
+    "grow": 1.0,
+    "children": [
+      {
+        "type": "block",
+        "id": "leaf-title",
+        "block_id": "title",
+        "grow": 0.45,
+        "text_style": "title"
+      },
+      {
+        "type": "block",
+        "id": "leaf-body",
+        "block_id": "body",
+        "grow": 1.4,
+        "text_style": "bullet"
+      },
+      {
+        "type": "row",
+        "id": "kpi-row",
+        "gap_pt": 12,
+        "grow": 0.9,
+        "ratios": [33, 33, 34],
+        "children": [
+          {
+            "type": "block",
+            "id": "leaf-kpi-1",
+            "block_id": "kpi_1",
+            "grow": 1.0
+          },
+          {
+            "type": "block",
+            "id": "leaf-kpi-2",
+            "block_id": "kpi_2",
+            "grow": 1.0
+          },
+          {
+            "type": "block",
+            "id": "leaf-kpi-3",
+            "block_id": "kpi_3",
+            "grow": 1.0
+          }
+        ]
+      }
+    ]
+  }
+}

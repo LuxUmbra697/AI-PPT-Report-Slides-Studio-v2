@@ -1,0 +1,121 @@
+{
+  "id": "two-column",
+  "name": "双栏对比",
+  "usage": "两组并列信息的对照，例如现状与目标、优势与风险",
+  "slots": [
+    {
+      "id": "title",
+      "accepts": [
+        "text"
+      ],
+      "text_style": "title",
+      "required": true,
+      "rect": {
+        "x": 0.075,
+        "y": 0.1037,
+        "w": 0.85,
+        "h": 0.115
+      },
+      "capacity": {
+        "max_lines": 1,
+        "max_chars": 24
+      }
+    },
+    {
+      "id": "left_heading",
+      "accepts": [
+        "text"
+      ],
+      "text_style": "subtitle",
+      "required": true,
+      "rect": {
+        "x": 0.075,
+        "y": 0.272,
+        "w": 0.4,
+        "h": 0.075
+      },
+      "capacity": {
+        "max_lines": 1,
+        "max_chars": 14
+      }
+    },
+    {
+      "id": "left_body",
+      "accepts": [
+        "bullets"
+      ],
+      "text_style": "bullet",
+      "required": true,
+      "rect": {
+        "x": 0.075,
+        "y": 0.368,
+        "w": 0.4,
+        "h": 0.517
+      },
+      "capacity": {
+        "max_items": 5,
+        "max_chars_per_item": 22,
+        "max_lines": 10
+      }
+    },
+    {
+      "id": "right_heading",
+      "accepts": [
+        "text"
+      ],
+      "text_style": "subtitle",
+      "required": true,
+      "rect": {
+        "x": 0.525,
+        "y": 0.272,
+        "w": 0.4,
+        "h": 0.075
+      },
+      "capacity": {
+        "max_lines": 1,
+        "max_chars": 14
+      }
+    },
+    {
+      "id": "right_body",
+      "accepts": [
+        "bullets"
+      ],
+      "text_style": "bullet",
+      "required": true,
+      "rect": {
+        "x": 0.525,
+        "y": 0.368,
+        "w": 0.4,
+        "h": 0.517
+      },
+      "capacity": {
+        "max_items": 5,
+        "max_chars_per_item": 22,
+        "max_lines": 10
+      }
+    }
+  ],
+  "decorations": [
+    {
+      "type": "rule",
+      "rect": {
+        "x": 0.075,
+        "y": 0.231,
+        "w": 0.85,
+        "h": 0.0019
+      },
+      "color": "line"
+    },
+    {
+      "type": "block",
+      "rect": {
+        "x": 0.4994,
+        "y": 0.272,
+        "w": 0.0012,
+        "h": 0.613
+      },
+      "color": "line"
+    }
+  ]
+}

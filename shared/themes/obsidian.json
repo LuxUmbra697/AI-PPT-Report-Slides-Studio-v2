@@ -1,0 +1,215 @@
+{
+  "id": "obsidian",
+  "name": "曜石鎏金",
+  "description": "近黑底、香槟金点缀、高对比衬线标题，适合品牌发布与高端提案",
+  "palette": {
+    "background": "#0A0B0D",
+    "surface": "#14171C",
+    "ink": "#F5F2EA",
+    "ink_soft": "#C2BEB4",
+    "ink_muted": "#87847C",
+    "accent": "#C9A96B",
+    "accent_soft": "#241F16",
+    "line": "#23262C",
+    "line_strong": "#3B4048",
+    "chart_series": [
+      "#C9A96B",
+      "#6FA8A0",
+      "#8EA6CE",
+      "#C08C74",
+      "#9FAE85",
+      "#B29ECB"
+    ]
+  },
+  "fonts": {
+    "display": {
+      "web": "'Instrument Serif', 'Songti SC', 'STSong', serif",
+      "pptx_latin": "Georgia",
+      "pptx_east_asian": "宋体"
+    },
+    "body": {
+      "web": "'Manrope Variable', 'PingFang SC', 'Microsoft YaHei', sans-serif",
+      "pptx_latin": "Arial",
+      "pptx_east_asian": "微软雅黑"
+    }
+  },
+  "text_styles": {
+    "display": {
+      "font": "display",
+      "size_pt": 58,
+      "line_height": 1.14,
+      "weight": 400,
+      "letter_spacing_pt": -0.6,
+      "color": "ink"
+    },
+    "title": {
+      "font": "display",
+      "size_pt": 36,
+      "line_height": 1.24,
+      "weight": 400,
+      "letter_spacing_pt": -0.2,
+      "color": "ink"
+    },
+    "subtitle": {
+      "font": "body",
+      "size_pt": 18,
+      "line_height": 1.5,
+      "weight": 500,
+      "letter_spacing_pt": 0.2,
+      "color": "ink_soft"
+    },
+    "body": {
+      "font": "body",
+      "size_pt": 15,
+      "line_height": 1.72,
+      "weight": 400,
+      "letter_spacing_pt": 0.1,
+      "color": "ink_soft"
+    },
+    "bullet": {
+      "font": "body",
+      "size_pt": 16,
+      "line_height": 1.7,
+      "weight": 400,
+      "letter_spacing_pt": 0.1,
+      "color": "ink_soft"
+    },
+    "caption": {
+      "font": "body",
+      "size_pt": 10.5,
+      "line_height": 1.5,
+      "weight": 700,
+      "letter_spacing_pt": 2.6,
+      "color": "accent"
+    },
+    "kpi_value": {
+      "font": "display",
+      "size_pt": 52,
+      "line_height": 1.02,
+      "weight": 400,
+      "letter_spacing_pt": -1,
+      "color": "accent"
+    },
+    "kpi_label": {
+      "font": "body",
+      "size_pt": 13,
+      "line_height": 1.4,
+      "weight": 700,
+      "letter_spacing_pt": 0.6,
+      "color": "ink"
+    },
+    "kpi_note": {
+      "font": "body",
+      "size_pt": 11.5,
+      "line_height": 1.5,
+      "weight": 400,
+      "letter_spacing_pt": 0.2,
+      "color": "ink_muted"
+    },
+    "table_header": {
+      "font": "body",
+      "size_pt": 12,
+      "line_height": 1.4,
+      "weight": 700,
+      "letter_spacing_pt": 1.2,
+      "color": "accent"
+    },
+    "table_cell": {
+      "font": "body",
+      "size_pt": 13,
+      "line_height": 1.45,
+      "weight": 400,
+      "letter_spacing_pt": 0.1,
+      "color": "ink_soft"
+    },
+    "chart_label": {
+      "font": "body",
+      "size_pt": 11,
+      "line_height": 1.3,
+      "weight": 500,
+      "letter_spacing_pt": 0.2,
+      "color": "ink_muted"
+    }
+  },
+  "shape": {
+    "radius_pt": 0,
+    "border_width_pt": 0.75,
+    "bullet_marker": "rule"
+  },
+  "ambient": [
+    {
+      "motif": "glow",
+      "color": "accent",
+      "strength": 0.12,
+      "cx": 0.87,
+      "cy": 0.08,
+      "radius_pt": 300,
+      "layers": 4
+    },
+    {
+      "motif": "hairline_grid",
+      "color": "line_strong",
+      "strength": 0.28,
+      "columns": 4,
+      "thickness_pt": 0.5,
+      "avoid_content": true
+    },
+    {
+      "motif": "corner_bracket",
+      "color": "accent",
+      "strength": 0.62,
+      "corner": "top_right",
+      "size_pt": 96,
+      "thickness_pt": 1,
+      "inset_pt": 20,
+      "scope": [
+        "cover",
+        "section"
+      ]
+    },
+    {
+      "motif": "corner_bracket",
+      "color": "accent",
+      "strength": 0.62,
+      "corner": "bottom_left",
+      "size_pt": 96,
+      "thickness_pt": 1,
+      "inset_pt": 20,
+      "scope": [
+        "cover",
+        "section"
+      ]
+    },
+    {
+      "motif": "edge_band",
+      "color": "accent",
+      "strength": 0.9,
+      "edge": "left",
+      "thickness_pt": 3,
+      "start": 0.22,
+      "end": 0.78,
+      "scope": [
+        "section"
+      ]
+    },
+    {
+      "motif": "watermark",
+      "color": "accent",
+      "strength": 0.1,
+      "size_pt": 112,
+      "align": "right",
+      "font": "display",
+      "weight": 400,
+      "avoid_content": true,
+      "rect": {
+        "x": 0.75,
+        "y": 0.8,
+        "w": 0.24,
+        "h": 0.19
+      },
+      "scope": [
+        "content"
+      ]
+    }
+  ]
+}

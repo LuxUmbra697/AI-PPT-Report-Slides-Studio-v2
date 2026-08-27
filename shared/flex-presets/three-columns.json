@@ -1,0 +1,47 @@
+{
+  "id": "three-columns",
+  "name": "三列 KPI",
+  "description": "标题在上，下方三列并列指标",
+  "tree": {
+    "type": "column",
+    "id": "root",
+    "gap_pt": 16,
+    "grow": 1.0,
+    "children": [
+      {
+        "type": "block",
+        "id": "leaf-title",
+        "block_id": "title",
+        "grow": 0.4,
+        "text_style": "title"
+      },
+      {
+        "type": "row",
+        "id": "kpi-row",
+        "gap_pt": 16,
+        "ratios": [33, 33, 34],
+        "grow": 1.6,
+        "children": [
+          {
+            "type": "block",
+            "id": "leaf-kpi-1",
+            "block_id": "kpi_1",
+            "grow": 1.0
+          },
+          {
+            "type": "block",
+            "id": "leaf-kpi-2",
+            "block_id": "kpi_2",
+            "grow": 1.0
+          },
+          {
+            "type": "block",
+            "id": "leaf-kpi-3",
+            "block_id": "kpi_3",
+            "grow": 1.0
+          }
+        ]
+      }
+    ]
+  }
+}

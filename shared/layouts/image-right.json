@@ -1,0 +1,59 @@
+{
+  "id": "image-right",
+  "name": "图文（图在右）",
+  "usage": "文字论述配一张示意图，图片位于右侧",
+  "slots": [
+    {
+      "id": "title",
+      "accepts": [
+        "text"
+      ],
+      "text_style": "title",
+      "required": true,
+      "rect": {
+        "x": 0.075,
+        "y": 0.1037,
+        "w": 0.42,
+        "h": 0.17
+      },
+      "capacity": {
+        "max_lines": 2,
+        "max_chars": 18
+      }
+    },
+    {
+      "id": "body",
+      "accepts": [
+        "bullets",
+        "text"
+      ],
+      "text_style": "bullet",
+      "required": true,
+      "rect": {
+        "x": 0.075,
+        "y": 0.30,
+        "w": 0.42,
+        "h": 0.585
+      },
+      "capacity": {
+        "max_items": 4,
+        "max_chars_per_item": 24,
+        "max_lines": 9
+      }
+    },
+    {
+      "id": "image",
+      "accepts": [
+        "image"
+      ],
+      "required": true,
+      "rect": {
+        "x": 0.545,
+        "y": 0.1037,
+        "w": 0.38,
+        "h": 0.7926
+      }
+    }
+  ],
+  "decorations": []
+}

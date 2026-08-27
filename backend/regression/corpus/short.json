@@ -1,0 +1,301 @@
+{
+  "id": "regression-short",
+  "title": "固定回归语料·偏短档",
+  "theme_id": "ivory",
+  "slides": [
+    {
+      "id": "short-cover",
+      "layout_id": "cover",
+      "revision": 1,
+      "blocks": [
+        {
+          "id": "sc-e",
+          "slot_id": "eyebrow",
+          "type": "text",
+          "text": "年度复盘"
+        },
+        {
+          "id": "sc-t",
+          "slot_id": "title",
+          "type": "text",
+          "text": "办公套件复盘"
+        },
+        {
+          "id": "sc-s",
+          "slot_id": "subtitle",
+          "type": "text",
+          "text": "一年回顾"
+        }
+      ]
+    },
+    {
+      "id": "short-toc",
+      "layout_id": "toc",
+      "revision": 1,
+      "blocks": [
+        {
+          "id": "st-t",
+          "slot_id": "title",
+          "type": "text",
+          "text": "目录"
+        },
+        {
+          "id": "st-i",
+          "slot_id": "items",
+          "type": "bullets",
+          "items": ["经营结果", "产品策略", "明年重点"]
+        }
+      ]
+    },
+    {
+      "id": "short-section",
+      "layout_id": "section",
+      "revision": 1,
+      "blocks": [
+        {
+          "id": "ss-i",
+          "slot_id": "index",
+          "type": "text",
+          "text": "一"
+        },
+        {
+          "id": "ss-t",
+          "slot_id": "title",
+          "type": "text",
+          "text": "经营结果"
+        },
+        {
+          "id": "ss-n",
+          "slot_id": "note",
+          "type": "text",
+          "text": "已确认收入口径。"
+        }
+      ]
+    },
+    {
+      "id": "short-kpi",
+      "layout_id": "kpi",
+      "revision": 1,
+      "blocks": [
+        {
+          "id": "sk-t",
+          "slot_id": "title",
+          "type": "text",
+          "text": "关键指标"
+        },
+        {
+          "id": "sk-1",
+          "slot_id": "kpi1",
+          "type": "kpi",
+          "value": "2.4亿",
+          "label": "收入",
+          "note": null
+        },
+        {
+          "id": "sk-2",
+          "slot_id": "kpi2",
+          "type": "kpi",
+          "value": "87%",
+          "label": "续约",
+          "note": null
+        },
+        {
+          "id": "sk-3",
+          "slot_id": "kpi3",
+          "type": "kpi",
+          "value": "11万",
+          "label": "席位",
+          "note": null
+        }
+      ]
+    },
+    {
+      "id": "short-chart",
+      "layout_id": "chart",
+      "revision": 1,
+      "blocks": [
+        {
+          "id": "sch-t",
+          "slot_id": "title",
+          "type": "text",
+          "text": "季度收入"
+        },
+        {
+          "id": "sch-c",
+          "slot_id": "chart",
+          "type": "chart",
+          "chart_type": "bar",
+          "categories": ["Q1", "Q2"],
+          "series": [
+            {
+              "name": "订阅",
+              "values": [38, 44]
+            }
+          ]
+        },
+        {
+          "id": "sch-n",
+          "slot_id": "note",
+          "type": "text",
+          "text": "稳步上升。"
+        }
+      ]
+    },
+    {
+      "id": "short-bullets",
+      "layout_id": "bullets",
+      "revision": 1,
+      "blocks": [
+        {
+          "id": "sb-t",
+          "slot_id": "title",
+          "type": "text",
+          "text": "策略调整"
+        },
+        {
+          "id": "sb-b",
+          "slot_id": "body",
+          "type": "bullets",
+          "items": ["聚焦协作", "开放生态"]
+        }
+      ]
+    },
+    {
+      "id": "short-image-right",
+      "layout_id": "image-right",
+      "revision": 1,
+      "blocks": [
+        {
+          "id": "sir-t",
+          "slot_id": "title",
+          "type": "text",
+          "text": "编排界面"
+        },
+        {
+          "id": "sir-b",
+          "slot_id": "body",
+          "type": "bullets",
+          "items": ["可视化配置", "失败重试"]
+        },
+        {
+          "id": "sir-i",
+          "slot_id": "image",
+          "type": "image",
+          "source": "placeholder",
+          "alt": "界面示意"
+        }
+      ]
+    },
+    {
+      "id": "short-image-left",
+      "layout_id": "image-left",
+      "revision": 1,
+      "blocks": [
+        {
+          "id": "sil-i",
+          "slot_id": "image",
+          "type": "image",
+          "source": "placeholder",
+          "alt": "看板示意"
+        },
+        {
+          "id": "sil-t",
+          "slot_id": "title",
+          "type": "text",
+          "text": "用户结构"
+        },
+        {
+          "id": "sil-b",
+          "slot_id": "body",
+          "type": "bullets",
+          "items": ["制造占比升", "小团队流失"]
+        }
+      ]
+    },
+    {
+      "id": "short-two-column",
+      "layout_id": "two-column",
+      "revision": 1,
+      "blocks": [
+        {
+          "id": "stc-t",
+          "slot_id": "title",
+          "type": "text",
+          "text": "竞争位置"
+        },
+        {
+          "id": "stc-lh",
+          "slot_id": "left_heading",
+          "type": "text",
+          "text": "优势"
+        },
+        {
+          "id": "stc-lb",
+          "slot_id": "left_body",
+          "type": "bullets",
+          "items": ["私有化", "协作体验"]
+        },
+        {
+          "id": "stc-rh",
+          "slot_id": "right_heading",
+          "type": "text",
+          "text": "压力"
+        },
+        {
+          "id": "stc-rb",
+          "slot_id": "right_body",
+          "type": "bullets",
+          "items": ["捆绑销售", "价格敏感"]
+        }
+      ]
+    },
+    {
+      "id": "short-table",
+      "layout_id": "table",
+      "revision": 1,
+      "blocks": [
+        {
+          "id": "sta-t",
+          "slot_id": "title",
+          "type": "text",
+          "text": "投入表"
+        },
+        {
+          "id": "sta-tb",
+          "slot_id": "table",
+          "type": "table",
+          "header": ["方向", "占比", "负责人"],
+          "rows": [
+            ["工作流", "40%", "产品"],
+            ["交付", "20%", "交付"]
+          ]
+        }
+      ]
+    },
+    {
+      "id": "short-summary",
+      "layout_id": "summary",
+      "revision": 1,
+      "blocks": [
+        {
+          "id": "ssm-e",
+          "slot_id": "eyebrow",
+          "type": "text",
+          "text": "结论"
+        },
+        {
+          "id": "ssm-t",
+          "slot_id": "title",
+          "type": "text",
+          "text": "聚焦工作流"
+        },
+        {
+          "id": "ssm-p",
+          "slot_id": "points",
+          "type": "bullets",
+          "items": ["大客户驱动增长", "明年只押注平台"]
+        }
+      ]
+    }
+  ]
+}

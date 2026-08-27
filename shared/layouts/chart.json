@@ -1,0 +1,72 @@
+{
+  "id": "chart",
+  "name": "图表页",
+  "usage": "一张原生图表配一段解读，用于呈现趋势或结构",
+  "slots": [
+    {
+      "id": "title",
+      "accepts": [
+        "text"
+      ],
+      "text_style": "title",
+      "required": true,
+      "rect": {
+        "x": 0.075,
+        "y": 0.1037,
+        "w": 0.85,
+        "h": 0.115
+      },
+      "capacity": {
+        "max_lines": 1,
+        "max_chars": 24
+      }
+    },
+    {
+      "id": "chart",
+      "accepts": [
+        "chart"
+      ],
+      "required": true,
+      "rect": {
+        "x": 0.075,
+        "y": 0.272,
+        "w": 0.6,
+        "h": 0.613
+      },
+      "capacity": {
+        "max_series": 3,
+        "max_categories": 8
+      }
+    },
+    {
+      "id": "note",
+      "accepts": [
+        "text"
+      ],
+      "text_style": "body",
+      "required": false,
+      "rect": {
+        "x": 0.705,
+        "y": 0.272,
+        "w": 0.22,
+        "h": 0.55
+      },
+      "capacity": {
+        "max_lines": 10,
+        "max_chars": 120
+      }
+    }
+  ],
+  "decorations": [
+    {
+      "type": "rule",
+      "rect": {
+        "x": 0.075,
+        "y": 0.231,
+        "w": 0.85,
+        "h": 0.0019
+      },
+      "color": "line"
+    }
+  ]
+}

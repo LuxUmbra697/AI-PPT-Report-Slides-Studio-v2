@@ -1,0 +1,50 @@
+{
+  "id": "title-cards-2",
+  "name": "标题 + 双卡片",
+  "description": "kicker/标题后横排两张 cards，挂 solid_boxes 皮肤",
+  "tree": {
+    "type": "column",
+    "id": "root",
+    "gap_pt": 14,
+    "grow": 1.0,
+    "children": [
+      {
+        "type": "block",
+        "id": "leaf-kicker",
+        "block_id": "kicker",
+        "grow": 0.25,
+        "text_style": "caption"
+      },
+      {
+        "type": "block",
+        "id": "leaf-title",
+        "block_id": "title",
+        "grow": 0.45,
+        "text_style": "title"
+      },
+      {
+        "type": "row",
+        "id": "cards-row",
+        "gap_pt": 16,
+        "grow": 1.6,
+        "ratios": [50, 50],
+        "preset": "solid_boxes",
+        "children": [
+          {
+            "type": "block",
+            "id": "leaf-cards",
+            "block_id": "cards",
+            "grow": 1.0
+          },
+          {
+            "type": "block",
+            "id": "leaf-body",
+            "block_id": "body",
+            "grow": 1.0,
+            "text_style": "bullet"
+          }
+        ]
+      }
+    ]
+  }
+}

@@ -1,0 +1,49 @@
+{
+  "id": "title-cards-3",
+  "name": "标题 + 三卡片",
+  "description": "kicker/标题 + 一张三卡 cards 块，容器挂 solid_boxes",
+  "tree": {
+    "type": "column",
+    "id": "root",
+    "gap_pt": 14,
+    "grow": 1.0,
+    "children": [
+      {
+        "type": "block",
+        "id": "leaf-kicker",
+        "block_id": "kicker",
+        "grow": 0.25,
+        "text_style": "caption"
+      },
+      {
+        "type": "block",
+        "id": "leaf-title",
+        "block_id": "title",
+        "grow": 0.45,
+        "text_style": "title"
+      },
+      {
+        "type": "block",
+        "id": "leaf-lead",
+        "block_id": "lead",
+        "grow": 0.35,
+        "text_style": "subtitle"
+      },
+      {
+        "type": "column",
+        "id": "cards-wrap",
+        "gap_pt": 0,
+        "grow": 1.8,
+        "preset": "solid_boxes",
+        "children": [
+          {
+            "type": "block",
+            "id": "leaf-cards",
+            "block_id": "cards",
+            "grow": 1.0
+          }
+        ]
+      }
+    ]
+  }
+}

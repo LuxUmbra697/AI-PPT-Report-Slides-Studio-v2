@@ -1,0 +1,73 @@
+{
+  "id": "section",
+  "name": "章节分隔",
+  "usage": "切换大主题时的过渡页，只承载章节序号与标题",
+  "slots": [
+    {
+      "id": "index",
+      "accepts": [
+        "text"
+      ],
+      "text_style": "caption",
+      "required": false,
+      "rect": {
+        "x": 0.105,
+        "y": 0.365,
+        "w": 0.3,
+        "h": 0.05
+      },
+      "capacity": {
+        "max_lines": 1,
+        "max_chars": 16
+      }
+    },
+    {
+      "id": "title",
+      "accepts": [
+        "text"
+      ],
+      "text_style": "display",
+      "required": true,
+      "rect": {
+        "x": 0.105,
+        "y": 0.425,
+        "w": 0.72,
+        "h": 0.25
+      },
+      "capacity": {
+        "max_lines": 2,
+        "max_chars": 24
+      }
+    },
+    {
+      "id": "note",
+      "accepts": [
+        "text"
+      ],
+      "text_style": "body",
+      "required": false,
+      "rect": {
+        "x": 0.105,
+        "y": 0.70,
+        "w": 0.6,
+        "h": 0.1
+      },
+      "capacity": {
+        "max_lines": 2,
+        "max_chars": 52
+      }
+    }
+  ],
+  "decorations": [
+    {
+      "type": "block",
+      "rect": {
+        "x": 0.0,
+        "y": 0.0,
+        "w": 0.014,
+        "h": 1.0
+      },
+      "color": "accent"
+    }
+  ]
+}

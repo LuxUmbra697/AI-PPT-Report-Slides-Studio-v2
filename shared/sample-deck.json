@@ -1,0 +1,342 @@
+{
+  "id": "sample-deck",
+  "title": "智能办公套件 2026 年度复盘",
+  "theme_id": "ivory",
+  "slides": [
+    {
+      "id": "s01",
+      "layout_id": "cover",
+      "revision": 1,
+      "blocks": [
+        { "id": "b0101", "slot_id": "eyebrow", "type": "text", "text": "年度业务复盘" },
+        {
+          "id": "b0102",
+          "slot_id": "title",
+          "type": "text",
+          "text": "智能办公套件 2026 年度复盘"
+        },
+        {
+          "id": "b0103",
+          "slot_id": "subtitle",
+          "type": "text",
+          "text": "从工具集合走向工作流平台的一年"
+        }
+      ]
+    },
+    {
+      "id": "s02",
+      "layout_id": "toc",
+      "revision": 1,
+      "blocks": [
+        { "id": "b0201", "slot_id": "title", "type": "text", "text": "本次汇报内容" },
+        {
+          "id": "b0202",
+          "slot_id": "items",
+          "type": "bullets",
+          "items": [
+            "全年经营结果与关键指标",
+            "产品策略的三次调整",
+            "用户结构与留存变化",
+            "竞争格局与定价压力",
+            "明年的投入重点"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "s03",
+      "layout_id": "section",
+      "revision": 1,
+      "blocks": [
+        { "id": "b0301", "slot_id": "index", "type": "text", "text": "第一部分" },
+        { "id": "b0302", "slot_id": "title", "type": "text", "text": "全年经营结果" },
+        {
+          "id": "b0303",
+          "slot_id": "note",
+          "type": "text",
+          "text": "数据口径为财年内已确认收入，不含代理商未结算部分。"
+        }
+      ]
+    },
+    {
+      "id": "s04",
+      "layout_id": "kpi",
+      "revision": 1,
+      "blocks": [
+        { "id": "b0401", "slot_id": "title", "type": "text", "text": "三个关键结果" },
+        {
+          "id": "b0402",
+          "slot_id": "kpi1",
+          "type": "kpi",
+          "value": "2.4 亿",
+          "label": "全年确认收入",
+          "note": "同比增长 38%，低于年初 50% 的目标"
+        },
+        {
+          "id": "b0403",
+          "slot_id": "kpi2",
+          "type": "kpi",
+          "value": "87%",
+          "label": "企业客户年度续约率",
+          "note": "较去年提升 6 个百分点"
+        },
+        {
+          "id": "b0404",
+          "slot_id": "kpi3",
+          "type": "kpi",
+          "value": "11.2 万",
+          "label": "月活跃席位",
+          "note": "其中付费席位占比 64%"
+        }
+      ]
+    },
+    {
+      "id": "s05",
+      "layout_id": "chart",
+      "revision": 1,
+      "blocks": [
+        { "id": "b0501", "slot_id": "title", "type": "text", "text": "分季度收入构成" },
+        {
+          "id": "b0502",
+          "slot_id": "chart",
+          "type": "chart",
+          "chart_type": "column",
+          "unit": "百万元",
+          "categories": ["Q1", "Q2", "Q3", "Q4"],
+          "series": [
+            { "name": "订阅收入", "values": [38, 44, 52, 61] },
+            { "name": "实施服务", "values": [12, 14, 13, 16] }
+          ]
+        },
+        {
+          "id": "b0503",
+          "slot_id": "note",
+          "type": "text",
+          "text": "订阅收入连续四个季度环比增长，服务收入基本持平。Q4 的跃升主要来自两家大型制造业客户的集中签约。"
+        }
+      ]
+    },
+    {
+      "id": "s06",
+      "layout_id": "bullets",
+      "layout_mode": "flex",
+      "revision": 1,
+      "blocks": [
+        {
+          "id": "b0600",
+          "slot_id": "b0600",
+          "type": "text",
+          "text": "策略"
+        },
+        {
+          "id": "b0601",
+          "slot_id": "b0601",
+          "type": "text",
+          "text": "产品策略的三次调整"
+        },
+        {
+          "id": "b0602",
+          "slot_id": "b0602",
+          "type": "cards",
+          "items": [
+            {
+              "title": "收敛模块",
+              "desc": "上半年停止横向扩展，集中资源打磨文档协作",
+              "icon": "🎯"
+            },
+            {
+              "title": "开放生态",
+              "desc": "模板市场改为第三方接入，节省两个团队投入",
+              "icon": "🧩"
+            },
+            {
+              "title": "AI 下沉",
+              "desc": "能力从独立入口沉到模块内部，使用率明显提升",
+              "icon": "✨"
+            }
+          ]
+        },
+        {
+          "id": "b0603",
+          "slot_id": "b0603",
+          "type": "callout",
+          "text": "数据来源：产品部 2026 年中复盘纪要",
+          "icon": "📎",
+          "variant": "source"
+        }
+      ],
+      "layout_tree": {
+        "type": "column",
+        "id": "root",
+        "gap_pt": 14,
+        "grow": 1.0,
+        "children": [
+          {
+            "type": "block",
+            "id": "leaf-kicker",
+            "block_id": "b0600",
+            "grow": 0.25,
+            "text_style": "caption"
+          },
+          {
+            "type": "block",
+            "id": "leaf-title",
+            "block_id": "b0601",
+            "grow": 0.45,
+            "text_style": "title"
+          },
+          {
+            "type": "column",
+            "id": "cards-wrap",
+            "gap_pt": 0,
+            "grow": 1.6,
+            "preset": "solid_boxes",
+            "children": [
+              {
+                "type": "block",
+                "id": "leaf-cards",
+                "block_id": "b0602",
+                "grow": 1.0
+              }
+            ]
+          },
+          {
+            "type": "block",
+            "id": "leaf-source",
+            "block_id": "b0603",
+            "grow": 0.35
+          }
+        ]
+      }
+    },
+    {
+      "id": "s07",
+      "layout_id": "image-right",
+      "revision": 1,
+      "blocks": [
+        { "id": "b0701", "slot_id": "title", "type": "text", "text": "工作流编排界面" },
+        {
+          "id": "b0702",
+          "slot_id": "body",
+          "type": "bullets",
+          "items": [
+            "可视化编排替代脚本配置",
+            "节点级失败重试与断点续跑",
+            "审批链路与文档权限打通",
+            "上线后配置耗时下降 62%"
+          ]
+        },
+        {
+          "id": "b0703",
+          "slot_id": "image",
+          "type": "image",
+          "source": "placeholder",
+          "alt": "工作流编排界面的示意截图"
+        }
+      ]
+    },
+    {
+      "id": "s08",
+      "layout_id": "image-left",
+      "revision": 1,
+      "blocks": [
+        {
+          "id": "b0801",
+          "slot_id": "image",
+          "type": "image",
+          "source": "placeholder",
+          "alt": "用户活跃度看板的示意截图"
+        },
+        { "id": "b0802", "slot_id": "title", "type": "text", "text": "用户结构变化" },
+        {
+          "id": "b0803",
+          "slot_id": "body",
+          "type": "bullets",
+          "items": [
+            "制造业客户占比升至 34%",
+            "百人以下团队流失最严重",
+            "跨部门使用的账号留存更好",
+            "移动端仅占总时长的 9%"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "s09",
+      "layout_id": "two-column",
+      "revision": 1,
+      "blocks": [
+        { "id": "b0901", "slot_id": "title", "type": "text", "text": "竞争格局与我们的位置" },
+        { "id": "b0902", "slot_id": "left_heading", "type": "text", "text": "我们的优势" },
+        {
+          "id": "b0903",
+          "slot_id": "left_body",
+          "type": "bullets",
+          "items": [
+            "私有化部署经验充足",
+            "文档协作体验领先",
+            "实施团队交付稳定",
+            "与主流 OA 集成完整"
+          ]
+        },
+        { "id": "b0904", "slot_id": "right_heading", "type": "text", "text": "面临的压力" },
+        {
+          "id": "b0905",
+          "slot_id": "right_body",
+          "type": "bullets",
+          "items": [
+            "头部厂商捆绑销售",
+            "中小客户对价格敏感",
+            "AI 功能同质化加剧",
+            "海外市场尚未验证"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "s10",
+      "layout_id": "table",
+      "revision": 1,
+      "blocks": [
+        { "id": "b1001", "slot_id": "title", "type": "text", "text": "明年投入优先级" },
+        {
+          "id": "b1002",
+          "slot_id": "table",
+          "type": "table",
+          "header": ["方向", "投入占比", "负责人", "关键里程碑"],
+          "rows": [
+            ["工作流平台", "40%", "产品一部", "Q2 完成开放接口"],
+            ["行业解决方案", "25%", "解决方案部", "Q3 落地三个标杆"],
+            ["交付标准化", "20%", "交付中心", "Q1 发布实施手册"],
+            ["海外试点", "15%", "国际业务组", "Q4 完成合规评估"]
+          ]
+        }
+      ]
+    },
+    {
+      "id": "s11",
+      "layout_id": "summary",
+      "revision": 1,
+      "blocks": [
+        { "id": "b1101", "slot_id": "eyebrow", "type": "text", "text": "结论" },
+        {
+          "id": "b1102",
+          "slot_id": "title",
+          "type": "text",
+          "text": "增长仍在，但增长的来源变了"
+        },
+        {
+          "id": "b1103",
+          "slot_id": "points",
+          "type": "bullets",
+          "items": [
+            "收入增长依赖大客户集中签约，需警惕集中度风险",
+            "中小客户流失是结构性问题，靠降价无法解决",
+            "工作流平台是明年唯一的战略级投入",
+            "海外市场先做合规验证，不设收入目标"
+          ]
+        }
+      ]
+    }
+  ]
+}

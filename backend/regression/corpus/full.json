@@ -1,0 +1,358 @@
+{
+  "id": "regression-full",
+  "title": "固定回归语料·饱满档",
+  "theme_id": "ivory",
+  "slides": [
+    {
+      "id": "full-cover",
+      "layout_id": "cover",
+      "revision": 1,
+      "blocks": [
+        {
+          "id": "fc-e",
+          "slot_id": "eyebrow",
+          "type": "text",
+          "text": "FY2026 Annual Review 专场"
+        },
+        {
+          "id": "fc-t",
+          "slot_id": "title",
+          "type": "text",
+          "text": "智能办公套件 2026 年度经营复盘"
+        },
+        {
+          "id": "fc-s",
+          "slot_id": "subtitle",
+          "type": "text",
+          "text": "从工具集合走向 AI-Native Workspace：收入、留存与交付效率复盘"
+        }
+      ]
+    },
+    {
+      "id": "full-toc",
+      "layout_id": "toc",
+      "revision": 1,
+      "blocks": [
+        {
+          "id": "ft-t",
+          "slot_id": "title",
+          "type": "text",
+          "text": "本次汇报覆盖的核心议程"
+        },
+        {
+          "id": "ft-i",
+          "slot_id": "items",
+          "type": "bullets",
+          "items": [
+            "全年确认收入与 ARR 结构拆解图",
+            "产品策略三次转向与资源再分配",
+            "用户结构、留存与席位扩张路径",
+            "竞争格局、定价与捆绑销售压力",
+            "交付标准化与平均上线周期变化",
+            "Internationalization 海外试点",
+            "明年战略级投入的优先级总排序",
+            "风险清单与董事会需重点关注项"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "full-section",
+      "layout_id": "section",
+      "revision": 1,
+      "blocks": [
+        {
+          "id": "fs-i",
+          "slot_id": "index",
+          "type": "text",
+          "text": "Part 01 · 经营复盘"
+        },
+        {
+          "id": "fs-t",
+          "slot_id": "title",
+          "type": "text",
+          "text": "全年经营结果与关键指标复盘"
+        },
+        {
+          "id": "fs-n",
+          "slot_id": "note",
+          "type": "text",
+          "text": "口径：财年内已确认收入，不含代理商尚未结算的尾款 12,345,678 元。"
+        }
+      ]
+    },
+    {
+      "id": "full-kpi",
+      "layout_id": "kpi",
+      "revision": 1,
+      "blocks": [
+        {
+          "id": "fk-t",
+          "slot_id": "title",
+          "type": "text",
+          "text": "三个必须先看清的关键经营结果"
+        },
+        {
+          "id": "fk-1",
+          "slot_id": "kpi1",
+          "type": "kpi",
+          "value": "¥2.48亿",
+          "label": "全年确认收入 ARR",
+          "note": "同比 +38.2%，低于目标 50%"
+        },
+        {
+          "id": "fk-2",
+          "slot_id": "kpi2",
+          "type": "kpi",
+          "value": "87.6%",
+          "label": "企业客户年度续约率",
+          "note": "较去年提升 6.4 个百分点"
+        },
+        {
+          "id": "fk-3",
+          "slot_id": "kpi3",
+          "type": "kpi",
+          "value": "112,456",
+          "label": "月活跃付费席位数",
+          "note": "付费席位占比升至 64.8%"
+        }
+      ]
+    },
+    {
+      "id": "full-chart",
+      "layout_id": "chart",
+      "revision": 1,
+      "blocks": [
+        {
+          "id": "fch-t",
+          "slot_id": "title",
+          "type": "text",
+          "text": "分季度收入构成与同比变化图"
+        },
+        {
+          "id": "fch-c",
+          "slot_id": "chart",
+          "type": "chart",
+          "chart_type": "column",
+          "unit": "百万元",
+          "categories": ["Q1", "Q2", "Q3", "Q4", "YoY"],
+          "series": [
+            {
+              "name": "订阅 Subscription",
+              "values": [38.2, 44.5, 52.1, 61.8, 72.0]
+            },
+            {
+              "name": "实施服务 Delivery",
+              "values": [12.0, 14.3, 13.1, 16.4, 15.0]
+            },
+            {
+              "name": "增值 Add-on",
+              "values": [4.2, 5.1, 6.8, 9.3, 11.0]
+            }
+          ]
+        },
+        {
+          "id": "fch-n",
+          "slot_id": "note",
+          "type": "text",
+          "text": "订阅收入连续四季度环比正增长；Q4 跃升主要来自两家制造业大客户集中签约，以及 InternationalizationFramework 带动的海外试点订单合计 12,345,678 元。"
+        }
+      ]
+    },
+    {
+      "id": "full-bullets",
+      "layout_id": "bullets",
+      "revision": 1,
+      "blocks": [
+        {
+          "id": "fb-t",
+          "slot_id": "title",
+          "type": "text",
+          "text": "产品策略经历的三次关键调整点"
+        },
+        {
+          "id": "fb-b",
+          "slot_id": "body",
+          "type": "bullets",
+          "items": [
+            "上半年停止横向扩展新模块，集中全部资源打磨文档协作主路径",
+            "模板市场改为开放第三方接入，节省两个团队的年度编制与预算",
+            "把 AI 能力从独立入口下沉到各模块内部，周活使用率升至 41.7%",
+            "放弃面向个人用户的免费套餐，聚焦企业采购决策链与席位扩张",
+            "实施交付标准化为四个阶段，客户平均上线周期缩短约 18.5 天",
+            "建立 FeatureFlag 灰度发布框架，显著降低大版本回滚与故障面"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "full-image-right",
+      "layout_id": "image-right",
+      "revision": 1,
+      "blocks": [
+        {
+          "id": "fir-t",
+          "slot_id": "title",
+          "type": "text",
+          "text": "工作流编排 UI 升级预览"
+        },
+        {
+          "id": "fir-b",
+          "slot_id": "body",
+          "type": "bullets",
+          "items": [
+            "可视化编排全面替代脚本配置",
+            "节点失败自动重试与断点续跑",
+            "审批链路打通文档权限与审计",
+            "配置平均耗时下降约达 62.4%"
+          ]
+        },
+        {
+          "id": "fir-i",
+          "slot_id": "image",
+          "type": "image",
+          "source": "placeholder",
+          "alt": "工作流编排界面示意"
+        }
+      ]
+    },
+    {
+      "id": "full-image-left",
+      "layout_id": "image-left",
+      "revision": 1,
+      "blocks": [
+        {
+          "id": "fil-i",
+          "slot_id": "image",
+          "type": "image",
+          "source": "placeholder",
+          "alt": "用户活跃度看板示意"
+        },
+        {
+          "id": "fil-t",
+          "slot_id": "title",
+          "type": "text",
+          "text": "用户结构与留存变化图"
+        },
+        {
+          "id": "fil-b",
+          "slot_id": "body",
+          "type": "bullets",
+          "items": [
+            "制造业客户占比已经升至 34%",
+            "百人以下小团队流失最为严重",
+            "跨部门共用账号留存明显更好",
+            "移动端仅占总使用时长的 9.2%"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "full-two-column",
+      "layout_id": "two-column",
+      "revision": 1,
+      "blocks": [
+        {
+          "id": "ftc-t",
+          "slot_id": "title",
+          "type": "text",
+          "text": "竞争格局与我们当前所处位置"
+        },
+        {
+          "id": "ftc-lh",
+          "slot_id": "left_heading",
+          "type": "text",
+          "text": "我们仍保有的优势"
+        },
+        {
+          "id": "ftc-lb",
+          "slot_id": "left_body",
+          "type": "bullets",
+          "items": [
+            "私有化部署经验足够扎实完整",
+            "文档协作体验仍保持明显领先",
+            "实施团队交付质量长期很稳定",
+            "与主流 OA 系统集成已经完整",
+            "年度 SLA 兑现率稳定在 99.2%"
+          ]
+        },
+        {
+          "id": "ftc-rh",
+          "slot_id": "right_heading",
+          "type": "text",
+          "text": "外部正在加大压力"
+        },
+        {
+          "id": "ftc-rb",
+          "slot_id": "right_body",
+          "type": "bullets",
+          "items": [
+            "头部厂商持续推进捆绑式销售",
+            "中小客户对标价与折扣极敏感",
+            "各家 AI 功能同质化明显加剧",
+            "海外市场合规闭环尚未完成",
+            "关键工程人才成本同比上升 18%"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "full-table",
+      "layout_id": "table",
+      "revision": 1,
+      "blocks": [
+        {
+          "id": "fta-t",
+          "slot_id": "title",
+          "type": "text",
+          "text": "明年各项投入的优先级总览表"
+        },
+        {
+          "id": "fta-tb",
+          "slot_id": "table",
+          "type": "table",
+          "header": ["方向", "投入占比", "负责人", "预算(万)", "里程碑"],
+          "rows": [
+            ["工作流平台", "40%", "产品一部", "3,200", "Q2开放接口"],
+            ["行业解决方案", "25%", "解决方案", "2,000", "Q3三标杆"],
+            ["交付标准化", "20%", "交付中心", "1,600", "Q1发手册"],
+            ["海外试点", "10%", "国际业务", "800", "Q4合规评"],
+            ["数据底座", "5%", "平台工程", "400", "Q2指标仓"],
+            ["安全合规", "—", "安全合规", "350", "ISO续审"],
+            ["Partner生态", "—", "生态合作", "280", "20家认证"]
+          ]
+        }
+      ]
+    },
+    {
+      "id": "full-summary",
+      "layout_id": "summary",
+      "revision": 1,
+      "blocks": [
+        {
+          "id": "fsm-e",
+          "slot_id": "eyebrow",
+          "type": "text",
+          "text": "结论与下一步行动项"
+        },
+        {
+          "id": "fsm-t",
+          "slot_id": "title",
+          "type": "text",
+          "text": "增长仍在，但增长的来源变了"
+        },
+        {
+          "id": "fsm-p",
+          "slot_id": "points",
+          "type": "bullets",
+          "items": [
+            "收入增长依赖大客户集中签约，必须警惕收入集中度风险抬头",
+            "中小客户流失属于结构性问题，单靠降价无法从根上真正解决",
+            "工作流平台是明年唯一战略级投入，其余项目定位为支撑能力",
+            "海外市场先完成合规验证闭环，不设 12,345,678 元收入目标"
+          ]
+        }
+      ]
+    }
+  ]
+}

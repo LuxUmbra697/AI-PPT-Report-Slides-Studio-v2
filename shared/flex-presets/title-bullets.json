@@ -1,0 +1,34 @@
+{
+  "id": "title-bullets",
+  "name": "标题 + 要点",
+  "description": "纵向：kicker → 标题 → 要点",
+  "tree": {
+    "type": "column",
+    "id": "root",
+    "gap_pt": 14,
+    "grow": 1.0,
+    "children": [
+      {
+        "type": "block",
+        "id": "leaf-kicker",
+        "block_id": "kicker",
+        "grow": 0.25,
+        "text_style": "caption"
+      },
+      {
+        "type": "block",
+        "id": "leaf-title",
+        "block_id": "title",
+        "grow": 0.45,
+        "text_style": "title"
+      },
+      {
+        "type": "block",
+        "id": "leaf-body",
+        "block_id": "body",
+        "grow": 1.5,
+        "text_style": "bullet"
+      }
+    ]
+  }
+}

@@ -1,0 +1,77 @@
+{
+  "id": "title-kpi-grid-source",
+  "name": "标题 + 2x2 KPI + 来源",
+  "description": "四格 KPI 加底部 source callout",
+  "tree": {
+    "type": "column",
+    "id": "root",
+    "gap_pt": 12,
+    "grow": 1.0,
+    "children": [
+      {
+        "type": "block",
+        "id": "leaf-kicker",
+        "block_id": "kicker",
+        "grow": 0.25,
+        "text_style": "caption"
+      },
+      {
+        "type": "block",
+        "id": "leaf-title",
+        "block_id": "title",
+        "grow": 0.4,
+        "text_style": "title"
+      },
+      {
+        "type": "row",
+        "id": "kpi-row-1",
+        "gap_pt": 12,
+        "grow": 1.0,
+        "ratios": [50, 50],
+        "preset": "solid_boxes",
+        "children": [
+          {
+            "type": "block",
+            "id": "leaf-kpi-1",
+            "block_id": "kpi_1",
+            "grow": 1.0
+          },
+          {
+            "type": "block",
+            "id": "leaf-kpi-2",
+            "block_id": "kpi_2",
+            "grow": 1.0
+          }
+        ]
+      },
+      {
+        "type": "row",
+        "id": "kpi-row-2",
+        "gap_pt": 12,
+        "grow": 1.0,
+        "ratios": [50, 50],
+        "preset": "solid_boxes",
+        "children": [
+          {
+            "type": "block",
+            "id": "leaf-kpi-3",
+            "block_id": "kpi_3",
+            "grow": 1.0
+          },
+          {
+            "type": "block",
+            "id": "leaf-kpi",
+            "block_id": "kpi",
+            "grow": 1.0
+          }
+        ]
+      },
+      {
+        "type": "block",
+        "id": "leaf-source",
+        "block_id": "source",
+        "grow": 0.35
+      }
+    ]
+  }
+}

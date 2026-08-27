@@ -1,0 +1,115 @@
+{
+  "id": "kpi",
+  "name": "数据卡片组",
+  "usage": "并列展示三个关键指标，突出数字本身",
+  "slots": [
+    {
+      "id": "title",
+      "accepts": [
+        "text"
+      ],
+      "text_style": "title",
+      "required": true,
+      "rect": {
+        "x": 0.075,
+        "y": 0.1037,
+        "w": 0.85,
+        "h": 0.115
+      },
+      "capacity": {
+        "max_lines": 1,
+        "max_chars": 24
+      }
+    },
+    {
+      "id": "kpi1",
+      "accepts": [
+        "kpi"
+      ],
+      "required": true,
+      "rect": {
+        "x": 0.075,
+        "y": 0.45,
+        "w": 0.26,
+        "h": 0.3
+      },
+      "capacity": {
+        "max_chars": 40
+      }
+    },
+    {
+      "id": "kpi2",
+      "accepts": [
+        "kpi"
+      ],
+      "required": true,
+      "rect": {
+        "x": 0.37,
+        "y": 0.45,
+        "w": 0.26,
+        "h": 0.3
+      },
+      "capacity": {
+        "max_chars": 40
+      }
+    },
+    {
+      "id": "kpi3",
+      "accepts": [
+        "kpi"
+      ],
+      "required": true,
+      "rect": {
+        "x": 0.665,
+        "y": 0.45,
+        "w": 0.26,
+        "h": 0.3
+      },
+      "capacity": {
+        "max_chars": 40
+      }
+    }
+  ],
+  "decorations": [
+    {
+      "type": "rule",
+      "rect": {
+        "x": 0.075,
+        "y": 0.231,
+        "w": 0.85,
+        "h": 0.0019
+      },
+      "color": "line"
+    },
+    {
+      "type": "rule",
+      "rect": {
+        "x": 0.075,
+        "y": 0.42,
+        "w": 0.26,
+        "h": 0.005
+      },
+      "color": "accent"
+    },
+    {
+      "type": "rule",
+      "rect": {
+        "x": 0.37,
+        "y": 0.42,
+        "w": 0.26,
+        "h": 0.005
+      },
+      "color": "accent"
+    },
+    {
+      "type": "rule",
+      "rect": {
+        "x": 0.665,
+        "y": 0.42,
+        "w": 0.26,
+        "h": 0.005
+      },
+      "color": "accent"
+    }
+  ]
+}

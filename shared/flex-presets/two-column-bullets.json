@@ -1,0 +1,43 @@
+{
+  "id": "two-column-bullets",
+  "name": "双栏要点",
+  "description": "标题在上，下方左右两栏要点",
+  "tree": {
+    "type": "column",
+    "id": "root",
+    "gap_pt": 16,
+    "grow": 1.0,
+    "children": [
+      {
+        "type": "block",
+        "id": "leaf-title",
+        "block_id": "title",
+        "grow": 0.4,
+        "text_style": "title"
+      },
+      {
+        "type": "row",
+        "id": "body-row",
+        "gap_pt": 16,
+        "ratios": [50, 50],
+        "grow": 1.6,
+        "children": [
+          {
+            "type": "block",
+            "id": "leaf-left",
+            "block_id": "body_left",
+            "grow": 1.0,
+            "text_style": "bullet"
+          },
+          {
+            "type": "block",
+            "id": "leaf-right",
+            "block_id": "body_right",
+            "grow": 1.0,
+            "text_style": "bullet"
+          }
+        ]
+      }
+    ]
+  }
+}

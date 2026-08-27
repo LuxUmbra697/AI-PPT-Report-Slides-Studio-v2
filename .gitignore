@@ -1,0 +1,119 @@
+# 项目文档
+docs/
+
+# 操作系统
+.DS_Store
+.DS_Store?
+._*
+.Spotlight-V100
+.Trashes
+Thumbs.db
+ehthumbs.db
+Desktop.ini
+
+# 编辑器 / IDE
+.idea/
+.vscode/
+*.swp
+*.swo
+*~
+.project
+.classpath
+.settings/
+
+# AI 编码工具（本地目录 / 缓存；项目级说明文件如 AGENTS.md、CLAUDE.md 可按需提交）
+.cursor/
+.claude/
+.codex/
+.agents/
+.windsurf/
+.continue/
+.gemini/
+.copilot/
+.tabnine/
+.zed/
+.augment/
+.repomix/
+.specs/
+.clinerules
+.aider*
+.aider.conf.yml
+.aiderignore
+
+# 环境变量与密钥
+.env
+.env.*
+!.env.example
+*.pem
+*.key
+credentials.json
+secrets.json
+
+# 依赖
+node_modules/
+.pnpm-store/
+.yarn/
+bower_components/
+vendor/
+.venv/
+venv/
+env/
+ENV/
+__pycache__/
+*.py[cod]
+*$py.class
+.Python
+*.egg-info/
+.eggs/
+dist/
+build/
+target/
+*.egg
+
+# 包管理锁文件旁产物 / 缓存
+.npm/
+.cache/
+.parcel-cache/
+.next/
+.nuxt/
+.turbo/
+.vite/
+.output/
+coverage/
+.nyc_output/
+*.tsbuildinfo
+
+# 日志与临时文件
+*.log
+logs/
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+pnpm-debug.log*
+tmp/
+temp/
+*.tmp
+*.temp
+*.bak
+*.orig
+
+# 测试 / 覆盖率
+.pytest_cache/
+.mypy_cache/
+.ruff_cache/
+.tox/
+htmlcov/
+.coverage
+.coverage.*
+
+# 本地对象存储驱动的落盘目录
+backend/var/
+
+# 文字度量字体（本地下载，不提交仓库；见 make fonts）
+backend/fonts/*
+!backend/fonts/.gitkeep
+
+
+# 其他
+*.local
+.history/

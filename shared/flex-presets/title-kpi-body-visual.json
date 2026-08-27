@@ -1,0 +1,63 @@
+{
+  "id": "title-kpi-body-visual",
+  "name": "标题 + 指标行 + 要点与配图",
+  "description": "标题，双 KPI，下方要点与配图并排",
+  "tree": {
+    "type": "column",
+    "id": "root",
+    "gap_pt": 12,
+    "grow": 1.0,
+    "children": [
+      {
+        "type": "block",
+        "id": "leaf-title",
+        "block_id": "title",
+        "grow": 0.4,
+        "text_style": "title"
+      },
+      {
+        "type": "row",
+        "id": "kpi-row",
+        "gap_pt": 12,
+        "grow": 0.7,
+        "ratios": [50, 50],
+        "children": [
+          {
+            "type": "block",
+            "id": "leaf-kpi-1",
+            "block_id": "kpi_1",
+            "grow": 1.0
+          },
+          {
+            "type": "block",
+            "id": "leaf-kpi-2",
+            "block_id": "kpi_2",
+            "grow": 1.0
+          }
+        ]
+      },
+      {
+        "type": "row",
+        "id": "main",
+        "gap_pt": 16,
+        "grow": 1.5,
+        "ratios": [58, 42],
+        "children": [
+          {
+            "type": "block",
+            "id": "leaf-body",
+            "block_id": "body",
+            "grow": 1.0,
+            "text_style": "bullet"
+          },
+          {
+            "type": "block",
+            "id": "leaf-visual",
+            "block_id": "visual",
+            "grow": 1.0
+          }
+        ]
+      }
+    ]
+  }
+}

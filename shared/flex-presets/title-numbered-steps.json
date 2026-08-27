@@ -1,0 +1,57 @@
+{
+  "id": "title-numbered-steps",
+  "name": "标题 + 编号步骤",
+  "description": "纵向步骤列表，挂 numbered_steps 皮肤",
+  "tree": {
+    "type": "column",
+    "id": "root",
+    "gap_pt": 14,
+    "grow": 1.0,
+    "children": [
+      {
+        "type": "block",
+        "id": "leaf-kicker",
+        "block_id": "kicker",
+        "grow": 0.25,
+        "text_style": "caption"
+      },
+      {
+        "type": "block",
+        "id": "leaf-title",
+        "block_id": "title",
+        "grow": 0.45,
+        "text_style": "title"
+      },
+      {
+        "type": "column",
+        "id": "steps",
+        "gap_pt": 12,
+        "grow": 1.8,
+        "preset": "numbered_steps",
+        "children": [
+          {
+            "type": "block",
+            "id": "leaf-body-left",
+            "block_id": "body_left",
+            "grow": 1.0,
+            "text_style": "body"
+          },
+          {
+            "type": "block",
+            "id": "leaf-body-right",
+            "block_id": "body_right",
+            "grow": 1.0,
+            "text_style": "body"
+          },
+          {
+            "type": "block",
+            "id": "leaf-body",
+            "block_id": "body",
+            "grow": 1.0,
+            "text_style": "body"
+          }
+        ]
+      }
+    ]
+  }
+}

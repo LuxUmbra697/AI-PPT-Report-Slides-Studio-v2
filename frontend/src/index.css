@@ -1,0 +1,107 @@
+@import 'tailwindcss';
+
+@import '@fontsource-variable/manrope';
+/* 幻灯片主题（shared/themes）里声明了衬线标题字体，必须随应用一起加载 */
+@import '@fontsource/instrument-serif';
+
+/* 应用外壳的设计令牌。注意：这一套只服务于产品界面本身，
+   幻灯片主题的令牌另有一套（shared/themes），两者不可混用，
+   否则切换 PPT 主题时会连带改变编辑器界面。 */
+@theme {
+  /* 末尾的 emoji 字体是兜底：正文字体里没有 emoji 码位，不兜就是方框 */
+  --font-emoji: 'Apple Color Emoji', 'Segoe UI Emoji', 'Noto Color Emoji';
+  --font-sans: 'Manrope Variable', 'PingFang SC', 'Microsoft YaHei', var(--font-emoji), sans-serif;
+  --font-display: 'Manrope Variable', 'PingFang SC', 'Microsoft YaHei', var(--font-emoji),
+    sans-serif;
+
+  --color-canvas: #f3f6fb;
+  --color-surface: #ffffff;
+  --color-surface-soft: #f7f9fd;
+  --color-ink: #0f1522;
+  --color-ink-soft: #3d4657;
+  --color-ink-muted: #7b8598;
+  --color-line: #e4eaf3;
+  --color-line-strong: #ccd6e6;
+  --color-accent: #2f4bff;
+  --color-accent-soft: #eaeeff;
+  --color-positive: #0f9d6a;
+  /* 警告与错误必须能一眼分开：前者只是内容偏长，不阻断导出 */
+  --color-warning: #b5761a;
+  --color-negative: #d93b30;
+
+  --shadow-card: 0 1px 2px rgba(15, 21, 34, 0.04), 0 10px 30px -18px rgba(15, 21, 34, 0.18);
+  --shadow-pop: 0 12px 40px -12px rgba(15, 21, 34, 0.28);
+  --shadow-slide: 0 2px 4px rgba(15, 21, 34, 0.06), 0 24px 60px -28px rgba(15, 21, 34, 0.35);
+}
+
+@layer base {
+  html {
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+  }
+
+  body {
+    background-color: var(--color-canvas);
+    color: var(--color-ink);
+    font-family: var(--font-sans);
+  }
+
+  ::selection {
+    background-color: var(--color-accent);
+    color: #fff;
+  }
+
+  :focus-visible {
+    outline: 2px solid var(--color-accent);
+    outline-offset: 2px;
+  }
+}
+
+/* 创作类页面的空气感底纹：两团低饱和光晕，避免大面积纯色显得单薄 */
+@utility bg-aurora {
+  background-image:
+    radial-gradient(60rem 32rem at 12% -8%, #dde6ff 0%, transparent 60%),
+    radial-gradient(48rem 28rem at 92% 4%, #e6f0ff 0%, transparent 62%);
+  background-repeat: no-repeat;
+}
+
+/* 编辑器画布衬底：比页面底色更深一档，让白色幻灯片成为唯一焦点 */
+@utility bg-stage {
+  background-color: #e9edf5;
+  background-image: radial-gradient(48rem 24rem at 50% -10%, #f4f7fc 0%, transparent 70%);
+}
+
+@utility scrollbar-slim {
+  scrollbar-width: thin;
+  scrollbar-color: var(--color-line-strong) transparent;
+}
+
+/* 演示翻页轻过渡：瞬切质感，不做花哨动画 */
+@keyframes present-slide-in {
+  from {
+    opacity: 0.55;
+  }
+  to {
+    opacity: 1;
+  }
+}
+
+.present-slide-in {
+  animation: present-slide-in 160ms ease-out;
+}
+
+/* 参数胶囊菜单入场：轻量缩放 + 淡入 */
+@keyframes pill-menu-in {
+  from {
+    opacity: 0;
+    transform: translateY(-4px) scale(0.98);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0) scale(1);
+  }
+}
+
+@utility animate-in {
+  animation: pill-menu-in 140ms cubic-bezier(0.2, 0.8, 0.2, 1);
+}

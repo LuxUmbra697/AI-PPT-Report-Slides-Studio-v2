@@ -1,0 +1,90 @@
+{
+  "id": "golden-multi-child",
+  "name": "三子项（golden）",
+  "description": "覆盖 row/column 三子项间隙推进的前后端 solver 基准树；expected_rects 由 backend solve 产出",
+  "tree": {
+    "type": "column",
+    "id": "root",
+    "gap_pt": 16,
+    "grow": 1.0,
+    "children": [
+      {
+        "type": "block",
+        "id": "leaf-title",
+        "block_id": "title",
+        "grow": 0.5,
+        "text_style": "title"
+      },
+      {
+        "type": "row",
+        "id": "kpi-row",
+        "gap_pt": 16,
+        "ratios": [
+          33,
+          34,
+          33
+        ],
+        "grow": 1.0,
+        "children": [
+          {
+            "type": "block",
+            "id": "leaf-kpi-1",
+            "block_id": "kpi_1",
+            "grow": 1.0
+          },
+          {
+            "type": "block",
+            "id": "leaf-kpi-2",
+            "block_id": "kpi_2",
+            "grow": 1.0
+          },
+          {
+            "type": "block",
+            "id": "leaf-kpi-3",
+            "block_id": "kpi_3",
+            "grow": 1.0
+          }
+        ]
+      },
+      {
+        "type": "block",
+        "id": "leaf-body",
+        "block_id": "body",
+        "grow": 1.0,
+        "text_style": "bullet"
+      }
+    ]
+  },
+  "expected_rects": {
+    "title": {
+      "x": 0.05416666666666667,
+      "y": 0.07777777777777778,
+      "w": 0.8916666666666667,
+      "h": 0.15629629629629632
+    },
+    "kpi_1": {
+      "x": 0.05416666666666667,
+      "y": 0.2637037037037037,
+      "w": 0.28325000000000006,
+      "h": 0.31259259259259264
+    },
+    "kpi_2": {
+      "x": 0.35408333333333336,
+      "y": 0.2637037037037037,
+      "w": 0.2918333333333334,
+      "h": 0.31259259259259264
+    },
+    "kpi_3": {
+      "x": 0.6625833333333334,
+      "y": 0.2637037037037037,
+      "w": 0.28325,
+      "h": 0.31259259259259264
+    },
+    "body": {
+      "x": 0.05416666666666667,
+      "y": 0.605925925925926,
+      "w": 0.8916666666666667,
+      "h": 0.31259259259259253
+    }
+  }
+}

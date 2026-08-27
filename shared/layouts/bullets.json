@@ -1,0 +1,56 @@
+{
+  "id": "bullets",
+  "name": "要点列表",
+  "usage": "最通用的正文页，用要点展开论述或罗列结论",
+  "slots": [
+    {
+      "id": "title",
+      "accepts": [
+        "text"
+      ],
+      "text_style": "title",
+      "required": true,
+      "rect": {
+        "x": 0.075,
+        "y": 0.1037,
+        "w": 0.85,
+        "h": 0.115
+      },
+      "capacity": {
+        "max_lines": 1,
+        "max_chars": 24
+      }
+    },
+    {
+      "id": "body",
+      "accepts": [
+        "bullets"
+      ],
+      "text_style": "bullet",
+      "required": true,
+      "rect": {
+        "x": 0.075,
+        "y": 0.265,
+        "w": 0.85,
+        "h": 0.62
+      },
+      "capacity": {
+        "max_items": 6,
+        "max_chars_per_item": 46,
+        "max_lines": 12
+      }
+    }
+  ],
+  "decorations": [
+    {
+      "type": "rule",
+      "rect": {
+        "x": 0.075,
+        "y": 0.231,
+        "w": 0.85,
+        "h": 0.0019
+      },
+      "color": "line"
+    }
+  ]
+}

@@ -1,0 +1,201 @@
+{
+  "cases": [
+    {
+      "name": "竖拉把下方块压到内容软下限：后端会抬回 GROW_MIN 并重分配",
+      "tree": {
+        "type": "column",
+        "id": "root",
+        "gap_pt": 16.0,
+        "grow": 1.0,
+        "children": [
+          {
+            "type": "block",
+            "id": "title",
+            "block_id": "title",
+            "grow": 0.5,
+            "text_style": "title"
+          },
+          {
+            "type": "block",
+            "id": "body",
+            "block_id": "body",
+            "grow": 1.9
+          },
+          {
+            "type": "block",
+            "id": "pic",
+            "block_id": "pic",
+            "grow": 0.1
+          }
+        ]
+      },
+      "expected_grows": {
+        "root": 1.0,
+        "title": 0.5660377358490566,
+        "body": 2.150943396226415,
+        "pic": 0.2830188679245283
+      }
+    },
+    {
+      "name": "列内含 spacer：占位锁定，内容绝对权重不变",
+      "tree": {
+        "type": "column",
+        "id": "root",
+        "gap_pt": 0.0,
+        "grow": 1.0,
+        "children": [
+          {
+            "type": "block",
+            "id": "body",
+            "block_id": "body",
+            "grow": 2.4
+          },
+          {
+            "type": "column",
+            "id": "spacer-tail",
+            "children": [],
+            "gap_pt": 0.0,
+            "grow": 0.0
+          }
+        ]
+      },
+      "expected_grows": {
+        "root": 1.0,
+        "body": 2.4,
+        "spacer-tail": 0.0
+      }
+    },
+    {
+      "name": "ensure 出的高度包装 cell：叶子 grow=GROW_MAX + 种子 spacer",
+      "tree": {
+        "type": "row",
+        "id": "root",
+        "gap_pt": 16.0,
+        "grow": 1.0,
+        "ratios": [
+          62.0,
+          38.0
+        ],
+        "children": [
+          {
+            "type": "column",
+            "id": "cell-1",
+            "gap_pt": 0.0,
+            "grow": 1.0,
+            "children": [
+              {
+                "type": "block",
+                "id": "text",
+                "block_id": "text",
+                "grow": 4.0
+              },
+              {
+                "type": "column",
+                "id": "spacer-seed",
+                "children": [],
+                "gap_pt": 0.0,
+                "grow": 0.001
+              }
+            ]
+          },
+          {
+            "type": "block",
+            "id": "image",
+            "block_id": "image",
+            "grow": 1.0
+          }
+        ]
+      },
+      "expected_grows": {
+        "root": 1.0,
+        "cell-1": 1.0,
+        "text": 4.0,
+        "spacer-seed": 0.001,
+        "image": 1.0
+      }
+    },
+    {
+      "name": "越界 grow：0 与 99 都要钳回 [0.25, 4]",
+      "tree": {
+        "type": "column",
+        "id": "root",
+        "gap_pt": 16.0,
+        "grow": 1.0,
+        "children": [
+          {
+            "type": "block",
+            "id": "tiny",
+            "block_id": "tiny",
+            "grow": 0.0
+          },
+          {
+            "type": "block",
+            "id": "huge",
+            "block_id": "huge",
+            "grow": 99.0
+          },
+          {
+            "type": "block",
+            "id": "mid",
+            "block_id": "mid",
+            "grow": 1.0
+          }
+        ]
+      },
+      "expected_grows": {
+        "root": 1.0,
+        "tiny": 0.25,
+        "huge": 2.2,
+        "mid": 0.55
+      }
+    },
+    {
+      "name": "四列 KPI 行：等分不动",
+      "tree": {
+        "type": "row",
+        "id": "root",
+        "gap_pt": 16.0,
+        "grow": 1.0,
+        "ratios": [
+          25.0,
+          25.0,
+          25.0,
+          25.0
+        ],
+        "children": [
+          {
+            "type": "block",
+            "id": "kpi0",
+            "block_id": "kpi0",
+            "grow": 1.0
+          },
+          {
+            "type": "block",
+            "id": "kpi1",
+            "block_id": "kpi1",
+            "grow": 1.0
+          },
+          {
+            "type": "block",
+            "id": "kpi2",
+            "block_id": "kpi2",
+            "grow": 1.0
+          },
+          {
+            "type": "block",
+            "id": "kpi3",
+            "block_id": "kpi3",
+            "grow": 1.0
+          }
+        ]
+      },
+      "expected_grows": {
+        "root": 1.0,
+        "kpi0": 1.0,
+        "kpi1": 1.0,
+        "kpi2": 1.0,
+        "kpi3": 1.0
+      }
+    }
+  ]
+}

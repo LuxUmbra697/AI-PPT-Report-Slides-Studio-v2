@@ -1,0 +1,55 @@
+{
+  "id": "table",
+  "name": "表格页",
+  "usage": "结构化对照数据，行列均需可在 PowerPoint 中直接编辑",
+  "slots": [
+    {
+      "id": "title",
+      "accepts": [
+        "text"
+      ],
+      "text_style": "title",
+      "required": true,
+      "rect": {
+        "x": 0.075,
+        "y": 0.1037,
+        "w": 0.85,
+        "h": 0.115
+      },
+      "capacity": {
+        "max_lines": 1,
+        "max_chars": 24
+      }
+    },
+    {
+      "id": "table",
+      "accepts": [
+        "table"
+      ],
+      "required": true,
+      "rect": {
+        "x": 0.075,
+        "y": 0.272,
+        "w": 0.85,
+        "h": 0.6
+      },
+      "capacity": {
+        "max_rows": 8,
+        "max_columns": 5,
+        "max_chars_per_cell": 18
+      }
+    }
+  ],
+  "decorations": [
+    {
+      "type": "rule",
+      "rect": {
+        "x": 0.075,
+        "y": 0.231,
+        "w": 0.85,
+        "h": 0.0019
+      },
+      "color": "line"
+    }
+  ]
+}

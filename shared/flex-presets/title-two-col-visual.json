@@ -1,0 +1,57 @@
+{
+  "id": "title-two-col-visual",
+  "name": "标题 + 双栏要点 + 配图",
+  "description": "上标题，下左双栏要点、右配图",
+  "tree": {
+    "type": "column",
+    "id": "root",
+    "gap_pt": 14,
+    "grow": 1.0,
+    "children": [
+      {
+        "type": "block",
+        "id": "leaf-title",
+        "block_id": "title",
+        "grow": 0.45,
+        "text_style": "title"
+      },
+      {
+        "type": "row",
+        "id": "main",
+        "gap_pt": 16,
+        "grow": 1.6,
+        "ratios": [62, 38],
+        "children": [
+          {
+            "type": "column",
+            "id": "left",
+            "gap_pt": 12,
+            "grow": 1.0,
+            "children": [
+              {
+                "type": "block",
+                "id": "leaf-body-left",
+                "block_id": "body_left",
+                "grow": 1.0,
+                "text_style": "bullet"
+              },
+              {
+                "type": "block",
+                "id": "leaf-body-right",
+                "block_id": "body_right",
+                "grow": 1.0,
+                "text_style": "bullet"
+              }
+            ]
+          },
+          {
+            "type": "block",
+            "id": "leaf-image",
+            "block_id": "image",
+            "grow": 1.0
+          }
+        ]
+      }
+    ]
+  }
+}

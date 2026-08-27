@@ -1,0 +1,59 @@
+[project]
+name = "luxumbra-slides-backend"
+version = "0.1.0"
+description = "LuxUmbra Slides API"
+requires-python = ">=3.12"
+dependencies = [
+    "fastapi",
+    "uvicorn[standard]",
+    "pydantic>=2",
+    "pydantic-settings",
+    "sqlalchemy[asyncio]>=2",
+    "asyncpg",
+    "alembic",
+    "redis",
+    "python-dotenv",
+    "pyjwt>=2.13.0",
+    "pwdlib[argon2]>=0.3.0",
+    "email-validator>=2.3.0",
+    "python-pptx>=1.0.2",
+    "markdown-it-py>=4.2.0",
+    "python-docx>=1.2.0",
+    "pdfplumber>=0.11.10",
+    "python-multipart>=0.0.32",
+    "langchain-core>=1",
+    "langchain-openai>=1",
+    "langgraph>=1",
+    "arq>=0.26",
+    "httpx[socks]>=0.28.1",
+    "fonttools>=4.63.0",
+]
+
+[build-system]
+requires = ["hatchling"]
+build-backend = "hatchling.build"
+
+[tool.hatch.build.targets.wheel]
+packages = ["app"]
+
+[dependency-groups]
+dev = [
+    "pytest",
+    "pytest-asyncio",
+    "ruff",
+    "httpx",
+    "reportlab>=5.0.0",
+]
+
+[tool.ruff]
+line-length = 100
+target-version = "py312"
+
+[tool.ruff.lint]
+select = ["E", "F", "I", "UP", "B"]
+
+[tool.pytest.ini_options]
+asyncio_mode = "auto"
+# 全局 async engine 绑定事件循环；session 级 loop 避免跨用例 InterfaceError
+asyncio_default_fixture_loop_scope = "session"
+asyncio_default_test_loop_scope = "session"

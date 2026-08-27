@@ -1,0 +1,3488 @@
+{
+  "cases": [
+    {
+      "theme_id": "ivory",
+      "layout_id": "cover",
+      "slide_index": 2,
+      "occupied_id": "empty",
+      "occupied": [],
+      "expected_shapes": [
+        {
+          "kind": "ellipse",
+          "rect": {
+            "x": 0.6291666666666667,
+            "y": -0.34148148148148144,
+            "w": 0.5416666666666666,
+            "h": 0.9629629629629629
+          },
+          "color": "#FAF8F4",
+          "text": null,
+          "font": null,
+          "size_pt": null,
+          "weight": null,
+          "letter_spacing_pt": 0.0,
+          "align": "left"
+        },
+        {
+          "kind": "ellipse",
+          "rect": {
+            "x": 0.696875,
+            "y": -0.2211111111111111,
+            "w": 0.40625,
+            "h": 0.7222222222222222
+          },
+          "color": "#F9F6F2",
+          "text": null,
+          "font": null,
+          "size_pt": null,
+          "weight": null,
+          "letter_spacing_pt": 0.0,
+          "align": "left"
+        },
+        {
+          "kind": "ellipse",
+          "rect": {
+            "x": 0.7645833333333334,
+            "y": -0.10074074074074071,
+            "w": 0.2708333333333333,
+            "h": 0.48148148148148145
+          },
+          "color": "#F8F4F0",
+          "text": null,
+          "font": null,
+          "size_pt": null,
+          "weight": null,
+          "letter_spacing_pt": 0.0,
+          "align": "left"
+        },
+        {
+          "kind": "ellipse",
+          "rect": {
+            "x": 0.8322916666666667,
+            "y": 0.01962962962962965,
+            "w": 0.13541666666666666,
+            "h": 0.24074074074074073
+          },
+          "color": "#F7F2EE",
+          "text": null,
+          "font": null,
+          "size_pt": null,
+          "weight": null,
+          "letter_spacing_pt": 0.0,
+          "align": "left"
+        },
+        {
+          "kind": "rect",
+          "rect": {
+            "x": 0.24973958333333332,
+            "y": 0.0,
+            "w": 0.0005208333333333315,
+            "h": 1.0
+          },
+          "color": "#E9E5DC",
+          "text": null,
+          "font": null,
+          "size_pt": null,
+          "weight": null,
+          "letter_spacing_pt": 0.0,
+          "align": "left"
+        },
+        {
+          "kind": "rect",
+          "rect": {
+            "x": 0.49973958333333335,
+            "y": 0.0,
+            "w": 0.0005208333333333037,
+            "h": 1.0
+          },
+          "color": "#E9E5DC",
+          "text": null,
+          "font": null,
+          "size_pt": null,
+          "weight": null,
+          "letter_spacing_pt": 0.0,
+          "align": "left"
+        },
+        {
+          "kind": "rect",
+          "rect": {
+            "x": 0.7497395833333333,
+            "y": 0.0,
+            "w": 0.0005208333333333037,
+            "h": 1.0
+          },
+          "color": "#E9E5DC",
+          "text": null,
+          "font": null,
+          "size_pt": null,
+          "weight": null,
+          "letter_spacing_pt": 0.0,
+          "align": "left"
+        },
+        {
+          "kind": "rect",
+          "rect": {
+            "x": 0.0,
+            "y": 0.0,
+            "w": 0.14,
+            "h": 0.007407407407407408
+          },
+          "color": "#B4432B",
+          "text": null,
+          "font": null,
+          "size_pt": null,
+          "weight": null,
+          "letter_spacing_pt": 0.0,
+          "align": "left"
+        },
+        {
+          "kind": "rect",
+          "rect": {
+            "x": 0.8916666666666666,
+            "y": 0.9611111111111111,
+            "w": 0.08750000000000002,
+            "h": 0.0018518518518518823
+          },
+          "color": "#E2BAAF",
+          "text": null,
+          "font": null,
+          "size_pt": null,
+          "weight": null,
+          "letter_spacing_pt": 0.0,
+          "align": "left"
+        },
+        {
+          "kind": "rect",
+          "rect": {
+            "x": 0.9781249999999999,
+            "y": 0.8074074074074075,
+            "w": 0.0010416666666667185,
+            "h": 0.15555555555555556
+          },
+          "color": "#E2BAAF",
+          "text": null,
+          "font": null,
+          "size_pt": null,
+          "weight": null,
+          "letter_spacing_pt": 0.0,
+          "align": "left"
+        }
+      ]
+    },
+    {
+      "theme_id": "ivory",
+      "layout_id": "cover",
+      "slide_index": 2,
+      "occupied_id": "two_column",
+      "occupied": [
+        {
+          "x": 0.05416666666666667,
+          "y": 0.07777777777777778,
+          "w": 0.8916666666666667,
+          "h": 0.14
+        },
+        {
+          "x": 0.05416666666666667,
+          "y": 0.2177777777777778,
+          "w": 0.43583333333333335,
+          "h": 0.7007407407407407
+        },
+        {
+          "x": 0.51,
+          "y": 0.2177777777777778,
+          "w": 0.43583333333333335,
+          "h": 0.7007407407407407
+        }
+      ],
+      "expected_shapes": [
+        {
+          "kind": "ellipse",
+          "rect": {
+            "x": 0.6291666666666667,
+            "y": -0.34148148148148144,
+            "w": 0.5416666666666666,
+            "h": 0.9629629629629629
+          },
+          "color": "#FAF8F4",
+          "text": null,
+          "font": null,
+          "size_pt": null,
+          "weight": null,
+          "letter_spacing_pt": 0.0,
+          "align": "left"
+        },
+        {
+          "kind": "ellipse",
+          "rect": {
+            "x": 0.696875,
+            "y": -0.2211111111111111,
+            "w": 0.40625,
+            "h": 0.7222222222222222
+          },
+          "color": "#F9F6F2",
+          "text": null,
+          "font": null,
+          "size_pt": null,
+          "weight": null,
+          "letter_spacing_pt": 0.0,
+          "align": "left"
+        },
+        {
+          "kind": "ellipse",
+          "rect": {
+            "x": 0.7645833333333334,
+            "y": -0.10074074074074071,
+            "w": 0.2708333333333333,
+            "h": 0.48148148148148145
+          },
+          "color": "#F8F4F0",
+          "text": null,
+          "font": null,
+          "size_pt": null,
+          "weight": null,
+          "letter_spacing_pt": 0.0,
+          "align": "left"
+        },
+        {
+          "kind": "ellipse",
+          "rect": {
+            "x": 0.8322916666666667,
+            "y": 0.01962962962962965,
+            "w": 0.13541666666666666,
+            "h": 0.24074074074074073
+          },
+          "color": "#F7F2EE",
+          "text": null,
+          "font": null,
+          "size_pt": null,
+          "weight": null,
+          "letter_spacing_pt": 0.0,
+          "align": "left"
+        },
+        {
+          "kind": "rect",
+          "rect": {
+            "x": 0.0,
+            "y": 0.0,
+            "w": 0.14,
+            "h": 0.007407407407407408
+          },
+          "color": "#B4432B",
+          "text": null,
+          "font": null,
+          "size_pt": null,
+          "weight": null,
+          "letter_spacing_pt": 0.0,
+          "align": "left"
+        },
+        {
+          "kind": "rect",
+          "rect": {
+            "x": 0.8916666666666666,
+            "y": 0.9611111111111111,
+            "w": 0.08750000000000002,
+            "h": 0.0018518518518518823
+          },
+          "color": "#E2BAAF",
+          "text": null,
+          "font": null,
+          "size_pt": null,
+          "weight": null,
+          "letter_spacing_pt": 0.0,
+          "align": "left"
+        },
+        {
+          "kind": "rect",
+          "rect": {
+            "x": 0.9781249999999999,
+            "y": 0.8074074074074075,
+            "w": 0.0010416666666667185,
+            "h": 0.15555555555555556
+          },
+          "color": "#E2BAAF",
+          "text": null,
+          "font": null,
+          "size_pt": null,
+          "weight": null,
+          "letter_spacing_pt": 0.0,
+          "align": "left"
+        }
+      ]
+    },
+    {
+      "theme_id": "ivory",
+      "layout_id": "section",
+      "slide_index": 2,
+      "occupied_id": "empty",
+      "occupied": [],
+      "expected_shapes": [
+        {
+          "kind": "ellipse",
+          "rect": {
+            "x": 0.6291666666666667,
+            "y": -0.34148148148148144,
+            "w": 0.5416666666666666,
+            "h": 0.9629629629629629
+          },
+          "color": "#FAF8F4",
+          "text": null,
+          "font": null,
+          "size_pt": null,
+          "weight": null,
+          "letter_spacing_pt": 0.0,
+          "align": "left"
+        },
+        {
+          "kind": "ellipse",
+          "rect": {
+            "x": 0.696875,
+            "y": -0.2211111111111111,
+            "w": 0.40625,
+            "h": 0.7222222222222222
+          },
+          "color": "#F9F6F2",
+          "text": null,
+          "font": null,
+          "size_pt": null,
+          "weight": null,
+          "letter_spacing_pt": 0.0,
+          "align": "left"
+        },
+        {
+          "kind": "ellipse",
+          "rect": {
+            "x": 0.7645833333333334,
+            "y": -0.10074074074074071,
+            "w": 0.2708333333333333,
+            "h": 0.48148148148148145
+          },
+          "color": "#F8F4F0",
+          "text": null,
+          "font": null,
+          "size_pt": null,
+          "weight": null,
+          "letter_spacing_pt": 0.0,
+          "align": "left"
+        },
+        {
+          "kind": "ellipse",
+          "rect": {
+            "x": 0.8322916666666667,
+            "y": 0.01962962962962965,
+            "w": 0.13541666666666666,
+            "h": 0.24074074074074073
+          },
+          "color": "#F7F2EE",
+          "text": null,
+          "font": null,
+          "size_pt": null,
+          "weight": null,
+          "letter_spacing_pt": 0.0,
+          "align": "left"
+        },
+        {
+          "kind": "rect",
+          "rect": {
+            "x": 0.24973958333333332,
+            "y": 0.0,
+            "w": 0.0005208333333333315,
+            "h": 1.0
+          },
+          "color": "#E9E5DC",
+          "text": null,
+          "font": null,
+          "size_pt": null,
+          "weight": null,
+          "letter_spacing_pt": 0.0,
+          "align": "left"
+        },
+        {
+          "kind": "rect",
+          "rect": {
+            "x": 0.49973958333333335,
+            "y": 0.0,
+            "w": 0.0005208333333333037,
+            "h": 1.0
+          },
+          "color": "#E9E5DC",
+          "text": null,
+          "font": null,
+          "size_pt": null,
+          "weight": null,
+          "letter_spacing_pt": 0.0,
+          "align": "left"
+        },
+        {
+          "kind": "rect",
+          "rect": {
+            "x": 0.7497395833333333,
+            "y": 0.0,
+            "w": 0.0005208333333333037,
+            "h": 1.0
+          },
+          "color": "#E9E5DC",
+          "text": null,
+          "font": null,
+          "size_pt": null,
+          "weight": null,
+          "letter_spacing_pt": 0.0,
+          "align": "left"
+        },
+        {
+          "kind": "rect",
+          "rect": {
+            "x": 0.0,
+            "y": 0.0,
+            "w": 0.14,
+            "h": 0.007407407407407408
+          },
+          "color": "#B4432B",
+          "text": null,
+          "font": null,
+          "size_pt": null,
+          "weight": null,
+          "letter_spacing_pt": 0.0,
+          "align": "left"
+        },
+        {
+          "kind": "rect",
+          "rect": {
+            "x": 0.8916666666666666,
+            "y": 0.9611111111111111,
+            "w": 0.08750000000000002,
+            "h": 0.0018518518518518823
+          },
+          "color": "#E2BAAF",
+          "text": null,
+          "font": null,
+          "size_pt": null,
+          "weight": null,
+          "letter_spacing_pt": 0.0,
+          "align": "left"
+        },
+        {
+          "kind": "rect",
+          "rect": {
+            "x": 0.9781249999999999,
+            "y": 0.8074074074074075,
+            "w": 0.0010416666666667185,
+            "h": 0.15555555555555556
+          },
+          "color": "#E2BAAF",
+          "text": null,
+          "font": null,
+          "size_pt": null,
+          "weight": null,
+          "letter_spacing_pt": 0.0,
+          "align": "left"
+        }
+      ]
+    },
+    {
+      "theme_id": "ivory",
+      "layout_id": "section",
+      "slide_index": 2,
+      "occupied_id": "two_column",
+      "occupied": [
+        {
+          "x": 0.05416666666666667,
+          "y": 0.07777777777777778,
+          "w": 0.8916666666666667,
+          "h": 0.14
+        },
+        {
+          "x": 0.05416666666666667,
+          "y": 0.2177777777777778,
+          "w": 0.43583333333333335,
+          "h": 0.7007407407407407
+        },
+        {
+          "x": 0.51,
+          "y": 0.2177777777777778,
+          "w": 0.43583333333333335,
+          "h": 0.7007407407407407
+        }
+      ],
+      "expected_shapes": [
+        {
+          "kind": "ellipse",
+          "rect": {
+            "x": 0.6291666666666667,
+            "y": -0.34148148148148144,
+            "w": 0.5416666666666666,
+            "h": 0.9629629629629629
+          },
+          "color": "#FAF8F4",
+          "text": null,
+          "font": null,
+          "size_pt": null,
+          "weight": null,
+          "letter_spacing_pt": 0.0,
+          "align": "left"
+        },
+        {
+          "kind": "ellipse",
+          "rect": {
+            "x": 0.696875,
+            "y": -0.2211111111111111,
+            "w": 0.40625,
+            "h": 0.7222222222222222
+          },
+          "color": "#F9F6F2",
+          "text": null,
+          "font": null,
+          "size_pt": null,
+          "weight": null,
+          "letter_spacing_pt": 0.0,
+          "align": "left"
+        },
+        {
+          "kind": "ellipse",
+          "rect": {
+            "x": 0.7645833333333334,
+            "y": -0.10074074074074071,
+            "w": 0.2708333333333333,
+            "h": 0.48148148148148145
+          },
+          "color": "#F8F4F0",
+          "text": null,
+          "font": null,
+          "size_pt": null,
+          "weight": null,
+          "letter_spacing_pt": 0.0,
+          "align": "left"
+        },
+        {
+          "kind": "ellipse",
+          "rect": {
+            "x": 0.8322916666666667,
+            "y": 0.01962962962962965,
+            "w": 0.13541666666666666,
+            "h": 0.24074074074074073
+          },
+          "color": "#F7F2EE",
+          "text": null,
+          "font": null,
+          "size_pt": null,
+          "weight": null,
+          "letter_spacing_pt": 0.0,
+          "align": "left"
+        },
+        {
+          "kind": "rect",
+          "rect": {
+            "x": 0.0,
+            "y": 0.0,
+            "w": 0.14,
+            "h": 0.007407407407407408
+          },
+          "color": "#B4432B",
+          "text": null,
+          "font": null,
+          "size_pt": null,
+          "weight": null,
+          "letter_spacing_pt": 0.0,
+          "align": "left"
+        },
+        {
+          "kind": "rect",
+          "rect": {
+            "x": 0.8916666666666666,
+            "y": 0.9611111111111111,
+            "w": 0.08750000000000002,
+            "h": 0.0018518518518518823
+          },
+          "color": "#E2BAAF",
+          "text": null,
+          "font": null,
+          "size_pt": null,
+          "weight": null,
+          "letter_spacing_pt": 0.0,
+          "align": "left"
+        },
+        {
+          "kind": "rect",
+          "rect": {
+            "x": 0.9781249999999999,
+            "y": 0.8074074074074075,
+            "w": 0.0010416666666667185,
+            "h": 0.15555555555555556
+          },
+          "color": "#E2BAAF",
+          "text": null,
+          "font": null,
+          "size_pt": null,
+          "weight": null,
+          "letter_spacing_pt": 0.0,
+          "align": "left"
+        }
+      ]
+    },
+    {
+      "theme_id": "ivory",
+      "layout_id": "bullets",
+      "slide_index": 2,
+      "occupied_id": "empty",
+      "occupied": [],
+      "expected_shapes": [
+        {
+          "kind": "ellipse",
+          "rect": {
+            "x": 0.6291666666666667,
+            "y": -0.34148148148148144,
+            "w": 0.5416666666666666,
+            "h": 0.9629629629629629
+          },
+          "color": "#FAF8F4",
+          "text": null,
+          "font": null,
+          "size_pt": null,
+          "weight": null,
+          "letter_spacing_pt": 0.0,
+          "align": "left"
+        },
+        {
+          "kind": "ellipse",
+          "rect": {
+            "x": 0.696875,
+            "y": -0.2211111111111111,
+            "w": 0.40625,
+            "h": 0.7222222222222222
+          },
+          "color": "#F9F6F2",
+          "text": null,
+          "font": null,
+          "size_pt": null,
+          "weight": null,
+          "letter_spacing_pt": 0.0,
+          "align": "left"
+        },
+        {
+          "kind": "ellipse",
+          "rect": {
+            "x": 0.7645833333333334,
+            "y": -0.10074074074074071,
+            "w": 0.2708333333333333,
+            "h": 0.48148148148148145
+          },
+          "color": "#F8F4F0",
+          "text": null,
+          "font": null,
+          "size_pt": null,
+          "weight": null,
+          "letter_spacing_pt": 0.0,
+          "align": "left"
+        },
+        {
+          "kind": "ellipse",
+          "rect": {
+            "x": 0.8322916666666667,
+            "y": 0.01962962962962965,
+            "w": 0.13541666666666666,
+            "h": 0.24074074074074073
+          },
+          "color": "#F7F2EE",
+          "text": null,
+          "font": null,
+          "size_pt": null,
+          "weight": null,
+          "letter_spacing_pt": 0.0,
+          "align": "left"
+        },
+        {
+          "kind": "rect",
+          "rect": {
+            "x": 0.24973958333333332,
+            "y": 0.0,
+            "w": 0.0005208333333333315,
+            "h": 1.0
+          },
+          "color": "#E9E5DC",
+          "text": null,
+          "font": null,
+          "size_pt": null,
+          "weight": null,
+          "letter_spacing_pt": 0.0,
+          "align": "left"
+        },
+        {
+          "kind": "rect",
+          "rect": {
+            "x": 0.49973958333333335,
+            "y": 0.0,
+            "w": 0.0005208333333333037,
+            "h": 1.0
+          },
+          "color": "#E9E5DC",
+          "text": null,
+          "font": null,
+          "size_pt": null,
+          "weight": null,
+          "letter_spacing_pt": 0.0,
+          "align": "left"
+        },
+        {
+          "kind": "rect",
+          "rect": {
+            "x": 0.7497395833333333,
+            "y": 0.0,
+            "w": 0.0005208333333333037,
+            "h": 1.0
+          },
+          "color": "#E9E5DC",
+          "text": null,
+          "font": null,
+          "size_pt": null,
+          "weight": null,
+          "letter_spacing_pt": 0.0,
+          "align": "left"
+        },
+        {
+          "kind": "rect",
+          "rect": {
+            "x": 0.0,
+            "y": 0.0,
+            "w": 0.14,
+            "h": 0.007407407407407408
+          },
+          "color": "#B4432B",
+          "text": null,
+          "font": null,
+          "size_pt": null,
+          "weight": null,
+          "letter_spacing_pt": 0.0,
+          "align": "left"
+        },
+        {
+          "kind": "text",
+          "rect": {
+            "x": 0.75,
+            "y": 0.8,
+            "w": 0.24,
+            "h": 0.19
+          },
+          "color": "#E9E4DA",
+          "text": "03",
+          "font": "display",
+          "size_pt": 108.0,
+          "weight": 400,
+          "letter_spacing_pt": 0.0,
+          "align": "right"
+        }
+      ]
+    },
+    {
+      "theme_id": "ivory",
+      "layout_id": "bullets",
+      "slide_index": 2,
+      "occupied_id": "two_column",
+      "occupied": [
+        {
+          "x": 0.05416666666666667,
+          "y": 0.07777777777777778,
+          "w": 0.8916666666666667,
+          "h": 0.14
+        },
+        {
+          "x": 0.05416666666666667,
+          "y": 0.2177777777777778,
+          "w": 0.43583333333333335,
+          "h": 0.7007407407407407
+        },
+        {
+          "x": 0.51,
+          "y": 0.2177777777777778,
+          "w": 0.43583333333333335,
+          "h": 0.7007407407407407
+        }
+      ],
+      "expected_shapes": [
+        {
+          "kind": "ellipse",
+          "rect": {
+            "x": 0.6291666666666667,
+            "y": -0.34148148148148144,
+            "w": 0.5416666666666666,
+            "h": 0.9629629629629629
+          },
+          "color": "#FAF8F4",
+          "text": null,
+          "font": null,
+          "size_pt": null,
+          "weight": null,
+          "letter_spacing_pt": 0.0,
+          "align": "left"
+        },
+        {
+          "kind": "ellipse",
+          "rect": {
+            "x": 0.696875,
+            "y": -0.2211111111111111,
+            "w": 0.40625,
+            "h": 0.7222222222222222
+          },
+          "color": "#F9F6F2",
+          "text": null,
+          "font": null,
+          "size_pt": null,
+          "weight": null,
+          "letter_spacing_pt": 0.0,
+          "align": "left"
+        },
+        {
+          "kind": "ellipse",
+          "rect": {
+            "x": 0.7645833333333334,
+            "y": -0.10074074074074071,
+            "w": 0.2708333333333333,
+            "h": 0.48148148148148145
+          },
+          "color": "#F8F4F0",
+          "text": null,
+          "font": null,
+          "size_pt": null,
+          "weight": null,
+          "letter_spacing_pt": 0.0,
+          "align": "left"
+        },
+        {
+          "kind": "ellipse",
+          "rect": {
+            "x": 0.8322916666666667,
+            "y": 0.01962962962962965,
+            "w": 0.13541666666666666,
+            "h": 0.24074074074074073
+          },
+          "color": "#F7F2EE",
+          "text": null,
+          "font": null,
+          "size_pt": null,
+          "weight": null,
+          "letter_spacing_pt": 0.0,
+          "align": "left"
+        },
+        {
+          "kind": "rect",
+          "rect": {
+            "x": 0.0,
+            "y": 0.0,
+            "w": 0.14,
+            "h": 0.007407407407407408
+          },
+          "color": "#B4432B",
+          "text": null,
+          "font": null,
+          "size_pt": null,
+          "weight": null,
+          "letter_spacing_pt": 0.0,
+          "align": "left"
+        }
+      ]
+    },
+    {
+      "theme_id": "midnight",
+      "layout_id": "cover",
+      "slide_index": 2,
+      "occupied_id": "empty",
+      "occupied": [],
+      "expected_shapes": [
+        {
+          "kind": "ellipse",
+          "rect": {
+            "x": 0.6491666666666667,
+            "y": 0.39851851851851855,
+            "w": 0.5416666666666666,
+            "h": 0.9629629629629629
+          },
+          "color": "#101A24",
+          "text": null,
+          "font": null,
+          "size_pt": null,
+          "weight": null,
+          "letter_spacing_pt": 0.0,
+          "align": "left"
+        },
+        {
+          "kind": "ellipse",
+          "rect": {
+            "x": 0.716875,
+            "y": 0.518888888888889,
+            "w": 0.40625,
+            "h": 0.7222222222222222
+          },
+          "color": "#111E28",
+          "text": null,
+          "font": null,
+          "size_pt": null,
+          "weight": null,
+          "letter_spacing_pt": 0.0,
+          "align": "left"
+        },
+        {
+          "kind": "ellipse",
+          "rect": {
+            "x": 0.7845833333333334,
+            "y": 0.6392592592592593,
+            "w": 0.2708333333333333,
+            "h": 0.48148148148148145
+          },
+          "color": "#13232C",
+          "text": null,
+          "font": null,
+          "size_pt": null,
+          "weight": null,
+          "letter_spacing_pt": 0.0,
+          "align": "left"
+        },
+        {
+          "kind": "ellipse",
+          "rect": {
+            "x": 0.8522916666666667,
+            "y": 0.7596296296296297,
+            "w": 0.13541666666666666,
+            "h": 0.24074074074074073
+          },
+          "color": "#142830",
+          "text": null,
+          "font": null,
+          "size_pt": null,
+          "weight": null,
+          "letter_spacing_pt": 0.0,
+          "align": "left"
+        },
+        {
+          "kind": "rect",
+          "rect": {
+            "x": 0.24973958333333332,
+            "y": 0.0,
+            "w": 0.0005208333333333315,
+            "h": 1.0
+          },
+          "color": "#1B2735",
+          "text": null,
+          "font": null,
+          "size_pt": null,
+          "weight": null,
+          "letter_spacing_pt": 0.0,
+          "align": "left"
+        },
+        {
+          "kind": "rect",
+          "rect": {
+            "x": 0.49973958333333335,
+            "y": 0.0,
+            "w": 0.0005208333333333037,
+            "h": 1.0
+          },
+          "color": "#1B2735",
+          "text": null,
+          "font": null,
+          "size_pt": null,
+          "weight": null,
+          "letter_spacing_pt": 0.0,
+          "align": "left"
+        },
+        {
+          "kind": "rect",
+          "rect": {
+            "x": 0.7497395833333333,
+            "y": 0.0,
+            "w": 0.0005208333333333037,
+            "h": 1.0
+          },
+          "color": "#1B2735",
+          "text": null,
+          "font": null,
+          "size_pt": null,
+          "weight": null,
+          "letter_spacing_pt": 0.0,
+          "align": "left"
+        },
+        {
+          "kind": "rect",
+          "rect": {
+            "x": 0.0,
+            "y": 0.0,
+            "w": 0.16,
+            "h": 0.005555555555555556
+          },
+          "color": "#4FD1C5",
+          "text": null,
+          "font": null,
+          "size_pt": null,
+          "weight": null,
+          "letter_spacing_pt": 0.0,
+          "align": "left"
+        },
+        {
+          "kind": "rect",
+          "rect": {
+            "x": 0.9020833333333333,
+            "y": 0.9638888888888889,
+            "w": 0.07916666666666661,
+            "h": 0.002777777777777768
+          },
+          "color": "#286062",
+          "text": null,
+          "font": null,
+          "size_pt": null,
+          "weight": null,
+          "letter_spacing_pt": 0.0,
+          "align": "left"
+        },
+        {
+          "kind": "rect",
+          "rect": {
+            "x": 0.9796874999999999,
+            "y": 0.825925925925926,
+            "w": 0.0015625000000000222,
+            "h": 0.14074074074074072
+          },
+          "color": "#286062",
+          "text": null,
+          "font": null,
+          "size_pt": null,
+          "weight": null,
+          "letter_spacing_pt": 0.0,
+          "align": "left"
+        }
+      ]
+    },
+    {
+      "theme_id": "midnight",
+      "layout_id": "cover",
+      "slide_index": 2,
+      "occupied_id": "two_column",
+      "occupied": [
+        {
+          "x": 0.05416666666666667,
+          "y": 0.07777777777777778,
+          "w": 0.8916666666666667,
+          "h": 0.14
+        },
+        {
+          "x": 0.05416666666666667,
+          "y": 0.2177777777777778,
+          "w": 0.43583333333333335,
+          "h": 0.7007407407407407
+        },
+        {
+          "x": 0.51,
+          "y": 0.2177777777777778,
+          "w": 0.43583333333333335,
+          "h": 0.7007407407407407
+        }
+      ],
+      "expected_shapes": [
+        {
+          "kind": "ellipse",
+          "rect": {
+            "x": 0.6491666666666667,
+            "y": 0.39851851851851855,
+            "w": 0.5416666666666666,
+            "h": 0.9629629629629629
+          },
+          "color": "#101A24",
+          "text": null,
+          "font": null,
+          "size_pt": null,
+          "weight": null,
+          "letter_spacing_pt": 0.0,
+          "align": "left"
+        },
+        {
+          "kind": "ellipse",
+          "rect": {
+            "x": 0.716875,
+            "y": 0.518888888888889,
+            "w": 0.40625,
+            "h": 0.7222222222222222
+          },
+          "color": "#111E28",
+          "text": null,
+          "font": null,
+          "size_pt": null,
+          "weight": null,
+          "letter_spacing_pt": 0.0,
+          "align": "left"
+        },
+        {
+          "kind": "ellipse",
+          "rect": {
+            "x": 0.7845833333333334,
+            "y": 0.6392592592592593,
+            "w": 0.2708333333333333,
+            "h": 0.48148148148148145
+          },
+          "color": "#13232C",
+          "text": null,
+          "font": null,
+          "size_pt": null,
+          "weight": null,
+          "letter_spacing_pt": 0.0,
+          "align": "left"
+        },
+        {
+          "kind": "ellipse",
+          "rect": {
+            "x": 0.8522916666666667,
+            "y": 0.7596296296296297,
+            "w": 0.13541666666666666,
+            "h": 0.24074074074074073
+          },
+          "color": "#142830",
+          "text": null,
+          "font": null,
+          "size_pt": null,
+          "weight": null,
+          "letter_spacing_pt": 0.0,
+          "align": "left"
+        },
+        {
+          "kind": "rect",
+          "rect": {
+            "x": 0.0,
+            "y": 0.0,
+            "w": 0.16,
+            "h": 0.005555555555555556
+          },
+          "color": "#4FD1C5",
+          "text": null,
+          "font": null,
+          "size_pt": null,
+          "weight": null,
+          "letter_spacing_pt": 0.0,
+          "align": "left"
+        },
+        {
+          "kind": "rect",
+          "rect": {
+            "x": 0.9020833333333333,
+            "y": 0.9638888888888889,
+            "w": 0.07916666666666661,
+            "h": 0.002777777777777768
+          },
+          "color": "#286062",
+          "text": null,
+          "font": null,
+          "size_pt": null,
+          "weight": null,
+          "letter_spacing_pt": 0.0,
+          "align": "left"
+        },
+        {
+          "kind": "rect",
+          "rect": {
+            "x": 0.9796874999999999,
+            "y": 0.825925925925926,
+            "w": 0.0015625000000000222,
+            "h": 0.14074074074074072
+          },
+          "color": "#286062",
+          "text": null,
+          "font": null,
+          "size_pt": null,
+          "weight": null,
+          "letter_spacing_pt": 0.0,
+          "align": "left"
+        }
+      ]
+    },
+    {
+      "theme_id": "midnight",
+      "layout_id": "section",
+      "slide_index": 2,
+      "occupied_id": "empty",
+      "occupied": [],
+      "expected_shapes": [
+        {
+          "kind": "ellipse",
+          "rect": {
+            "x": 0.6491666666666667,
+            "y": 0.39851851851851855,
+            "w": 0.5416666666666666,
+            "h": 0.9629629629629629
+          },
+          "color": "#101A24",
+          "text": null,
+          "font": null,
+          "size_pt": null,
+          "weight": null,
+          "letter_spacing_pt": 0.0,
+          "align": "left"
+        },
+        {
+          "kind": "ellipse",
+          "rect": {
+            "x": 0.716875,
+            "y": 0.518888888888889,
+            "w": 0.40625,
+            "h": 0.7222222222222222
+          },
+          "color": "#111E28",
+          "text": null,
+          "font": null,
+          "size_pt": null,
+          "weight": null,
+          "letter_spacing_pt": 0.0,
+          "align": "left"
+        },
+        {
+          "kind": "ellipse",
+          "rect": {
+            "x": 0.7845833333333334,
+            "y": 0.6392592592592593,
+            "w": 0.2708333333333333,
+            "h": 0.48148148148148145
+          },
+          "color": "#13232C",
+          "text": null,
+          "font": null,
+          "size_pt": null,
+          "weight": null,
+          "letter_spacing_pt": 0.0,
+          "align": "left"
+        },
+        {
+          "kind": "ellipse",
+          "rect": {
+            "x": 0.8522916666666667,
+            "y": 0.7596296296296297,
+            "w": 0.13541666666666666,
+            "h": 0.24074074074074073
+          },
+          "color": "#142830",
+          "text": null,
+          "font": null,
+          "size_pt": null,
+          "weight": null,
+          "letter_spacing_pt": 0.0,
+          "align": "left"
+        },
+        {
+          "kind": "rect",
+          "rect": {
+            "x": 0.24973958333333332,
+            "y": 0.0,
+            "w": 0.0005208333333333315,
+            "h": 1.0
+          },
+          "color": "#1B2735",
+          "text": null,
+          "font": null,
+          "size_pt": null,
+          "weight": null,
+          "letter_spacing_pt": 0.0,
+          "align": "left"
+        },
+        {
+          "kind": "rect",
+          "rect": {
+            "x": 0.49973958333333335,
+            "y": 0.0,
+            "w": 0.0005208333333333037,
+            "h": 1.0
+          },
+          "color": "#1B2735",
+          "text": null,
+          "font": null,
+          "size_pt": null,
+          "weight": null,
+          "letter_spacing_pt": 0.0,
+          "align": "left"
+        },
+        {
+          "kind": "rect",
+          "rect": {
+            "x": 0.7497395833333333,
+            "y": 0.0,
+            "w": 0.0005208333333333037,
+            "h": 1.0
+          },
+          "color": "#1B2735",
+          "text": null,
+          "font": null,
+          "size_pt": null,
+          "weight": null,
+          "letter_spacing_pt": 0.0,
+          "align": "left"
+        },
+        {
+          "kind": "rect",
+          "rect": {
+            "x": 0.0,
+            "y": 0.0,
+            "w": 0.16,
+            "h": 0.005555555555555556
+          },
+          "color": "#4FD1C5",
+          "text": null,
+          "font": null,
+          "size_pt": null,
+          "weight": null,
+          "letter_spacing_pt": 0.0,
+          "align": "left"
+        },
+        {
+          "kind": "rect",
+          "rect": {
+            "x": 0.9020833333333333,
+            "y": 0.9638888888888889,
+            "w": 0.07916666666666661,
+            "h": 0.002777777777777768
+          },
+          "color": "#286062",
+          "text": null,
+          "font": null,
+          "size_pt": null,
+          "weight": null,
+          "letter_spacing_pt": 0.0,
+          "align": "left"
+        },
+        {
+          "kind": "rect",
+          "rect": {
+            "x": 0.9796874999999999,
+            "y": 0.825925925925926,
+            "w": 0.0015625000000000222,
+            "h": 0.14074074074074072
+          },
+          "color": "#286062",
+          "text": null,
+          "font": null,
+          "size_pt": null,
+          "weight": null,
+          "letter_spacing_pt": 0.0,
+          "align": "left"
+        }
+      ]
+    },
+    {
+      "theme_id": "midnight",
+      "layout_id": "section",
+      "slide_index": 2,
+      "occupied_id": "two_column",
+      "occupied": [
+        {
+          "x": 0.05416666666666667,
+          "y": 0.07777777777777778,
+          "w": 0.8916666666666667,
+          "h": 0.14
+        },
+        {
+          "x": 0.05416666666666667,
+          "y": 0.2177777777777778,
+          "w": 0.43583333333333335,
+          "h": 0.7007407407407407
+        },
+        {
+          "x": 0.51,
+          "y": 0.2177777777777778,
+          "w": 0.43583333333333335,
+          "h": 0.7007407407407407
+        }
+      ],
+      "expected_shapes": [
+        {
+          "kind": "ellipse",
+          "rect": {
+            "x": 0.6491666666666667,
+            "y": 0.39851851851851855,
+            "w": 0.5416666666666666,
+            "h": 0.9629629629629629
+          },
+          "color": "#101A24",
+          "text": null,
+          "font": null,
+          "size_pt": null,
+          "weight": null,
+          "letter_spacing_pt": 0.0,
+          "align": "left"
+        },
+        {
+          "kind": "ellipse",
+          "rect": {
+            "x": 0.716875,
+            "y": 0.518888888888889,
+            "w": 0.40625,
+            "h": 0.7222222222222222
+          },
+          "color": "#111E28",
+          "text": null,
+          "font": null,
+          "size_pt": null,
+          "weight": null,
+          "letter_spacing_pt": 0.0,
+          "align": "left"
+        },
+        {
+          "kind": "ellipse",
+          "rect": {
+            "x": 0.7845833333333334,
+            "y": 0.6392592592592593,
+            "w": 0.2708333333333333,
+            "h": 0.48148148148148145
+          },
+          "color": "#13232C",
+          "text": null,
+          "font": null,
+          "size_pt": null,
+          "weight": null,
+          "letter_spacing_pt": 0.0,
+          "align": "left"
+        },
+        {
+          "kind": "ellipse",
+          "rect": {
+            "x": 0.8522916666666667,
+            "y": 0.7596296296296297,
+            "w": 0.13541666666666666,
+            "h": 0.24074074074074073
+          },
+          "color": "#142830",
+          "text": null,
+          "font": null,
+          "size_pt": null,
+          "weight": null,
+          "letter_spacing_pt": 0.0,
+          "align": "left"
+        },
+        {
+          "kind": "rect",
+          "rect": {
+            "x": 0.0,
+            "y": 0.0,
+            "w": 0.16,
+            "h": 0.005555555555555556
+          },
+          "color": "#4FD1C5",
+          "text": null,
+          "font": null,
+          "size_pt": null,
+          "weight": null,
+          "letter_spacing_pt": 0.0,
+          "align": "left"
+        },
+        {
+          "kind": "rect",
+          "rect": {
+            "x": 0.9020833333333333,
+            "y": 0.9638888888888889,
+            "w": 0.07916666666666661,
+            "h": 0.002777777777777768
+          },
+          "color": "#286062",
+          "text": null,
+          "font": null,
+          "size_pt": null,
+          "weight": null,
+          "letter_spacing_pt": 0.0,
+          "align": "left"
+        },
+        {
+          "kind": "rect",
+          "rect": {
+            "x": 0.9796874999999999,
+            "y": 0.825925925925926,
+            "w": 0.0015625000000000222,
+            "h": 0.14074074074074072
+          },
+          "color": "#286062",
+          "text": null,
+          "font": null,
+          "size_pt": null,
+          "weight": null,
+          "letter_spacing_pt": 0.0,
+          "align": "left"
+        }
+      ]
+    },
+    {
+      "theme_id": "midnight",
+      "layout_id": "bullets",
+      "slide_index": 2,
+      "occupied_id": "empty",
+      "occupied": [],
+      "expected_shapes": [
+        {
+          "kind": "ellipse",
+          "rect": {
+            "x": 0.6491666666666667,
+            "y": 0.39851851851851855,
+            "w": 0.5416666666666666,
+            "h": 0.9629629629629629
+          },
+          "color": "#101A24",
+          "text": null,
+          "font": null,
+          "size_pt": null,
+          "weight": null,
+          "letter_spacing_pt": 0.0,
+          "align": "left"
+        },
+        {
+          "kind": "ellipse",
+          "rect": {
+            "x": 0.716875,
+            "y": 0.518888888888889,
+            "w": 0.40625,
+            "h": 0.7222222222222222
+          },
+          "color": "#111E28",
+          "text": null,
+          "font": null,
+          "size_pt": null,
+          "weight": null,
+          "letter_spacing_pt": 0.0,
+          "align": "left"
+        },
+        {
+          "kind": "ellipse",
+          "rect": {
+            "x": 0.7845833333333334,
+            "y": 0.6392592592592593,
+            "w": 0.2708333333333333,
+            "h": 0.48148148148148145
+          },
+          "color": "#13232C",
+          "text": null,
+          "font": null,
+          "size_pt": null,
+          "weight": null,
+          "letter_spacing_pt": 0.0,
+          "align": "left"
+        },
+        {
+          "kind": "ellipse",
+          "rect": {
+            "x": 0.8522916666666667,
+            "y": 0.7596296296296297,
+            "w": 0.13541666666666666,
+            "h": 0.24074074074074073
+          },
+          "color": "#142830",
+          "text": null,
+          "font": null,
+          "size_pt": null,
+          "weight": null,
+          "letter_spacing_pt": 0.0,
+          "align": "left"
+        },
+        {
+          "kind": "rect",
+          "rect": {
+            "x": 0.24973958333333332,
+            "y": 0.0,
+            "w": 0.0005208333333333315,
+            "h": 1.0
+          },
+          "color": "#1B2735",
+          "text": null,
+          "font": null,
+          "size_pt": null,
+          "weight": null,
+          "letter_spacing_pt": 0.0,
+          "align": "left"
+        },
+        {
+          "kind": "rect",
+          "rect": {
+            "x": 0.49973958333333335,
+            "y": 0.0,
+            "w": 0.0005208333333333037,
+            "h": 1.0
+          },
+          "color": "#1B2735",
+          "text": null,
+          "font": null,
+          "size_pt": null,
+          "weight": null,
+          "letter_spacing_pt": 0.0,
+          "align": "left"
+        },
+        {
+          "kind": "rect",
+          "rect": {
+            "x": 0.7497395833333333,
+            "y": 0.0,
+            "w": 0.0005208333333333037,
+            "h": 1.0
+          },
+          "color": "#1B2735",
+          "text": null,
+          "font": null,
+          "size_pt": null,
+          "weight": null,
+          "letter_spacing_pt": 0.0,
+          "align": "left"
+        },
+        {
+          "kind": "rect",
+          "rect": {
+            "x": 0.0,
+            "y": 0.0,
+            "w": 0.16,
+            "h": 0.005555555555555556
+          },
+          "color": "#4FD1C5",
+          "text": null,
+          "font": null,
+          "size_pt": null,
+          "weight": null,
+          "letter_spacing_pt": 0.0,
+          "align": "left"
+        }
+      ]
+    },
+    {
+      "theme_id": "midnight",
+      "layout_id": "bullets",
+      "slide_index": 2,
+      "occupied_id": "two_column",
+      "occupied": [
+        {
+          "x": 0.05416666666666667,
+          "y": 0.07777777777777778,
+          "w": 0.8916666666666667,
+          "h": 0.14
+        },
+        {
+          "x": 0.05416666666666667,
+          "y": 0.2177777777777778,
+          "w": 0.43583333333333335,
+          "h": 0.7007407407407407
+        },
+        {
+          "x": 0.51,
+          "y": 0.2177777777777778,
+          "w": 0.43583333333333335,
+          "h": 0.7007407407407407
+        }
+      ],
+      "expected_shapes": [
+        {
+          "kind": "ellipse",
+          "rect": {
+            "x": 0.6491666666666667,
+            "y": 0.39851851851851855,
+            "w": 0.5416666666666666,
+            "h": 0.9629629629629629
+          },
+          "color": "#101A24",
+          "text": null,
+          "font": null,
+          "size_pt": null,
+          "weight": null,
+          "letter_spacing_pt": 0.0,
+          "align": "left"
+        },
+        {
+          "kind": "ellipse",
+          "rect": {
+            "x": 0.716875,
+            "y": 0.518888888888889,
+            "w": 0.40625,
+            "h": 0.7222222222222222
+          },
+          "color": "#111E28",
+          "text": null,
+          "font": null,
+          "size_pt": null,
+          "weight": null,
+          "letter_spacing_pt": 0.0,
+          "align": "left"
+        },
+        {
+          "kind": "ellipse",
+          "rect": {
+            "x": 0.7845833333333334,
+            "y": 0.6392592592592593,
+            "w": 0.2708333333333333,
+            "h": 0.48148148148148145
+          },
+          "color": "#13232C",
+          "text": null,
+          "font": null,
+          "size_pt": null,
+          "weight": null,
+          "letter_spacing_pt": 0.0,
+          "align": "left"
+        },
+        {
+          "kind": "ellipse",
+          "rect": {
+            "x": 0.8522916666666667,
+            "y": 0.7596296296296297,
+            "w": 0.13541666666666666,
+            "h": 0.24074074074074073
+          },
+          "color": "#142830",
+          "text": null,
+          "font": null,
+          "size_pt": null,
+          "weight": null,
+          "letter_spacing_pt": 0.0,
+          "align": "left"
+        },
+        {
+          "kind": "rect",
+          "rect": {
+            "x": 0.0,
+            "y": 0.0,
+            "w": 0.16,
+            "h": 0.005555555555555556
+          },
+          "color": "#4FD1C5",
+          "text": null,
+          "font": null,
+          "size_pt": null,
+          "weight": null,
+          "letter_spacing_pt": 0.0,
+          "align": "left"
+        }
+      ]
+    },
+    {
+      "theme_id": "obsidian",
+      "layout_id": "cover",
+      "slide_index": 2,
+      "occupied_id": "empty",
+      "occupied": [],
+      "expected_shapes": [
+        {
+          "kind": "ellipse",
+          "rect": {
+            "x": 0.5575,
+            "y": -0.47555555555555556,
+            "w": 0.625,
+            "h": 1.1111111111111112
+          },
+          "color": "#101010",
+          "text": null,
+          "font": null,
+          "size_pt": null,
+          "weight": null,
+          "letter_spacing_pt": 0.0,
+          "align": "left"
+        },
+        {
+          "kind": "ellipse",
+          "rect": {
+            "x": 0.635625,
+            "y": -0.33666666666666667,
+            "w": 0.46875,
+            "h": 0.8333333333333334
+          },
+          "color": "#151413",
+          "text": null,
+          "font": null,
+          "size_pt": null,
+          "weight": null,
+          "letter_spacing_pt": 0.0,
+          "align": "left"
+        },
+        {
+          "kind": "ellipse",
+          "rect": {
+            "x": 0.71375,
+            "y": -0.19777777777777777,
+            "w": 0.3125,
+            "h": 0.5555555555555556
+          },
+          "color": "#1B1915",
+          "text": null,
+          "font": null,
+          "size_pt": null,
+          "weight": null,
+          "letter_spacing_pt": 0.0,
+          "align": "left"
+        },
+        {
+          "kind": "ellipse",
+          "rect": {
+            "x": 0.791875,
+            "y": -0.05888888888888889,
+            "w": 0.15625,
+            "h": 0.2777777777777778
+          },
+          "color": "#211E18",
+          "text": null,
+          "font": null,
+          "size_pt": null,
+          "weight": null,
+          "letter_spacing_pt": 0.0,
+          "align": "left"
+        },
+        {
+          "kind": "rect",
+          "rect": {
+            "x": 0.24973958333333332,
+            "y": 0.0,
+            "w": 0.0005208333333333315,
+            "h": 1.0
+          },
+          "color": "#181A1E",
+          "text": null,
+          "font": null,
+          "size_pt": null,
+          "weight": null,
+          "letter_spacing_pt": 0.0,
+          "align": "left"
+        },
+        {
+          "kind": "rect",
+          "rect": {
+            "x": 0.49973958333333335,
+            "y": 0.0,
+            "w": 0.0005208333333333037,
+            "h": 1.0
+          },
+          "color": "#181A1E",
+          "text": null,
+          "font": null,
+          "size_pt": null,
+          "weight": null,
+          "letter_spacing_pt": 0.0,
+          "align": "left"
+        },
+        {
+          "kind": "rect",
+          "rect": {
+            "x": 0.7497395833333333,
+            "y": 0.0,
+            "w": 0.0005208333333333037,
+            "h": 1.0
+          },
+          "color": "#181A1E",
+          "text": null,
+          "font": null,
+          "size_pt": null,
+          "weight": null,
+          "letter_spacing_pt": 0.0,
+          "align": "left"
+        },
+        {
+          "kind": "rect",
+          "rect": {
+            "x": 0.8791666666666667,
+            "y": 0.037037037037037035,
+            "w": 0.09999999999999998,
+            "h": 0.0018518518518518545
+          },
+          "color": "#806D47",
+          "text": null,
+          "font": null,
+          "size_pt": null,
+          "weight": null,
+          "letter_spacing_pt": 0.0,
+          "align": "left"
+        },
+        {
+          "kind": "rect",
+          "rect": {
+            "x": 0.9781249999999999,
+            "y": 0.037037037037037035,
+            "w": 0.0010416666666667185,
+            "h": 0.17777777777777778
+          },
+          "color": "#806D47",
+          "text": null,
+          "font": null,
+          "size_pt": null,
+          "weight": null,
+          "letter_spacing_pt": 0.0,
+          "align": "left"
+        },
+        {
+          "kind": "rect",
+          "rect": {
+            "x": 0.020833333333333332,
+            "y": 0.9611111111111111,
+            "w": 0.1,
+            "h": 0.0018518518518518823
+          },
+          "color": "#806D47",
+          "text": null,
+          "font": null,
+          "size_pt": null,
+          "weight": null,
+          "letter_spacing_pt": 0.0,
+          "align": "left"
+        },
+        {
+          "kind": "rect",
+          "rect": {
+            "x": 0.020833333333333332,
+            "y": 0.7851851851851852,
+            "w": 0.0010416666666666664,
+            "h": 0.1777777777777778
+          },
+          "color": "#806D47",
+          "text": null,
+          "font": null,
+          "size_pt": null,
+          "weight": null,
+          "letter_spacing_pt": 0.0,
+          "align": "left"
+        }
+      ]
+    },
+    {
+      "theme_id": "obsidian",
+      "layout_id": "cover",
+      "slide_index": 2,
+      "occupied_id": "two_column",
+      "occupied": [
+        {
+          "x": 0.05416666666666667,
+          "y": 0.07777777777777778,
+          "w": 0.8916666666666667,
+          "h": 0.14
+        },
+        {
+          "x": 0.05416666666666667,
+          "y": 0.2177777777777778,
+          "w": 0.43583333333333335,
+          "h": 0.7007407407407407
+        },
+        {
+          "x": 0.51,
+          "y": 0.2177777777777778,
+          "w": 0.43583333333333335,
+          "h": 0.7007407407407407
+        }
+      ],
+      "expected_shapes": [
+        {
+          "kind": "ellipse",
+          "rect": {
+            "x": 0.5575,
+            "y": -0.47555555555555556,
+            "w": 0.625,
+            "h": 1.1111111111111112
+          },
+          "color": "#101010",
+          "text": null,
+          "font": null,
+          "size_pt": null,
+          "weight": null,
+          "letter_spacing_pt": 0.0,
+          "align": "left"
+        },
+        {
+          "kind": "ellipse",
+          "rect": {
+            "x": 0.635625,
+            "y": -0.33666666666666667,
+            "w": 0.46875,
+            "h": 0.8333333333333334
+          },
+          "color": "#151413",
+          "text": null,
+          "font": null,
+          "size_pt": null,
+          "weight": null,
+          "letter_spacing_pt": 0.0,
+          "align": "left"
+        },
+        {
+          "kind": "ellipse",
+          "rect": {
+            "x": 0.71375,
+            "y": -0.19777777777777777,
+            "w": 0.3125,
+            "h": 0.5555555555555556
+          },
+          "color": "#1B1915",
+          "text": null,
+          "font": null,
+          "size_pt": null,
+          "weight": null,
+          "letter_spacing_pt": 0.0,
+          "align": "left"
+        },
+        {
+          "kind": "ellipse",
+          "rect": {
+            "x": 0.791875,
+            "y": -0.05888888888888889,
+            "w": 0.15625,
+            "h": 0.2777777777777778
+          },
+          "color": "#211E18",
+          "text": null,
+          "font": null,
+          "size_pt": null,
+          "weight": null,
+          "letter_spacing_pt": 0.0,
+          "align": "left"
+        },
+        {
+          "kind": "rect",
+          "rect": {
+            "x": 0.8791666666666667,
+            "y": 0.037037037037037035,
+            "w": 0.09999999999999998,
+            "h": 0.0018518518518518545
+          },
+          "color": "#806D47",
+          "text": null,
+          "font": null,
+          "size_pt": null,
+          "weight": null,
+          "letter_spacing_pt": 0.0,
+          "align": "left"
+        },
+        {
+          "kind": "rect",
+          "rect": {
+            "x": 0.9781249999999999,
+            "y": 0.037037037037037035,
+            "w": 0.0010416666666667185,
+            "h": 0.17777777777777778
+          },
+          "color": "#806D47",
+          "text": null,
+          "font": null,
+          "size_pt": null,
+          "weight": null,
+          "letter_spacing_pt": 0.0,
+          "align": "left"
+        },
+        {
+          "kind": "rect",
+          "rect": {
+            "x": 0.020833333333333332,
+            "y": 0.9611111111111111,
+            "w": 0.1,
+            "h": 0.0018518518518518823
+          },
+          "color": "#806D47",
+          "text": null,
+          "font": null,
+          "size_pt": null,
+          "weight": null,
+          "letter_spacing_pt": 0.0,
+          "align": "left"
+        },
+        {
+          "kind": "rect",
+          "rect": {
+            "x": 0.020833333333333332,
+            "y": 0.7851851851851852,
+            "w": 0.0010416666666666664,
+            "h": 0.1777777777777778
+          },
+          "color": "#806D47",
+          "text": null,
+          "font": null,
+          "size_pt": null,
+          "weight": null,
+          "letter_spacing_pt": 0.0,
+          "align": "left"
+        }
+      ]
+    },
+    {
+      "theme_id": "obsidian",
+      "layout_id": "section",
+      "slide_index": 2,
+      "occupied_id": "empty",
+      "occupied": [],
+      "expected_shapes": [
+        {
+          "kind": "ellipse",
+          "rect": {
+            "x": 0.5575,
+            "y": -0.47555555555555556,
+            "w": 0.625,
+            "h": 1.1111111111111112
+          },
+          "color": "#101010",
+          "text": null,
+          "font": null,
+          "size_pt": null,
+          "weight": null,
+          "letter_spacing_pt": 0.0,
+          "align": "left"
+        },
+        {
+          "kind": "ellipse",
+          "rect": {
+            "x": 0.635625,
+            "y": -0.33666666666666667,
+            "w": 0.46875,
+            "h": 0.8333333333333334
+          },
+          "color": "#151413",
+          "text": null,
+          "font": null,
+          "size_pt": null,
+          "weight": null,
+          "letter_spacing_pt": 0.0,
+          "align": "left"
+        },
+        {
+          "kind": "ellipse",
+          "rect": {
+            "x": 0.71375,
+            "y": -0.19777777777777777,
+            "w": 0.3125,
+            "h": 0.5555555555555556
+          },
+          "color": "#1B1915",
+          "text": null,
+          "font": null,
+          "size_pt": null,
+          "weight": null,
+          "letter_spacing_pt": 0.0,
+          "align": "left"
+        },
+        {
+          "kind": "ellipse",
+          "rect": {
+            "x": 0.791875,
+            "y": -0.05888888888888889,
+            "w": 0.15625,
+            "h": 0.2777777777777778
+          },
+          "color": "#211E18",
+          "text": null,
+          "font": null,
+          "size_pt": null,
+          "weight": null,
+          "letter_spacing_pt": 0.0,
+          "align": "left"
+        },
+        {
+          "kind": "rect",
+          "rect": {
+            "x": 0.24973958333333332,
+            "y": 0.0,
+            "w": 0.0005208333333333315,
+            "h": 1.0
+          },
+          "color": "#181A1E",
+          "text": null,
+          "font": null,
+          "size_pt": null,
+          "weight": null,
+          "letter_spacing_pt": 0.0,
+          "align": "left"
+        },
+        {
+          "kind": "rect",
+          "rect": {
+            "x": 0.49973958333333335,
+            "y": 0.0,
+            "w": 0.0005208333333333037,
+            "h": 1.0
+          },
+          "color": "#181A1E",
+          "text": null,
+          "font": null,
+          "size_pt": null,
+          "weight": null,
+          "letter_spacing_pt": 0.0,
+          "align": "left"
+        },
+        {
+          "kind": "rect",
+          "rect": {
+            "x": 0.7497395833333333,
+            "y": 0.0,
+            "w": 0.0005208333333333037,
+            "h": 1.0
+          },
+          "color": "#181A1E",
+          "text": null,
+          "font": null,
+          "size_pt": null,
+          "weight": null,
+          "letter_spacing_pt": 0.0,
+          "align": "left"
+        },
+        {
+          "kind": "rect",
+          "rect": {
+            "x": 0.8791666666666667,
+            "y": 0.037037037037037035,
+            "w": 0.09999999999999998,
+            "h": 0.0018518518518518545
+          },
+          "color": "#806D47",
+          "text": null,
+          "font": null,
+          "size_pt": null,
+          "weight": null,
+          "letter_spacing_pt": 0.0,
+          "align": "left"
+        },
+        {
+          "kind": "rect",
+          "rect": {
+            "x": 0.9781249999999999,
+            "y": 0.037037037037037035,
+            "w": 0.0010416666666667185,
+            "h": 0.17777777777777778
+          },
+          "color": "#806D47",
+          "text": null,
+          "font": null,
+          "size_pt": null,
+          "weight": null,
+          "letter_spacing_pt": 0.0,
+          "align": "left"
+        },
+        {
+          "kind": "rect",
+          "rect": {
+            "x": 0.020833333333333332,
+            "y": 0.9611111111111111,
+            "w": 0.1,
+            "h": 0.0018518518518518823
+          },
+          "color": "#806D47",
+          "text": null,
+          "font": null,
+          "size_pt": null,
+          "weight": null,
+          "letter_spacing_pt": 0.0,
+          "align": "left"
+        },
+        {
+          "kind": "rect",
+          "rect": {
+            "x": 0.020833333333333332,
+            "y": 0.7851851851851852,
+            "w": 0.0010416666666666664,
+            "h": 0.1777777777777778
+          },
+          "color": "#806D47",
+          "text": null,
+          "font": null,
+          "size_pt": null,
+          "weight": null,
+          "letter_spacing_pt": 0.0,
+          "align": "left"
+        },
+        {
+          "kind": "rect",
+          "rect": {
+            "x": 0.0,
+            "y": 0.22,
+            "w": 0.003125,
+            "h": 0.56
+          },
+          "color": "#B69962",
+          "text": null,
+          "font": null,
+          "size_pt": null,
+          "weight": null,
+          "letter_spacing_pt": 0.0,
+          "align": "left"
+        }
+      ]
+    },
+    {
+      "theme_id": "obsidian",
+      "layout_id": "section",
+      "slide_index": 2,
+      "occupied_id": "two_column",
+      "occupied": [
+        {
+          "x": 0.05416666666666667,
+          "y": 0.07777777777777778,
+          "w": 0.8916666666666667,
+          "h": 0.14
+        },
+        {
+          "x": 0.05416666666666667,
+          "y": 0.2177777777777778,
+          "w": 0.43583333333333335,
+          "h": 0.7007407407407407
+        },
+        {
+          "x": 0.51,
+          "y": 0.2177777777777778,
+          "w": 0.43583333333333335,
+          "h": 0.7007407407407407
+        }
+      ],
+      "expected_shapes": [
+        {
+          "kind": "ellipse",
+          "rect": {
+            "x": 0.5575,
+            "y": -0.47555555555555556,
+            "w": 0.625,
+            "h": 1.1111111111111112
+          },
+          "color": "#101010",
+          "text": null,
+          "font": null,
+          "size_pt": null,
+          "weight": null,
+          "letter_spacing_pt": 0.0,
+          "align": "left"
+        },
+        {
+          "kind": "ellipse",
+          "rect": {
+            "x": 0.635625,
+            "y": -0.33666666666666667,
+            "w": 0.46875,
+            "h": 0.8333333333333334
+          },
+          "color": "#151413",
+          "text": null,
+          "font": null,
+          "size_pt": null,
+          "weight": null,
+          "letter_spacing_pt": 0.0,
+          "align": "left"
+        },
+        {
+          "kind": "ellipse",
+          "rect": {
+            "x": 0.71375,
+            "y": -0.19777777777777777,
+            "w": 0.3125,
+            "h": 0.5555555555555556
+          },
+          "color": "#1B1915",
+          "text": null,
+          "font": null,
+          "size_pt": null,
+          "weight": null,
+          "letter_spacing_pt": 0.0,
+          "align": "left"
+        },
+        {
+          "kind": "ellipse",
+          "rect": {
+            "x": 0.791875,
+            "y": -0.05888888888888889,
+            "w": 0.15625,
+            "h": 0.2777777777777778
+          },
+          "color": "#211E18",
+          "text": null,
+          "font": null,
+          "size_pt": null,
+          "weight": null,
+          "letter_spacing_pt": 0.0,
+          "align": "left"
+        },
+        {
+          "kind": "rect",
+          "rect": {
+            "x": 0.8791666666666667,
+            "y": 0.037037037037037035,
+            "w": 0.09999999999999998,
+            "h": 0.0018518518518518545
+          },
+          "color": "#806D47",
+          "text": null,
+          "font": null,
+          "size_pt": null,
+          "weight": null,
+          "letter_spacing_pt": 0.0,
+          "align": "left"
+        },
+        {
+          "kind": "rect",
+          "rect": {
+            "x": 0.9781249999999999,
+            "y": 0.037037037037037035,
+            "w": 0.0010416666666667185,
+            "h": 0.17777777777777778
+          },
+          "color": "#806D47",
+          "text": null,
+          "font": null,
+          "size_pt": null,
+          "weight": null,
+          "letter_spacing_pt": 0.0,
+          "align": "left"
+        },
+        {
+          "kind": "rect",
+          "rect": {
+            "x": 0.020833333333333332,
+            "y": 0.9611111111111111,
+            "w": 0.1,
+            "h": 0.0018518518518518823
+          },
+          "color": "#806D47",
+          "text": null,
+          "font": null,
+          "size_pt": null,
+          "weight": null,
+          "letter_spacing_pt": 0.0,
+          "align": "left"
+        },
+        {
+          "kind": "rect",
+          "rect": {
+            "x": 0.020833333333333332,
+            "y": 0.7851851851851852,
+            "w": 0.0010416666666666664,
+            "h": 0.1777777777777778
+          },
+          "color": "#806D47",
+          "text": null,
+          "font": null,
+          "size_pt": null,
+          "weight": null,
+          "letter_spacing_pt": 0.0,
+          "align": "left"
+        },
+        {
+          "kind": "rect",
+          "rect": {
+            "x": 0.0,
+            "y": 0.22,
+            "w": 0.003125,
+            "h": 0.56
+          },
+          "color": "#B69962",
+          "text": null,
+          "font": null,
+          "size_pt": null,
+          "weight": null,
+          "letter_spacing_pt": 0.0,
+          "align": "left"
+        }
+      ]
+    },
+    {
+      "theme_id": "obsidian",
+      "layout_id": "bullets",
+      "slide_index": 2,
+      "occupied_id": "empty",
+      "occupied": [],
+      "expected_shapes": [
+        {
+          "kind": "ellipse",
+          "rect": {
+            "x": 0.5575,
+            "y": -0.47555555555555556,
+            "w": 0.625,
+            "h": 1.1111111111111112
+          },
+          "color": "#101010",
+          "text": null,
+          "font": null,
+          "size_pt": null,
+          "weight": null,
+          "letter_spacing_pt": 0.0,
+          "align": "left"
+        },
+        {
+          "kind": "ellipse",
+          "rect": {
+            "x": 0.635625,
+            "y": -0.33666666666666667,
+            "w": 0.46875,
+            "h": 0.8333333333333334
+          },
+          "color": "#151413",
+          "text": null,
+          "font": null,
+          "size_pt": null,
+          "weight": null,
+          "letter_spacing_pt": 0.0,
+          "align": "left"
+        },
+        {
+          "kind": "ellipse",
+          "rect": {
+            "x": 0.71375,
+            "y": -0.19777777777777777,
+            "w": 0.3125,
+            "h": 0.5555555555555556
+          },
+          "color": "#1B1915",
+          "text": null,
+          "font": null,
+          "size_pt": null,
+          "weight": null,
+          "letter_spacing_pt": 0.0,
+          "align": "left"
+        },
+        {
+          "kind": "ellipse",
+          "rect": {
+            "x": 0.791875,
+            "y": -0.05888888888888889,
+            "w": 0.15625,
+            "h": 0.2777777777777778
+          },
+          "color": "#211E18",
+          "text": null,
+          "font": null,
+          "size_pt": null,
+          "weight": null,
+          "letter_spacing_pt": 0.0,
+          "align": "left"
+        },
+        {
+          "kind": "rect",
+          "rect": {
+            "x": 0.24973958333333332,
+            "y": 0.0,
+            "w": 0.0005208333333333315,
+            "h": 1.0
+          },
+          "color": "#181A1E",
+          "text": null,
+          "font": null,
+          "size_pt": null,
+          "weight": null,
+          "letter_spacing_pt": 0.0,
+          "align": "left"
+        },
+        {
+          "kind": "rect",
+          "rect": {
+            "x": 0.49973958333333335,
+            "y": 0.0,
+            "w": 0.0005208333333333037,
+            "h": 1.0
+          },
+          "color": "#181A1E",
+          "text": null,
+          "font": null,
+          "size_pt": null,
+          "weight": null,
+          "letter_spacing_pt": 0.0,
+          "align": "left"
+        },
+        {
+          "kind": "rect",
+          "rect": {
+            "x": 0.7497395833333333,
+            "y": 0.0,
+            "w": 0.0005208333333333037,
+            "h": 1.0
+          },
+          "color": "#181A1E",
+          "text": null,
+          "font": null,
+          "size_pt": null,
+          "weight": null,
+          "letter_spacing_pt": 0.0,
+          "align": "left"
+        },
+        {
+          "kind": "text",
+          "rect": {
+            "x": 0.75,
+            "y": 0.8,
+            "w": 0.24,
+            "h": 0.19
+          },
+          "color": "#1D1B16",
+          "text": "03",
+          "font": "display",
+          "size_pt": 112.0,
+          "weight": 400,
+          "letter_spacing_pt": 0.0,
+          "align": "right"
+        }
+      ]
+    },
+    {
+      "theme_id": "obsidian",
+      "layout_id": "bullets",
+      "slide_index": 2,
+      "occupied_id": "two_column",
+      "occupied": [
+        {
+          "x": 0.05416666666666667,
+          "y": 0.07777777777777778,
+          "w": 0.8916666666666667,
+          "h": 0.14
+        },
+        {
+          "x": 0.05416666666666667,
+          "y": 0.2177777777777778,
+          "w": 0.43583333333333335,
+          "h": 0.7007407407407407
+        },
+        {
+          "x": 0.51,
+          "y": 0.2177777777777778,
+          "w": 0.43583333333333335,
+          "h": 0.7007407407407407
+        }
+      ],
+      "expected_shapes": [
+        {
+          "kind": "ellipse",
+          "rect": {
+            "x": 0.5575,
+            "y": -0.47555555555555556,
+            "w": 0.625,
+            "h": 1.1111111111111112
+          },
+          "color": "#101010",
+          "text": null,
+          "font": null,
+          "size_pt": null,
+          "weight": null,
+          "letter_spacing_pt": 0.0,
+          "align": "left"
+        },
+        {
+          "kind": "ellipse",
+          "rect": {
+            "x": 0.635625,
+            "y": -0.33666666666666667,
+            "w": 0.46875,
+            "h": 0.8333333333333334
+          },
+          "color": "#151413",
+          "text": null,
+          "font": null,
+          "size_pt": null,
+          "weight": null,
+          "letter_spacing_pt": 0.0,
+          "align": "left"
+        },
+        {
+          "kind": "ellipse",
+          "rect": {
+            "x": 0.71375,
+            "y": -0.19777777777777777,
+            "w": 0.3125,
+            "h": 0.5555555555555556
+          },
+          "color": "#1B1915",
+          "text": null,
+          "font": null,
+          "size_pt": null,
+          "weight": null,
+          "letter_spacing_pt": 0.0,
+          "align": "left"
+        },
+        {
+          "kind": "ellipse",
+          "rect": {
+            "x": 0.791875,
+            "y": -0.05888888888888889,
+            "w": 0.15625,
+            "h": 0.2777777777777778
+          },
+          "color": "#211E18",
+          "text": null,
+          "font": null,
+          "size_pt": null,
+          "weight": null,
+          "letter_spacing_pt": 0.0,
+          "align": "left"
+        }
+      ]
+    },
+    {
+      "theme_id": "scholar",
+      "layout_id": "cover",
+      "slide_index": 2,
+      "occupied_id": "empty",
+      "occupied": [],
+      "expected_shapes": [
+        {
+          "kind": "ellipse",
+          "rect": {
+            "x": 0.7008333333333334,
+            "y": 0.4325925925925926,
+            "w": 0.4583333333333333,
+            "h": 0.8148148148148148
+          },
+          "color": "#FDFDFD",
+          "text": null,
+          "font": null,
+          "size_pt": null,
+          "weight": null,
+          "letter_spacing_pt": 0.0,
+          "align": "left"
+        },
+        {
+          "kind": "ellipse",
+          "rect": {
+            "x": 0.758125,
+            "y": 0.5344444444444444,
+            "w": 0.34375,
+            "h": 0.6111111111111112
+          },
+          "color": "#FBFCFB",
+          "text": null,
+          "font": null,
+          "size_pt": null,
+          "weight": null,
+          "letter_spacing_pt": 0.0,
+          "align": "left"
+        },
+        {
+          "kind": "ellipse",
+          "rect": {
+            "x": 0.8154166666666667,
+            "y": 0.6362962962962962,
+            "w": 0.22916666666666666,
+            "h": 0.4074074074074074
+          },
+          "color": "#F8FAF9",
+          "text": null,
+          "font": null,
+          "size_pt": null,
+          "weight": null,
+          "letter_spacing_pt": 0.0,
+          "align": "left"
+        },
+        {
+          "kind": "ellipse",
+          "rect": {
+            "x": 0.8727083333333334,
+            "y": 0.7381481481481481,
+            "w": 0.11458333333333333,
+            "h": 0.2037037037037037
+          },
+          "color": "#F6F9F8",
+          "text": null,
+          "font": null,
+          "size_pt": null,
+          "weight": null,
+          "letter_spacing_pt": 0.0,
+          "align": "left"
+        },
+        {
+          "kind": "rect",
+          "rect": {
+            "x": 0.0,
+            "y": 0.0,
+            "w": 0.12,
+            "h": 0.004629629629629629
+          },
+          "color": "#2F5D50",
+          "text": null,
+          "font": null,
+          "size_pt": null,
+          "weight": null,
+          "letter_spacing_pt": 0.0,
+          "align": "left"
+        },
+        {
+          "kind": "rect",
+          "rect": {
+            "x": 0.90625,
+            "y": 0.03333333333333333,
+            "w": 0.07499999999999996,
+            "h": 0.001388888888888891
+          },
+          "color": "#D4D8DD",
+          "text": null,
+          "font": null,
+          "size_pt": null,
+          "weight": null,
+          "letter_spacing_pt": 0.0,
+          "align": "left"
+        },
+        {
+          "kind": "rect",
+          "rect": {
+            "x": 0.98046875,
+            "y": 0.03333333333333333,
+            "w": 0.0007812499999999556,
+            "h": 0.13333333333333333
+          },
+          "color": "#D4D8DD",
+          "text": null,
+          "font": null,
+          "size_pt": null,
+          "weight": null,
+          "letter_spacing_pt": 0.0,
+          "align": "left"
+        }
+      ]
+    },
+    {
+      "theme_id": "scholar",
+      "layout_id": "cover",
+      "slide_index": 2,
+      "occupied_id": "two_column",
+      "occupied": [
+        {
+          "x": 0.05416666666666667,
+          "y": 0.07777777777777778,
+          "w": 0.8916666666666667,
+          "h": 0.14
+        },
+        {
+          "x": 0.05416666666666667,
+          "y": 0.2177777777777778,
+          "w": 0.43583333333333335,
+          "h": 0.7007407407407407
+        },
+        {
+          "x": 0.51,
+          "y": 0.2177777777777778,
+          "w": 0.43583333333333335,
+          "h": 0.7007407407407407
+        }
+      ],
+      "expected_shapes": [
+        {
+          "kind": "ellipse",
+          "rect": {
+            "x": 0.7008333333333334,
+            "y": 0.4325925925925926,
+            "w": 0.4583333333333333,
+            "h": 0.8148148148148148
+          },
+          "color": "#FDFDFD",
+          "text": null,
+          "font": null,
+          "size_pt": null,
+          "weight": null,
+          "letter_spacing_pt": 0.0,
+          "align": "left"
+        },
+        {
+          "kind": "ellipse",
+          "rect": {
+            "x": 0.758125,
+            "y": 0.5344444444444444,
+            "w": 0.34375,
+            "h": 0.6111111111111112
+          },
+          "color": "#FBFCFB",
+          "text": null,
+          "font": null,
+          "size_pt": null,
+          "weight": null,
+          "letter_spacing_pt": 0.0,
+          "align": "left"
+        },
+        {
+          "kind": "ellipse",
+          "rect": {
+            "x": 0.8154166666666667,
+            "y": 0.6362962962962962,
+            "w": 0.22916666666666666,
+            "h": 0.4074074074074074
+          },
+          "color": "#F8FAF9",
+          "text": null,
+          "font": null,
+          "size_pt": null,
+          "weight": null,
+          "letter_spacing_pt": 0.0,
+          "align": "left"
+        },
+        {
+          "kind": "ellipse",
+          "rect": {
+            "x": 0.8727083333333334,
+            "y": 0.7381481481481481,
+            "w": 0.11458333333333333,
+            "h": 0.2037037037037037
+          },
+          "color": "#F6F9F8",
+          "text": null,
+          "font": null,
+          "size_pt": null,
+          "weight": null,
+          "letter_spacing_pt": 0.0,
+          "align": "left"
+        },
+        {
+          "kind": "rect",
+          "rect": {
+            "x": 0.0,
+            "y": 0.0,
+            "w": 0.12,
+            "h": 0.004629629629629629
+          },
+          "color": "#2F5D50",
+          "text": null,
+          "font": null,
+          "size_pt": null,
+          "weight": null,
+          "letter_spacing_pt": 0.0,
+          "align": "left"
+        },
+        {
+          "kind": "rect",
+          "rect": {
+            "x": 0.90625,
+            "y": 0.03333333333333333,
+            "w": 0.07499999999999996,
+            "h": 0.001388888888888891
+          },
+          "color": "#D4D8DD",
+          "text": null,
+          "font": null,
+          "size_pt": null,
+          "weight": null,
+          "letter_spacing_pt": 0.0,
+          "align": "left"
+        },
+        {
+          "kind": "rect",
+          "rect": {
+            "x": 0.98046875,
+            "y": 0.03333333333333333,
+            "w": 0.0007812499999999556,
+            "h": 0.13333333333333333
+          },
+          "color": "#D4D8DD",
+          "text": null,
+          "font": null,
+          "size_pt": null,
+          "weight": null,
+          "letter_spacing_pt": 0.0,
+          "align": "left"
+        }
+      ]
+    },
+    {
+      "theme_id": "scholar",
+      "layout_id": "section",
+      "slide_index": 2,
+      "occupied_id": "empty",
+      "occupied": [],
+      "expected_shapes": [
+        {
+          "kind": "ellipse",
+          "rect": {
+            "x": 0.7008333333333334,
+            "y": 0.4325925925925926,
+            "w": 0.4583333333333333,
+            "h": 0.8148148148148148
+          },
+          "color": "#FDFDFD",
+          "text": null,
+          "font": null,
+          "size_pt": null,
+          "weight": null,
+          "letter_spacing_pt": 0.0,
+          "align": "left"
+        },
+        {
+          "kind": "ellipse",
+          "rect": {
+            "x": 0.758125,
+            "y": 0.5344444444444444,
+            "w": 0.34375,
+            "h": 0.6111111111111112
+          },
+          "color": "#FBFCFB",
+          "text": null,
+          "font": null,
+          "size_pt": null,
+          "weight": null,
+          "letter_spacing_pt": 0.0,
+          "align": "left"
+        },
+        {
+          "kind": "ellipse",
+          "rect": {
+            "x": 0.8154166666666667,
+            "y": 0.6362962962962962,
+            "w": 0.22916666666666666,
+            "h": 0.4074074074074074
+          },
+          "color": "#F8FAF9",
+          "text": null,
+          "font": null,
+          "size_pt": null,
+          "weight": null,
+          "letter_spacing_pt": 0.0,
+          "align": "left"
+        },
+        {
+          "kind": "ellipse",
+          "rect": {
+            "x": 0.8727083333333334,
+            "y": 0.7381481481481481,
+            "w": 0.11458333333333333,
+            "h": 0.2037037037037037
+          },
+          "color": "#F6F9F8",
+          "text": null,
+          "font": null,
+          "size_pt": null,
+          "weight": null,
+          "letter_spacing_pt": 0.0,
+          "align": "left"
+        },
+        {
+          "kind": "rect",
+          "rect": {
+            "x": 0.0,
+            "y": 0.0,
+            "w": 0.12,
+            "h": 0.004629629629629629
+          },
+          "color": "#2F5D50",
+          "text": null,
+          "font": null,
+          "size_pt": null,
+          "weight": null,
+          "letter_spacing_pt": 0.0,
+          "align": "left"
+        },
+        {
+          "kind": "rect",
+          "rect": {
+            "x": 0.90625,
+            "y": 0.03333333333333333,
+            "w": 0.07499999999999996,
+            "h": 0.001388888888888891
+          },
+          "color": "#D4D8DD",
+          "text": null,
+          "font": null,
+          "size_pt": null,
+          "weight": null,
+          "letter_spacing_pt": 0.0,
+          "align": "left"
+        },
+        {
+          "kind": "rect",
+          "rect": {
+            "x": 0.98046875,
+            "y": 0.03333333333333333,
+            "w": 0.0007812499999999556,
+            "h": 0.13333333333333333
+          },
+          "color": "#D4D8DD",
+          "text": null,
+          "font": null,
+          "size_pt": null,
+          "weight": null,
+          "letter_spacing_pt": 0.0,
+          "align": "left"
+        }
+      ]
+    },
+    {
+      "theme_id": "scholar",
+      "layout_id": "section",
+      "slide_index": 2,
+      "occupied_id": "two_column",
+      "occupied": [
+        {
+          "x": 0.05416666666666667,
+          "y": 0.07777777777777778,
+          "w": 0.8916666666666667,
+          "h": 0.14
+        },
+        {
+          "x": 0.05416666666666667,
+          "y": 0.2177777777777778,
+          "w": 0.43583333333333335,
+          "h": 0.7007407407407407
+        },
+        {
+          "x": 0.51,
+          "y": 0.2177777777777778,
+          "w": 0.43583333333333335,
+          "h": 0.7007407407407407
+        }
+      ],
+      "expected_shapes": [
+        {
+          "kind": "ellipse",
+          "rect": {
+            "x": 0.7008333333333334,
+            "y": 0.4325925925925926,
+            "w": 0.4583333333333333,
+            "h": 0.8148148148148148
+          },
+          "color": "#FDFDFD",
+          "text": null,
+          "font": null,
+          "size_pt": null,
+          "weight": null,
+          "letter_spacing_pt": 0.0,
+          "align": "left"
+        },
+        {
+          "kind": "ellipse",
+          "rect": {
+            "x": 0.758125,
+            "y": 0.5344444444444444,
+            "w": 0.34375,
+            "h": 0.6111111111111112
+          },
+          "color": "#FBFCFB",
+          "text": null,
+          "font": null,
+          "size_pt": null,
+          "weight": null,
+          "letter_spacing_pt": 0.0,
+          "align": "left"
+        },
+        {
+          "kind": "ellipse",
+          "rect": {
+            "x": 0.8154166666666667,
+            "y": 0.6362962962962962,
+            "w": 0.22916666666666666,
+            "h": 0.4074074074074074
+          },
+          "color": "#F8FAF9",
+          "text": null,
+          "font": null,
+          "size_pt": null,
+          "weight": null,
+          "letter_spacing_pt": 0.0,
+          "align": "left"
+        },
+        {
+          "kind": "ellipse",
+          "rect": {
+            "x": 0.8727083333333334,
+            "y": 0.7381481481481481,
+            "w": 0.11458333333333333,
+            "h": 0.2037037037037037
+          },
+          "color": "#F6F9F8",
+          "text": null,
+          "font": null,
+          "size_pt": null,
+          "weight": null,
+          "letter_spacing_pt": 0.0,
+          "align": "left"
+        },
+        {
+          "kind": "rect",
+          "rect": {
+            "x": 0.0,
+            "y": 0.0,
+            "w": 0.12,
+            "h": 0.004629629629629629
+          },
+          "color": "#2F5D50",
+          "text": null,
+          "font": null,
+          "size_pt": null,
+          "weight": null,
+          "letter_spacing_pt": 0.0,
+          "align": "left"
+        },
+        {
+          "kind": "rect",
+          "rect": {
+            "x": 0.90625,
+            "y": 0.03333333333333333,
+            "w": 0.07499999999999996,
+            "h": 0.001388888888888891
+          },
+          "color": "#D4D8DD",
+          "text": null,
+          "font": null,
+          "size_pt": null,
+          "weight": null,
+          "letter_spacing_pt": 0.0,
+          "align": "left"
+        },
+        {
+          "kind": "rect",
+          "rect": {
+            "x": 0.98046875,
+            "y": 0.03333333333333333,
+            "w": 0.0007812499999999556,
+            "h": 0.13333333333333333
+          },
+          "color": "#D4D8DD",
+          "text": null,
+          "font": null,
+          "size_pt": null,
+          "weight": null,
+          "letter_spacing_pt": 0.0,
+          "align": "left"
+        }
+      ]
+    },
+    {
+      "theme_id": "scholar",
+      "layout_id": "bullets",
+      "slide_index": 2,
+      "occupied_id": "empty",
+      "occupied": [],
+      "expected_shapes": [
+        {
+          "kind": "ellipse",
+          "rect": {
+            "x": 0.7008333333333334,
+            "y": 0.4325925925925926,
+            "w": 0.4583333333333333,
+            "h": 0.8148148148148148
+          },
+          "color": "#FDFDFD",
+          "text": null,
+          "font": null,
+          "size_pt": null,
+          "weight": null,
+          "letter_spacing_pt": 0.0,
+          "align": "left"
+        },
+        {
+          "kind": "ellipse",
+          "rect": {
+            "x": 0.758125,
+            "y": 0.5344444444444444,
+            "w": 0.34375,
+            "h": 0.6111111111111112
+          },
+          "color": "#FBFCFB",
+          "text": null,
+          "font": null,
+          "size_pt": null,
+          "weight": null,
+          "letter_spacing_pt": 0.0,
+          "align": "left"
+        },
+        {
+          "kind": "ellipse",
+          "rect": {
+            "x": 0.8154166666666667,
+            "y": 0.6362962962962962,
+            "w": 0.22916666666666666,
+            "h": 0.4074074074074074
+          },
+          "color": "#F8FAF9",
+          "text": null,
+          "font": null,
+          "size_pt": null,
+          "weight": null,
+          "letter_spacing_pt": 0.0,
+          "align": "left"
+        },
+        {
+          "kind": "ellipse",
+          "rect": {
+            "x": 0.8727083333333334,
+            "y": 0.7381481481481481,
+            "w": 0.11458333333333333,
+            "h": 0.2037037037037037
+          },
+          "color": "#F6F9F8",
+          "text": null,
+          "font": null,
+          "size_pt": null,
+          "weight": null,
+          "letter_spacing_pt": 0.0,
+          "align": "left"
+        },
+        {
+          "kind": "rect",
+          "rect": {
+            "x": 0.0,
+            "y": 0.0,
+            "w": 0.12,
+            "h": 0.004629629629629629
+          },
+          "color": "#2F5D50",
+          "text": null,
+          "font": null,
+          "size_pt": null,
+          "weight": null,
+          "letter_spacing_pt": 0.0,
+          "align": "left"
+        },
+        {
+          "kind": "rect",
+          "rect": {
+            "x": 0.27673958333333337,
+            "y": 0.2,
+            "w": 0.0005208333333333592,
+            "h": 0.72
+          },
+          "color": "#EEEFF1",
+          "text": null,
+          "font": null,
+          "size_pt": null,
+          "weight": null,
+          "letter_spacing_pt": 0.0,
+          "align": "left"
+        },
+        {
+          "kind": "rect",
+          "rect": {
+            "x": 0.49973958333333335,
+            "y": 0.2,
+            "w": 0.0005208333333333037,
+            "h": 0.72
+          },
+          "color": "#EEEFF1",
+          "text": null,
+          "font": null,
+          "size_pt": null,
+          "weight": null,
+          "letter_spacing_pt": 0.0,
+          "align": "left"
+        },
+        {
+          "kind": "rect",
+          "rect": {
+            "x": 0.7227395833333334,
+            "y": 0.2,
+            "w": 0.0005208333333333037,
+            "h": 0.72
+          },
+          "color": "#EEEFF1",
+          "text": null,
+          "font": null,
+          "size_pt": null,
+          "weight": null,
+          "letter_spacing_pt": 0.0,
+          "align": "left"
+        },
+        {
+          "kind": "text",
+          "rect": {
+            "x": 0.75,
+            "y": 0.8,
+            "w": 0.24,
+            "h": 0.19
+          },
+          "color": "#E7E9EC",
+          "text": "03",
+          "font": "display",
+          "size_pt": 104.0,
+          "weight": 400,
+          "letter_spacing_pt": 0.0,
+          "align": "right"
+        }
+      ]
+    },
+    {
+      "theme_id": "scholar",
+      "layout_id": "bullets",
+      "slide_index": 2,
+      "occupied_id": "two_column",
+      "occupied": [
+        {
+          "x": 0.05416666666666667,
+          "y": 0.07777777777777778,
+          "w": 0.8916666666666667,
+          "h": 0.14
+        },
+        {
+          "x": 0.05416666666666667,
+          "y": 0.2177777777777778,
+          "w": 0.43583333333333335,
+          "h": 0.7007407407407407
+        },
+        {
+          "x": 0.51,
+          "y": 0.2177777777777778,
+          "w": 0.43583333333333335,
+          "h": 0.7007407407407407
+        }
+      ],
+      "expected_shapes": [
+        {
+          "kind": "ellipse",
+          "rect": {
+            "x": 0.7008333333333334,
+            "y": 0.4325925925925926,
+            "w": 0.4583333333333333,
+            "h": 0.8148148148148148
+          },
+          "color": "#FDFDFD",
+          "text": null,
+          "font": null,
+          "size_pt": null,
+          "weight": null,
+          "letter_spacing_pt": 0.0,
+          "align": "left"
+        },
+        {
+          "kind": "ellipse",
+          "rect": {
+            "x": 0.758125,
+            "y": 0.5344444444444444,
+            "w": 0.34375,
+            "h": 0.6111111111111112
+          },
+          "color": "#FBFCFB",
+          "text": null,
+          "font": null,
+          "size_pt": null,
+          "weight": null,
+          "letter_spacing_pt": 0.0,
+          "align": "left"
+        },
+        {
+          "kind": "ellipse",
+          "rect": {
+            "x": 0.8154166666666667,
+            "y": 0.6362962962962962,
+            "w": 0.22916666666666666,
+            "h": 0.4074074074074074
+          },
+          "color": "#F8FAF9",
+          "text": null,
+          "font": null,
+          "size_pt": null,
+          "weight": null,
+          "letter_spacing_pt": 0.0,
+          "align": "left"
+        },
+        {
+          "kind": "ellipse",
+          "rect": {
+            "x": 0.8727083333333334,
+            "y": 0.7381481481481481,
+            "w": 0.11458333333333333,
+            "h": 0.2037037037037037
+          },
+          "color": "#F6F9F8",
+          "text": null,
+          "font": null,
+          "size_pt": null,
+          "weight": null,
+          "letter_spacing_pt": 0.0,
+          "align": "left"
+        },
+        {
+          "kind": "rect",
+          "rect": {
+            "x": 0.0,
+            "y": 0.0,
+            "w": 0.12,
+            "h": 0.004629629629629629
+          },
+          "color": "#2F5D50",
+          "text": null,
+          "font": null,
+          "size_pt": null,
+          "weight": null,
+          "letter_spacing_pt": 0.0,
+          "align": "left"
+        },
+        {
+          "kind": "rect",
+          "rect": {
+            "x": 0.49973958333333335,
+            "y": 0.2,
+            "w": 0.0005208333333333037,
+            "h": 0.72
+          },
+          "color": "#EEEFF1",
+          "text": null,
+          "font": null,
+          "size_pt": null,
+          "weight": null,
+          "letter_spacing_pt": 0.0,
+          "align": "left"
+        }
+      ]
+    }
+  ]
+}
