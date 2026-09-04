@@ -1,5 +1,17 @@
+# Secrets and local runtime state must never become part of an image layer.
 .env
-var/
-__pycache__/
+.env.*
+!.env.example
+
 .venv/
-*.pyc
+__pycache__/
+*.py[cod]
+.pytest_cache/
+.ruff_cache/
+htmlcov/
+.coverage*
+
+var/
+fonts/
+!fonts/.gitkeep
+*.log

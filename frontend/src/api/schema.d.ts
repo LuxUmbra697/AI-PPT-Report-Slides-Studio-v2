@@ -81,10 +81,10 @@ export interface paths {
         };
         /**
          * List Layouts
-         * @description 下发布局定义。
+         * @description �·����ֶ��塣
          *
-         *     前端本可直接读 shared/ 下的同一批文件，这个接口的作用是让两端
-         *     在运行时校验读到的是同一份数据，也让 OpenAPI 里带上布局的类型定义。
+         *     ǰ�˱���ֱ�Ӷ� shared/ �µ�ͬһ���ļ�������ӿڵ�������������
+         *     ������ʱУ���������ͬһ�����ݣ�Ҳ�� OpenAPI ����ϲ��ֵ����Ͷ��塣
          */
         get: operations["list_layouts_api_v1_design_layouts_get"];
         put?: never;
@@ -104,6 +104,86 @@ export interface paths {
         };
         /** List Themes */
         get: operations["list_themes_api_v1_design_themes_get"];
+        put?: never;
+        post?: never;
+        delete?: never;
+        options?: never;
+        head?: never;
+        patch?: never;
+        trace?: never;
+    };
+    "/api/v1/design/external-templates": {
+        parameters: {
+            query?: never;
+            header?: never;
+            path?: never;
+            cookie?: never;
+        };
+        /**
+         * List Templates From Directory
+         * @description �г� ``Template/`` Ŀ¼�е� PPTX �ο�ģ�塣
+         *
+         *     GET ֻ��ȡ�����ļ��ṹ�����л��棬�������ⴥ������ģ�͵��ã���Ҫ��������
+         *     ͼƬ���İ�ʱ����ǰ����ȷ�����·� refresh �ӿڡ�
+         */
+        get: operations["list_templates_from_directory_api_v1_design_external_templates_get"];
+        put?: never;
+        post?: never;
+        delete?: never;
+        options?: never;
+        head?: never;
+        patch?: never;
+        trace?: never;
+    };
+    "/api/v1/design/external-templates/refresh": {
+        parameters: {
+            query?: never;
+            header?: never;
+            path?: never;
+            cookie?: never;
+        };
+        get?: never;
+        put?: never;
+        /** Refresh Templates From Directory */
+        post: operations["refresh_templates_from_directory_api_v1_design_external_templates_refresh_post"];
+        delete?: never;
+        options?: never;
+        head?: never;
+        patch?: never;
+        trace?: never;
+    };
+    "/api/v1/design/external-templates/{template_id}/inspection": {
+        parameters: {
+            query?: never;
+            header?: never;
+            path?: never;
+            cookie?: never;
+        };
+        /**
+         * Inspect Template From Directory
+         * @description ��ҳ�������ꡢͼ�㡢������ѻ���� AI ���壬���ᴥ���µ�ģ�͵��á�
+         */
+        get: operations["inspect_template_from_directory_api_v1_design_external_templates__template_id__inspection_get"];
+        put?: never;
+        post?: never;
+        delete?: never;
+        options?: never;
+        head?: never;
+        patch?: never;
+        trace?: never;
+    };
+    "/api/v1/design/external-templates/{template_id}/assets/{asset_id}": {
+        parameters: {
+            query?: never;
+            header?: never;
+            path?: never;
+            cookie?: never;
+        };
+        /**
+         * Get Template Asset From Directory
+         * @description Serve one whitelisted source asset for the selected template visual layer.
+         */
+        get: operations["get_template_asset_from_directory_api_v1_design_external_templates__template_id__assets__asset_id__get"];
         put?: never;
         post?: never;
         delete?: never;
@@ -215,9 +295,31 @@ export interface paths {
         head?: never;
         /**
          * Update Project Theme
-         * @description 更新主题预设或细粒度覆盖；大纲确认后仍可用。
+         * @description ��������Ԥ���ϸ���ȸ��ǣ����ȷ�Ϻ��Կ��á�
          */
         patch: operations["update_project_theme_api_v1_projects__project_id__theme_patch"];
+        trace?: never;
+    };
+    "/api/v1/projects/{project_id}/html-style/generate": {
+        parameters: {
+            query?: never;
+            header?: never;
+            path?: never;
+            cookie?: never;
+        };
+        get?: never;
+        put?: never;
+        /**
+         * Generate Project Html Style
+         * @description �Ե�ǰ����ͷ����ʾ�����ܰ����������� HTML չʾ���á�
+         *
+         *     �����Ӿ�����������л�����һ����Ӧ��ʹ�û�ȡ����ȷ�ϵĴ�١�
+         */
+        post: operations["generate_project_html_style_api_v1_projects__project_id__html_style_generate_post"];
+        delete?: never;
+        options?: never;
+        head?: never;
+        patch?: never;
         trace?: never;
     };
     "/api/v1/projects/{project_id}/sources": {
@@ -357,6 +459,57 @@ export interface paths {
         patch?: never;
         trace?: never;
     };
+    "/api/v1/projects/{project_id}/html-report": {
+        parameters: {
+            query?: never;
+            header?: never;
+            path?: never;
+            cookie?: never;
+        };
+        /** Get Html Report */
+        get: operations["get_html_report_api_v1_projects__project_id__html_report_get"];
+        put?: never;
+        post?: never;
+        delete?: never;
+        options?: never;
+        head?: never;
+        patch?: never;
+        trace?: never;
+    };
+    "/api/v1/projects/{project_id}/html-report/generate": {
+        parameters: {
+            query?: never;
+            header?: never;
+            path?: never;
+            cookie?: never;
+        };
+        get?: never;
+        put?: never;
+        /** Generate Html Report */
+        post: operations["generate_html_report_api_v1_projects__project_id__html_report_generate_post"];
+        delete?: never;
+        options?: never;
+        head?: never;
+        patch?: never;
+        trace?: never;
+    };
+    "/api/v1/projects/{project_id}/html-report/render": {
+        parameters: {
+            query?: never;
+            header?: never;
+            path?: never;
+            cookie?: never;
+        };
+        /** Render Html Report */
+        get: operations["render_html_report_api_v1_projects__project_id__html_report_render_get"];
+        put?: never;
+        post?: never;
+        delete?: never;
+        options?: never;
+        head?: never;
+        patch?: never;
+        trace?: never;
+    };
     "/api/v1/projects/{project_id}/deck": {
         parameters: {
             query?: never;
@@ -383,7 +536,7 @@ export interface paths {
         };
         /**
          * Get Deck Quality
-         * @description 导出前质量报告：分级 issues 与是否允许导出。检查逻辑见 build_quality_report。
+         * @description ����ǰ�������棺�ּ� issues ���Ƿ���������������߼��� build_quality_report��
          */
         get: operations["get_deck_quality_api_v1_projects__project_id__deck_quality_get"];
         put?: never;
@@ -403,9 +556,69 @@ export interface paths {
         };
         /**
          * Export Deck
-         * @description 同步导出项目 PPTX：检查 → 渲染 → 回读验证 → 返回文件流。
+         * @description ͬ��������Ŀ PPTX����� �� ��Ⱦ �� �ض���֤ �� �����ļ�����
          */
         get: operations["export_deck_api_v1_projects__project_id__deck_export_get"];
+        put?: never;
+        post?: never;
+        delete?: never;
+        options?: never;
+        head?: never;
+        patch?: never;
+        trace?: never;
+    };
+    "/api/v1/projects/{project_id}/deck/export/html": {
+        parameters: {
+            query?: never;
+            header?: never;
+            path?: never;
+            cookie?: never;
+        };
+        /**
+         * Export Deck Html
+         * @description �������߿ɴ򿪡����������볡��Ч�ĵ��ļ� HTML չʾ��
+         */
+        get: operations["export_deck_html_api_v1_projects__project_id__deck_export_html_get"];
+        put?: never;
+        post?: never;
+        delete?: never;
+        options?: never;
+        head?: never;
+        patch?: never;
+        trace?: never;
+    };
+    "/api/v1/projects/{project_id}/deck/export/markdown": {
+        parameters: {
+            query?: never;
+            header?: never;
+            path?: never;
+            cookie?: never;
+        };
+        /**
+         * Export Deck Markdown
+         * @description �����ɼ����༭��汾������ Markdown �ĸ塣
+         */
+        get: operations["export_deck_markdown_api_v1_projects__project_id__deck_export_markdown_get"];
+        put?: never;
+        post?: never;
+        delete?: never;
+        options?: never;
+        head?: never;
+        patch?: never;
+        trace?: never;
+    };
+    "/api/v1/projects/{project_id}/deck/export/pdf": {
+        parameters: {
+            query?: never;
+            header?: never;
+            path?: never;
+            cookie?: never;
+        };
+        /**
+         * Export Deck Pdf
+         * @description ������̬�Ķ��� PDF��HTML ��Ч���Զ�������
+         */
+        get: operations["export_deck_pdf_api_v1_projects__project_id__deck_export_pdf_get"];
         put?: never;
         post?: never;
         delete?: never;
@@ -515,7 +728,7 @@ export interface paths {
         head?: never;
         /**
          * Update Slide Block Style
-         * @description 更新元素级样式覆盖。不置 locked：改颜色不该挡住 AI 改写文字。
+         * @description ����Ԫ�ؼ���ʽ���ǡ����� locked������ɫ���õ�ס AI ��д���֡�
          */
         patch: operations["update_slide_block_style_api_v1_projects__project_id__deck_slides__slide_id__blocks__block_id__style_patch"];
         trace?: never;
@@ -564,7 +777,7 @@ export interface paths {
         get?: never;
         /**
          * Update Flex State
-         * @description 原子写回 blocks + layout_tree，供撤销/重做恢复整页结构。
+         * @description ԭ��д�� blocks + layout_tree��������/�����ָ���ҳ�ṹ��
          */
         put: operations["update_flex_state_api_v1_projects__project_id__deck_slides__slide_id__flex_state_put"];
         post?: never;
@@ -653,7 +866,7 @@ export interface paths {
         put?: never;
         /**
          * Insert Slide
-         * @description 插入一张空白页，内容在本地生成，无需再跑一遍 AI。
+         * @description ����һ�ſհ�ҳ�������ڱ������ɣ���������һ�� AI��
          */
         post: operations["insert_slide_api_v1_projects__project_id__deck_slides_post"];
         delete?: never;
@@ -905,7 +1118,7 @@ export interface components {
         };
         /**
          * BlockStyle
-         * @description 单个元素相对主题的样式覆盖。
+         * @description ����Ԫ������������ʽ���ǡ�
          */
         BlockStyle: {
             /** Size Pt */
@@ -931,7 +1144,7 @@ export interface components {
         };
         /**
          * BlockStyleUpdate
-         * @description 元素级样式覆盖；style 为 null 表示清除该元素的全部微调。
+         * @description Ԫ�ؼ���ʽ���ǣ�style Ϊ null ��ʾ�����Ԫ�ص�ȫ��΢����
          */
         BlockStyleUpdate: {
             /** Revision */
@@ -1199,7 +1412,7 @@ export interface components {
         };
         /**
          * CornerBracket
-         * @description 角部 L 形几何，由两条细矩形拼成。
+         * @description �ǲ� L �μ��Σ�������ϸ����ƴ�ɡ�
          */
         CornerBracket: {
             /** Scope */
@@ -1248,10 +1461,10 @@ export interface components {
         };
         /**
          * Deck
-         * @description PPT 的统一内容模型。
+         * @description PPT ��ͳһ����ģ�͡�
          *
-         *     内容、布局、主题三者分离：这里描述页面块内容；
-         *     fixed 页几何来自布局槽位，flex 页几何来自 layout_tree，视觉表现来自主题。
+         *     ���ݡ����֡��������߷��룺��������ҳ������ݣ�
+         *     fixed ҳ�������Բ��ֲ�λ��flex ҳ�������� layout_tree���Ӿ������������⡣
          */
         Deck: {
             /** Id */
@@ -1288,10 +1501,10 @@ export interface components {
         };
         /**
          * DeckPageResult
-         * @description 整页增删复制的结果。
+         * @description ��ҳ��ɾ���ƵĽ����
          *
-         *     增删都会改动多页 position，返回整份 deck 让前端一次换掉缓存；slide_id 是
-         *     操作后应当选中的页（新页，或删除后的邻页）。
+         *     ��ɾ����Ķ���ҳ position���������� deck ��ǰ��һ�λ������棻slide_id ��
+         *     ������Ӧ��ѡ�е�ҳ����ҳ����ɾ�������ҳ����
          */
         DeckPageResult: {
             deck: components["schemas"]["DeckPublic"];
@@ -1325,7 +1538,7 @@ export interface components {
         };
         /**
          * Decoration
-         * @description 纯装饰图形，不承载内容，两端渲染器按同一份声明绘制
+         * @description ��װ��ͼ�Σ����������ݣ�������Ⱦ����ͬһ����������
          */
         Decoration: {
             /**
@@ -1346,7 +1559,7 @@ export interface components {
         };
         /**
          * EdgeBand
-         * @description 贴着画布某条边的细色带。
+         * @description ���Ż���ĳ���ߵ�ϸɫ����
          */
         EdgeBand: {
             /** Scope */
@@ -1395,7 +1608,7 @@ export interface components {
         };
         /**
          * ExportCheckReport
-         * @description 导出前分级报告。
+         * @description ����ǰ�ּ����档
          */
         ExportCheckReport: {
             /** Issues */
@@ -1407,6 +1620,75 @@ export interface components {
              * @default true
              */
             fonts_precise: boolean;
+        };
+        /**
+         * ExternalTemplatePublic
+         * @description Lightweight selector summary; request ``inspection`` for detailed object data.
+         */
+        ExternalTemplatePublic: {
+            /** Id */
+            id: string;
+            /** Name */
+            name: string;
+            /** Filename */
+            filename: string;
+            /** Source Path */
+            source_path: string;
+            /** Size Bytes */
+            size_bytes: number;
+            /**
+             * Modified At
+             * Format: date-time
+             */
+            modified_at: string;
+            /** Slide Count */
+            slide_count: number;
+            /** Layout Count */
+            layout_count: number;
+            /** Image Count */
+            image_count: number;
+            /**
+             * Element Count
+             * @default 0
+             */
+            element_count: number;
+            /**
+             * Background Count
+             * @default 0
+             */
+            background_count: number;
+            /**
+             * Component Count
+             * @default 0
+             */
+            component_count: number;
+            /** Text Preview */
+            text_preview?: string[];
+            /** Palette */
+            palette?: string[];
+            /** Fonts */
+            fonts?: string[];
+            /** Aspect Ratio */
+            aspect_ratio: string;
+            /** Structural Summary */
+            structural_summary?: string | null;
+            style_profile: components["schemas"]["ExternalTemplateStyleProfile"];
+            /**
+             * Analysis Status
+             * @default not_analyzed
+             * @enum {string}
+             */
+            analysis_status: "not_analyzed" | "ready" | "partial" | "unavailable" | "failed";
+            /** Style Summary */
+            style_summary?: string | null;
+            /** Image Summary */
+            image_summary?: string | null;
+        };
+        /** ExternalTemplateStyleProfile */
+        ExternalTemplateStyleProfile: {
+            /** Base Theme Id */
+            base_theme_id: string;
+            overrides: components["schemas"]["ThemeOverrides"];
         };
         /** FlexContainer */
         "FlexContainer-Input": {
@@ -1502,7 +1784,7 @@ export interface components {
         };
         /**
          * FlexStateUpdateRequest
-         * @description 整页恢复灵活布局状态（撤销/重做增删块与换排布用）。
+         * @description ��ҳ�ָ�����״̬������/������ɾ���뻻�Ų��ã���
          */
         FlexStateUpdateRequest: {
             /** Revision */
@@ -1513,10 +1795,10 @@ export interface components {
         };
         /**
          * FontFamily
-         * @description Web 与 PPTX 分别声明字体名。
+         * @description Web �� PPTX �ֱ�������������
          *
-         *     浏览器可用 webfont，而 PPTX 只能引用观众机器上已安装的字体，
-         *     两者无法统一，因此显式分开声明，而不是让某一端将就另一端。
+         *     ��������� webfont���� PPTX ֻ�����ù��ڻ������Ѱ�װ�����壬
+         *     �����޷�ͳһ�������ʽ�ֿ���������������ĳһ�˽�����һ�ˡ�
          */
         FontFamily: {
             /** Web */
@@ -1540,8 +1822,51 @@ export interface components {
             emoji: components["schemas"]["FontFamily"];
         };
         /**
+         * FrameMotif
+         * @description �ı߿�����λ�ǿ飬�γɺ�������������Ƽ���幹ͼ��
+         */
+        FrameMotif: {
+            /** Scope */
+            scope?: ("cover" | "section" | "content")[] | null;
+            /**
+             * Color
+             * @default accent
+             */
+            color: string;
+            /**
+             * Strength
+             * @default 0.2
+             */
+            strength: number;
+            /**
+             * Avoid Content
+             * @default false
+             */
+            avoid_content: boolean;
+            /**
+             * @description discriminator enum property added by openapi-typescript
+             * @enum {string}
+             */
+            motif: "frame";
+            /**
+             * Inset Pt
+             * @default 24
+             */
+            inset_pt: number;
+            /**
+             * Thickness Pt
+             * @default 1
+             */
+            thickness_pt: number;
+            /**
+             * Corner Size Pt
+             * @default 18
+             */
+            corner_size_pt: number;
+        };
+        /**
          * Glow
-         * @description 光晕：同心椭圆逐层加深，越靠中心越浓，用实色台阶逼近径向渐变。
+         * @description ���Σ�ͬ����Բ�����Խ������ԽŨ����ʵɫ̨�ױƽ����򽥱䡣
          */
         Glow: {
             /** Scope */
@@ -1594,7 +1919,7 @@ export interface components {
         };
         /**
          * HairlineGrid
-         * @description 细网格：区域内等分的竖线与横线，只画内部分隔线。
+         * @description ϸ���������ڵȷֵ���������ߣ�ֻ���ڲ��ָ��ߡ�
          */
         HairlineGrid: {
             /** Scope */
@@ -1638,8 +1963,8 @@ export interface components {
         };
         /**
          * HealthResponse
-         * @description 显式声明响应模型，让 OpenAPI 产出带字段的 schema。
-         *     前端类型由 OpenAPI 生成，接口若只返回裸 dict，生成结果会退化为 object。
+         * @description ��ʽ������Ӧģ�ͣ��� OpenAPI �������ֶε� schema��
+         *     ǰ�������� OpenAPI ���ɣ��ӿ���ֻ������ dict�����ɽ�����˻�Ϊ object��
          */
         HealthResponse: {
             /**
@@ -1657,6 +1982,36 @@ export interface components {
              * @enum {string}
              */
             redis: "ok" | "down";
+        };
+        /** HtmlReportGenerateRequest */
+        HtmlReportGenerateRequest: {
+            /**
+             * Regenerate
+             * @default false
+             */
+            regenerate: boolean;
+        };
+        /** HtmlReportPublic */
+        HtmlReportPublic: {
+            /**
+             * Status
+             * @enum {string}
+             */
+            status: "idle" | "generating" | "ready" | "failed";
+            /** Error */
+            error?: string | null;
+            /** Job Id */
+            job_id?: string | null;
+            /** Has Document */
+            has_document?: boolean;
+        };
+        /**
+         * HtmlStyleGenerateRequest
+         * @description ����������û������������ɰ�ȫ�� HTML չʾ��ʽ��
+         */
+        HtmlStyleGenerateRequest: {
+            /** Prompt */
+            prompt?: string | null;
         };
         /** ImageBlock */
         ImageBlock: {
@@ -1793,6 +2148,69 @@ export interface components {
             email: string;
             /** Password */
             password: string;
+        };
+        /**
+         * Orbit
+         * @description ��С�ڵ���ɵ���Բ�ǹ죬���ڽǲ���������Χ�γ����Թ�ͼ��
+         */
+        Orbit: {
+            /** Scope */
+            scope?: ("cover" | "section" | "content")[] | null;
+            /**
+             * Color
+             * @default accent
+             */
+            color: string;
+            /**
+             * Strength
+             * @default 0.2
+             */
+            strength: number;
+            /**
+             * Avoid Content
+             * @default false
+             */
+            avoid_content: boolean;
+            /**
+             * @description discriminator enum property added by openapi-typescript
+             * @enum {string}
+             */
+            motif: "orbit";
+            /**
+             * Cx
+             * @default 0.82
+             */
+            cx: number;
+            /**
+             * Cy
+             * @default 0.2
+             */
+            cy: number;
+            /**
+             * Radius X Pt
+             * @default 120
+             */
+            radius_x_pt: number;
+            /**
+             * Radius Y Pt
+             * @default 72
+             */
+            radius_y_pt: number;
+            /**
+             * Nodes
+             * @default 18
+             */
+            nodes: number;
+            /**
+             * Dot Size Pt
+             * @default 3
+             */
+            dot_size_pt: number;
+            /**
+             * Start Deg
+             * @default 0
+             */
+            start_deg: number;
         };
         /** OutlineGenerateAccepted */
         OutlineGenerateAccepted: {
@@ -1945,6 +2363,8 @@ export interface components {
              * @default ivory
              */
             theme_id: string;
+            /** External Template Id */
+            external_template_id?: string | null;
             /**
              * Layout Mode
              * @default flex
@@ -1957,6 +2377,14 @@ export interface components {
              * @enum {string}
              */
             content_density: "concise" | "medium" | "detailed";
+            /**
+             * Output Format
+             * @default ppt
+             * @enum {string}
+             */
+            output_format: "ppt" | "html";
+            /** Html Style Prompt */
+            html_style_prompt?: string | null;
         };
         /** ProjectDetail */
         ProjectDetail: {
@@ -1978,6 +2406,8 @@ export interface components {
             page_count: number;
             /** Theme Id */
             theme_id: string;
+            /** External Template Id */
+            external_template_id?: string | null;
             /** Theme Overrides */
             theme_overrides?: {
                 [key: string]: unknown;
@@ -1994,6 +2424,26 @@ export interface components {
              * @enum {string}
              */
             content_density: "concise" | "medium" | "detailed";
+            /**
+             * Output Format
+             * @default ppt
+             * @enum {string}
+             */
+            output_format: "ppt" | "html";
+            /** Html Style Prompt */
+            html_style_prompt?: string | null;
+            /** Html Style */
+            html_style?: {
+                [key: string]: unknown;
+            };
+            /**
+             * Html Report Status
+             * @default idle
+             * @enum {string}
+             */
+            html_report_status: "idle" | "generating" | "ready" | "failed";
+            /** Html Report Error */
+            html_report_error?: string | null;
             /**
              * Status
              * @enum {string}
@@ -2032,6 +2482,8 @@ export interface components {
             page_count: number;
             /** Theme Id */
             theme_id: string;
+            /** External Template Id */
+            external_template_id?: string | null;
             /** Theme Overrides */
             theme_overrides?: {
                 [key: string]: unknown;
@@ -2048,6 +2500,26 @@ export interface components {
              * @enum {string}
              */
             content_density: "concise" | "medium" | "detailed";
+            /**
+             * Output Format
+             * @default ppt
+             * @enum {string}
+             */
+            output_format: "ppt" | "html";
+            /** Html Style Prompt */
+            html_style_prompt?: string | null;
+            /** Html Style */
+            html_style?: {
+                [key: string]: unknown;
+            };
+            /**
+             * Html Report Status
+             * @default idle
+             * @enum {string}
+             */
+            html_report_status: "idle" | "generating" | "ready" | "failed";
+            /** Html Report Error */
+            html_report_error?: string | null;
             /**
              * Status
              * @enum {string}
@@ -2066,11 +2538,13 @@ export interface components {
         };
         /**
          * ProjectThemeUpdate
-         * @description 样式专用更新：不受大纲 confirmed 锁定。
+         * @description ��ʽר�ø��£����ܴ�� confirmed ������
          */
         ProjectThemeUpdate: {
             /** Theme Id */
             theme_id?: string | null;
+            /** External Template Id */
+            external_template_id?: string | null;
             overrides?: components["schemas"]["ThemeOverrides"] | null;
         };
         /** ProjectUpdate */
@@ -2085,17 +2559,23 @@ export interface components {
             page_count?: number | null;
             /** Theme Id */
             theme_id?: string | null;
+            /** External Template Id */
+            external_template_id?: string | null;
             /** Layout Mode */
             layout_mode?: ("fixed" | "flex") | null;
             /** Content Density */
             content_density?: ("concise" | "medium" | "detailed") | null;
+            /** Output Format */
+            output_format?: ("ppt" | "html") | null;
+            /** Html Style Prompt */
+            html_style_prompt?: string | null;
         };
         /**
          * Rect
-         * @description 归一化矩形，取值 0–1，相对基准画布。
+         * @description ��һ�����Σ�ȡֵ 0�C1����Ի�׼������
          *
-         *     用归一化而非绝对坐标，是为了让缩略图、全屏预览和导出三者
-         *     共用同一份几何定义，换算只发生在各自的渲染边界上。
+         *     �ù�һ�����Ǿ������꣬��Ϊ��������ͼ��ȫ��Ԥ���͵�������
+         *     ����ͬһ�ݼ��ζ��壬����ֻ�����ڸ��Ե���Ⱦ�߽��ϡ�
          */
         Rect: {
             /** X */
@@ -2141,6 +2621,69 @@ export interface components {
             /** Revision */
             revision: number;
         };
+        /**
+         * Scatter
+         * @description ȷ����ɢ��װ�Σ����ꡢ��â��Բ�㡢���Ρ��̻���оƬ�㡣
+         */
+        Scatter: {
+            /** Scope */
+            scope?: ("cover" | "section" | "content")[] | null;
+            /**
+             * Color
+             * @default accent
+             */
+            color: string;
+            /**
+             * Strength
+             * @default 0.2
+             */
+            strength: number;
+            /**
+             * Avoid Content
+             * @default false
+             */
+            avoid_content: boolean;
+            /**
+             * @description discriminator enum property added by openapi-typescript
+             * @enum {string}
+             */
+            motif: "scatter";
+            /**
+             * Symbol
+             * @default dot
+             * @enum {string}
+             */
+            symbol: "petal" | "spark" | "dot" | "diamond" | "dash" | "chip";
+            /**
+             * Count
+             * @default 12
+             */
+            count: number;
+            /**
+             * Seed
+             * @default 17
+             */
+            seed: number;
+            /**
+             * @default {
+             *       "x": 0,
+             *       "y": 0,
+             *       "w": 1,
+             *       "h": 1
+             *     }
+             */
+            area: components["schemas"]["Rect"];
+            /**
+             * Min Size Pt
+             * @default 4
+             */
+            min_size_pt: number;
+            /**
+             * Max Size Pt
+             * @default 12
+             */
+            max_size_pt: number;
+        };
         /** Shape */
         Shape: {
             /** Radius Pt */
@@ -2185,7 +2728,7 @@ export interface components {
         };
         /**
          * SlideInsertRequest
-         * @description 在指定页之后插入空白页；null 表示追加到末尾。
+         * @description ��ָ��ҳ֮�����հ�ҳ��null ��ʾ׷�ӵ�ĩβ��
          */
         SlideInsertRequest: {
             /** After Slide Id */
@@ -2261,11 +2804,11 @@ export interface components {
         };
         /**
          * SlotCapacity
-         * @description 布局对内容长度的声明式约束。
+         * @description ���ֶ����ݳ��ȵ�����ʽԼ����
          *
-         *     它有两个用途：作为提示词里的硬指标约束模型生成长度，
-         *     以及在字体度量之前做一次廉价的快速筛查。
-         *     最终是否溢出仍以真实字体度量为准。
+         *     ����������;����Ϊ��ʾ�����Ӳָ��Լ��ģ�����ɳ��ȣ�
+         *     �Լ����������֮ǰ��һ�����۵Ŀ���ɸ�顣
+         *     �����Ƿ����������ʵ�������Ϊ׼��
          */
         SlotCapacity: {
             /** Max Lines */
@@ -2319,10 +2862,10 @@ export interface components {
         };
         /**
          * SourceSection
-         * @description 输入材料的一个章节。
+         * @description ������ϵ�һ���½ڡ�
          *
-         *     保留标题层级而非拍平成纯文本，是因为大纲规划本质上是结构提炼：
-         *     原文档已有的结构信息如果丢掉，等于让模型再猜一遍。
+         *     ��������㼶������ƽ�ɴ��ı�������Ϊ��ٹ滮�������ǽṹ������
+         *     ԭ�ĵ����еĽṹ��Ϣ���������������ģ���ٲ�һ�顣
          */
         SourceSection: {
             /** Level */
@@ -2335,12 +2878,132 @@ export interface components {
             locator: string;
         };
         /**
+         * Sticker
+         * @description Բ�Ǳ�ǩ��ֽ����������ı���ϣ��ʺϷ���Ǳ����Ŀǩ��
+         */
+        Sticker: {
+            /** Scope */
+            scope?: ("cover" | "section" | "content")[] | null;
+            /**
+             * Color
+             * @default accent
+             */
+            color: string;
+            /**
+             * Strength
+             * @default 0.2
+             */
+            strength: number;
+            /**
+             * Avoid Content
+             * @default false
+             */
+            avoid_content: boolean;
+            /**
+             * @description discriminator enum property added by openapi-typescript
+             * @enum {string}
+             */
+            motif: "sticker";
+            rect: components["schemas"]["Rect"];
+            /** Text */
+            text: string;
+            /**
+             * Size Pt
+             * @default 11
+             */
+            size_pt: number;
+            /**
+             * Font
+             * @default body
+             * @enum {string}
+             */
+            font: "display" | "body";
+            /**
+             * Weight
+             * @default 700
+             */
+            weight: number;
+            /**
+             * Align
+             * @default center
+             * @enum {string}
+             */
+            align: "left" | "center" | "right";
+            /**
+             * Rotation
+             * @default 0
+             */
+            rotation: number;
+            /**
+             * Text Color
+             * @default background
+             */
+            text_color: string;
+        };
+        /**
+         * StripeField
+         * @description һ�����ת��ƽ��ɫ���������ٶȸС�ֽ���кͷ���������
+         */
+        StripeField: {
+            /** Scope */
+            scope?: ("cover" | "section" | "content")[] | null;
+            /**
+             * Color
+             * @default accent
+             */
+            color: string;
+            /**
+             * Strength
+             * @default 0.2
+             */
+            strength: number;
+            /**
+             * Avoid Content
+             * @default false
+             */
+            avoid_content: boolean;
+            /**
+             * @description discriminator enum property added by openapi-typescript
+             * @enum {string}
+             */
+            motif: "stripe_field";
+            /**
+             * @default {
+             *       "x": 0,
+             *       "y": 0,
+             *       "w": 1,
+             *       "h": 1
+             *     }
+             */
+            area: components["schemas"]["Rect"];
+            /**
+             * Count
+             * @default 5
+             */
+            count: number;
+            /**
+             * Thickness Pt
+             * @default 8
+             */
+            thickness_pt: number;
+            /**
+             * Gap Pt
+             * @default 14
+             */
+            gap_pt: number;
+            /**
+             * Rotation
+             * @default -12
+             */
+            rotation: number;
+        };
+        /**
          * StructureIssue
-         * @description 结构问题。
+         * @description �ṹ���⡣
          *
-         *     error 表示内容与布局的契约被破坏，必须阻断导出；
-         *     warning 表示内容偏长可能观感不佳，允许继续。
-         *     code 用于生成 repair 分流：overflow/capacity 不触发砍块重写。
+         *     error ��ʾ�����벼�ֵ���Լ���ƻ���������ϵ�����
+         *     warning ��ʾ����ƫ�����ܹ۸в��ѣ�����������
+         *     code �������� repair ������overflow/capacity ������������д��
          */
         StructureIssue: {
             /**
@@ -2406,6 +3069,179 @@ export interface components {
             header: string[];
             /** Rows */
             rows: string[][];
+        };
+        /** TemplateBackground */
+        TemplateBackground: {
+            /**
+             * Kind
+             * @default none
+             * @enum {string}
+             */
+            kind: "none" | "solid" | "image" | "mixed";
+            /** Colors */
+            colors?: string[];
+            /** Asset Id */
+            asset_id?: string | null;
+        };
+        /** TemplateComponent */
+        TemplateComponent: {
+            /** Kind */
+            kind: string;
+            /** Role */
+            role: string;
+            /** Occurrences */
+            occurrences: number;
+            /** Sample Slides */
+            sample_slides: number[];
+            /** Description */
+            description: string;
+        };
+        /** TemplateElement */
+        TemplateElement: {
+            /** Id */
+            id: string;
+            /** Kind */
+            kind: string;
+            /** Role */
+            role: string;
+            /** Name */
+            name: string;
+            rect: components["schemas"]["TemplateRect"];
+            /** Z Index */
+            z_index: number;
+            /**
+             * Source Layer
+             * @default slide
+             * @enum {string}
+             */
+            source_layer: "master" | "layout" | "slide";
+            /** Group Path */
+            group_path?: string[];
+            /** Text Preview */
+            text_preview?: string | null;
+            /** Colors */
+            colors?: string[];
+            /** Font Size Pt */
+            font_size_pt?: number | null;
+            /** Asset Id */
+            asset_id?: string | null;
+            /** Asset Description */
+            asset_description?: string | null;
+            /**
+             * Is Background
+             * @default false
+             */
+            is_background: boolean;
+            /** Details */
+            details?: {
+                [key: string]: string | number | boolean;
+            };
+        };
+        /**
+         * TemplateInspection
+         * @description Full per-slide parsing result. This is deliberately not returned by the list API.
+         */
+        TemplateInspection: {
+            /** Template Id */
+            template_id: string;
+            canvas: components["schemas"]["TemplateRect"];
+            /**
+             * Visual Analysis Mode
+             * @enum {string}
+             */
+            visual_analysis_mode: "native-object-tree" | "native-object-tree-with-vision";
+            /**
+             * Visual Analysis Status
+             * @default not_analyzed
+             * @enum {string}
+             */
+            visual_analysis_status: "not_analyzed" | "ready" | "partial" | "unavailable" | "failed";
+            /** Slides */
+            slides: components["schemas"]["TemplateSlideAnalysis"][];
+            /** Component Catalog */
+            component_catalog: components["schemas"]["TemplateComponent"][];
+            /** Layout Recipes */
+            layout_recipes: components["schemas"]["TemplateLayoutRecipe"][];
+            /** Analyzed At */
+            analyzed_at?: string | null;
+        };
+        /** TemplateLayoutRecipe */
+        TemplateLayoutRecipe: {
+            /** Id */
+            id: string;
+            /** Name */
+            name: string;
+            /** Slide Numbers */
+            slide_numbers: number[];
+            /** Description */
+            description: string;
+        };
+        /**
+         * TemplateRect
+         * @description Coordinates are normalized to the slide (0 to 1), not raw EMU.
+         */
+        TemplateRect: {
+            /** Left */
+            left: number;
+            /** Top */
+            top: number;
+            /** Width */
+            width: number;
+            /** Height */
+            height: number;
+        };
+        /** TemplateSlideAnalysis */
+        TemplateSlideAnalysis: {
+            /** Slide Number */
+            slide_number: number;
+            /** Layout Name */
+            layout_name?: string | null;
+            /** Title */
+            title?: string | null;
+            background: components["schemas"]["TemplateBackground"];
+            /** Element Count */
+            element_count: number;
+            /** Element Counts */
+            element_counts?: {
+                [key: string]: number;
+            };
+            /** Elements */
+            elements: components["schemas"]["TemplateElement"][];
+            /** Structural Summary */
+            structural_summary: string;
+            /** Semantic Role */
+            semantic_role?: string | null;
+            /** Visual Summary */
+            visual_summary?: string | null;
+        };
+        /**
+         * TemplateVisual
+         * @description ģ�弶��ͼԪ���ݣ����Ʒ���Ԥ��������Ƥ���͵�����ҳ��ʽ��
+         */
+        TemplateVisual: {
+            /**
+             * Family
+             * @default classic
+             */
+            family: string;
+            /**
+             * Cover Variant
+             * @default editorial
+             * @enum {string}
+             */
+            cover_variant: "editorial" | "split" | "poster" | "framed" | "spotlight" | "ribbon";
+            /**
+             * Content Variant
+             * @default clean
+             * @enum {string}
+             */
+            content_variant: "clean" | "cards" | "notebook" | "dashboard" | "magazine" | "panel";
+            /**
+             * Transition
+             * @default fade
+             * @enum {string}
+             */
+            transition: "none" | "fade" | "push" | "wipe" | "split";
         };
         /** TextBlock */
         TextBlock: {
@@ -2508,11 +3344,20 @@ export interface components {
              * Ambient
              * @default []
              */
-            ambient: (components["schemas"]["EdgeBand"] | components["schemas"]["CornerBracket"] | components["schemas"]["HairlineGrid"] | components["schemas"]["Glow"] | components["schemas"]["Watermark"])[];
+            ambient: (components["schemas"]["EdgeBand"] | components["schemas"]["CornerBracket"] | components["schemas"]["HairlineGrid"] | components["schemas"]["Glow"] | components["schemas"]["Watermark"] | components["schemas"]["Scatter"] | components["schemas"]["Orbit"] | components["schemas"]["Sticker"] | components["schemas"]["FrameMotif"] | components["schemas"]["StripeField"])[];
+            /**
+             * @default {
+             *       "family": "classic",
+             *       "cover_variant": "editorial",
+             *       "content_variant": "clean",
+             *       "transition": "fade"
+             *     }
+             */
+            visual: components["schemas"]["TemplateVisual"];
         };
         /**
          * ThemeOverrides
-         * @description 相对预设主题的安全子集覆盖。
+         * @description ���Ԥ������İ�ȫ�Ӽ����ǡ�
          */
         ThemeOverrides: {
             palette?: components["schemas"]["PaletteOverride"] | null;
@@ -2572,7 +3417,7 @@ export interface components {
         };
         /**
          * Watermark
-         * @description 巨字水印。text 留空时用页码（01、02……）。
+         * @description ����ˮӡ��text ����ʱ��ҳ�루01��02��������
          */
         Watermark: {
             /** Scope */
@@ -2779,6 +3624,109 @@ export interface operations {
                 };
                 content: {
                     "application/json": components["schemas"]["Theme"][];
+                };
+            };
+        };
+    };
+    list_templates_from_directory_api_v1_design_external_templates_get: {
+        parameters: {
+            query?: never;
+            header?: never;
+            path?: never;
+            cookie?: never;
+        };
+        requestBody?: never;
+        responses: {
+            /** @description Successful Response */
+            200: {
+                headers: {
+                    [name: string]: unknown;
+                };
+                content: {
+                    "application/json": components["schemas"]["ExternalTemplatePublic"][];
+                };
+            };
+        };
+    };
+    refresh_templates_from_directory_api_v1_design_external_templates_refresh_post: {
+        parameters: {
+            query?: never;
+            header?: never;
+            path?: never;
+            cookie?: never;
+        };
+        requestBody?: never;
+        responses: {
+            /** @description Successful Response */
+            200: {
+                headers: {
+                    [name: string]: unknown;
+                };
+                content: {
+                    "application/json": components["schemas"]["ExternalTemplatePublic"][];
+                };
+            };
+        };
+    };
+    inspect_template_from_directory_api_v1_design_external_templates__template_id__inspection_get: {
+        parameters: {
+            query?: never;
+            header?: never;
+            path: {
+                template_id: string;
+            };
+            cookie?: never;
+        };
+        requestBody?: never;
+        responses: {
+            /** @description Successful Response */
+            200: {
+                headers: {
+                    [name: string]: unknown;
+                };
+                content: {
+                    "application/json": components["schemas"]["TemplateInspection"];
+                };
+            };
+            /** @description Validation Error */
+            422: {
+                headers: {
+                    [name: string]: unknown;
+                };
+                content: {
+                    "application/json": components["schemas"]["HTTPValidationError"];
+                };
+            };
+        };
+    };
+    get_template_asset_from_directory_api_v1_design_external_templates__template_id__assets__asset_id__get: {
+        parameters: {
+            query?: never;
+            header?: never;
+            path: {
+                template_id: string;
+                asset_id: string;
+            };
+            cookie?: never;
+        };
+        requestBody?: never;
+        responses: {
+            /** @description Successful Response */
+            200: {
+                headers: {
+                    [name: string]: unknown;
+                };
+                content: {
+                    "application/json": unknown;
+                };
+            };
+            /** @description Validation Error */
+            422: {
+                headers: {
+                    [name: string]: unknown;
+                };
+                content: {
+                    "application/json": components["schemas"]["HTTPValidationError"];
                 };
             };
         };
@@ -3025,6 +3973,41 @@ export interface operations {
         requestBody: {
             content: {
                 "application/json": components["schemas"]["ProjectThemeUpdate"];
+            };
+        };
+        responses: {
+            /** @description Successful Response */
+            200: {
+                headers: {
+                    [name: string]: unknown;
+                };
+                content: {
+                    "application/json": components["schemas"]["ProjectDetail"];
+                };
+            };
+            /** @description Validation Error */
+            422: {
+                headers: {
+                    [name: string]: unknown;
+                };
+                content: {
+                    "application/json": components["schemas"]["HTTPValidationError"];
+                };
+            };
+        };
+    };
+    generate_project_html_style_api_v1_projects__project_id__html_style_generate_post: {
+        parameters: {
+            query?: never;
+            header?: never;
+            path: {
+                project_id: string;
+            };
+            cookie?: never;
+        };
+        requestBody: {
+            content: {
+                "application/json": components["schemas"]["HtmlStyleGenerateRequest"];
             };
         };
         responses: {
@@ -3346,6 +4329,103 @@ export interface operations {
             };
         };
     };
+    get_html_report_api_v1_projects__project_id__html_report_get: {
+        parameters: {
+            query?: never;
+            header?: never;
+            path: {
+                project_id: string;
+            };
+            cookie?: never;
+        };
+        requestBody?: never;
+        responses: {
+            /** @description Successful Response */
+            200: {
+                headers: {
+                    [name: string]: unknown;
+                };
+                content: {
+                    "application/json": components["schemas"]["HtmlReportPublic"];
+                };
+            };
+            /** @description Validation Error */
+            422: {
+                headers: {
+                    [name: string]: unknown;
+                };
+                content: {
+                    "application/json": components["schemas"]["HTTPValidationError"];
+                };
+            };
+        };
+    };
+    generate_html_report_api_v1_projects__project_id__html_report_generate_post: {
+        parameters: {
+            query?: never;
+            header?: never;
+            path: {
+                project_id: string;
+            };
+            cookie?: never;
+        };
+        requestBody: {
+            content: {
+                "application/json": components["schemas"]["HtmlReportGenerateRequest"];
+            };
+        };
+        responses: {
+            /** @description Successful Response */
+            202: {
+                headers: {
+                    [name: string]: unknown;
+                };
+                content: {
+                    "application/json": components["schemas"]["HtmlReportPublic"];
+                };
+            };
+            /** @description Validation Error */
+            422: {
+                headers: {
+                    [name: string]: unknown;
+                };
+                content: {
+                    "application/json": components["schemas"]["HTTPValidationError"];
+                };
+            };
+        };
+    };
+    render_html_report_api_v1_projects__project_id__html_report_render_get: {
+        parameters: {
+            query?: never;
+            header?: never;
+            path: {
+                project_id: string;
+            };
+            cookie?: never;
+        };
+        requestBody?: never;
+        responses: {
+            /** @description Successful Response */
+            200: {
+                headers: {
+                    [name: string]: unknown;
+                };
+                content: {
+                    "application/json": unknown;
+                };
+            };
+            /** @description Validation Error */
+            422: {
+                headers: {
+                    [name: string]: unknown;
+                };
+                content: {
+                    "application/json": components["schemas"]["HTTPValidationError"];
+                };
+            };
+        };
+    };
     get_deck_api_v1_projects__project_id__deck_get: {
         parameters: {
             query?: never;
@@ -3409,6 +4489,99 @@ export interface operations {
         };
     };
     export_deck_api_v1_projects__project_id__deck_export_get: {
+        parameters: {
+            query?: never;
+            header?: never;
+            path: {
+                project_id: string;
+            };
+            cookie?: never;
+        };
+        requestBody?: never;
+        responses: {
+            /** @description Successful Response */
+            200: {
+                headers: {
+                    [name: string]: unknown;
+                };
+                content: {
+                    "application/json": unknown;
+                };
+            };
+            /** @description Validation Error */
+            422: {
+                headers: {
+                    [name: string]: unknown;
+                };
+                content: {
+                    "application/json": components["schemas"]["HTTPValidationError"];
+                };
+            };
+        };
+    };
+    export_deck_html_api_v1_projects__project_id__deck_export_html_get: {
+        parameters: {
+            query?: never;
+            header?: never;
+            path: {
+                project_id: string;
+            };
+            cookie?: never;
+        };
+        requestBody?: never;
+        responses: {
+            /** @description Successful Response */
+            200: {
+                headers: {
+                    [name: string]: unknown;
+                };
+                content: {
+                    "application/json": unknown;
+                };
+            };
+            /** @description Validation Error */
+            422: {
+                headers: {
+                    [name: string]: unknown;
+                };
+                content: {
+                    "application/json": components["schemas"]["HTTPValidationError"];
+                };
+            };
+        };
+    };
+    export_deck_markdown_api_v1_projects__project_id__deck_export_markdown_get: {
+        parameters: {
+            query?: never;
+            header?: never;
+            path: {
+                project_id: string;
+            };
+            cookie?: never;
+        };
+        requestBody?: never;
+        responses: {
+            /** @description Successful Response */
+            200: {
+                headers: {
+                    [name: string]: unknown;
+                };
+                content: {
+                    "application/json": unknown;
+                };
+            };
+            /** @description Validation Error */
+            422: {
+                headers: {
+                    [name: string]: unknown;
+                };
+                content: {
+                    "application/json": components["schemas"]["HTTPValidationError"];
+                };
+            };
+        };
+    };
+    export_deck_pdf_api_v1_projects__project_id__deck_export_pdf_get: {
         parameters: {
             query?: never;
             header?: never;

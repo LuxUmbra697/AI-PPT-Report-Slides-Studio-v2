@@ -3,12 +3,13 @@ from arq.connections import RedisSettings
 from app.core.config import get_settings
 from app.worker.context import shutdown, startup
 from app.worker.deck_tasks import generate_deck
+from app.worker.html_report_tasks import generate_html_report
 from app.worker.retry import MAX_TRIES
 from app.worker.tasks import generate_outline
 
 
 class WorkerSettings:
-    functions = [generate_outline, generate_deck]
+    functions = [generate_outline, generate_deck, generate_html_report]
     on_startup = startup
     on_shutdown = shutdown
     redis_settings = RedisSettings.from_dsn(get_settings().redis_url)

@@ -1,7 +1,7 @@
 [project]
-name = "luxumbra-slides-backend"
+name = "slide-report-studio-backend"
 version = "0.1.0"
-description = "LuxUmbra Slides API"
+description = "Slide Report Studio API"
 requires-python = ">=3.12"
 dependencies = [
     "fastapi",
@@ -17,9 +17,11 @@ dependencies = [
     "pwdlib[argon2]>=0.3.0",
     "email-validator>=2.3.0",
     "python-pptx>=1.0.2",
+    "pillow>=10",
     "markdown-it-py>=4.2.0",
     "python-docx>=1.2.0",
     "pdfplumber>=0.11.10",
+    "reportlab>=5.0.0",
     "python-multipart>=0.0.32",
     "langchain-core>=1",
     "langchain-openai>=1",
@@ -27,6 +29,7 @@ dependencies = [
     "arq>=0.26",
     "httpx[socks]>=0.28.1",
     "fonttools>=4.63.0",
+    "cos-python-sdk-v5>=1.9.44",
 ]
 
 [build-system]
@@ -42,7 +45,6 @@ dev = [
     "pytest-asyncio",
     "ruff",
     "httpx",
-    "reportlab>=5.0.0",
 ]
 
 [tool.ruff]

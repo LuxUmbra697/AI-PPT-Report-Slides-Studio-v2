@@ -29,6 +29,7 @@ from app.render.pptx import render_deck_to_pptx
 from app.services.media import MEDIA_PREFIX, media_url, store_image
 from app.services.slide_images import resolve_slide_images
 from app.storage import get_storage
+from app.storage.cos import CosStorage
 
 
 def _chunk(tag: bytes, data: bytes) -> bytes:
@@ -586,6 +587,22 @@ async def test_resolve_slide_images_keeps_placeholder_and_skips_locked() -> None
 
 
 # --- media endpoint ---
+
+
+def test_cos_storage_normalizes_missing_object_to_file_not_found() -> None:
+    class MissingObjectError(Exception):
+        status_code = 404
+
+    class MissingClient:
+        def get_object(self, **_kwargs):
+            raise MissingObjectError("NoSuchKey")
+
+    storage = object.__new__(CosStorage)
+    storage.bucket = "example-bucket"
+    storage._client = MissingClient()
+
+    with pytest.raises(FileNotFoundError):
+        storage.load("media/missing.png")
 
 
 @pytest.mark.asyncio

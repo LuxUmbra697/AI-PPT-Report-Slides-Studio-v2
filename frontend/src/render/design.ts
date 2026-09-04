@@ -10,7 +10,48 @@ const layoutModules = import.meta.glob<Layout>('../../../shared/layouts/*.json',
   import: 'default',
 })
 
-const themeModules = import.meta.glob<Theme>('../../../shared/themes/*.json', {
+const themeModules = import.meta.glob<Theme>([
+  '../../../shared/themes/*.json',
+  '!../../../shared/themes/catalog.json',
+  '!../../../shared/themes/visuals.json',
+], {
+  eager: true,
+  import: 'default',
+})
+
+type CatalogPreset = {
+  id: string
+  name: string
+  description: string
+  category?: string
+  base: string
+  palette?: Partial<Theme['palette']>
+  shape?: Partial<Theme['shape']>
+  ambient?: Theme['ambient']
+}
+
+type ThemeCatalog = { presets?: CatalogPreset[] }
+
+type VisualFamily = {
+  cover_variant?: NonNullable<Theme['visual']>['cover_variant']
+  content_variant?: NonNullable<Theme['visual']>['content_variant']
+  transition?: NonNullable<Theme['visual']>['transition']
+  ambient?: NonNullable<Theme['ambient']>
+}
+
+type VisualCatalog = {
+  active_theme_ids?: string[]
+  families?: Record<string, VisualFamily>
+  category_families?: Record<string, string>
+  preset_families?: Record<string, string>
+}
+
+const catalogModules = import.meta.glob<ThemeCatalog>('../../../shared/themes/catalog.json', {
+  eager: true,
+  import: 'default',
+})
+
+const visualModules = import.meta.glob<VisualCatalog>('../../../shared/themes/visuals.json', {
   eager: true,
   import: 'default',
 })
@@ -20,7 +61,61 @@ function byId<T extends { id: string }>(modules: Record<string, T>): Map<string,
 }
 
 export const layouts = byId(layoutModules)
-export const themes = byId(themeModules)
+
+const baseThemes: Theme[] = Object.values(themeModules) as Theme[]
+const catalog = Object.values(catalogModules).flatMap((item) => item.presets ?? [])
+const visualCatalog = Object.values(visualModules)[0] ?? {}
+
+const activeThemeIds = new Set(visualCatalog.active_theme_ids ?? [])
+const activeBaseThemes = activeThemeIds.size
+  ? baseThemes.filter((theme) => activeThemeIds.has(theme.id))
+  : baseThemes
+const activeCatalog = activeThemeIds.size
+  ? catalog.filter((preset) => activeThemeIds.has(preset.id))
+  : catalog
+
+const catalogThemes: Theme[] = activeCatalog.map((preset) => {
+  const base = baseThemes.find((theme) => theme.id === preset.base)
+  if (!base) throw new Error(`主题 ${preset.id} 引用了未知底座：${preset.base}`)
+  const familyId =
+    visualCatalog.preset_families?.[preset.id] ??
+    visualCatalog.category_families?.[preset.category ?? ''] ??
+    'classic'
+  const family = visualCatalog.families?.[familyId]
+  return {
+    ...structuredClone(base),
+    id: preset.id,
+    name: preset.name,
+    description: preset.description,
+    palette: { ...base.palette, ...preset.palette },
+    shape: { ...base.shape, ...preset.shape },
+    ambient: [
+      ...(preset.ambient ?? base.ambient ?? []),
+      ...(family?.ambient ?? []),
+    ],
+    visual: {
+      family: familyId,
+      cover_variant: family?.cover_variant ?? 'editorial',
+      content_variant: family?.content_variant ?? 'clean',
+      transition: family?.transition ?? 'fade',
+    },
+  }
+})
+
+export const themes = new Map<string, Theme>(
+  [...activeBaseThemes, ...catalogThemes].map((theme) => [theme.id, theme]),
+)
+
+export const themeCategoryById = new Map<string, string>([
+  ...activeBaseThemes.map((theme) => [theme.id, '经典预设'] as const),
+  ...activeCatalog.map((preset) => [preset.id, preset.category ?? '扩展预设'] as const),
+])
+
+export const themeCategories = [...new Set(themeCategoryById.values())]
+
+export function getThemeCategory(themeId: string): string {
+  return themeCategoryById.get(themeId) ?? '扩展预设'
+}
 
 export const themeList = [...themes.values()]
 

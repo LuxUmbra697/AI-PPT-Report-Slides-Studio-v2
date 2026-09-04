@@ -1,0 +1,261 @@
+{
+  "active_theme_ids": [
+    "ivory",
+    "midnight",
+    "obsidian",
+    "scholar",
+    "anime-sakura-dream",
+    "anime-neon-idol",
+    "anime-shrine-spring",
+    "anime-celestial-library",
+    "anime-foxfire-festival",
+    "enterprise-growth",
+    "profile-portfolio",
+    "government-red-seal",
+    "china-red-ink",
+    "tech-grid",
+    "ancient-ink",
+    "science-lab"
+  ],
+  "preset_families": {
+    "anime-sakura-dream": "sakura",
+    "anime-neon-idol": "neon",
+    "anime-shrine-spring": "shrine",
+    "anime-celestial-library": "celestial",
+    "anime-foxfire-festival": "foxfire"
+  },
+  "category_families": {
+    "二次元幻想": "sakura",
+    "企业汇报": "corporate",
+    "个人介绍": "editorial",
+    "复试面试": "academic",
+    "政企公文": "government",
+    "商务提案": "premium",
+    "红色中国风": "china_red",
+    "科技风": "technology",
+    "中国古风": "ancient",
+    "科学与技术": "science",
+    "总结汇报": "corporate",
+    "教育培训": "education",
+    "营销推广": "marketing",
+    "企业宣讲": "corporate",
+    "高校专用": "campus",
+    "商业计划": "premium",
+    "人资行政": "editorial",
+    "医疗健康": "medical",
+    "产品发布": "marketing",
+    "调研分析": "research",
+    "数据分析": "data"
+  },
+  "families": {
+    "sakura": {
+      "cover_variant": "poster",
+      "content_variant": "cards",
+      "transition": "fade",
+      "ambient": [
+        { "motif": "scatter", "symbol": "petal", "count": 22, "seed": 101, "min_size_pt": 5, "max_size_pt": 15, "color": "accent", "strength": 0.42, "avoid_content": true },
+        { "motif": "orbit", "cx": 0.84, "cy": 0.24, "radius_x_pt": 132, "radius_y_pt": 82, "nodes": 22, "dot_size_pt": 4, "color": "accent", "strength": 0.45, "scope": ["cover", "section"] },
+        { "motif": "sticker", "rect": { "x": 0.78, "y": 0.08, "w": 0.14, "h": 0.055 }, "text": "MAGIC NOTE", "size_pt": 10, "rotation": 6, "color": "accent", "strength": 0.92, "scope": ["cover"] },
+        { "motif": "frame", "inset_pt": 22, "thickness_pt": 1, "corner_size_pt": 12, "color": "line_strong", "strength": 0.7, "scope": ["cover", "section"] }
+      ]
+    },
+    "neon": {
+      "cover_variant": "split",
+      "content_variant": "dashboard",
+      "transition": "push",
+      "ambient": [
+        { "motif": "scatter", "symbol": "chip", "count": 26, "seed": 202, "min_size_pt": 4, "max_size_pt": 10, "color": "accent", "strength": 0.52, "avoid_content": true },
+        { "motif": "orbit", "cx": 0.82, "cy": 0.5, "radius_x_pt": 150, "radius_y_pt": 118, "nodes": 30, "dot_size_pt": 3.5, "color": "accent", "strength": 0.7, "scope": ["cover", "section"] },
+        { "motif": "frame", "inset_pt": 18, "thickness_pt": 1.2, "corner_size_pt": 20, "color": "accent", "strength": 0.58 },
+        { "motif": "sticker", "rect": { "x": 0.77, "y": 0.09, "w": 0.16, "h": 0.055 }, "text": "SYSTEM // ON", "size_pt": 9, "rotation": 0, "color": "accent", "strength": 0.86, "scope": ["cover"] }
+      ]
+    },
+    "shrine": {
+      "cover_variant": "framed",
+      "content_variant": "notebook",
+      "transition": "wipe",
+      "ambient": [
+        { "motif": "scatter", "symbol": "petal", "count": 18, "seed": 303, "area": { "x": 0.55, "y": 0, "w": 0.45, "h": 1 }, "min_size_pt": 5, "max_size_pt": 14, "color": "accent", "strength": 0.4, "avoid_content": true },
+        { "motif": "stripe_field", "area": { "x": 0.78, "y": 0.0, "w": 0.18, "h": 1.0 }, "count": 5, "thickness_pt": 9, "gap_pt": 18, "rotation": -8, "color": "accent", "strength": 0.24, "scope": ["cover", "section"] },
+        { "motif": "sticker", "rect": { "x": 0.79, "y": 0.1, "w": 0.12, "h": 0.065 }, "text": "御 守", "size_pt": 12, "rotation": 3, "color": "accent", "strength": 0.9, "scope": ["cover"] },
+        { "motif": "frame", "inset_pt": 26, "thickness_pt": 1.2, "corner_size_pt": 16, "color": "line_strong", "strength": 0.75, "scope": ["cover", "section"] }
+      ]
+    },
+    "celestial": {
+      "cover_variant": "spotlight",
+      "content_variant": "magazine",
+      "transition": "fade",
+      "ambient": [
+        { "motif": "scatter", "symbol": "spark", "count": 16, "seed": 404, "min_size_pt": 3, "max_size_pt": 9, "color": "accent", "strength": 0.48, "avoid_content": true },
+        { "motif": "orbit", "cx": 0.78, "cy": 0.3, "radius_x_pt": 174, "radius_y_pt": 108, "nodes": 28, "dot_size_pt": 3.2, "start_deg": 12, "color": "accent", "strength": 0.5, "scope": ["cover", "section"] },
+        { "motif": "sticker", "rect": { "x": 0.79, "y": 0.08, "w": 0.14, "h": 0.055 }, "text": "CELESTIAL", "size_pt": 9, "rotation": -4, "color": "accent", "strength": 0.82, "scope": ["cover"] },
+        { "motif": "frame", "inset_pt": 20, "thickness_pt": 0.8, "corner_size_pt": 10, "color": "line_strong", "strength": 0.7 }
+      ]
+    },
+    "foxfire": {
+      "cover_variant": "ribbon",
+      "content_variant": "panel",
+      "transition": "split",
+      "ambient": [
+        { "motif": "scatter", "symbol": "diamond", "count": 16, "seed": 505, "min_size_pt": 5, "max_size_pt": 13, "color": "accent", "strength": 0.52, "avoid_content": true },
+        { "motif": "stripe_field", "area": { "x": 0.72, "y": 0.0, "w": 0.3, "h": 1.0 }, "count": 6, "thickness_pt": 12, "gap_pt": 16, "rotation": -18, "color": "accent", "strength": 0.3, "scope": ["cover", "section"] },
+        { "motif": "orbit", "cx": 0.84, "cy": 0.7, "radius_x_pt": 120, "radius_y_pt": 76, "nodes": 16, "dot_size_pt": 5, "color": "accent", "strength": 0.6, "scope": ["cover"] },
+        { "motif": "sticker", "rect": { "x": 0.8, "y": 0.09, "w": 0.11, "h": 0.06 }, "text": "狐 火", "size_pt": 12, "rotation": 5, "color": "accent", "strength": 0.9, "scope": ["cover"] }
+      ]
+    },
+    "corporate": {
+      "cover_variant": "split",
+      "content_variant": "dashboard",
+      "transition": "push",
+      "ambient": [
+        { "motif": "frame", "inset_pt": 24, "thickness_pt": 1, "corner_size_pt": 14, "color": "line_strong", "strength": 0.72 },
+        { "motif": "stripe_field", "area": { "x": 0.76, "y": 0.0, "w": 0.24, "h": 1.0 }, "count": 5, "thickness_pt": 10, "gap_pt": 18, "rotation": -14, "color": "accent", "strength": 0.22, "scope": ["cover", "section"] },
+        { "motif": "scatter", "symbol": "dash", "count": 14, "seed": 606, "min_size_pt": 4, "max_size_pt": 9, "color": "accent", "strength": 0.3, "avoid_content": true },
+        { "motif": "sticker", "rect": { "x": 0.78, "y": 0.09, "w": 0.14, "h": 0.05 }, "text": "STRATEGY", "size_pt": 9, "color": "accent", "strength": 0.86, "scope": ["cover"] }
+      ]
+    },
+    "editorial": {
+      "cover_variant": "poster",
+      "content_variant": "magazine",
+      "transition": "fade",
+      "ambient": [
+        { "motif": "frame", "inset_pt": 30, "thickness_pt": 0.8, "corner_size_pt": 9, "color": "line_strong", "strength": 0.75 },
+        { "motif": "scatter", "symbol": "dot", "count": 12, "seed": 707, "area": { "x": 0.65, "y": 0.05, "w": 0.32, "h": 0.9 }, "min_size_pt": 3, "max_size_pt": 8, "color": "accent", "strength": 0.32, "avoid_content": true },
+        { "motif": "sticker", "rect": { "x": 0.79, "y": 0.1, "w": 0.12, "h": 0.05 }, "text": "PROFILE", "size_pt": 9, "rotation": -5, "color": "accent", "strength": 0.82, "scope": ["cover"] }
+      ]
+    },
+    "academic": {
+      "cover_variant": "framed",
+      "content_variant": "notebook",
+      "transition": "wipe",
+      "ambient": [
+        { "motif": "frame", "inset_pt": 26, "thickness_pt": 1, "corner_size_pt": 12, "color": "line_strong", "strength": 0.75 },
+        { "motif": "orbit", "cx": 0.83, "cy": 0.23, "radius_x_pt": 110, "radius_y_pt": 68, "nodes": 18, "dot_size_pt": 3, "color": "accent", "strength": 0.35, "scope": ["cover", "section"] },
+        { "motif": "sticker", "rect": { "x": 0.77, "y": 0.1, "w": 0.16, "h": 0.05 }, "text": "RESEARCH NOTE", "size_pt": 8.5, "color": "accent", "strength": 0.84, "scope": ["cover"] }
+      ]
+    },
+    "government": {
+      "cover_variant": "framed",
+      "content_variant": "clean",
+      "transition": "wipe",
+      "ambient": [
+        { "motif": "frame", "inset_pt": 20, "thickness_pt": 1.6, "corner_size_pt": 8, "color": "accent", "strength": 0.62, "scope": ["cover", "section"] },
+        { "motif": "stripe_field", "area": { "x": 0.78, "y": 0.12, "w": 0.18, "h": 0.76 }, "count": 4, "thickness_pt": 7, "gap_pt": 20, "rotation": 0, "color": "accent", "strength": 0.22, "scope": ["cover"] },
+        { "motif": "sticker", "rect": { "x": 0.8, "y": 0.1, "w": 0.11, "h": 0.05 }, "text": "REPORT", "size_pt": 9, "color": "accent", "strength": 0.9, "scope": ["cover"] }
+      ]
+    },
+    "premium": {
+      "cover_variant": "spotlight",
+      "content_variant": "panel",
+      "transition": "fade",
+      "ambient": [
+        { "motif": "frame", "inset_pt": 18, "thickness_pt": 0.8, "corner_size_pt": 24, "color": "accent", "strength": 0.42 },
+        { "motif": "orbit", "cx": 0.82, "cy": 0.5, "radius_x_pt": 150, "radius_y_pt": 102, "nodes": 20, "dot_size_pt": 2.6, "color": "accent", "strength": 0.4, "scope": ["cover", "section"] },
+        { "motif": "sticker", "rect": { "x": 0.78, "y": 0.09, "w": 0.14, "h": 0.05 }, "text": "PREMIUM", "size_pt": 9, "rotation": 4, "color": "accent", "strength": 0.88, "scope": ["cover"] }
+      ]
+    },
+    "china_red": {
+      "cover_variant": "ribbon",
+      "content_variant": "panel",
+      "transition": "split",
+      "ambient": [
+        { "motif": "frame", "inset_pt": 22, "thickness_pt": 1.5, "corner_size_pt": 20, "color": "accent", "strength": 0.55 },
+        { "motif": "scatter", "symbol": "diamond", "count": 12, "seed": 808, "area": { "x": 0.62, "y": 0.04, "w": 0.34, "h": 0.92 }, "min_size_pt": 5, "max_size_pt": 13, "color": "accent", "strength": 0.34, "avoid_content": true },
+        { "motif": "sticker", "rect": { "x": 0.8, "y": 0.1, "w": 0.1, "h": 0.065 }, "text": "华 章", "size_pt": 12, "rotation": -3, "color": "accent", "strength": 0.9, "scope": ["cover"] }
+      ]
+    },
+    "technology": {
+      "cover_variant": "split",
+      "content_variant": "dashboard",
+      "transition": "push",
+      "ambient": [
+        { "motif": "frame", "inset_pt": 16, "thickness_pt": 1.1, "corner_size_pt": 22, "color": "accent", "strength": 0.58 },
+        { "motif": "scatter", "symbol": "chip", "count": 22, "seed": 909, "min_size_pt": 3.5, "max_size_pt": 9, "color": "accent", "strength": 0.46, "avoid_content": true },
+        { "motif": "orbit", "cx": 0.84, "cy": 0.52, "radius_x_pt": 148, "radius_y_pt": 112, "nodes": 28, "dot_size_pt": 3, "color": "accent", "strength": 0.6, "scope": ["cover", "section"] },
+        { "motif": "sticker", "rect": { "x": 0.79, "y": 0.09, "w": 0.13, "h": 0.05 }, "text": "FUTURE //", "size_pt": 8.5, "color": "accent", "strength": 0.88, "scope": ["cover"] }
+      ]
+    },
+    "ancient": {
+      "cover_variant": "framed",
+      "content_variant": "notebook",
+      "transition": "wipe",
+      "ambient": [
+        { "motif": "frame", "inset_pt": 28, "thickness_pt": 0.9, "corner_size_pt": 14, "color": "line_strong", "strength": 0.75 },
+        { "motif": "scatter", "symbol": "petal", "count": 14, "seed": 1001, "area": { "x": 0.58, "y": 0.04, "w": 0.38, "h": 0.92 }, "min_size_pt": 5, "max_size_pt": 14, "color": "accent", "strength": 0.28, "avoid_content": true },
+        { "motif": "stripe_field", "area": { "x": 0.76, "y": 0.05, "w": 0.2, "h": 0.9 }, "count": 5, "thickness_pt": 5, "gap_pt": 24, "rotation": -9, "color": "accent", "strength": 0.16, "scope": ["cover", "section"] },
+        { "motif": "sticker", "rect": { "x": 0.79, "y": 0.1, "w": 0.12, "h": 0.06 }, "text": "东方美学", "size_pt": 10, "rotation": 2, "color": "accent", "strength": 0.84, "scope": ["cover"] }
+      ]
+    },
+    "science": {
+      "cover_variant": "spotlight",
+      "content_variant": "dashboard",
+      "transition": "fade",
+      "ambient": [
+        { "motif": "orbit", "cx": 0.8, "cy": 0.34, "radius_x_pt": 170, "radius_y_pt": 98, "nodes": 30, "dot_size_pt": 3, "color": "accent", "strength": 0.48, "scope": ["cover", "section"] },
+        { "motif": "scatter", "symbol": "dot", "count": 18, "seed": 1101, "min_size_pt": 3, "max_size_pt": 8, "color": "accent", "strength": 0.36, "avoid_content": true },
+        { "motif": "sticker", "rect": { "x": 0.78, "y": 0.09, "w": 0.15, "h": 0.05 }, "text": "LAB / SCIENCE", "size_pt": 8.5, "color": "accent", "strength": 0.86, "scope": ["cover"] }
+      ]
+    },
+    "education": {
+      "cover_variant": "poster",
+      "content_variant": "notebook",
+      "transition": "wipe",
+      "ambient": [
+        { "motif": "frame", "inset_pt": 26, "thickness_pt": 1.2, "corner_size_pt": 13, "color": "line_strong", "strength": 0.75 },
+        { "motif": "scatter", "symbol": "dash", "count": 16, "seed": 1201, "min_size_pt": 4, "max_size_pt": 10, "color": "accent", "strength": 0.32, "avoid_content": true },
+        { "motif": "sticker", "rect": { "x": 0.79, "y": 0.1, "w": 0.12, "h": 0.055 }, "text": "LESSON", "size_pt": 9, "rotation": -4, "color": "accent", "strength": 0.86, "scope": ["cover"] }
+      ]
+    },
+    "marketing": {
+      "cover_variant": "ribbon",
+      "content_variant": "magazine",
+      "transition": "split",
+      "ambient": [
+        { "motif": "stripe_field", "area": { "x": 0.7, "y": 0, "w": 0.32, "h": 1 }, "count": 7, "thickness_pt": 13, "gap_pt": 12, "rotation": -20, "color": "accent", "strength": 0.3, "scope": ["cover", "section"] },
+        { "motif": "scatter", "symbol": "diamond", "count": 20, "seed": 1301, "min_size_pt": 4, "max_size_pt": 12, "color": "accent", "strength": 0.42, "avoid_content": true },
+        { "motif": "sticker", "rect": { "x": 0.8, "y": 0.08, "w": 0.11, "h": 0.065 }, "text": "NEW!", "size_pt": 12, "rotation": 7, "color": "accent", "strength": 0.92, "scope": ["cover"] }
+      ]
+    },
+    "campus": {
+      "cover_variant": "poster",
+      "content_variant": "cards",
+      "transition": "fade",
+      "ambient": [
+        { "motif": "frame", "inset_pt": 24, "thickness_pt": 1, "corner_size_pt": 15, "color": "line_strong", "strength": 0.7 },
+        { "motif": "scatter", "symbol": "dot", "count": 20, "seed": 1401, "min_size_pt": 4, "max_size_pt": 11, "color": "accent", "strength": 0.35, "avoid_content": true },
+        { "motif": "sticker", "rect": { "x": 0.79, "y": 0.09, "w": 0.12, "h": 0.055 }, "text": "CAMPUS", "size_pt": 9, "rotation": -3, "color": "accent", "strength": 0.88, "scope": ["cover"] }
+      ]
+    },
+    "medical": {
+      "cover_variant": "spotlight",
+      "content_variant": "clean",
+      "transition": "fade",
+      "ambient": [
+        { "motif": "orbit", "cx": 0.82, "cy": 0.34, "radius_x_pt": 132, "radius_y_pt": 82, "nodes": 24, "dot_size_pt": 4, "color": "accent", "strength": 0.38, "scope": ["cover", "section"] },
+        { "motif": "frame", "inset_pt": 24, "thickness_pt": 1, "corner_size_pt": 12, "color": "line_strong", "strength": 0.7 },
+        { "motif": "sticker", "rect": { "x": 0.79, "y": 0.09, "w": 0.12, "h": 0.055 }, "text": "HEALTH +", "size_pt": 9, "color": "accent", "strength": 0.86, "scope": ["cover"] }
+      ]
+    },
+    "research": {
+      "cover_variant": "editorial",
+      "content_variant": "magazine",
+      "transition": "wipe",
+      "ambient": [
+        { "motif": "frame", "inset_pt": 28, "thickness_pt": 0.8, "corner_size_pt": 10, "color": "line_strong", "strength": 0.75 },
+        { "motif": "scatter", "symbol": "dash", "count": 14, "seed": 1501, "min_size_pt": 4, "max_size_pt": 9, "color": "accent", "strength": 0.3, "avoid_content": true },
+        { "motif": "sticker", "rect": { "x": 0.78, "y": 0.1, "w": 0.14, "h": 0.05 }, "text": "INSIGHT", "size_pt": 9, "color": "accent", "strength": 0.86, "scope": ["cover"] }
+      ]
+    },
+    "data": {
+      "cover_variant": "split",
+      "content_variant": "dashboard",
+      "transition": "push",
+      "ambient": [
+        { "motif": "frame", "inset_pt": 16, "thickness_pt": 1.1, "corner_size_pt": 18, "color": "accent", "strength": 0.5 },
+        { "motif": "scatter", "symbol": "chip", "count": 24, "seed": 1601, "min_size_pt": 3, "max_size_pt": 8, "color": "accent", "strength": 0.4, "avoid_content": true },
+        { "motif": "orbit", "cx": 0.84, "cy": 0.52, "radius_x_pt": 150, "radius_y_pt": 108, "nodes": 26, "dot_size_pt": 3, "color": "accent", "strength": 0.5, "scope": ["cover", "section"] },
+        { "motif": "sticker", "rect": { "x": 0.78, "y": 0.09, "w": 0.14, "h": 0.05 }, "text": "DATA / 01", "size_pt": 8.5, "color": "accent", "strength": 0.88, "scope": ["cover"] }
+      ]
+    }
+  }
+}

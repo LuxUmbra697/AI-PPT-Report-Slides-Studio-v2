@@ -205,6 +205,20 @@ async def test_deepseek_parses_valid_outline() -> None:
     assert chat.called
 
 
+@pytest.mark.asyncio
+async def test_html_project_uses_report_outline_prompt() -> None:
+    chat = FakeChat(_valid_outline_json())
+    generator = DeepSeekOutlineGenerator(chat=chat, layout_ids=frozenset({"bullets", "cover"}))
+
+    await generator.generate(_input(page_count=2).model_copy(update={"output_format": "html"}))
+
+    assert chat.last_system is not None
+    assert "HTML 报告章节" in chat.last_system
+    assert "统一填写 bullets" in chat.last_system
+    assert chat.last_user is not None
+    assert '"output_format": "html"' in chat.last_user
+
+
 def test_create_chat_model_omits_thinking_by_default() -> None:
     model = create_chat_model(Settings(llm_api_key="k", llm_thinking_enabled=False))
     assert not getattr(model, "extra_body", None)

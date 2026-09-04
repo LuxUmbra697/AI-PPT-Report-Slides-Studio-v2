@@ -1,6 +1,7 @@
 import { AlertTriangle, Loader2, RefreshCw, RotateCw } from 'lucide-react'
 import { useEffect, useRef, useState } from 'react'
 import { Button } from '@/components/ui/Button'
+import type { ExternalTemplateLayerSource } from '@/features/templates/ExternalTemplateLayer'
 import { useRetrySlide } from '@/features/deck/api'
 import { ChartDataEditor } from '@/features/deck/ChartDataEditor'
 import { ElementToolbar } from '@/features/deck/ElementToolbar'
@@ -29,6 +30,7 @@ export function SlidePage({
   onSelectBlock,
   onOpenRelayout,
   bindEl,
+  externalTemplate,
 }: {
   projectId: string
   slide: DeckSlide
@@ -42,6 +44,7 @@ export function SlidePage({
   onSelectBlock: (blockId: string | null) => void
   onOpenRelayout: () => void
   bindEl: (slideId: string, node: HTMLElement | null) => void
+  externalTemplate?: ExternalTemplateLayerSource | null
 }) {
   const {
     commit,
@@ -238,6 +241,7 @@ export function SlidePage({
               onCommit={commit}
               overflowMode={editable ? 'reveal' : 'clip'}
               overflowSlotIds={overflowSlotIds}
+              externalTemplate={externalTemplate}
             />
             {isFlex && editable && (
               <FlexEditLayer

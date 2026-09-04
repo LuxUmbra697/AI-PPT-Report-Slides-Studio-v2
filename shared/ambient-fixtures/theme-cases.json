@@ -21,7 +21,8 @@
           "size_pt": null,
           "weight": null,
           "letter_spacing_pt": 0.0,
-          "align": "left"
+          "align": "left",
+          "rotation": 0.0
         },
         {
           "kind": "ellipse",
@@ -37,7 +38,8 @@
           "size_pt": null,
           "weight": null,
           "letter_spacing_pt": 0.0,
-          "align": "left"
+          "align": "left",
+          "rotation": 0.0
         },
         {
           "kind": "ellipse",
@@ -53,7 +55,8 @@
           "size_pt": null,
           "weight": null,
           "letter_spacing_pt": 0.0,
-          "align": "left"
+          "align": "left",
+          "rotation": 0.0
         },
         {
           "kind": "ellipse",
@@ -69,7 +72,8 @@
           "size_pt": null,
           "weight": null,
           "letter_spacing_pt": 0.0,
-          "align": "left"
+          "align": "left",
+          "rotation": 0.0
         },
         {
           "kind": "rect",
@@ -85,7 +89,8 @@
           "size_pt": null,
           "weight": null,
           "letter_spacing_pt": 0.0,
-          "align": "left"
+          "align": "left",
+          "rotation": 0.0
         },
         {
           "kind": "rect",
@@ -101,7 +106,8 @@
           "size_pt": null,
           "weight": null,
           "letter_spacing_pt": 0.0,
-          "align": "left"
+          "align": "left",
+          "rotation": 0.0
         },
         {
           "kind": "rect",
@@ -117,7 +123,8 @@
           "size_pt": null,
           "weight": null,
           "letter_spacing_pt": 0.0,
-          "align": "left"
+          "align": "left",
+          "rotation": 0.0
         },
         {
           "kind": "rect",
@@ -133,7 +140,8 @@
           "size_pt": null,
           "weight": null,
           "letter_spacing_pt": 0.0,
-          "align": "left"
+          "align": "left",
+          "rotation": 0.0
         },
         {
           "kind": "rect",
@@ -149,7 +157,8 @@
           "size_pt": null,
           "weight": null,
           "letter_spacing_pt": 0.0,
-          "align": "left"
+          "align": "left",
+          "rotation": 0.0
         },
         {
           "kind": "rect",
@@ -165,7 +174,8 @@
           "size_pt": null,
           "weight": null,
           "letter_spacing_pt": 0.0,
-          "align": "left"
+          "align": "left",
+          "rotation": 0.0
         }
       ]
     },
@@ -209,7 +219,8 @@
           "size_pt": null,
           "weight": null,
           "letter_spacing_pt": 0.0,
-          "align": "left"
+          "align": "left",
+          "rotation": 0.0
         },
         {
           "kind": "ellipse",
@@ -225,7 +236,8 @@
           "size_pt": null,
           "weight": null,
           "letter_spacing_pt": 0.0,
-          "align": "left"
+          "align": "left",
+          "rotation": 0.0
         },
         {
           "kind": "ellipse",
@@ -241,7 +253,8 @@
           "size_pt": null,
           "weight": null,
           "letter_spacing_pt": 0.0,
-          "align": "left"
+          "align": "left",
+          "rotation": 0.0
         },
         {
           "kind": "ellipse",
@@ -257,7 +270,8 @@
           "size_pt": null,
           "weight": null,
           "letter_spacing_pt": 0.0,
-          "align": "left"
+          "align": "left",
+          "rotation": 0.0
         },
         {
           "kind": "rect",
@@ -273,7 +287,8 @@
           "size_pt": null,
           "weight": null,
           "letter_spacing_pt": 0.0,
-          "align": "left"
+          "align": "left",
+          "rotation": 0.0
         },
         {
           "kind": "rect",
@@ -289,7 +304,8 @@
           "size_pt": null,
           "weight": null,
           "letter_spacing_pt": 0.0,
-          "align": "left"
+          "align": "left",
+          "rotation": 0.0
         },
         {
           "kind": "rect",
@@ -305,7 +321,8 @@
           "size_pt": null,
           "weight": null,
           "letter_spacing_pt": 0.0,
-          "align": "left"
+          "align": "left",
+          "rotation": 0.0
         }
       ]
     },
@@ -330,7 +347,8 @@
           "size_pt": null,
           "weight": null,
           "letter_spacing_pt": 0.0,
-          "align": "left"
+          "align": "left",
+          "rotation": 0.0
         },
         {
           "kind": "ellipse",
@@ -346,7 +364,8 @@
           "size_pt": null,
           "weight": null,
           "letter_spacing_pt": 0.0,
-          "align": "left"
+          "align": "left",
+          "rotation": 0.0
         },
         {
           "kind": "ellipse",
@@ -362,7 +381,8 @@
           "size_pt": null,
           "weight": null,
           "letter_spacing_pt": 0.0,
-          "align": "left"
+          "align": "left",
+          "rotation": 0.0
         },
         {
           "kind": "ellipse",
@@ -378,7 +398,8 @@
           "size_pt": null,
           "weight": null,
           "letter_spacing_pt": 0.0,
-          "align": "left"
+          "align": "left",
+          "rotation": 0.0
         },
         {
           "kind": "rect",
@@ -394,7 +415,8 @@
           "size_pt": null,
           "weight": null,
           "letter_spacing_pt": 0.0,
-          "align": "left"
+          "align": "left",
+          "rotation": 0.0
         },
         {
           "kind": "rect",
@@ -410,7 +432,8 @@
           "size_pt": null,
           "weight": null,
           "letter_spacing_pt": 0.0,
-          "align": "left"
+          "align": "left",
+          "rotation": 0.0
         },
         {
           "kind": "rect",
@@ -426,7 +449,8 @@
           "size_pt": null,
           "weight": null,
           "letter_spacing_pt": 0.0,
-          "align": "left"
+          "align": "left",
+          "rotation": 0.0
         },
         {
           "kind": "rect",
@@ -442,7 +466,8 @@
           "size_pt": null,
           "weight": null,
           "letter_spacing_pt": 0.0,
-          "align": "left"
+          "align": "left",
+          "rotation": 0.0
         },
         {
           "kind": "rect",
@@ -458,7 +483,8 @@
           "size_pt": null,
           "weight": null,
           "letter_spacing_pt": 0.0,
-          "align": "left"
+          "align": "left",
+          "rotation": 0.0
         },
         {
           "kind": "rect",
@@ -474,7 +500,8 @@
           "size_pt": null,
           "weight": null,
           "letter_spacing_pt": 0.0,
-          "align": "left"
+          "align": "left",
+          "rotation": 0.0
         }
       ]
     },
@@ -518,7 +545,8 @@
           "size_pt": null,
           "weight": null,
           "letter_spacing_pt": 0.0,
-          "align": "left"
+          "align": "left",
+          "rotation": 0.0
         },
         {
           "kind": "ellipse",
@@ -534,7 +562,8 @@
           "size_pt": null,
           "weight": null,
           "letter_spacing_pt": 0.0,
-          "align": "left"
+          "align": "left",
+          "rotation": 0.0
         },
         {
           "kind": "ellipse",
@@ -550,7 +579,8 @@
           "size_pt": null,
           "weight": null,
           "letter_spacing_pt": 0.0,
-          "align": "left"
+          "align": "left",
+          "rotation": 0.0
         },
         {
           "kind": "ellipse",
@@ -566,7 +596,8 @@
           "size_pt": null,
           "weight": null,
           "letter_spacing_pt": 0.0,
-          "align": "left"
+          "align": "left",
+          "rotation": 0.0
         },
         {
           "kind": "rect",
@@ -582,7 +613,8 @@
           "size_pt": null,
           "weight": null,
           "letter_spacing_pt": 0.0,
-          "align": "left"
+          "align": "left",
+          "rotation": 0.0
         },
         {
           "kind": "rect",
@@ -598,7 +630,8 @@
           "size_pt": null,
           "weight": null,
           "letter_spacing_pt": 0.0,
-          "align": "left"
+          "align": "left",
+          "rotation": 0.0
         },
         {
           "kind": "rect",
@@ -614,7 +647,8 @@
           "size_pt": null,
           "weight": null,
           "letter_spacing_pt": 0.0,
-          "align": "left"
+          "align": "left",
+          "rotation": 0.0
         }
       ]
     },
@@ -639,7 +673,8 @@
           "size_pt": null,
           "weight": null,
           "letter_spacing_pt": 0.0,
-          "align": "left"
+          "align": "left",
+          "rotation": 0.0
         },
         {
           "kind": "ellipse",
@@ -655,7 +690,8 @@
           "size_pt": null,
           "weight": null,
           "letter_spacing_pt": 0.0,
-          "align": "left"
+          "align": "left",
+          "rotation": 0.0
         },
         {
           "kind": "ellipse",
@@ -671,7 +707,8 @@
           "size_pt": null,
           "weight": null,
           "letter_spacing_pt": 0.0,
-          "align": "left"
+          "align": "left",
+          "rotation": 0.0
         },
         {
           "kind": "ellipse",
@@ -687,7 +724,8 @@
           "size_pt": null,
           "weight": null,
           "letter_spacing_pt": 0.0,
-          "align": "left"
+          "align": "left",
+          "rotation": 0.0
         },
         {
           "kind": "rect",
@@ -703,7 +741,8 @@
           "size_pt": null,
           "weight": null,
           "letter_spacing_pt": 0.0,
-          "align": "left"
+          "align": "left",
+          "rotation": 0.0
         },
         {
           "kind": "rect",
@@ -719,7 +758,8 @@
           "size_pt": null,
           "weight": null,
           "letter_spacing_pt": 0.0,
-          "align": "left"
+          "align": "left",
+          "rotation": 0.0
         },
         {
           "kind": "rect",
@@ -735,7 +775,8 @@
           "size_pt": null,
           "weight": null,
           "letter_spacing_pt": 0.0,
-          "align": "left"
+          "align": "left",
+          "rotation": 0.0
         },
         {
           "kind": "rect",
@@ -751,7 +792,8 @@
           "size_pt": null,
           "weight": null,
           "letter_spacing_pt": 0.0,
-          "align": "left"
+          "align": "left",
+          "rotation": 0.0
         },
         {
           "kind": "text",
@@ -767,7 +809,8 @@
           "size_pt": 108.0,
           "weight": 400,
           "letter_spacing_pt": 0.0,
-          "align": "right"
+          "align": "right",
+          "rotation": 0.0
         }
       ]
     },
@@ -811,7 +854,8 @@
           "size_pt": null,
           "weight": null,
           "letter_spacing_pt": 0.0,
-          "align": "left"
+          "align": "left",
+          "rotation": 0.0
         },
         {
           "kind": "ellipse",
@@ -827,7 +871,8 @@
           "size_pt": null,
           "weight": null,
           "letter_spacing_pt": 0.0,
-          "align": "left"
+          "align": "left",
+          "rotation": 0.0
         },
         {
           "kind": "ellipse",
@@ -843,7 +888,8 @@
           "size_pt": null,
           "weight": null,
           "letter_spacing_pt": 0.0,
-          "align": "left"
+          "align": "left",
+          "rotation": 0.0
         },
         {
           "kind": "ellipse",
@@ -859,7 +905,8 @@
           "size_pt": null,
           "weight": null,
           "letter_spacing_pt": 0.0,
-          "align": "left"
+          "align": "left",
+          "rotation": 0.0
         },
         {
           "kind": "rect",
@@ -875,7 +922,8 @@
           "size_pt": null,
           "weight": null,
           "letter_spacing_pt": 0.0,
-          "align": "left"
+          "align": "left",
+          "rotation": 0.0
         }
       ]
     },
@@ -900,7 +948,8 @@
           "size_pt": null,
           "weight": null,
           "letter_spacing_pt": 0.0,
-          "align": "left"
+          "align": "left",
+          "rotation": 0.0
         },
         {
           "kind": "ellipse",
@@ -916,7 +965,8 @@
           "size_pt": null,
           "weight": null,
           "letter_spacing_pt": 0.0,
-          "align": "left"
+          "align": "left",
+          "rotation": 0.0
         },
         {
           "kind": "ellipse",
@@ -932,7 +982,8 @@
           "size_pt": null,
           "weight": null,
           "letter_spacing_pt": 0.0,
-          "align": "left"
+          "align": "left",
+          "rotation": 0.0
         },
         {
           "kind": "ellipse",
@@ -948,7 +999,8 @@
           "size_pt": null,
           "weight": null,
           "letter_spacing_pt": 0.0,
-          "align": "left"
+          "align": "left",
+          "rotation": 0.0
         },
         {
           "kind": "rect",
@@ -964,7 +1016,8 @@
           "size_pt": null,
           "weight": null,
           "letter_spacing_pt": 0.0,
-          "align": "left"
+          "align": "left",
+          "rotation": 0.0
         },
         {
           "kind": "rect",
@@ -980,7 +1033,8 @@
           "size_pt": null,
           "weight": null,
           "letter_spacing_pt": 0.0,
-          "align": "left"
+          "align": "left",
+          "rotation": 0.0
         },
         {
           "kind": "rect",
@@ -996,7 +1050,8 @@
           "size_pt": null,
           "weight": null,
           "letter_spacing_pt": 0.0,
-          "align": "left"
+          "align": "left",
+          "rotation": 0.0
         },
         {
           "kind": "rect",
@@ -1012,7 +1067,8 @@
           "size_pt": null,
           "weight": null,
           "letter_spacing_pt": 0.0,
-          "align": "left"
+          "align": "left",
+          "rotation": 0.0
         },
         {
           "kind": "rect",
@@ -1028,7 +1084,8 @@
           "size_pt": null,
           "weight": null,
           "letter_spacing_pt": 0.0,
-          "align": "left"
+          "align": "left",
+          "rotation": 0.0
         },
         {
           "kind": "rect",
@@ -1044,7 +1101,8 @@
           "size_pt": null,
           "weight": null,
           "letter_spacing_pt": 0.0,
-          "align": "left"
+          "align": "left",
+          "rotation": 0.0
         }
       ]
     },
@@ -1088,7 +1146,8 @@
           "size_pt": null,
           "weight": null,
           "letter_spacing_pt": 0.0,
-          "align": "left"
+          "align": "left",
+          "rotation": 0.0
         },
         {
           "kind": "ellipse",
@@ -1104,7 +1163,8 @@
           "size_pt": null,
           "weight": null,
           "letter_spacing_pt": 0.0,
-          "align": "left"
+          "align": "left",
+          "rotation": 0.0
         },
         {
           "kind": "ellipse",
@@ -1120,7 +1180,8 @@
           "size_pt": null,
           "weight": null,
           "letter_spacing_pt": 0.0,
-          "align": "left"
+          "align": "left",
+          "rotation": 0.0
         },
         {
           "kind": "ellipse",
@@ -1136,7 +1197,8 @@
           "size_pt": null,
           "weight": null,
           "letter_spacing_pt": 0.0,
-          "align": "left"
+          "align": "left",
+          "rotation": 0.0
         },
         {
           "kind": "rect",
@@ -1152,7 +1214,8 @@
           "size_pt": null,
           "weight": null,
           "letter_spacing_pt": 0.0,
-          "align": "left"
+          "align": "left",
+          "rotation": 0.0
         },
         {
           "kind": "rect",
@@ -1168,7 +1231,8 @@
           "size_pt": null,
           "weight": null,
           "letter_spacing_pt": 0.0,
-          "align": "left"
+          "align": "left",
+          "rotation": 0.0
         },
         {
           "kind": "rect",
@@ -1184,7 +1248,8 @@
           "size_pt": null,
           "weight": null,
           "letter_spacing_pt": 0.0,
-          "align": "left"
+          "align": "left",
+          "rotation": 0.0
         }
       ]
     },
@@ -1209,7 +1274,8 @@
           "size_pt": null,
           "weight": null,
           "letter_spacing_pt": 0.0,
-          "align": "left"
+          "align": "left",
+          "rotation": 0.0
         },
         {
           "kind": "ellipse",
@@ -1225,7 +1291,8 @@
           "size_pt": null,
           "weight": null,
           "letter_spacing_pt": 0.0,
-          "align": "left"
+          "align": "left",
+          "rotation": 0.0
         },
         {
           "kind": "ellipse",
@@ -1241,7 +1308,8 @@
           "size_pt": null,
           "weight": null,
           "letter_spacing_pt": 0.0,
-          "align": "left"
+          "align": "left",
+          "rotation": 0.0
         },
         {
           "kind": "ellipse",
@@ -1257,7 +1325,8 @@
           "size_pt": null,
           "weight": null,
           "letter_spacing_pt": 0.0,
-          "align": "left"
+          "align": "left",
+          "rotation": 0.0
         },
         {
           "kind": "rect",
@@ -1273,7 +1342,8 @@
           "size_pt": null,
           "weight": null,
           "letter_spacing_pt": 0.0,
-          "align": "left"
+          "align": "left",
+          "rotation": 0.0
         },
         {
           "kind": "rect",
@@ -1289,7 +1359,8 @@
           "size_pt": null,
           "weight": null,
           "letter_spacing_pt": 0.0,
-          "align": "left"
+          "align": "left",
+          "rotation": 0.0
         },
         {
           "kind": "rect",
@@ -1305,7 +1376,8 @@
           "size_pt": null,
           "weight": null,
           "letter_spacing_pt": 0.0,
-          "align": "left"
+          "align": "left",
+          "rotation": 0.0
         },
         {
           "kind": "rect",
@@ -1321,7 +1393,8 @@
           "size_pt": null,
           "weight": null,
           "letter_spacing_pt": 0.0,
-          "align": "left"
+          "align": "left",
+          "rotation": 0.0
         },
         {
           "kind": "rect",
@@ -1337,7 +1410,8 @@
           "size_pt": null,
           "weight": null,
           "letter_spacing_pt": 0.0,
-          "align": "left"
+          "align": "left",
+          "rotation": 0.0
         },
         {
           "kind": "rect",
@@ -1353,7 +1427,8 @@
           "size_pt": null,
           "weight": null,
           "letter_spacing_pt": 0.0,
-          "align": "left"
+          "align": "left",
+          "rotation": 0.0
         }
       ]
     },
@@ -1397,7 +1472,8 @@
           "size_pt": null,
           "weight": null,
           "letter_spacing_pt": 0.0,
-          "align": "left"
+          "align": "left",
+          "rotation": 0.0
         },
         {
           "kind": "ellipse",
@@ -1413,7 +1489,8 @@
           "size_pt": null,
           "weight": null,
           "letter_spacing_pt": 0.0,
-          "align": "left"
+          "align": "left",
+          "rotation": 0.0
         },
         {
           "kind": "ellipse",
@@ -1429,7 +1506,8 @@
           "size_pt": null,
           "weight": null,
           "letter_spacing_pt": 0.0,
-          "align": "left"
+          "align": "left",
+          "rotation": 0.0
         },
         {
           "kind": "ellipse",
@@ -1445,7 +1523,8 @@
           "size_pt": null,
           "weight": null,
           "letter_spacing_pt": 0.0,
-          "align": "left"
+          "align": "left",
+          "rotation": 0.0
         },
         {
           "kind": "rect",
@@ -1461,7 +1540,8 @@
           "size_pt": null,
           "weight": null,
           "letter_spacing_pt": 0.0,
-          "align": "left"
+          "align": "left",
+          "rotation": 0.0
         },
         {
           "kind": "rect",
@@ -1477,7 +1557,8 @@
           "size_pt": null,
           "weight": null,
           "letter_spacing_pt": 0.0,
-          "align": "left"
+          "align": "left",
+          "rotation": 0.0
         },
         {
           "kind": "rect",
@@ -1493,7 +1574,8 @@
           "size_pt": null,
           "weight": null,
           "letter_spacing_pt": 0.0,
-          "align": "left"
+          "align": "left",
+          "rotation": 0.0
         }
       ]
     },
@@ -1518,7 +1600,8 @@
           "size_pt": null,
           "weight": null,
           "letter_spacing_pt": 0.0,
-          "align": "left"
+          "align": "left",
+          "rotation": 0.0
         },
         {
           "kind": "ellipse",
@@ -1534,7 +1617,8 @@
           "size_pt": null,
           "weight": null,
           "letter_spacing_pt": 0.0,
-          "align": "left"
+          "align": "left",
+          "rotation": 0.0
         },
         {
           "kind": "ellipse",
@@ -1550,7 +1634,8 @@
           "size_pt": null,
           "weight": null,
           "letter_spacing_pt": 0.0,
-          "align": "left"
+          "align": "left",
+          "rotation": 0.0
         },
         {
           "kind": "ellipse",
@@ -1566,7 +1651,8 @@
           "size_pt": null,
           "weight": null,
           "letter_spacing_pt": 0.0,
-          "align": "left"
+          "align": "left",
+          "rotation": 0.0
         },
         {
           "kind": "rect",
@@ -1582,7 +1668,8 @@
           "size_pt": null,
           "weight": null,
           "letter_spacing_pt": 0.0,
-          "align": "left"
+          "align": "left",
+          "rotation": 0.0
         },
         {
           "kind": "rect",
@@ -1598,7 +1685,8 @@
           "size_pt": null,
           "weight": null,
           "letter_spacing_pt": 0.0,
-          "align": "left"
+          "align": "left",
+          "rotation": 0.0
         },
         {
           "kind": "rect",
@@ -1614,7 +1702,8 @@
           "size_pt": null,
           "weight": null,
           "letter_spacing_pt": 0.0,
-          "align": "left"
+          "align": "left",
+          "rotation": 0.0
         },
         {
           "kind": "rect",
@@ -1630,7 +1719,8 @@
           "size_pt": null,
           "weight": null,
           "letter_spacing_pt": 0.0,
-          "align": "left"
+          "align": "left",
+          "rotation": 0.0
         }
       ]
     },
@@ -1674,7 +1764,8 @@
           "size_pt": null,
           "weight": null,
           "letter_spacing_pt": 0.0,
-          "align": "left"
+          "align": "left",
+          "rotation": 0.0
         },
         {
           "kind": "ellipse",
@@ -1690,7 +1781,8 @@
           "size_pt": null,
           "weight": null,
           "letter_spacing_pt": 0.0,
-          "align": "left"
+          "align": "left",
+          "rotation": 0.0
         },
         {
           "kind": "ellipse",
@@ -1706,7 +1798,8 @@
           "size_pt": null,
           "weight": null,
           "letter_spacing_pt": 0.0,
-          "align": "left"
+          "align": "left",
+          "rotation": 0.0
         },
         {
           "kind": "ellipse",
@@ -1722,7 +1815,8 @@
           "size_pt": null,
           "weight": null,
           "letter_spacing_pt": 0.0,
-          "align": "left"
+          "align": "left",
+          "rotation": 0.0
         },
         {
           "kind": "rect",
@@ -1738,7 +1832,8 @@
           "size_pt": null,
           "weight": null,
           "letter_spacing_pt": 0.0,
-          "align": "left"
+          "align": "left",
+          "rotation": 0.0
         }
       ]
     },
@@ -1763,7 +1858,8 @@
           "size_pt": null,
           "weight": null,
           "letter_spacing_pt": 0.0,
-          "align": "left"
+          "align": "left",
+          "rotation": 0.0
         },
         {
           "kind": "ellipse",
@@ -1779,7 +1875,8 @@
           "size_pt": null,
           "weight": null,
           "letter_spacing_pt": 0.0,
-          "align": "left"
+          "align": "left",
+          "rotation": 0.0
         },
         {
           "kind": "ellipse",
@@ -1795,7 +1892,8 @@
           "size_pt": null,
           "weight": null,
           "letter_spacing_pt": 0.0,
-          "align": "left"
+          "align": "left",
+          "rotation": 0.0
         },
         {
           "kind": "ellipse",
@@ -1811,7 +1909,8 @@
           "size_pt": null,
           "weight": null,
           "letter_spacing_pt": 0.0,
-          "align": "left"
+          "align": "left",
+          "rotation": 0.0
         },
         {
           "kind": "rect",
@@ -1827,7 +1926,8 @@
           "size_pt": null,
           "weight": null,
           "letter_spacing_pt": 0.0,
-          "align": "left"
+          "align": "left",
+          "rotation": 0.0
         },
         {
           "kind": "rect",
@@ -1843,7 +1943,8 @@
           "size_pt": null,
           "weight": null,
           "letter_spacing_pt": 0.0,
-          "align": "left"
+          "align": "left",
+          "rotation": 0.0
         },
         {
           "kind": "rect",
@@ -1859,7 +1960,8 @@
           "size_pt": null,
           "weight": null,
           "letter_spacing_pt": 0.0,
-          "align": "left"
+          "align": "left",
+          "rotation": 0.0
         },
         {
           "kind": "rect",
@@ -1875,7 +1977,8 @@
           "size_pt": null,
           "weight": null,
           "letter_spacing_pt": 0.0,
-          "align": "left"
+          "align": "left",
+          "rotation": 0.0
         },
         {
           "kind": "rect",
@@ -1891,7 +1994,8 @@
           "size_pt": null,
           "weight": null,
           "letter_spacing_pt": 0.0,
-          "align": "left"
+          "align": "left",
+          "rotation": 0.0
         },
         {
           "kind": "rect",
@@ -1907,7 +2011,8 @@
           "size_pt": null,
           "weight": null,
           "letter_spacing_pt": 0.0,
-          "align": "left"
+          "align": "left",
+          "rotation": 0.0
         },
         {
           "kind": "rect",
@@ -1923,7 +2028,8 @@
           "size_pt": null,
           "weight": null,
           "letter_spacing_pt": 0.0,
-          "align": "left"
+          "align": "left",
+          "rotation": 0.0
         }
       ]
     },
@@ -1967,7 +2073,8 @@
           "size_pt": null,
           "weight": null,
           "letter_spacing_pt": 0.0,
-          "align": "left"
+          "align": "left",
+          "rotation": 0.0
         },
         {
           "kind": "ellipse",
@@ -1983,7 +2090,8 @@
           "size_pt": null,
           "weight": null,
           "letter_spacing_pt": 0.0,
-          "align": "left"
+          "align": "left",
+          "rotation": 0.0
         },
         {
           "kind": "ellipse",
@@ -1999,7 +2107,8 @@
           "size_pt": null,
           "weight": null,
           "letter_spacing_pt": 0.0,
-          "align": "left"
+          "align": "left",
+          "rotation": 0.0
         },
         {
           "kind": "ellipse",
@@ -2015,7 +2124,8 @@
           "size_pt": null,
           "weight": null,
           "letter_spacing_pt": 0.0,
-          "align": "left"
+          "align": "left",
+          "rotation": 0.0
         },
         {
           "kind": "rect",
@@ -2031,7 +2141,8 @@
           "size_pt": null,
           "weight": null,
           "letter_spacing_pt": 0.0,
-          "align": "left"
+          "align": "left",
+          "rotation": 0.0
         },
         {
           "kind": "rect",
@@ -2047,7 +2158,8 @@
           "size_pt": null,
           "weight": null,
           "letter_spacing_pt": 0.0,
-          "align": "left"
+          "align": "left",
+          "rotation": 0.0
         },
         {
           "kind": "rect",
@@ -2063,7 +2175,8 @@
           "size_pt": null,
           "weight": null,
           "letter_spacing_pt": 0.0,
-          "align": "left"
+          "align": "left",
+          "rotation": 0.0
         },
         {
           "kind": "rect",
@@ -2079,7 +2192,8 @@
           "size_pt": null,
           "weight": null,
           "letter_spacing_pt": 0.0,
-          "align": "left"
+          "align": "left",
+          "rotation": 0.0
         }
       ]
     },
@@ -2104,7 +2218,8 @@
           "size_pt": null,
           "weight": null,
           "letter_spacing_pt": 0.0,
-          "align": "left"
+          "align": "left",
+          "rotation": 0.0
         },
         {
           "kind": "ellipse",
@@ -2120,7 +2235,8 @@
           "size_pt": null,
           "weight": null,
           "letter_spacing_pt": 0.0,
-          "align": "left"
+          "align": "left",
+          "rotation": 0.0
         },
         {
           "kind": "ellipse",
@@ -2136,7 +2252,8 @@
           "size_pt": null,
           "weight": null,
           "letter_spacing_pt": 0.0,
-          "align": "left"
+          "align": "left",
+          "rotation": 0.0
         },
         {
           "kind": "ellipse",
@@ -2152,7 +2269,8 @@
           "size_pt": null,
           "weight": null,
           "letter_spacing_pt": 0.0,
-          "align": "left"
+          "align": "left",
+          "rotation": 0.0
         },
         {
           "kind": "rect",
@@ -2168,7 +2286,8 @@
           "size_pt": null,
           "weight": null,
           "letter_spacing_pt": 0.0,
-          "align": "left"
+          "align": "left",
+          "rotation": 0.0
         },
         {
           "kind": "rect",
@@ -2184,7 +2303,8 @@
           "size_pt": null,
           "weight": null,
           "letter_spacing_pt": 0.0,
-          "align": "left"
+          "align": "left",
+          "rotation": 0.0
         },
         {
           "kind": "rect",
@@ -2200,7 +2320,8 @@
           "size_pt": null,
           "weight": null,
           "letter_spacing_pt": 0.0,
-          "align": "left"
+          "align": "left",
+          "rotation": 0.0
         },
         {
           "kind": "rect",
@@ -2216,7 +2337,8 @@
           "size_pt": null,
           "weight": null,
           "letter_spacing_pt": 0.0,
-          "align": "left"
+          "align": "left",
+          "rotation": 0.0
         },
         {
           "kind": "rect",
@@ -2232,7 +2354,8 @@
           "size_pt": null,
           "weight": null,
           "letter_spacing_pt": 0.0,
-          "align": "left"
+          "align": "left",
+          "rotation": 0.0
         },
         {
           "kind": "rect",
@@ -2248,7 +2371,8 @@
           "size_pt": null,
           "weight": null,
           "letter_spacing_pt": 0.0,
-          "align": "left"
+          "align": "left",
+          "rotation": 0.0
         },
         {
           "kind": "rect",
@@ -2264,7 +2388,8 @@
           "size_pt": null,
           "weight": null,
           "letter_spacing_pt": 0.0,
-          "align": "left"
+          "align": "left",
+          "rotation": 0.0
         },
         {
           "kind": "rect",
@@ -2280,7 +2405,8 @@
           "size_pt": null,
           "weight": null,
           "letter_spacing_pt": 0.0,
-          "align": "left"
+          "align": "left",
+          "rotation": 0.0
         }
       ]
     },
@@ -2324,7 +2450,8 @@
           "size_pt": null,
           "weight": null,
           "letter_spacing_pt": 0.0,
-          "align": "left"
+          "align": "left",
+          "rotation": 0.0
         },
         {
           "kind": "ellipse",
@@ -2340,7 +2467,8 @@
           "size_pt": null,
           "weight": null,
           "letter_spacing_pt": 0.0,
-          "align": "left"
+          "align": "left",
+          "rotation": 0.0
         },
         {
           "kind": "ellipse",
@@ -2356,7 +2484,8 @@
           "size_pt": null,
           "weight": null,
           "letter_spacing_pt": 0.0,
-          "align": "left"
+          "align": "left",
+          "rotation": 0.0
         },
         {
           "kind": "ellipse",
@@ -2372,7 +2501,8 @@
           "size_pt": null,
           "weight": null,
           "letter_spacing_pt": 0.0,
-          "align": "left"
+          "align": "left",
+          "rotation": 0.0
         },
         {
           "kind": "rect",
@@ -2388,7 +2518,8 @@
           "size_pt": null,
           "weight": null,
           "letter_spacing_pt": 0.0,
-          "align": "left"
+          "align": "left",
+          "rotation": 0.0
         },
         {
           "kind": "rect",
@@ -2404,7 +2535,8 @@
           "size_pt": null,
           "weight": null,
           "letter_spacing_pt": 0.0,
-          "align": "left"
+          "align": "left",
+          "rotation": 0.0
         },
         {
           "kind": "rect",
@@ -2420,7 +2552,8 @@
           "size_pt": null,
           "weight": null,
           "letter_spacing_pt": 0.0,
-          "align": "left"
+          "align": "left",
+          "rotation": 0.0
         },
         {
           "kind": "rect",
@@ -2436,7 +2569,8 @@
           "size_pt": null,
           "weight": null,
           "letter_spacing_pt": 0.0,
-          "align": "left"
+          "align": "left",
+          "rotation": 0.0
         },
         {
           "kind": "rect",
@@ -2452,7 +2586,8 @@
           "size_pt": null,
           "weight": null,
           "letter_spacing_pt": 0.0,
-          "align": "left"
+          "align": "left",
+          "rotation": 0.0
         }
       ]
     },
@@ -2477,7 +2612,8 @@
           "size_pt": null,
           "weight": null,
           "letter_spacing_pt": 0.0,
-          "align": "left"
+          "align": "left",
+          "rotation": 0.0
         },
         {
           "kind": "ellipse",
@@ -2493,7 +2629,8 @@
           "size_pt": null,
           "weight": null,
           "letter_spacing_pt": 0.0,
-          "align": "left"
+          "align": "left",
+          "rotation": 0.0
         },
         {
           "kind": "ellipse",
@@ -2509,7 +2646,8 @@
           "size_pt": null,
           "weight": null,
           "letter_spacing_pt": 0.0,
-          "align": "left"
+          "align": "left",
+          "rotation": 0.0
         },
         {
           "kind": "ellipse",
@@ -2525,7 +2663,8 @@
           "size_pt": null,
           "weight": null,
           "letter_spacing_pt": 0.0,
-          "align": "left"
+          "align": "left",
+          "rotation": 0.0
         },
         {
           "kind": "rect",
@@ -2541,7 +2680,8 @@
           "size_pt": null,
           "weight": null,
           "letter_spacing_pt": 0.0,
-          "align": "left"
+          "align": "left",
+          "rotation": 0.0
         },
         {
           "kind": "rect",
@@ -2557,7 +2697,8 @@
           "size_pt": null,
           "weight": null,
           "letter_spacing_pt": 0.0,
-          "align": "left"
+          "align": "left",
+          "rotation": 0.0
         },
         {
           "kind": "rect",
@@ -2573,7 +2714,8 @@
           "size_pt": null,
           "weight": null,
           "letter_spacing_pt": 0.0,
-          "align": "left"
+          "align": "left",
+          "rotation": 0.0
         },
         {
           "kind": "text",
@@ -2589,7 +2731,8 @@
           "size_pt": 112.0,
           "weight": 400,
           "letter_spacing_pt": 0.0,
-          "align": "right"
+          "align": "right",
+          "rotation": 0.0
         }
       ]
     },
@@ -2633,7 +2776,8 @@
           "size_pt": null,
           "weight": null,
           "letter_spacing_pt": 0.0,
-          "align": "left"
+          "align": "left",
+          "rotation": 0.0
         },
         {
           "kind": "ellipse",
@@ -2649,7 +2793,8 @@
           "size_pt": null,
           "weight": null,
           "letter_spacing_pt": 0.0,
-          "align": "left"
+          "align": "left",
+          "rotation": 0.0
         },
         {
           "kind": "ellipse",
@@ -2665,7 +2810,8 @@
           "size_pt": null,
           "weight": null,
           "letter_spacing_pt": 0.0,
-          "align": "left"
+          "align": "left",
+          "rotation": 0.0
         },
         {
           "kind": "ellipse",
@@ -2681,7 +2827,8 @@
           "size_pt": null,
           "weight": null,
           "letter_spacing_pt": 0.0,
-          "align": "left"
+          "align": "left",
+          "rotation": 0.0
         }
       ]
     },
@@ -2706,7 +2853,8 @@
           "size_pt": null,
           "weight": null,
           "letter_spacing_pt": 0.0,
-          "align": "left"
+          "align": "left",
+          "rotation": 0.0
         },
         {
           "kind": "ellipse",
@@ -2722,7 +2870,8 @@
           "size_pt": null,
           "weight": null,
           "letter_spacing_pt": 0.0,
-          "align": "left"
+          "align": "left",
+          "rotation": 0.0
         },
         {
           "kind": "ellipse",
@@ -2738,7 +2887,8 @@
           "size_pt": null,
           "weight": null,
           "letter_spacing_pt": 0.0,
-          "align": "left"
+          "align": "left",
+          "rotation": 0.0
         },
         {
           "kind": "ellipse",
@@ -2754,7 +2904,8 @@
           "size_pt": null,
           "weight": null,
           "letter_spacing_pt": 0.0,
-          "align": "left"
+          "align": "left",
+          "rotation": 0.0
         },
         {
           "kind": "rect",
@@ -2770,7 +2921,8 @@
           "size_pt": null,
           "weight": null,
           "letter_spacing_pt": 0.0,
-          "align": "left"
+          "align": "left",
+          "rotation": 0.0
         },
         {
           "kind": "rect",
@@ -2786,7 +2938,8 @@
           "size_pt": null,
           "weight": null,
           "letter_spacing_pt": 0.0,
-          "align": "left"
+          "align": "left",
+          "rotation": 0.0
         },
         {
           "kind": "rect",
@@ -2802,7 +2955,8 @@
           "size_pt": null,
           "weight": null,
           "letter_spacing_pt": 0.0,
-          "align": "left"
+          "align": "left",
+          "rotation": 0.0
         }
       ]
     },
@@ -2846,7 +3000,8 @@
           "size_pt": null,
           "weight": null,
           "letter_spacing_pt": 0.0,
-          "align": "left"
+          "align": "left",
+          "rotation": 0.0
         },
         {
           "kind": "ellipse",
@@ -2862,7 +3017,8 @@
           "size_pt": null,
           "weight": null,
           "letter_spacing_pt": 0.0,
-          "align": "left"
+          "align": "left",
+          "rotation": 0.0
         },
         {
           "kind": "ellipse",
@@ -2878,7 +3034,8 @@
           "size_pt": null,
           "weight": null,
           "letter_spacing_pt": 0.0,
-          "align": "left"
+          "align": "left",
+          "rotation": 0.0
         },
         {
           "kind": "ellipse",
@@ -2894,7 +3051,8 @@
           "size_pt": null,
           "weight": null,
           "letter_spacing_pt": 0.0,
-          "align": "left"
+          "align": "left",
+          "rotation": 0.0
         },
         {
           "kind": "rect",
@@ -2910,7 +3068,8 @@
           "size_pt": null,
           "weight": null,
           "letter_spacing_pt": 0.0,
-          "align": "left"
+          "align": "left",
+          "rotation": 0.0
         },
         {
           "kind": "rect",
@@ -2926,7 +3085,8 @@
           "size_pt": null,
           "weight": null,
           "letter_spacing_pt": 0.0,
-          "align": "left"
+          "align": "left",
+          "rotation": 0.0
         },
         {
           "kind": "rect",
@@ -2942,7 +3102,8 @@
           "size_pt": null,
           "weight": null,
           "letter_spacing_pt": 0.0,
-          "align": "left"
+          "align": "left",
+          "rotation": 0.0
         }
       ]
     },
@@ -2967,7 +3128,8 @@
           "size_pt": null,
           "weight": null,
           "letter_spacing_pt": 0.0,
-          "align": "left"
+          "align": "left",
+          "rotation": 0.0
         },
         {
           "kind": "ellipse",
@@ -2983,7 +3145,8 @@
           "size_pt": null,
           "weight": null,
           "letter_spacing_pt": 0.0,
-          "align": "left"
+          "align": "left",
+          "rotation": 0.0
         },
         {
           "kind": "ellipse",
@@ -2999,7 +3162,8 @@
           "size_pt": null,
           "weight": null,
           "letter_spacing_pt": 0.0,
-          "align": "left"
+          "align": "left",
+          "rotation": 0.0
         },
         {
           "kind": "ellipse",
@@ -3015,7 +3179,8 @@
           "size_pt": null,
           "weight": null,
           "letter_spacing_pt": 0.0,
-          "align": "left"
+          "align": "left",
+          "rotation": 0.0
         },
         {
           "kind": "rect",
@@ -3031,7 +3196,8 @@
           "size_pt": null,
           "weight": null,
           "letter_spacing_pt": 0.0,
-          "align": "left"
+          "align": "left",
+          "rotation": 0.0
         },
         {
           "kind": "rect",
@@ -3047,7 +3213,8 @@
           "size_pt": null,
           "weight": null,
           "letter_spacing_pt": 0.0,
-          "align": "left"
+          "align": "left",
+          "rotation": 0.0
         },
         {
           "kind": "rect",
@@ -3063,7 +3230,8 @@
           "size_pt": null,
           "weight": null,
           "letter_spacing_pt": 0.0,
-          "align": "left"
+          "align": "left",
+          "rotation": 0.0
         }
       ]
     },
@@ -3107,7 +3275,8 @@
           "size_pt": null,
           "weight": null,
           "letter_spacing_pt": 0.0,
-          "align": "left"
+          "align": "left",
+          "rotation": 0.0
         },
         {
           "kind": "ellipse",
@@ -3123,7 +3292,8 @@
           "size_pt": null,
           "weight": null,
           "letter_spacing_pt": 0.0,
-          "align": "left"
+          "align": "left",
+          "rotation": 0.0
         },
         {
           "kind": "ellipse",
@@ -3139,7 +3309,8 @@
           "size_pt": null,
           "weight": null,
           "letter_spacing_pt": 0.0,
-          "align": "left"
+          "align": "left",
+          "rotation": 0.0
         },
         {
           "kind": "ellipse",
@@ -3155,7 +3326,8 @@
           "size_pt": null,
           "weight": null,
           "letter_spacing_pt": 0.0,
-          "align": "left"
+          "align": "left",
+          "rotation": 0.0
         },
         {
           "kind": "rect",
@@ -3171,7 +3343,8 @@
           "size_pt": null,
           "weight": null,
           "letter_spacing_pt": 0.0,
-          "align": "left"
+          "align": "left",
+          "rotation": 0.0
         },
         {
           "kind": "rect",
@@ -3187,7 +3360,8 @@
           "size_pt": null,
           "weight": null,
           "letter_spacing_pt": 0.0,
-          "align": "left"
+          "align": "left",
+          "rotation": 0.0
         },
         {
           "kind": "rect",
@@ -3203,7 +3377,8 @@
           "size_pt": null,
           "weight": null,
           "letter_spacing_pt": 0.0,
-          "align": "left"
+          "align": "left",
+          "rotation": 0.0
         }
       ]
     },
@@ -3228,7 +3403,8 @@
           "size_pt": null,
           "weight": null,
           "letter_spacing_pt": 0.0,
-          "align": "left"
+          "align": "left",
+          "rotation": 0.0
         },
         {
           "kind": "ellipse",
@@ -3244,7 +3420,8 @@
           "size_pt": null,
           "weight": null,
           "letter_spacing_pt": 0.0,
-          "align": "left"
+          "align": "left",
+          "rotation": 0.0
         },
         {
           "kind": "ellipse",
@@ -3260,7 +3437,8 @@
           "size_pt": null,
           "weight": null,
           "letter_spacing_pt": 0.0,
-          "align": "left"
+          "align": "left",
+          "rotation": 0.0
         },
         {
           "kind": "ellipse",
@@ -3276,7 +3454,8 @@
           "size_pt": null,
           "weight": null,
           "letter_spacing_pt": 0.0,
-          "align": "left"
+          "align": "left",
+          "rotation": 0.0
         },
         {
           "kind": "rect",
@@ -3292,7 +3471,8 @@
           "size_pt": null,
           "weight": null,
           "letter_spacing_pt": 0.0,
-          "align": "left"
+          "align": "left",
+          "rotation": 0.0
         },
         {
           "kind": "rect",
@@ -3308,7 +3488,8 @@
           "size_pt": null,
           "weight": null,
           "letter_spacing_pt": 0.0,
-          "align": "left"
+          "align": "left",
+          "rotation": 0.0
         },
         {
           "kind": "rect",
@@ -3324,7 +3505,8 @@
           "size_pt": null,
           "weight": null,
           "letter_spacing_pt": 0.0,
-          "align": "left"
+          "align": "left",
+          "rotation": 0.0
         },
         {
           "kind": "rect",
@@ -3340,7 +3522,8 @@
           "size_pt": null,
           "weight": null,
           "letter_spacing_pt": 0.0,
-          "align": "left"
+          "align": "left",
+          "rotation": 0.0
         },
         {
           "kind": "text",
@@ -3356,7 +3539,8 @@
           "size_pt": 104.0,
           "weight": 400,
           "letter_spacing_pt": 0.0,
-          "align": "right"
+          "align": "right",
+          "rotation": 0.0
         }
       ]
     },
@@ -3400,7 +3584,8 @@
           "size_pt": null,
           "weight": null,
           "letter_spacing_pt": 0.0,
-          "align": "left"
+          "align": "left",
+          "rotation": 0.0
         },
         {
           "kind": "ellipse",
@@ -3416,7 +3601,8 @@
           "size_pt": null,
           "weight": null,
           "letter_spacing_pt": 0.0,
-          "align": "left"
+          "align": "left",
+          "rotation": 0.0
         },
         {
           "kind": "ellipse",
@@ -3432,7 +3618,8 @@
           "size_pt": null,
           "weight": null,
           "letter_spacing_pt": 0.0,
-          "align": "left"
+          "align": "left",
+          "rotation": 0.0
         },
         {
           "kind": "ellipse",
@@ -3448,7 +3635,8 @@
           "size_pt": null,
           "weight": null,
           "letter_spacing_pt": 0.0,
-          "align": "left"
+          "align": "left",
+          "rotation": 0.0
         },
         {
           "kind": "rect",
@@ -3464,7 +3652,8 @@
           "size_pt": null,
           "weight": null,
           "letter_spacing_pt": 0.0,
-          "align": "left"
+          "align": "left",
+          "rotation": 0.0
         },
         {
           "kind": "rect",
@@ -3480,7 +3669,4998 @@
           "size_pt": null,
           "weight": null,
           "letter_spacing_pt": 0.0,
-          "align": "left"
+          "align": "left",
+          "rotation": 0.0
+        }
+      ]
+    },
+    {
+      "theme_id": "anime-sakura-dream",
+      "layout_id": "cover",
+      "slide_index": 2,
+      "occupied_id": "two_column",
+      "occupied": [
+        {
+          "x": 0.05416666666666667,
+          "y": 0.07777777777777778,
+          "w": 0.8916666666666667,
+          "h": 0.14
+        },
+        {
+          "x": 0.05416666666666667,
+          "y": 0.2177777777777778,
+          "w": 0.43583333333333335,
+          "h": 0.7007407407407407
+        },
+        {
+          "x": 0.51,
+          "y": 0.2177777777777778,
+          "w": 0.43583333333333335,
+          "h": 0.7007407407407407
+        }
+      ],
+      "expected_shapes": [
+        {
+          "kind": "ellipse",
+          "rect": {
+            "x": 0.6291666666666667,
+            "y": -0.34148148148148144,
+            "w": 0.5416666666666666,
+            "h": 0.9629629629629629
+          },
+          "color": "#FFF6FC",
+          "text": null,
+          "font": null,
+          "size_pt": null,
+          "weight": null,
+          "letter_spacing_pt": 0.0,
+          "align": "left",
+          "rotation": 0.0
+        },
+        {
+          "kind": "ellipse",
+          "rect": {
+            "x": 0.696875,
+            "y": -0.2211111111111111,
+            "w": 0.40625,
+            "h": 0.7222222222222222
+          },
+          "color": "#FFF4FB",
+          "text": null,
+          "font": null,
+          "size_pt": null,
+          "weight": null,
+          "letter_spacing_pt": 0.0,
+          "align": "left",
+          "rotation": 0.0
+        },
+        {
+          "kind": "ellipse",
+          "rect": {
+            "x": 0.7645833333333334,
+            "y": -0.10074074074074071,
+            "w": 0.2708333333333333,
+            "h": 0.48148148148148145
+          },
+          "color": "#FFF2F9",
+          "text": null,
+          "font": null,
+          "size_pt": null,
+          "weight": null,
+          "letter_spacing_pt": 0.0,
+          "align": "left",
+          "rotation": 0.0
+        },
+        {
+          "kind": "ellipse",
+          "rect": {
+            "x": 0.8322916666666667,
+            "y": 0.01962962962962965,
+            "w": 0.13541666666666666,
+            "h": 0.24074074074074073
+          },
+          "color": "#FFF0F8",
+          "text": null,
+          "font": null,
+          "size_pt": null,
+          "weight": null,
+          "letter_spacing_pt": 0.0,
+          "align": "left",
+          "rotation": 0.0
+        },
+        {
+          "kind": "rect",
+          "rect": {
+            "x": 0.0,
+            "y": 0.0,
+            "w": 0.14,
+            "h": 0.007407407407407408
+          },
+          "color": "#F1539C",
+          "text": null,
+          "font": null,
+          "size_pt": null,
+          "weight": null,
+          "letter_spacing_pt": 0.0,
+          "align": "left",
+          "rotation": 0.0
+        },
+        {
+          "kind": "rect",
+          "rect": {
+            "x": 0.8916666666666666,
+            "y": 0.9611111111111111,
+            "w": 0.08750000000000002,
+            "h": 0.0018518518518518823
+          },
+          "color": "#FABEDB",
+          "text": null,
+          "font": null,
+          "size_pt": null,
+          "weight": null,
+          "letter_spacing_pt": 0.0,
+          "align": "left",
+          "rotation": 0.0
+        },
+        {
+          "kind": "rect",
+          "rect": {
+            "x": 0.9781249999999999,
+            "y": 0.8074074074074075,
+            "w": 0.0010416666666667185,
+            "h": 0.15555555555555556
+          },
+          "color": "#FABEDB",
+          "text": null,
+          "font": null,
+          "size_pt": null,
+          "weight": null,
+          "letter_spacing_pt": 0.0,
+          "align": "left",
+          "rotation": 0.0
+        },
+        {
+          "kind": "ellipse",
+          "rect": {
+            "x": 0.0011232504548388533,
+            "y": 0.37200233214146766,
+            "w": 0.009513188633718528,
+            "h": 0.02536850302324941
+          },
+          "color": "#F9B3D4",
+          "text": null,
+          "font": null,
+          "size_pt": null,
+          "weight": null,
+          "letter_spacing_pt": 0.0,
+          "align": "left",
+          "rotation": 30.910164560191333
+        },
+        {
+          "kind": "ellipse",
+          "rect": {
+            "x": 0.9544790135284226,
+            "y": 0.699783206186516,
+            "w": 0.006825121667740556,
+            "h": 0.01820032444730815
+          },
+          "color": "#F9B3D4",
+          "text": null,
+          "font": null,
+          "size_pt": null,
+          "weight": null,
+          "letter_spacing_pt": 0.0,
+          "align": "left",
+          "rotation": -31.523235985077918
+        },
+        {
+          "kind": "ellipse",
+          "rect": {
+            "x": 0.958744657834662,
+            "y": 0.5398112399594134,
+            "w": 0.014120389886860115,
+            "h": 0.03765437303162697
+          },
+          "color": "#F9B3D4",
+          "text": null,
+          "font": null,
+          "size_pt": null,
+          "weight": null,
+          "letter_spacing_pt": 0.0,
+          "align": "left",
+          "rotation": 65.32139697577804
+        },
+        {
+          "kind": "ellipse",
+          "rect": {
+            "x": 0.03016807826497825,
+            "y": 0.023068586383791022,
+            "w": 0.012215235954499803,
+            "h": 0.032573962545332805
+          },
+          "color": "#F9B3D4",
+          "text": null,
+          "font": null,
+          "size_pt": null,
+          "weight": null,
+          "letter_spacing_pt": 0.0,
+          "align": "left",
+          "rotation": 11.217840774916112
+        },
+        {
+          "kind": "ellipse",
+          "rect": {
+            "x": 0.4930546610436674,
+            "y": 0.30693111123077366,
+            "w": 0.010209849419576736,
+            "h": 0.027226265118871298
+          },
+          "color": "#F9B3D4",
+          "text": null,
+          "font": null,
+          "size_pt": null,
+          "weight": null,
+          "letter_spacing_pt": 0.0,
+          "align": "left",
+          "rotation": -64.17668322566897
+        },
+        {
+          "kind": "ellipse",
+          "rect": {
+            "x": 0.97375,
+            "y": 0.23333333333333334,
+            "w": 0.0075,
+            "h": 0.013333333333333334
+          },
+          "color": "#F9AED1",
+          "text": null,
+          "font": null,
+          "size_pt": null,
+          "weight": null,
+          "letter_spacing_pt": 0.0,
+          "align": "left",
+          "rotation": 0.0
+        },
+        {
+          "kind": "ellipse",
+          "rect": {
+            "x": 0.9698469505386601,
+            "y": 0.27907790677962446,
+            "w": 0.004166666666666667,
+            "h": 0.007407407407407408
+          },
+          "color": "#F9AED1",
+          "text": null,
+          "font": null,
+          "size_pt": null,
+          "weight": null,
+          "letter_spacing_pt": 0.0,
+          "align": "left",
+          "rotation": 0.0
+        },
+        {
+          "kind": "ellipse",
+          "rect": {
+            "x": 0.9535890274309541,
+            "y": 0.3183936056136278,
+            "w": 0.004166666666666667,
+            "h": 0.007407407407407408
+          },
+          "color": "#F9AED1",
+          "text": null,
+          "font": null,
+          "size_pt": null,
+          "weight": null,
+          "letter_spacing_pt": 0.0,
+          "align": "left",
+          "rotation": 0.0
+        },
+        {
+          "kind": "ellipse",
+          "rect": {
+            "x": 0.9279600175841434,
+            "y": 0.3510582686982392,
+            "w": 0.004166666666666667,
+            "h": 0.007407407407407408
+          },
+          "color": "#F9AED1",
+          "text": null,
+          "font": null,
+          "size_pt": null,
+          "weight": null,
+          "letter_spacing_pt": 0.0,
+          "align": "left",
+          "rotation": 0.0
+        },
+        {
+          "kind": "ellipse",
+          "rect": {
+            "x": 0.8950362309544261,
+            "y": 0.37442559929457503,
+            "w": 0.004166666666666667,
+            "h": 0.007407407407407408
+          },
+          "color": "#F9AED1",
+          "text": null,
+          "font": null,
+          "size_pt": null,
+          "weight": null,
+          "letter_spacing_pt": 0.0,
+          "align": "left",
+          "rotation": 0.0
+        },
+        {
+          "kind": "ellipse",
+          "rect": {
+            "x": 0.8558182902625766,
+            "y": 0.38363955228562313,
+            "w": 0.0075,
+            "h": 0.013333333333333334
+          },
+          "color": "#F9AED1",
+          "text": null,
+          "font": null,
+          "size_pt": null,
+          "weight": null,
+          "letter_spacing_pt": 0.0,
+          "align": "left",
+          "rotation": 0.0
+        },
+        {
+          "kind": "ellipse",
+          "rect": {
+            "x": 0.81834837640409,
+            "y": 0.3866025152485861,
+            "w": 0.004166666666666667,
+            "h": 0.007407407407407408
+          },
+          "color": "#F9AED1",
+          "text": null,
+          "font": null,
+          "size_pt": null,
+          "weight": null,
+          "letter_spacing_pt": 0.0,
+          "align": "left",
+          "rotation": 0.0
+        },
+        {
+          "kind": "ellipse",
+          "rect": {
+            "x": 0.7807971023789073,
+            "y": 0.37442559929457503,
+            "w": 0.004166666666666667,
+            "h": 0.007407407407407408
+          },
+          "color": "#F9AED1",
+          "text": null,
+          "font": null,
+          "size_pt": null,
+          "weight": null,
+          "letter_spacing_pt": 0.0,
+          "align": "left",
+          "rotation": 0.0
+        },
+        {
+          "kind": "ellipse",
+          "rect": {
+            "x": 0.7478733157491899,
+            "y": 0.3510582686982392,
+            "w": 0.004166666666666667,
+            "h": 0.007407407407407408
+          },
+          "color": "#F9AED1",
+          "text": null,
+          "font": null,
+          "size_pt": null,
+          "weight": null,
+          "letter_spacing_pt": 0.0,
+          "align": "left",
+          "rotation": 0.0
+        },
+        {
+          "kind": "ellipse",
+          "rect": {
+            "x": 0.7222443059023792,
+            "y": 0.3183936056136278,
+            "w": 0.004166666666666667,
+            "h": 0.007407407407407408
+          },
+          "color": "#F9AED1",
+          "text": null,
+          "font": null,
+          "size_pt": null,
+          "weight": null,
+          "letter_spacing_pt": 0.0,
+          "align": "left",
+          "rotation": 0.0
+        },
+        {
+          "kind": "ellipse",
+          "rect": {
+            "x": 0.7043197161280065,
+            "y": 0.2761149438166615,
+            "w": 0.0075,
+            "h": 0.013333333333333334
+          },
+          "color": "#F9AED1",
+          "text": null,
+          "font": null,
+          "size_pt": null,
+          "weight": null,
+          "letter_spacing_pt": 0.0,
+          "align": "left",
+          "rotation": 0.0
+        },
+        {
+          "kind": "ellipse",
+          "rect": {
+            "x": 0.7004166666666666,
+            "y": 0.23629629629629637,
+            "w": 0.004166666666666667,
+            "h": 0.007407407407407408
+          },
+          "color": "#F9AED1",
+          "text": null,
+          "font": null,
+          "size_pt": null,
+          "weight": null,
+          "letter_spacing_pt": 0.0,
+          "align": "left",
+          "rotation": 0.0
+        },
+        {
+          "kind": "ellipse",
+          "rect": {
+            "x": 0.7059863827946732,
+            "y": 0.1935146858129681,
+            "w": 0.004166666666666667,
+            "h": 0.007407407407407408
+          },
+          "color": "#F9AED1",
+          "text": null,
+          "font": null,
+          "size_pt": null,
+          "weight": null,
+          "letter_spacing_pt": 0.0,
+          "align": "left",
+          "rotation": 0.0
+        },
+        {
+          "kind": "ellipse",
+          "rect": {
+            "x": 0.7222443059023792,
+            "y": 0.1541989869789648,
+            "w": 0.004166666666666667,
+            "h": 0.007407407407407408
+          },
+          "color": "#F9AED1",
+          "text": null,
+          "font": null,
+          "size_pt": null,
+          "weight": null,
+          "letter_spacing_pt": 0.0,
+          "align": "left",
+          "rotation": 0.0
+        },
+        {
+          "kind": "ellipse",
+          "rect": {
+            "x": 0.7478733157491899,
+            "y": 0.12153432389435337,
+            "w": 0.004166666666666667,
+            "h": 0.007407407407407408
+          },
+          "color": "#F9AED1",
+          "text": null,
+          "font": null,
+          "size_pt": null,
+          "weight": null,
+          "letter_spacing_pt": 0.0,
+          "align": "left",
+          "rotation": 0.0
+        },
+        {
+          "kind": "ellipse",
+          "rect": {
+            "x": 0.7791304357122405,
+            "y": 0.09520403033505466,
+            "w": 0.0075,
+            "h": 0.013333333333333334
+          },
+          "color": "#F9AED1",
+          "text": null,
+          "font": null,
+          "size_pt": null,
+          "weight": null,
+          "letter_spacing_pt": 0.0,
+          "align": "left",
+          "rotation": 0.0
+        },
+        {
+          "kind": "ellipse",
+          "rect": {
+            "x": 0.81834837640409,
+            "y": 0.08599007734400652,
+            "w": 0.004166666666666667,
+            "h": 0.007407407407407408
+          },
+          "color": "#F9AED1",
+          "text": null,
+          "font": null,
+          "size_pt": null,
+          "weight": null,
+          "letter_spacing_pt": 0.0,
+          "align": "left",
+          "rotation": 0.0
+        },
+        {
+          "kind": "ellipse",
+          "rect": {
+            "x": 0.8574849569292433,
+            "y": 0.08599007734400649,
+            "w": 0.004166666666666667,
+            "h": 0.007407407407407408
+          },
+          "color": "#F9AED1",
+          "text": null,
+          "font": null,
+          "size_pt": null,
+          "weight": null,
+          "letter_spacing_pt": 0.0,
+          "align": "left",
+          "rotation": 0.0
+        },
+        {
+          "kind": "ellipse",
+          "rect": {
+            "x": 0.895036230954426,
+            "y": 0.09816699329801754,
+            "w": 0.004166666666666667,
+            "h": 0.007407407407407408
+          },
+          "color": "#F9AED1",
+          "text": null,
+          "font": null,
+          "size_pt": null,
+          "weight": null,
+          "letter_spacing_pt": 0.0,
+          "align": "left",
+          "rotation": 0.0
+        },
+        {
+          "kind": "ellipse",
+          "rect": {
+            "x": 0.9279600175841433,
+            "y": 0.12153432389435331,
+            "w": 0.004166666666666667,
+            "h": 0.007407407407407408
+          },
+          "color": "#F9AED1",
+          "text": null,
+          "font": null,
+          "size_pt": null,
+          "weight": null,
+          "letter_spacing_pt": 0.0,
+          "align": "left",
+          "rotation": 0.0
+        },
+        {
+          "kind": "ellipse",
+          "rect": {
+            "x": 0.9519223607642874,
+            "y": 0.1512360240160019,
+            "w": 0.0075,
+            "h": 0.013333333333333334
+          },
+          "color": "#F9AED1",
+          "text": null,
+          "font": null,
+          "size_pt": null,
+          "weight": null,
+          "letter_spacing_pt": 0.0,
+          "align": "left",
+          "rotation": 0.0
+        },
+        {
+          "kind": "ellipse",
+          "rect": {
+            "x": 0.9698469505386601,
+            "y": 0.19351468581296805,
+            "w": 0.004166666666666667,
+            "h": 0.007407407407407408
+          },
+          "color": "#F9AED1",
+          "text": null,
+          "font": null,
+          "size_pt": null,
+          "weight": null,
+          "letter_spacing_pt": 0.0,
+          "align": "left",
+          "rotation": 0.0
+        },
+        {
+          "kind": "round_rect",
+          "rect": {
+            "x": 0.78,
+            "y": 0.08,
+            "w": 0.14,
+            "h": 0.055
+          },
+          "color": "#F260A4",
+          "text": null,
+          "font": null,
+          "size_pt": null,
+          "weight": null,
+          "letter_spacing_pt": 0.0,
+          "align": "left",
+          "rotation": 6.0
+        },
+        {
+          "kind": "text",
+          "rect": {
+            "x": 0.78,
+            "y": 0.08,
+            "w": 0.14,
+            "h": 0.055
+          },
+          "color": "#FFF8FD",
+          "text": "MAGIC NOTE",
+          "font": "body",
+          "size_pt": 10.0,
+          "weight": 700,
+          "letter_spacing_pt": 0.0,
+          "align": "center",
+          "rotation": 6.0
+        },
+        {
+          "kind": "rect",
+          "rect": {
+            "x": 0.022916666666666665,
+            "y": 0.040740740740740744,
+            "w": 0.9541666666666667,
+            "h": 0.0018518518518518545
+          },
+          "color": "#EBC4D9",
+          "text": null,
+          "font": null,
+          "size_pt": null,
+          "weight": null,
+          "letter_spacing_pt": 0.0,
+          "align": "left",
+          "rotation": 0.0
+        },
+        {
+          "kind": "rect",
+          "rect": {
+            "x": 0.022916666666666665,
+            "y": 0.9574074074074074,
+            "w": 0.9541666666666667,
+            "h": 0.0018518518518518823
+          },
+          "color": "#EBC4D9",
+          "text": null,
+          "font": null,
+          "size_pt": null,
+          "weight": null,
+          "letter_spacing_pt": 0.0,
+          "align": "left",
+          "rotation": 0.0
+        },
+        {
+          "kind": "rect",
+          "rect": {
+            "x": 0.022916666666666665,
+            "y": 0.040740740740740744,
+            "w": 0.0010416666666666664,
+            "h": 0.9185185185185185
+          },
+          "color": "#EBC4D9",
+          "text": null,
+          "font": null,
+          "size_pt": null,
+          "weight": null,
+          "letter_spacing_pt": 0.0,
+          "align": "left",
+          "rotation": 0.0
+        },
+        {
+          "kind": "rect",
+          "rect": {
+            "x": 0.9760416666666666,
+            "y": 0.040740740740740744,
+            "w": 0.0010416666666667185,
+            "h": 0.9185185185185185
+          },
+          "color": "#EBC4D9",
+          "text": null,
+          "font": null,
+          "size_pt": null,
+          "weight": null,
+          "letter_spacing_pt": 0.0,
+          "align": "left",
+          "rotation": 0.0
+        },
+        {
+          "kind": "round_rect",
+          "rect": {
+            "x": 0.022916666666666665,
+            "y": 0.040740740740740744,
+            "w": 0.0125,
+            "h": 0.022222222222222227
+          },
+          "color": "#EBC4D9",
+          "text": null,
+          "font": null,
+          "size_pt": null,
+          "weight": null,
+          "letter_spacing_pt": 0.0,
+          "align": "left",
+          "rotation": 0.0
+        },
+        {
+          "kind": "round_rect",
+          "rect": {
+            "x": 0.9645833333333333,
+            "y": 0.040740740740740744,
+            "w": 0.012499999999999956,
+            "h": 0.022222222222222227
+          },
+          "color": "#EBC4D9",
+          "text": null,
+          "font": null,
+          "size_pt": null,
+          "weight": null,
+          "letter_spacing_pt": 0.0,
+          "align": "left",
+          "rotation": 0.0
+        },
+        {
+          "kind": "round_rect",
+          "rect": {
+            "x": 0.022916666666666665,
+            "y": 0.937037037037037,
+            "w": 0.0125,
+            "h": 0.022222222222222254
+          },
+          "color": "#EBC4D9",
+          "text": null,
+          "font": null,
+          "size_pt": null,
+          "weight": null,
+          "letter_spacing_pt": 0.0,
+          "align": "left",
+          "rotation": 0.0
+        },
+        {
+          "kind": "round_rect",
+          "rect": {
+            "x": 0.9645833333333333,
+            "y": 0.937037037037037,
+            "w": 0.012499999999999956,
+            "h": 0.022222222222222254
+          },
+          "color": "#EBC4D9",
+          "text": null,
+          "font": null,
+          "size_pt": null,
+          "weight": null,
+          "letter_spacing_pt": 0.0,
+          "align": "left",
+          "rotation": 0.0
+        }
+      ]
+    },
+    {
+      "theme_id": "anime-neon-idol",
+      "layout_id": "cover",
+      "slide_index": 2,
+      "occupied_id": "two_column",
+      "occupied": [
+        {
+          "x": 0.05416666666666667,
+          "y": 0.07777777777777778,
+          "w": 0.8916666666666667,
+          "h": 0.14
+        },
+        {
+          "x": 0.05416666666666667,
+          "y": 0.2177777777777778,
+          "w": 0.43583333333333335,
+          "h": 0.7007407407407407
+        },
+        {
+          "x": 0.51,
+          "y": 0.2177777777777778,
+          "w": 0.43583333333333335,
+          "h": 0.7007407407407407
+        }
+      ],
+      "expected_shapes": [
+        {
+          "kind": "ellipse",
+          "rect": {
+            "x": 0.6491666666666667,
+            "y": 0.39851851851851855,
+            "w": 0.5416666666666666,
+            "h": 0.9629629629629629
+          },
+          "color": "#111933",
+          "text": null,
+          "font": null,
+          "size_pt": null,
+          "weight": null,
+          "letter_spacing_pt": 0.0,
+          "align": "left",
+          "rotation": 0.0
+        },
+        {
+          "kind": "ellipse",
+          "rect": {
+            "x": 0.716875,
+            "y": 0.518888888888889,
+            "w": 0.40625,
+            "h": 0.7222222222222222
+          },
+          "color": "#121E38",
+          "text": null,
+          "font": null,
+          "size_pt": null,
+          "weight": null,
+          "letter_spacing_pt": 0.0,
+          "align": "left",
+          "rotation": 0.0
+        },
+        {
+          "kind": "ellipse",
+          "rect": {
+            "x": 0.7845833333333334,
+            "y": 0.6392592592592593,
+            "w": 0.2708333333333333,
+            "h": 0.48148148148148145
+          },
+          "color": "#13243E",
+          "text": null,
+          "font": null,
+          "size_pt": null,
+          "weight": null,
+          "letter_spacing_pt": 0.0,
+          "align": "left",
+          "rotation": 0.0
+        },
+        {
+          "kind": "ellipse",
+          "rect": {
+            "x": 0.8522916666666667,
+            "y": 0.7596296296296297,
+            "w": 0.13541666666666666,
+            "h": 0.24074074074074073
+          },
+          "color": "#142943",
+          "text": null,
+          "font": null,
+          "size_pt": null,
+          "weight": null,
+          "letter_spacing_pt": 0.0,
+          "align": "left",
+          "rotation": 0.0
+        },
+        {
+          "kind": "rect",
+          "rect": {
+            "x": 0.0,
+            "y": 0.0,
+            "w": 0.16,
+            "h": 0.005555555555555556
+          },
+          "color": "#34E5FF",
+          "text": null,
+          "font": null,
+          "size_pt": null,
+          "weight": null,
+          "letter_spacing_pt": 0.0,
+          "align": "left",
+          "rotation": 0.0
+        },
+        {
+          "kind": "rect",
+          "rect": {
+            "x": 0.9020833333333333,
+            "y": 0.9638888888888889,
+            "w": 0.07916666666666661,
+            "h": 0.002777777777777768
+          },
+          "color": "#1E6882",
+          "text": null,
+          "font": null,
+          "size_pt": null,
+          "weight": null,
+          "letter_spacing_pt": 0.0,
+          "align": "left",
+          "rotation": 0.0
+        },
+        {
+          "kind": "rect",
+          "rect": {
+            "x": 0.9796874999999999,
+            "y": 0.825925925925926,
+            "w": 0.0015625000000000222,
+            "h": 0.14074074074074072
+          },
+          "color": "#1E6882",
+          "text": null,
+          "font": null,
+          "size_pt": null,
+          "weight": null,
+          "letter_spacing_pt": 0.0,
+          "align": "left",
+          "rotation": 0.0
+        },
+        {
+          "kind": "round_rect",
+          "rect": {
+            "x": 0.03623710717244345,
+            "y": 0.3603832963935996,
+            "w": 0.007092185221942299,
+            "h": 0.012608329283452957
+          },
+          "color": "#23819B",
+          "text": null,
+          "font": null,
+          "size_pt": null,
+          "weight": null,
+          "letter_spacing_pt": 0.0,
+          "align": "left",
+          "rotation": 6.557320766150951
+        },
+        {
+          "kind": "rect",
+          "rect": {
+            "x": 0.03893213755678153,
+            "y": 0.3651744615213118,
+            "w": 0.001702124453266153,
+            "h": 0.003025999028028692
+          },
+          "color": "#23819B",
+          "text": null,
+          "font": null,
+          "size_pt": null,
+          "weight": null,
+          "letter_spacing_pt": 0.0,
+          "align": "left",
+          "rotation": 0.0
+        },
+        {
+          "kind": "round_rect",
+          "rect": {
+            "x": 0.31242040241656166,
+            "y": 0.9258773557820219,
+            "w": 0.007667203907719022,
+            "h": 0.013630584724833805
+          },
+          "color": "#23819B",
+          "text": null,
+          "font": null,
+          "size_pt": null,
+          "weight": null,
+          "letter_spacing_pt": 0.0,
+          "align": "left",
+          "rotation": -1.2160585820674896
+        },
+        {
+          "kind": "rect",
+          "rect": {
+            "x": 0.3153339399014949,
+            "y": 0.9310569779774588,
+            "w": 0.0018401289378525698,
+            "h": 0.0032713403339601488
+          },
+          "color": "#23819B",
+          "text": null,
+          "font": null,
+          "size_pt": null,
+          "weight": null,
+          "letter_spacing_pt": 0.0,
+          "align": "left",
+          "rotation": 0.0
+        },
+        {
+          "kind": "round_rect",
+          "rect": {
+            "x": 0.07270896819706346,
+            "y": 0.05912759831580506,
+            "w": 0.004518924964456036,
+            "h": 0.008033644381255194
+          },
+          "color": "#23819B",
+          "text": null,
+          "font": null,
+          "size_pt": null,
+          "weight": null,
+          "letter_spacing_pt": 0.0,
+          "align": "left",
+          "rotation": 7.294011935591698
+        },
+        {
+          "kind": "rect",
+          "rect": {
+            "x": 0.07442615968355676,
+            "y": 0.06218038318068203,
+            "w": 0.0010845419914694565,
+            "h": 0.0019280746515012437
+          },
+          "color": "#23819B",
+          "text": null,
+          "font": null,
+          "size_pt": null,
+          "weight": null,
+          "letter_spacing_pt": 0.0,
+          "align": "left",
+          "rotation": 0.0
+        },
+        {
+          "kind": "round_rect",
+          "rect": {
+            "x": 0.07600354063203364,
+            "y": 0.9509721323670992,
+            "w": 0.004629459513913997,
+            "h": 0.008230150246958168
+          },
+          "color": "#23819B",
+          "text": null,
+          "font": null,
+          "size_pt": null,
+          "weight": null,
+          "letter_spacing_pt": 0.0,
+          "align": "left",
+          "rotation": 9.724184196442366
+        },
+        {
+          "kind": "rect",
+          "rect": {
+            "x": 0.07776273524732095,
+            "y": 0.9540995894609433,
+            "w": 0.0011110702833393576,
+            "h": 0.001975236059269969
+          },
+          "color": "#23819B",
+          "text": null,
+          "font": null,
+          "size_pt": null,
+          "weight": null,
+          "letter_spacing_pt": 0.0,
+          "align": "left",
+          "rotation": 0.0
+        },
+        {
+          "kind": "ellipse",
+          "rect": {
+            "x": 0.9729687499999999,
+            "y": 0.49416666666666664,
+            "w": 0.006562500000000001,
+            "h": 0.011666666666666667
+          },
+          "color": "#29A6C0",
+          "text": null,
+          "font": null,
+          "size_pt": null,
+          "weight": null,
+          "letter_spacing_pt": 0.0,
+          "align": "left",
+          "rotation": 0.0
+        },
+        {
+          "kind": "ellipse",
+          "rect": {
+            "x": 0.9710126459479904,
+            "y": 0.5421918139194363,
+            "w": 0.0036458333333333334,
+            "h": 0.006481481481481481
+          },
+          "color": "#29A6C0",
+          "text": null,
+          "font": null,
+          "size_pt": null,
+          "weight": null,
+          "letter_spacing_pt": 0.0,
+          "align": "left",
+          "rotation": 0.0
+        },
+        {
+          "kind": "ellipse",
+          "rect": {
+            "x": 0.9609185610899896,
+            "y": 0.5856387479313785,
+            "w": 0.0036458333333333334,
+            "h": 0.006481481481481481
+          },
+          "color": "#29A6C0",
+          "text": null,
+          "font": null,
+          "size_pt": null,
+          "weight": null,
+          "letter_spacing_pt": 0.0,
+          "align": "left",
+          "rotation": 0.0
+        },
+        {
+          "kind": "ellipse",
+          "rect": {
+            "x": 0.9445859887044188,
+            "y": 0.6252012217972441,
+            "w": 0.0036458333333333334,
+            "h": 0.006481481481481481
+          },
+          "color": "#29A6C0",
+          "text": null,
+          "font": null,
+          "size_pt": null,
+          "weight": null,
+          "letter_spacing_pt": 0.0,
+          "align": "left",
+          "rotation": 0.0
+        },
+        {
+          "kind": "ellipse",
+          "rect": {
+            "x": 0.9227287405769049,
+            "y": 0.6591501655672823,
+            "w": 0.0036458333333333334,
+            "h": 0.006481481481481481
+          },
+          "color": "#29A6C0",
+          "text": null,
+          "font": null,
+          "size_pt": null,
+          "weight": null,
+          "letter_spacing_pt": 0.0,
+          "align": "left",
+          "rotation": 0.0
+        },
+        {
+          "kind": "ellipse",
+          "rect": {
+            "x": 0.8948437499999999,
+            "y": 0.683409254901044,
+            "w": 0.006562500000000001,
+            "h": 0.011666666666666667
+          },
+          "color": "#29A6C0",
+          "text": null,
+          "font": null,
+          "size_pt": null,
+          "weight": null,
+          "letter_spacing_pt": 0.0,
+          "align": "left",
+          "rotation": 0.0
+        },
+        {
+          "kind": "ellipse",
+          "rect": {
+            "x": 0.8664609887044188,
+            "y": 0.7045827202274595,
+            "w": 0.0036458333333333334,
+            "h": 0.006481481481481481
+          },
+          "color": "#29A6C0",
+          "text": null,
+          "font": null,
+          "size_pt": null,
+          "weight": null,
+          "letter_spacing_pt": 0.0,
+          "align": "left",
+          "rotation": 0.0
+        },
+        {
+          "kind": "ellipse",
+          "rect": {
+            "x": 0.8345096557189041,
+            "y": 0.7140807104693634,
+            "w": 0.0036458333333333334,
+            "h": 0.006481481481481481
+          },
+          "color": "#29A6C0",
+          "text": null,
+          "font": null,
+          "size_pt": null,
+          "weight": null,
+          "letter_spacing_pt": 0.0,
+          "align": "left",
+          "rotation": 0.0
+        },
+        {
+          "kind": "ellipse",
+          "rect": {
+            "x": 0.8018445109477624,
+            "y": 0.7140807104693635,
+            "w": 0.0036458333333333334,
+            "h": 0.006481481481481481
+          },
+          "color": "#29A6C0",
+          "text": null,
+          "font": null,
+          "size_pt": null,
+          "weight": null,
+          "letter_spacing_pt": 0.0,
+          "align": "left",
+          "rotation": 0.0
+        },
+        {
+          "kind": "ellipse",
+          "rect": {
+            "x": 0.7698931779622478,
+            "y": 0.7045827202274595,
+            "w": 0.0036458333333333334,
+            "h": 0.006481481481481481
+          },
+          "color": "#29A6C0",
+          "text": null,
+          "font": null,
+          "size_pt": null,
+          "weight": null,
+          "letter_spacing_pt": 0.0,
+          "align": "left",
+          "rotation": 0.0
+        },
+        {
+          "kind": "ellipse",
+          "rect": {
+            "x": 0.7385937499999999,
+            "y": 0.683409254901044,
+            "w": 0.006562500000000001,
+            "h": 0.011666666666666667
+          },
+          "color": "#29A6C0",
+          "text": null,
+          "font": null,
+          "size_pt": null,
+          "weight": null,
+          "letter_spacing_pt": 0.0,
+          "align": "left",
+          "rotation": 0.0
+        },
+        {
+          "kind": "ellipse",
+          "rect": {
+            "x": 0.7136254260897618,
+            "y": 0.6591501655672825,
+            "w": 0.0036458333333333334,
+            "h": 0.006481481481481481
+          },
+          "color": "#29A6C0",
+          "text": null,
+          "font": null,
+          "size_pt": null,
+          "weight": null,
+          "letter_spacing_pt": 0.0,
+          "align": "left",
+          "rotation": 0.0
+        },
+        {
+          "kind": "ellipse",
+          "rect": {
+            "x": 0.6917681779622478,
+            "y": 0.6252012217972441,
+            "w": 0.0036458333333333334,
+            "h": 0.006481481481481481
+          },
+          "color": "#29A6C0",
+          "text": null,
+          "font": null,
+          "size_pt": null,
+          "weight": null,
+          "letter_spacing_pt": 0.0,
+          "align": "left",
+          "rotation": 0.0
+        },
+        {
+          "kind": "ellipse",
+          "rect": {
+            "x": 0.6754356055766769,
+            "y": 0.5856387479313785,
+            "w": 0.0036458333333333334,
+            "h": 0.006481481481481481
+          },
+          "color": "#29A6C0",
+          "text": null,
+          "font": null,
+          "size_pt": null,
+          "weight": null,
+          "letter_spacing_pt": 0.0,
+          "align": "left",
+          "rotation": 0.0
+        },
+        {
+          "kind": "ellipse",
+          "rect": {
+            "x": 0.6653415207186761,
+            "y": 0.5421918139194363,
+            "w": 0.0036458333333333334,
+            "h": 0.006481481481481481
+          },
+          "color": "#29A6C0",
+          "text": null,
+          "font": null,
+          "size_pt": null,
+          "weight": null,
+          "letter_spacing_pt": 0.0,
+          "align": "left",
+          "rotation": 0.0
+        },
+        {
+          "kind": "ellipse",
+          "rect": {
+            "x": 0.6604687499999999,
+            "y": 0.49416666666666675,
+            "w": 0.006562500000000001,
+            "h": 0.011666666666666667
+          },
+          "color": "#29A6C0",
+          "text": null,
+          "font": null,
+          "size_pt": null,
+          "weight": null,
+          "letter_spacing_pt": 0.0,
+          "align": "left",
+          "rotation": 0.0
+        },
+        {
+          "kind": "ellipse",
+          "rect": {
+            "x": 0.6653415207186761,
+            "y": 0.45132670459908225,
+            "w": 0.0036458333333333334,
+            "h": 0.006481481481481481
+          },
+          "color": "#29A6C0",
+          "text": null,
+          "font": null,
+          "size_pt": null,
+          "weight": null,
+          "letter_spacing_pt": 0.0,
+          "align": "left",
+          "rotation": 0.0
+        },
+        {
+          "kind": "ellipse",
+          "rect": {
+            "x": 0.6754356055766769,
+            "y": 0.4078797705871399,
+            "w": 0.0036458333333333334,
+            "h": 0.006481481481481481
+          },
+          "color": "#29A6C0",
+          "text": null,
+          "font": null,
+          "size_pt": null,
+          "weight": null,
+          "letter_spacing_pt": 0.0,
+          "align": "left",
+          "rotation": 0.0
+        },
+        {
+          "kind": "ellipse",
+          "rect": {
+            "x": 0.6917681779622478,
+            "y": 0.3683172967212744,
+            "w": 0.0036458333333333334,
+            "h": 0.006481481481481481
+          },
+          "color": "#29A6C0",
+          "text": null,
+          "font": null,
+          "size_pt": null,
+          "weight": null,
+          "letter_spacing_pt": 0.0,
+          "align": "left",
+          "rotation": 0.0
+        },
+        {
+          "kind": "ellipse",
+          "rect": {
+            "x": 0.7136254260897616,
+            "y": 0.3343683529512361,
+            "w": 0.0036458333333333334,
+            "h": 0.006481481481481481
+          },
+          "color": "#29A6C0",
+          "text": null,
+          "font": null,
+          "size_pt": null,
+          "weight": null,
+          "letter_spacing_pt": 0.0,
+          "align": "left",
+          "rotation": 0.0
+        },
+        {
+          "kind": "ellipse",
+          "rect": {
+            "x": 0.7385937499999998,
+            "y": 0.3049240784322893,
+            "w": 0.006562500000000001,
+            "h": 0.011666666666666667
+          },
+          "color": "#29A6C0",
+          "text": null,
+          "font": null,
+          "size_pt": null,
+          "weight": null,
+          "letter_spacing_pt": 0.0,
+          "align": "left",
+          "rotation": 0.0
+        },
+        {
+          "kind": "ellipse",
+          "rect": {
+            "x": 0.7698931779622478,
+            "y": 0.288935798291059,
+            "w": 0.0036458333333333334,
+            "h": 0.006481481481481481
+          },
+          "color": "#29A6C0",
+          "text": null,
+          "font": null,
+          "size_pt": null,
+          "weight": null,
+          "letter_spacing_pt": 0.0,
+          "align": "left",
+          "rotation": 0.0
+        },
+        {
+          "kind": "ellipse",
+          "rect": {
+            "x": 0.8018445109477623,
+            "y": 0.2794378080491551,
+            "w": 0.0036458333333333334,
+            "h": 0.006481481481481481
+          },
+          "color": "#29A6C0",
+          "text": null,
+          "font": null,
+          "size_pt": null,
+          "weight": null,
+          "letter_spacing_pt": 0.0,
+          "align": "left",
+          "rotation": 0.0
+        },
+        {
+          "kind": "ellipse",
+          "rect": {
+            "x": 0.834509655718904,
+            "y": 0.279437808049155,
+            "w": 0.0036458333333333334,
+            "h": 0.006481481481481481
+          },
+          "color": "#29A6C0",
+          "text": null,
+          "font": null,
+          "size_pt": null,
+          "weight": null,
+          "letter_spacing_pt": 0.0,
+          "align": "left",
+          "rotation": 0.0
+        },
+        {
+          "kind": "ellipse",
+          "rect": {
+            "x": 0.8664609887044188,
+            "y": 0.288935798291059,
+            "w": 0.0036458333333333334,
+            "h": 0.006481481481481481
+          },
+          "color": "#29A6C0",
+          "text": null,
+          "font": null,
+          "size_pt": null,
+          "weight": null,
+          "letter_spacing_pt": 0.0,
+          "align": "left",
+          "rotation": 0.0
+        },
+        {
+          "kind": "ellipse",
+          "rect": {
+            "x": 0.8948437499999999,
+            "y": 0.3049240784322893,
+            "w": 0.006562500000000001,
+            "h": 0.011666666666666667
+          },
+          "color": "#29A6C0",
+          "text": null,
+          "font": null,
+          "size_pt": null,
+          "weight": null,
+          "letter_spacing_pt": 0.0,
+          "align": "left",
+          "rotation": 0.0
+        },
+        {
+          "kind": "ellipse",
+          "rect": {
+            "x": 0.9227287405769049,
+            "y": 0.3343683529512361,
+            "w": 0.0036458333333333334,
+            "h": 0.006481481481481481
+          },
+          "color": "#29A6C0",
+          "text": null,
+          "font": null,
+          "size_pt": null,
+          "weight": null,
+          "letter_spacing_pt": 0.0,
+          "align": "left",
+          "rotation": 0.0
+        },
+        {
+          "kind": "ellipse",
+          "rect": {
+            "x": 0.9445859887044188,
+            "y": 0.36831729672127433,
+            "w": 0.0036458333333333334,
+            "h": 0.006481481481481481
+          },
+          "color": "#29A6C0",
+          "text": null,
+          "font": null,
+          "size_pt": null,
+          "weight": null,
+          "letter_spacing_pt": 0.0,
+          "align": "left",
+          "rotation": 0.0
+        },
+        {
+          "kind": "ellipse",
+          "rect": {
+            "x": 0.9609185610899896,
+            "y": 0.4078797705871399,
+            "w": 0.0036458333333333334,
+            "h": 0.006481481481481481
+          },
+          "color": "#29A6C0",
+          "text": null,
+          "font": null,
+          "size_pt": null,
+          "weight": null,
+          "letter_spacing_pt": 0.0,
+          "align": "left",
+          "rotation": 0.0
+        },
+        {
+          "kind": "ellipse",
+          "rect": {
+            "x": 0.9710126459479904,
+            "y": 0.45132670459908225,
+            "w": 0.0036458333333333334,
+            "h": 0.006481481481481481
+          },
+          "color": "#29A6C0",
+          "text": null,
+          "font": null,
+          "size_pt": null,
+          "weight": null,
+          "letter_spacing_pt": 0.0,
+          "align": "left",
+          "rotation": 0.0
+        },
+        {
+          "kind": "rect",
+          "rect": {
+            "x": 0.01875,
+            "y": 0.03333333333333333,
+            "w": 0.9625,
+            "h": 0.0022222222222222227
+          },
+          "color": "#258DA7",
+          "text": null,
+          "font": null,
+          "size_pt": null,
+          "weight": null,
+          "letter_spacing_pt": 0.0,
+          "align": "left",
+          "rotation": 0.0
+        },
+        {
+          "kind": "rect",
+          "rect": {
+            "x": 0.01875,
+            "y": 0.9644444444444444,
+            "w": 0.9625,
+            "h": 0.0022222222222222365
+          },
+          "color": "#258DA7",
+          "text": null,
+          "font": null,
+          "size_pt": null,
+          "weight": null,
+          "letter_spacing_pt": 0.0,
+          "align": "left",
+          "rotation": 0.0
+        },
+        {
+          "kind": "rect",
+          "rect": {
+            "x": 0.01875,
+            "y": 0.03333333333333333,
+            "w": 0.0012500000000000011,
+            "h": 0.9333333333333333
+          },
+          "color": "#258DA7",
+          "text": null,
+          "font": null,
+          "size_pt": null,
+          "weight": null,
+          "letter_spacing_pt": 0.0,
+          "align": "left",
+          "rotation": 0.0
+        },
+        {
+          "kind": "rect",
+          "rect": {
+            "x": 0.98,
+            "y": 0.03333333333333333,
+            "w": 0.0012499999999999734,
+            "h": 0.9333333333333333
+          },
+          "color": "#258DA7",
+          "text": null,
+          "font": null,
+          "size_pt": null,
+          "weight": null,
+          "letter_spacing_pt": 0.0,
+          "align": "left",
+          "rotation": 0.0
+        },
+        {
+          "kind": "round_rect",
+          "rect": {
+            "x": 0.01875,
+            "y": 0.03333333333333333,
+            "w": 0.020833333333333332,
+            "h": 0.03703703703703703
+          },
+          "color": "#258DA7",
+          "text": null,
+          "font": null,
+          "size_pt": null,
+          "weight": null,
+          "letter_spacing_pt": 0.0,
+          "align": "left",
+          "rotation": 0.0
+        },
+        {
+          "kind": "round_rect",
+          "rect": {
+            "x": 0.9604166666666666,
+            "y": 0.03333333333333333,
+            "w": 0.02083333333333337,
+            "h": 0.03703703703703703
+          },
+          "color": "#258DA7",
+          "text": null,
+          "font": null,
+          "size_pt": null,
+          "weight": null,
+          "letter_spacing_pt": 0.0,
+          "align": "left",
+          "rotation": 0.0
+        },
+        {
+          "kind": "round_rect",
+          "rect": {
+            "x": 0.01875,
+            "y": 0.9296296296296296,
+            "w": 0.020833333333333332,
+            "h": 0.03703703703703698
+          },
+          "color": "#258DA7",
+          "text": null,
+          "font": null,
+          "size_pt": null,
+          "weight": null,
+          "letter_spacing_pt": 0.0,
+          "align": "left",
+          "rotation": 0.0
+        },
+        {
+          "kind": "round_rect",
+          "rect": {
+            "x": 0.9604166666666666,
+            "y": 0.9296296296296296,
+            "w": 0.02083333333333337,
+            "h": 0.03703703703703698
+          },
+          "color": "#258DA7",
+          "text": null,
+          "font": null,
+          "size_pt": null,
+          "weight": null,
+          "letter_spacing_pt": 0.0,
+          "align": "left",
+          "rotation": 0.0
+        },
+        {
+          "kind": "round_rect",
+          "rect": {
+            "x": 0.77,
+            "y": 0.09,
+            "w": 0.16,
+            "h": 0.055
+          },
+          "color": "#2FC8E2",
+          "text": null,
+          "font": null,
+          "size_pt": null,
+          "weight": null,
+          "letter_spacing_pt": 0.0,
+          "align": "left",
+          "rotation": 0.0
+        },
+        {
+          "kind": "text",
+          "rect": {
+            "x": 0.77,
+            "y": 0.09,
+            "w": 0.16,
+            "h": 0.055
+          },
+          "color": "#10142E",
+          "text": "SYSTEM // ON",
+          "font": "body",
+          "size_pt": 9.0,
+          "weight": 700,
+          "letter_spacing_pt": 0.0,
+          "align": "center",
+          "rotation": 0.0
+        }
+      ]
+    },
+    {
+      "theme_id": "anime-shrine-spring",
+      "layout_id": "cover",
+      "slide_index": 2,
+      "occupied_id": "two_column",
+      "occupied": [
+        {
+          "x": 0.05416666666666667,
+          "y": 0.07777777777777778,
+          "w": 0.8916666666666667,
+          "h": 0.14
+        },
+        {
+          "x": 0.05416666666666667,
+          "y": 0.2177777777777778,
+          "w": 0.43583333333333335,
+          "h": 0.7007407407407407
+        },
+        {
+          "x": 0.51,
+          "y": 0.2177777777777778,
+          "w": 0.43583333333333335,
+          "h": 0.7007407407407407
+        }
+      ],
+      "expected_shapes": [
+        {
+          "kind": "ellipse",
+          "rect": {
+            "x": 0.6291666666666667,
+            "y": -0.34148148148148144,
+            "w": 0.5416666666666666,
+            "h": 0.9629629629629629
+          },
+          "color": "#FFF7EE",
+          "text": null,
+          "font": null,
+          "size_pt": null,
+          "weight": null,
+          "letter_spacing_pt": 0.0,
+          "align": "left",
+          "rotation": 0.0
+        },
+        {
+          "kind": "ellipse",
+          "rect": {
+            "x": 0.696875,
+            "y": -0.2211111111111111,
+            "w": 0.40625,
+            "h": 0.7222222222222222
+          },
+          "color": "#FFF5ED",
+          "text": null,
+          "font": null,
+          "size_pt": null,
+          "weight": null,
+          "letter_spacing_pt": 0.0,
+          "align": "left",
+          "rotation": 0.0
+        },
+        {
+          "kind": "ellipse",
+          "rect": {
+            "x": 0.7645833333333334,
+            "y": -0.10074074074074071,
+            "w": 0.2708333333333333,
+            "h": 0.48148148148148145
+          },
+          "color": "#FFF3EB",
+          "text": null,
+          "font": null,
+          "size_pt": null,
+          "weight": null,
+          "letter_spacing_pt": 0.0,
+          "align": "left",
+          "rotation": 0.0
+        },
+        {
+          "kind": "ellipse",
+          "rect": {
+            "x": 0.8322916666666667,
+            "y": 0.01962962962962965,
+            "w": 0.13541666666666666,
+            "h": 0.24074074074074073
+          },
+          "color": "#FFF1E9",
+          "text": null,
+          "font": null,
+          "size_pt": null,
+          "weight": null,
+          "letter_spacing_pt": 0.0,
+          "align": "left",
+          "rotation": 0.0
+        },
+        {
+          "kind": "rect",
+          "rect": {
+            "x": 0.0,
+            "y": 0.0,
+            "w": 0.14,
+            "h": 0.007407407407407408
+          },
+          "color": "#D94356",
+          "text": null,
+          "font": null,
+          "size_pt": null,
+          "weight": null,
+          "letter_spacing_pt": 0.0,
+          "align": "left",
+          "rotation": 0.0
+        },
+        {
+          "kind": "rect",
+          "rect": {
+            "x": 0.8916666666666666,
+            "y": 0.9611111111111111,
+            "w": 0.08750000000000002,
+            "h": 0.0018518518518518823
+          },
+          "color": "#F2B9BA",
+          "text": null,
+          "font": null,
+          "size_pt": null,
+          "weight": null,
+          "letter_spacing_pt": 0.0,
+          "align": "left",
+          "rotation": 0.0
+        },
+        {
+          "kind": "rect",
+          "rect": {
+            "x": 0.9781249999999999,
+            "y": 0.8074074074074075,
+            "w": 0.0010416666666667185,
+            "h": 0.15555555555555556
+          },
+          "color": "#F2B9BA",
+          "text": null,
+          "font": null,
+          "size_pt": null,
+          "weight": null,
+          "letter_spacing_pt": 0.0,
+          "align": "left",
+          "rotation": 0.0
+        },
+        {
+          "kind": "ellipse",
+          "rect": {
+            "x": 0.6173170529529064,
+            "y": -0.004792714928690758,
+            "w": 0.007051595232527083,
+            "h": 0.018804253953405552
+          },
+          "color": "#F0B0B2",
+          "text": null,
+          "font": null,
+          "size_pt": null,
+          "weight": null,
+          "letter_spacing_pt": 0.0,
+          "align": "left",
+          "rotation": 39.178294208832085
+        },
+        {
+          "kind": "round_rect",
+          "rect": {
+            "x": 0.78,
+            "y": 0.39166666666666666,
+            "w": 0.17999999999999994,
+            "h": 0.016666666666666663
+          },
+          "color": "#F6CDCB",
+          "text": null,
+          "font": null,
+          "size_pt": null,
+          "weight": null,
+          "letter_spacing_pt": 0.0,
+          "align": "left",
+          "rotation": -8.0
+        },
+        {
+          "kind": "round_rect",
+          "rect": {
+            "x": 0.78,
+            "y": 0.44166666666666665,
+            "w": 0.17999999999999994,
+            "h": 0.016666666666666663
+          },
+          "color": "#F6CDCB",
+          "text": null,
+          "font": null,
+          "size_pt": null,
+          "weight": null,
+          "letter_spacing_pt": 0.0,
+          "align": "left",
+          "rotation": -8.0
+        },
+        {
+          "kind": "round_rect",
+          "rect": {
+            "x": 0.78,
+            "y": 0.4916666666666667,
+            "w": 0.17999999999999994,
+            "h": 0.01666666666666672
+          },
+          "color": "#F6CDCB",
+          "text": null,
+          "font": null,
+          "size_pt": null,
+          "weight": null,
+          "letter_spacing_pt": 0.0,
+          "align": "left",
+          "rotation": -8.0
+        },
+        {
+          "kind": "round_rect",
+          "rect": {
+            "x": 0.78,
+            "y": 0.5416666666666667,
+            "w": 0.17999999999999994,
+            "h": 0.01666666666666672
+          },
+          "color": "#F6CDCB",
+          "text": null,
+          "font": null,
+          "size_pt": null,
+          "weight": null,
+          "letter_spacing_pt": 0.0,
+          "align": "left",
+          "rotation": -8.0
+        },
+        {
+          "kind": "round_rect",
+          "rect": {
+            "x": 0.78,
+            "y": 0.5916666666666667,
+            "w": 0.17999999999999994,
+            "h": 0.01666666666666672
+          },
+          "color": "#F6CDCB",
+          "text": null,
+          "font": null,
+          "size_pt": null,
+          "weight": null,
+          "letter_spacing_pt": 0.0,
+          "align": "left",
+          "rotation": -8.0
+        },
+        {
+          "kind": "round_rect",
+          "rect": {
+            "x": 0.79,
+            "y": 0.1,
+            "w": 0.12,
+            "h": 0.065
+          },
+          "color": "#DD5565",
+          "text": null,
+          "font": null,
+          "size_pt": null,
+          "weight": null,
+          "letter_spacing_pt": 0.0,
+          "align": "left",
+          "rotation": 3.0
+        },
+        {
+          "kind": "text",
+          "rect": {
+            "x": 0.79,
+            "y": 0.1,
+            "w": 0.12,
+            "h": 0.065
+          },
+          "color": "#FFF9F0",
+          "text": "御 守",
+          "font": "body",
+          "size_pt": 12.0,
+          "weight": 700,
+          "letter_spacing_pt": 0.0,
+          "align": "center",
+          "rotation": 3.0
+        },
+        {
+          "kind": "rect",
+          "rect": {
+            "x": 0.027083333333333334,
+            "y": 0.04814814814814815,
+            "w": 0.9458333333333333,
+            "h": 0.0022222222222222227
+          },
+          "color": "#E7C2B1",
+          "text": null,
+          "font": null,
+          "size_pt": null,
+          "weight": null,
+          "letter_spacing_pt": 0.0,
+          "align": "left",
+          "rotation": 0.0
+        },
+        {
+          "kind": "rect",
+          "rect": {
+            "x": 0.027083333333333334,
+            "y": 0.9496296296296296,
+            "w": 0.9458333333333333,
+            "h": 0.0022222222222222365
+          },
+          "color": "#E7C2B1",
+          "text": null,
+          "font": null,
+          "size_pt": null,
+          "weight": null,
+          "letter_spacing_pt": 0.0,
+          "align": "left",
+          "rotation": 0.0
+        },
+        {
+          "kind": "rect",
+          "rect": {
+            "x": 0.027083333333333334,
+            "y": 0.04814814814814815,
+            "w": 0.0012500000000000011,
+            "h": 0.9037037037037037
+          },
+          "color": "#E7C2B1",
+          "text": null,
+          "font": null,
+          "size_pt": null,
+          "weight": null,
+          "letter_spacing_pt": 0.0,
+          "align": "left",
+          "rotation": 0.0
+        },
+        {
+          "kind": "rect",
+          "rect": {
+            "x": 0.9716666666666667,
+            "y": 0.04814814814814815,
+            "w": 0.0012499999999999734,
+            "h": 0.9037037037037037
+          },
+          "color": "#E7C2B1",
+          "text": null,
+          "font": null,
+          "size_pt": null,
+          "weight": null,
+          "letter_spacing_pt": 0.0,
+          "align": "left",
+          "rotation": 0.0
+        },
+        {
+          "kind": "round_rect",
+          "rect": {
+            "x": 0.027083333333333334,
+            "y": 0.04814814814814815,
+            "w": 0.016666666666666663,
+            "h": 0.02962962962962963
+          },
+          "color": "#E7C2B1",
+          "text": null,
+          "font": null,
+          "size_pt": null,
+          "weight": null,
+          "letter_spacing_pt": 0.0,
+          "align": "left",
+          "rotation": 0.0
+        },
+        {
+          "kind": "round_rect",
+          "rect": {
+            "x": 0.9562499999999999,
+            "y": 0.04814814814814815,
+            "w": 0.01666666666666672,
+            "h": 0.02962962962962963
+          },
+          "color": "#E7C2B1",
+          "text": null,
+          "font": null,
+          "size_pt": null,
+          "weight": null,
+          "letter_spacing_pt": 0.0,
+          "align": "left",
+          "rotation": 0.0
+        },
+        {
+          "kind": "round_rect",
+          "rect": {
+            "x": 0.027083333333333334,
+            "y": 0.9222222222222222,
+            "w": 0.016666666666666663,
+            "h": 0.029629629629629672
+          },
+          "color": "#E7C2B1",
+          "text": null,
+          "font": null,
+          "size_pt": null,
+          "weight": null,
+          "letter_spacing_pt": 0.0,
+          "align": "left",
+          "rotation": 0.0
+        },
+        {
+          "kind": "round_rect",
+          "rect": {
+            "x": 0.9562499999999999,
+            "y": 0.9222222222222222,
+            "w": 0.01666666666666672,
+            "h": 0.029629629629629672
+          },
+          "color": "#E7C2B1",
+          "text": null,
+          "font": null,
+          "size_pt": null,
+          "weight": null,
+          "letter_spacing_pt": 0.0,
+          "align": "left",
+          "rotation": 0.0
+        }
+      ]
+    },
+    {
+      "theme_id": "anime-celestial-library",
+      "layout_id": "cover",
+      "slide_index": 2,
+      "occupied_id": "two_column",
+      "occupied": [
+        {
+          "x": 0.05416666666666667,
+          "y": 0.07777777777777778,
+          "w": 0.8916666666666667,
+          "h": 0.14
+        },
+        {
+          "x": 0.05416666666666667,
+          "y": 0.2177777777777778,
+          "w": 0.43583333333333335,
+          "h": 0.7007407407407407
+        },
+        {
+          "x": 0.51,
+          "y": 0.2177777777777778,
+          "w": 0.43583333333333335,
+          "h": 0.7007407407407407
+        }
+      ],
+      "expected_shapes": [
+        {
+          "kind": "ellipse",
+          "rect": {
+            "x": 0.7008333333333334,
+            "y": 0.4325925925925926,
+            "w": 0.4583333333333333,
+            "h": 0.8148148148148148
+          },
+          "color": "#F4F7FF",
+          "text": null,
+          "font": null,
+          "size_pt": null,
+          "weight": null,
+          "letter_spacing_pt": 0.0,
+          "align": "left",
+          "rotation": 0.0
+        },
+        {
+          "kind": "ellipse",
+          "rect": {
+            "x": 0.758125,
+            "y": 0.5344444444444444,
+            "w": 0.34375,
+            "h": 0.6111111111111112
+          },
+          "color": "#F3F6FF",
+          "text": null,
+          "font": null,
+          "size_pt": null,
+          "weight": null,
+          "letter_spacing_pt": 0.0,
+          "align": "left",
+          "rotation": 0.0
+        },
+        {
+          "kind": "ellipse",
+          "rect": {
+            "x": 0.8154166666666667,
+            "y": 0.6362962962962962,
+            "w": 0.22916666666666666,
+            "h": 0.4074074074074074
+          },
+          "color": "#F1F4FF",
+          "text": null,
+          "font": null,
+          "size_pt": null,
+          "weight": null,
+          "letter_spacing_pt": 0.0,
+          "align": "left",
+          "rotation": 0.0
+        },
+        {
+          "kind": "ellipse",
+          "rect": {
+            "x": 0.8727083333333334,
+            "y": 0.7381481481481481,
+            "w": 0.11458333333333333,
+            "h": 0.2037037037037037
+          },
+          "color": "#EFF3FF",
+          "text": null,
+          "font": null,
+          "size_pt": null,
+          "weight": null,
+          "letter_spacing_pt": 0.0,
+          "align": "left",
+          "rotation": 0.0
+        },
+        {
+          "kind": "rect",
+          "rect": {
+            "x": 0.0,
+            "y": 0.0,
+            "w": 0.12,
+            "h": 0.004629629629629629
+          },
+          "color": "#5A7BFF",
+          "text": null,
+          "font": null,
+          "size_pt": null,
+          "weight": null,
+          "letter_spacing_pt": 0.0,
+          "align": "left",
+          "rotation": 0.0
+        },
+        {
+          "kind": "rect",
+          "rect": {
+            "x": 0.90625,
+            "y": 0.03333333333333333,
+            "w": 0.07499999999999996,
+            "h": 0.001388888888888891
+          },
+          "color": "#C4D2EF",
+          "text": null,
+          "font": null,
+          "size_pt": null,
+          "weight": null,
+          "letter_spacing_pt": 0.0,
+          "align": "left",
+          "rotation": 0.0
+        },
+        {
+          "kind": "rect",
+          "rect": {
+            "x": 0.98046875,
+            "y": 0.03333333333333333,
+            "w": 0.0007812499999999556,
+            "h": 0.13333333333333333
+          },
+          "color": "#C4D2EF",
+          "text": null,
+          "font": null,
+          "size_pt": null,
+          "weight": null,
+          "letter_spacing_pt": 0.0,
+          "align": "left",
+          "rotation": 0.0
+        },
+        {
+          "kind": "round_rect",
+          "rect": {
+            "x": 0.1905200957422494,
+            "y": 0.987817913567337,
+            "w": 0.009230609776568588,
+            "h": 0.0019691967523346454
+          },
+          "color": "#ABBCFF",
+          "text": null,
+          "font": null,
+          "size_pt": null,
+          "weight": null,
+          "letter_spacing_pt": 0.0,
+          "align": "left",
+          "rotation": 42.706932155415416
+        },
+        {
+          "kind": "round_rect",
+          "rect": {
+            "x": 0.1945815640439396,
+            "y": 0.9805975254754432,
+            "w": 0.001107673173188245,
+            "h": 0.016409972936121897
+          },
+          "color": "#ABBCFF",
+          "text": null,
+          "font": null,
+          "size_pt": null,
+          "weight": null,
+          "letter_spacing_pt": 0.0,
+          "align": "left",
+          "rotation": 42.706932155415416
+        },
+        {
+          "kind": "ellipse",
+          "rect": {
+            "x": 0.19421233965287685,
+            "y": 0.987161514649892,
+            "w": 0.0018461219553137197,
+            "h": 0.0032819945872243905
+          },
+          "color": "#ABBCFF",
+          "text": null,
+          "font": null,
+          "size_pt": null,
+          "weight": null,
+          "letter_spacing_pt": 0.0,
+          "align": "left",
+          "rotation": 0.0
+        },
+        {
+          "kind": "round_rect",
+          "rect": {
+            "x": 0.0035562627061153764,
+            "y": 0.31881689676797637,
+            "w": 0.00824571027478669,
+            "h": 0.0017590848586211405
+          },
+          "color": "#ABBCFF",
+          "text": null,
+          "font": null,
+          "size_pt": null,
+          "weight": null,
+          "letter_spacing_pt": 0.0,
+          "align": "left",
+          "rotation": 81.27411064691842
+        },
+        {
+          "kind": "round_rect",
+          "rect": {
+            "x": 0.007184375227021519,
+            "y": 0.31236691895303215,
+            "w": 0.000989485232974402,
+            "h": 0.01465904048850969
+          },
+          "color": "#ABBCFF",
+          "text": null,
+          "font": null,
+          "size_pt": null,
+          "weight": null,
+          "letter_spacing_pt": 0.0,
+          "align": "left",
+          "rotation": 81.27411064691842
+        },
+        {
+          "kind": "ellipse",
+          "rect": {
+            "x": 0.006854546816030051,
+            "y": 0.318230535148436,
+            "w": 0.0016491420549573377,
+            "h": 0.002931808097701934
+          },
+          "color": "#ABBCFF",
+          "text": null,
+          "font": null,
+          "size_pt": null,
+          "weight": null,
+          "letter_spacing_pt": 0.0,
+          "align": "left",
+          "rotation": 0.0
+        },
+        {
+          "kind": "round_rect",
+          "rect": {
+            "x": 0.6837841153770569,
+            "y": 0.9958022884220505,
+            "w": 0.008082793527864895,
+            "h": 0.0017243292859444592
+          },
+          "color": "#ABBCFF",
+          "text": null,
+          "font": null,
+          "size_pt": null,
+          "weight": null,
+          "letter_spacing_pt": 0.0,
+          "align": "left",
+          "rotation": -65.73491460643709
+        },
+        {
+          "kind": "round_rect",
+          "rect": {
+            "x": 0.6873405445293174,
+            "y": 0.9894797477069207,
+            "w": 0.0009699352233437653,
+            "h": 0.01052025229307929
+          },
+          "color": "#ABBCFF",
+          "text": null,
+          "font": null,
+          "size_pt": null,
+          "weight": null,
+          "letter_spacing_pt": 0.0,
+          "align": "left",
+          "rotation": -65.73491460643709
+        },
+        {
+          "kind": "ellipse",
+          "rect": {
+            "x": 0.6870172327882028,
+            "y": 0.9952275119934024,
+            "w": 0.0016165587055729702,
+            "h": 0.002873882143240836
+          },
+          "color": "#ABBCFF",
+          "text": null,
+          "font": null,
+          "size_pt": null,
+          "weight": null,
+          "letter_spacing_pt": 0.0,
+          "align": "left",
+          "rotation": 0.0
+        },
+        {
+          "kind": "round_rect",
+          "rect": {
+            "x": 0.14801071457768558,
+            "y": 0.03420070886022101,
+            "w": 0.01568767681310418,
+            "h": 0.00334670438679556
+          },
+          "color": "#ABBCFF",
+          "text": null,
+          "font": null,
+          "size_pt": null,
+          "weight": null,
+          "letter_spacing_pt": 0.0,
+          "align": "left",
+          "rotation": 1.357784578576684
+        },
+        {
+          "kind": "round_rect",
+          "rect": {
+            "x": 0.15491329237545143,
+            "y": 0.021929459441970618,
+            "w": 0.0018825212175725137,
+            "h": 0.027889203223296334
+          },
+          "color": "#ABBCFF",
+          "text": null,
+          "font": null,
+          "size_pt": null,
+          "weight": null,
+          "letter_spacing_pt": 0.0,
+          "align": "left",
+          "rotation": 1.357784578576684
+        },
+        {
+          "kind": "ellipse",
+          "rect": {
+            "x": 0.15428578530292725,
+            "y": 0.03308514073128915,
+            "w": 0.003137535362620838,
+            "h": 0.0055778406446592675
+          },
+          "color": "#ABBCFF",
+          "text": null,
+          "font": null,
+          "size_pt": null,
+          "weight": null,
+          "letter_spacing_pt": 0.0,
+          "align": "left",
+          "rotation": 0.0
+        },
+        {
+          "kind": "ellipse",
+          "rect": {
+            "x": 0.9542892526330023,
+            "y": 0.3362490048302185,
+            "w": 0.006,
+            "h": 0.010666666666666668
+          },
+          "color": "#A8BAFF",
+          "text": null,
+          "font": null,
+          "size_pt": null,
+          "weight": null,
+          "letter_spacing_pt": 0.0,
+          "align": "left",
+          "rotation": 0.0
+        },
+        {
+          "kind": "ellipse",
+          "rect": {
+            "x": 0.9427920967237589,
+            "y": 0.38110848269895015,
+            "w": 0.0033333333333333335,
+            "h": 0.0059259259259259265
+          },
+          "color": "#A8BAFF",
+          "text": null,
+          "font": null,
+          "size_pt": null,
+          "weight": null,
+          "letter_spacing_pt": 0.0,
+          "align": "left",
+          "rotation": 0.0
+        },
+        {
+          "kind": "ellipse",
+          "rect": {
+            "x": 0.9217149583647952,
+            "y": 0.41938189686003835,
+            "w": 0.0033333333333333335,
+            "h": 0.0059259259259259265
+          },
+          "color": "#A8BAFF",
+          "text": null,
+          "font": null,
+          "size_pt": null,
+          "weight": null,
+          "letter_spacing_pt": 0.0,
+          "align": "left",
+          "rotation": 0.0
+        },
+        {
+          "kind": "ellipse",
+          "rect": {
+            "x": 0.8934480666172282,
+            "y": 0.451520428881957,
+            "w": 0.0033333333333333335,
+            "h": 0.0059259259259259265
+          },
+          "color": "#A8BAFF",
+          "text": null,
+          "font": null,
+          "size_pt": null,
+          "weight": null,
+          "letter_spacing_pt": 0.0,
+          "align": "left",
+          "rotation": 0.0
+        },
+        {
+          "kind": "ellipse",
+          "rect": {
+            "x": 0.8594088414655418,
+            "y": 0.4759125185703044,
+            "w": 0.0033333333333333335,
+            "h": 0.0059259259259259265
+          },
+          "color": "#A8BAFF",
+          "text": null,
+          "font": null,
+          "size_pt": null,
+          "weight": null,
+          "letter_spacing_pt": 0.0,
+          "align": "left",
+          "rotation": 0.0
+        },
+        {
+          "kind": "ellipse",
+          "rect": {
+            "x": 0.8199708184609339,
+            "y": 0.4889646743252401,
+            "w": 0.006,
+            "h": 0.010666666666666668
+          },
+          "color": "#A8BAFF",
+          "text": null,
+          "font": null,
+          "size_pt": null,
+          "weight": null,
+          "letter_spacing_pt": 0.0,
+          "align": "left",
+          "rotation": 0.0
+        },
+        {
+          "kind": "ellipse",
+          "rect": {
+            "x": 0.7810447258548499,
+            "y": 0.49701465739909173,
+            "w": 0.0033333333333333335,
+            "h": 0.0059259259259259265
+          },
+          "color": "#A8BAFF",
+          "text": null,
+          "font": null,
+          "size_pt": null,
+          "weight": null,
+          "letter_spacing_pt": 0.0,
+          "align": "left",
+          "rotation": 0.0
+        },
+        {
+          "kind": "ellipse",
+          "rect": {
+            "x": 0.7406493393726145,
+            "y": 0.4926665571837982,
+            "w": 0.0033333333333333335,
+            "h": 0.0059259259259259265
+          },
+          "color": "#A8BAFF",
+          "text": null,
+          "font": null,
+          "size_pt": null,
+          "weight": null,
+          "letter_spacing_pt": 0.0,
+          "align": "left",
+          "rotation": 0.0
+        },
+        {
+          "kind": "ellipse",
+          "rect": {
+            "x": 0.7021435857022246,
+            "y": 0.47850877595061003,
+            "w": 0.0033333333333333335,
+            "h": 0.0059259259259259265
+          },
+          "color": "#A8BAFF",
+          "text": null,
+          "font": null,
+          "size_pt": null,
+          "weight": null,
+          "letter_spacing_pt": 0.0,
+          "align": "left",
+          "rotation": 0.0
+        },
+        {
+          "kind": "ellipse",
+          "rect": {
+            "x": 0.6674583041187385,
+            "y": 0.45525124396830535,
+            "w": 0.0033333333333333335,
+            "h": 0.0059259259259259265
+          },
+          "color": "#A8BAFF",
+          "text": null,
+          "font": null,
+          "size_pt": null,
+          "weight": null,
+          "letter_spacing_pt": 0.0,
+          "align": "left",
+          "rotation": 0.0
+        },
+        {
+          "kind": "ellipse",
+          "rect": {
+            "x": 0.6369994261405414,
+            "y": 0.42168982063510246,
+            "w": 0.006,
+            "h": 0.010666666666666668
+          },
+          "color": "#A8BAFF",
+          "text": null,
+          "font": null,
+          "size_pt": null,
+          "weight": null,
+          "letter_spacing_pt": 0.0,
+          "align": "left",
+          "rotation": 0.0
+        },
+        {
+          "kind": "ellipse",
+          "rect": {
+            "x": 0.6162274281938098,
+            "y": 0.38649966670016367,
+            "w": 0.0033333333333333335,
+            "h": 0.0059259259259259265
+          },
+          "color": "#A8BAFF",
+          "text": null,
+          "font": null,
+          "size_pt": null,
+          "weight": null,
+          "letter_spacing_pt": 0.0,
+          "align": "left",
+          "rotation": 0.0
+        },
+        {
+          "kind": "ellipse",
+          "rect": {
+            "x": 0.6022507638927511,
+            "y": 0.3444531125801366,
+            "w": 0.0033333333333333335,
+            "h": 0.0059259259259259265
+          },
+          "color": "#A8BAFF",
+          "text": null,
+          "font": null,
+          "size_pt": null,
+          "weight": null,
+          "letter_spacing_pt": 0.0,
+          "align": "left",
+          "rotation": 0.0
+        },
+        {
+          "kind": "ellipse",
+          "rect": {
+            "x": 0.5971036148802212,
+            "y": 0.3000289184400897,
+            "w": 0.0033333333333333335,
+            "h": 0.0059259259259259265
+          },
+          "color": "#A8BAFF",
+          "text": null,
+          "font": null,
+          "size_pt": null,
+          "weight": null,
+          "letter_spacing_pt": 0.0,
+          "align": "left",
+          "rotation": 0.0
+        },
+        {
+          "kind": "ellipse",
+          "rect": {
+            "x": 0.601044080700331,
+            "y": 0.2554546988734852,
+            "w": 0.0033333333333333335,
+            "h": 0.0059259259259259265
+          },
+          "color": "#A8BAFF",
+          "text": null,
+          "font": null,
+          "size_pt": null,
+          "weight": null,
+          "letter_spacing_pt": 0.0,
+          "align": "left",
+          "rotation": 0.0
+        },
+        {
+          "kind": "ellipse",
+          "rect": {
+            "x": 0.6125412366095745,
+            "y": 0.21059522100475367,
+            "w": 0.006,
+            "h": 0.010666666666666668
+          },
+          "color": "#A8BAFF",
+          "text": null,
+          "font": null,
+          "size_pt": null,
+          "weight": null,
+          "letter_spacing_pt": 0.0,
+          "align": "left",
+          "rotation": 0.0
+        },
+        {
+          "kind": "ellipse",
+          "rect": {
+            "x": 0.6349517083018714,
+            "y": 0.17469217721403577,
+            "w": 0.0033333333333333335,
+            "h": 0.0059259259259259265
+          },
+          "color": "#A8BAFF",
+          "text": null,
+          "font": null,
+          "size_pt": null,
+          "weight": null,
+          "letter_spacing_pt": 0.0,
+          "align": "left",
+          "rotation": 0.0
+        },
+        {
+          "kind": "ellipse",
+          "rect": {
+            "x": 0.6632186000494384,
+            "y": 0.14255364519211708,
+            "w": 0.0033333333333333335,
+            "h": 0.0059259259259259265
+          },
+          "color": "#A8BAFF",
+          "text": null,
+          "font": null,
+          "size_pt": null,
+          "weight": null,
+          "letter_spacing_pt": 0.0,
+          "align": "left",
+          "rotation": 0.0
+        },
+        {
+          "kind": "ellipse",
+          "rect": {
+            "x": 0.6972578252011249,
+            "y": 0.11816155550376965,
+            "w": 0.0033333333333333335,
+            "h": 0.0059259259259259265
+          },
+          "color": "#A8BAFF",
+          "text": null,
+          "font": null,
+          "size_pt": null,
+          "weight": null,
+          "letter_spacing_pt": 0.0,
+          "align": "left",
+          "rotation": 0.0
+        },
+        {
+          "kind": "ellipse",
+          "rect": {
+            "x": 0.7353625148723995,
+            "y": 0.1027390293784635,
+            "w": 0.0033333333333333335,
+            "h": 0.0059259259259259265
+          },
+          "color": "#A8BAFF",
+          "text": null,
+          "font": null,
+          "size_pt": null,
+          "weight": null,
+          "letter_spacing_pt": 0.0,
+          "align": "left",
+          "rotation": 0.0
+        },
+        {
+          "kind": "ellipse",
+          "rect": {
+            "x": 0.7742886074784835,
+            "y": 0.09468904630461197,
+            "w": 0.006,
+            "h": 0.010666666666666668
+          },
+          "color": "#A8BAFF",
+          "text": null,
+          "font": null,
+          "size_pt": null,
+          "weight": null,
+          "letter_spacing_pt": 0.0,
+          "align": "left",
+          "rotation": 0.0
+        },
+        {
+          "kind": "ellipse",
+          "rect": {
+            "x": 0.8160173272940522,
+            "y": 0.1014075168902759,
+            "w": 0.0033333333333333335,
+            "h": 0.0059259259259259265
+          },
+          "color": "#A8BAFF",
+          "text": null,
+          "font": null,
+          "size_pt": null,
+          "weight": null,
+          "letter_spacing_pt": 0.0,
+          "align": "left",
+          "rotation": 0.0
+        },
+        {
+          "kind": "ellipse",
+          "rect": {
+            "x": 0.854523080964442,
+            "y": 0.11556529812346399,
+            "w": 0.0033333333333333335,
+            "h": 0.0059259259259259265
+          },
+          "color": "#A8BAFF",
+          "text": null,
+          "font": null,
+          "size_pt": null,
+          "weight": null,
+          "letter_spacing_pt": 0.0,
+          "align": "left",
+          "rotation": 0.0
+        },
+        {
+          "kind": "ellipse",
+          "rect": {
+            "x": 0.8892083625479282,
+            "y": 0.13882283010576876,
+            "w": 0.0033333333333333335,
+            "h": 0.0059259259259259265
+          },
+          "color": "#A8BAFF",
+          "text": null,
+          "font": null,
+          "size_pt": null,
+          "weight": null,
+          "letter_spacing_pt": 0.0,
+          "align": "left",
+          "rotation": 0.0
+        },
+        {
+          "kind": "ellipse",
+          "rect": {
+            "x": 0.918333907192792,
+            "y": 0.17001388306860127,
+            "w": 0.0033333333333333335,
+            "h": 0.0059259259259259265
+          },
+          "color": "#A8BAFF",
+          "text": null,
+          "font": null,
+          "size_pt": null,
+          "weight": null,
+          "letter_spacing_pt": 0.0,
+          "align": "left",
+          "rotation": 0.0
+        },
+        {
+          "kind": "ellipse",
+          "rect": {
+            "x": 0.9391059051395235,
+            "y": 0.20520403700354015,
+            "w": 0.006,
+            "h": 0.010666666666666668
+          },
+          "color": "#A8BAFF",
+          "text": null,
+          "font": null,
+          "size_pt": null,
+          "weight": null,
+          "letter_spacing_pt": 0.0,
+          "align": "left",
+          "rotation": 0.0
+        },
+        {
+          "kind": "ellipse",
+          "rect": {
+            "x": 0.9544159027739156,
+            "y": 0.24962096149393773,
+            "w": 0.0033333333333333335,
+            "h": 0.0059259259259259265
+          },
+          "color": "#A8BAFF",
+          "text": null,
+          "font": null,
+          "size_pt": null,
+          "weight": null,
+          "letter_spacing_pt": 0.0,
+          "align": "left",
+          "rotation": 0.0
+        },
+        {
+          "kind": "ellipse",
+          "rect": {
+            "x": 0.9595630517864454,
+            "y": 0.2940451556339843,
+            "w": 0.0033333333333333335,
+            "h": 0.0059259259259259265
+          },
+          "color": "#A8BAFF",
+          "text": null,
+          "font": null,
+          "size_pt": null,
+          "weight": null,
+          "letter_spacing_pt": 0.0,
+          "align": "left",
+          "rotation": 0.0
+        },
+        {
+          "kind": "round_rect",
+          "rect": {
+            "x": 0.79,
+            "y": 0.08,
+            "w": 0.14,
+            "h": 0.055
+          },
+          "color": "#7692FF",
+          "text": null,
+          "font": null,
+          "size_pt": null,
+          "weight": null,
+          "letter_spacing_pt": 0.0,
+          "align": "left",
+          "rotation": -4.0
+        },
+        {
+          "kind": "text",
+          "rect": {
+            "x": 0.79,
+            "y": 0.08,
+            "w": 0.14,
+            "h": 0.055
+          },
+          "color": "#F6F8FF",
+          "text": "CELESTIAL",
+          "font": "body",
+          "size_pt": 9.0,
+          "weight": 700,
+          "letter_spacing_pt": 0.0,
+          "align": "center",
+          "rotation": -4.0
+        },
+        {
+          "kind": "rect",
+          "rect": {
+            "x": 0.020833333333333332,
+            "y": 0.037037037037037035,
+            "w": 0.9583333333333334,
+            "h": 0.0014814814814814795
+          },
+          "color": "#CAD6F1",
+          "text": null,
+          "font": null,
+          "size_pt": null,
+          "weight": null,
+          "letter_spacing_pt": 0.0,
+          "align": "left",
+          "rotation": 0.0
+        },
+        {
+          "kind": "rect",
+          "rect": {
+            "x": 0.020833333333333332,
+            "y": 0.9614814814814815,
+            "w": 0.9583333333333334,
+            "h": 0.001481481481481528
+          },
+          "color": "#CAD6F1",
+          "text": null,
+          "font": null,
+          "size_pt": null,
+          "weight": null,
+          "letter_spacing_pt": 0.0,
+          "align": "left",
+          "rotation": 0.0
+        },
+        {
+          "kind": "rect",
+          "rect": {
+            "x": 0.020833333333333332,
+            "y": 0.037037037037037035,
+            "w": 0.0008333333333333318,
+            "h": 0.925925925925926
+          },
+          "color": "#CAD6F1",
+          "text": null,
+          "font": null,
+          "size_pt": null,
+          "weight": null,
+          "letter_spacing_pt": 0.0,
+          "align": "left",
+          "rotation": 0.0
+        },
+        {
+          "kind": "rect",
+          "rect": {
+            "x": 0.9783333333333333,
+            "y": 0.037037037037037035,
+            "w": 0.0008333333333333526,
+            "h": 0.925925925925926
+          },
+          "color": "#CAD6F1",
+          "text": null,
+          "font": null,
+          "size_pt": null,
+          "weight": null,
+          "letter_spacing_pt": 0.0,
+          "align": "left",
+          "rotation": 0.0
+        },
+        {
+          "kind": "round_rect",
+          "rect": {
+            "x": 0.020833333333333332,
+            "y": 0.037037037037037035,
+            "w": 0.010416666666666668,
+            "h": 0.018518518518518517
+          },
+          "color": "#CAD6F1",
+          "text": null,
+          "font": null,
+          "size_pt": null,
+          "weight": null,
+          "letter_spacing_pt": 0.0,
+          "align": "left",
+          "rotation": 0.0
+        },
+        {
+          "kind": "round_rect",
+          "rect": {
+            "x": 0.96875,
+            "y": 0.037037037037037035,
+            "w": 0.01041666666666663,
+            "h": 0.018518518518518517
+          },
+          "color": "#CAD6F1",
+          "text": null,
+          "font": null,
+          "size_pt": null,
+          "weight": null,
+          "letter_spacing_pt": 0.0,
+          "align": "left",
+          "rotation": 0.0
+        },
+        {
+          "kind": "round_rect",
+          "rect": {
+            "x": 0.020833333333333332,
+            "y": 0.9444444444444445,
+            "w": 0.010416666666666668,
+            "h": 0.01851851851851849
+          },
+          "color": "#CAD6F1",
+          "text": null,
+          "font": null,
+          "size_pt": null,
+          "weight": null,
+          "letter_spacing_pt": 0.0,
+          "align": "left",
+          "rotation": 0.0
+        },
+        {
+          "kind": "round_rect",
+          "rect": {
+            "x": 0.96875,
+            "y": 0.9444444444444445,
+            "w": 0.01041666666666663,
+            "h": 0.01851851851851849
+          },
+          "color": "#CAD6F1",
+          "text": null,
+          "font": null,
+          "size_pt": null,
+          "weight": null,
+          "letter_spacing_pt": 0.0,
+          "align": "left",
+          "rotation": 0.0
+        }
+      ]
+    },
+    {
+      "theme_id": "anime-foxfire-festival",
+      "layout_id": "cover",
+      "slide_index": 2,
+      "occupied_id": "two_column",
+      "occupied": [
+        {
+          "x": 0.05416666666666667,
+          "y": 0.07777777777777778,
+          "w": 0.8916666666666667,
+          "h": 0.14
+        },
+        {
+          "x": 0.05416666666666667,
+          "y": 0.2177777777777778,
+          "w": 0.43583333333333335,
+          "h": 0.7007407407407407
+        },
+        {
+          "x": 0.51,
+          "y": 0.2177777777777778,
+          "w": 0.43583333333333335,
+          "h": 0.7007407407407407
+        }
+      ],
+      "expected_shapes": [
+        {
+          "kind": "ellipse",
+          "rect": {
+            "x": 0.5575,
+            "y": -0.47555555555555556,
+            "w": 0.625,
+            "h": 1.1111111111111112
+          },
+          "color": "#2B1A1A",
+          "text": null,
+          "font": null,
+          "size_pt": null,
+          "weight": null,
+          "letter_spacing_pt": 0.0,
+          "align": "left",
+          "rotation": 0.0
+        },
+        {
+          "kind": "ellipse",
+          "rect": {
+            "x": 0.635625,
+            "y": -0.33666666666666667,
+            "w": 0.46875,
+            "h": 0.8333333333333334
+          },
+          "color": "#311C1C",
+          "text": null,
+          "font": null,
+          "size_pt": null,
+          "weight": null,
+          "letter_spacing_pt": 0.0,
+          "align": "left",
+          "rotation": 0.0
+        },
+        {
+          "kind": "ellipse",
+          "rect": {
+            "x": 0.71375,
+            "y": -0.19777777777777777,
+            "w": 0.3125,
+            "h": 0.5555555555555556
+          },
+          "color": "#371F1D",
+          "text": null,
+          "font": null,
+          "size_pt": null,
+          "weight": null,
+          "letter_spacing_pt": 0.0,
+          "align": "left",
+          "rotation": 0.0
+        },
+        {
+          "kind": "ellipse",
+          "rect": {
+            "x": 0.791875,
+            "y": -0.05888888888888889,
+            "w": 0.15625,
+            "h": 0.2777777777777778
+          },
+          "color": "#3D211E",
+          "text": null,
+          "font": null,
+          "size_pt": null,
+          "weight": null,
+          "letter_spacing_pt": 0.0,
+          "align": "left",
+          "rotation": 0.0
+        },
+        {
+          "kind": "rect",
+          "rect": {
+            "x": 0.8791666666666667,
+            "y": 0.037037037037037035,
+            "w": 0.09999999999999998,
+            "h": 0.0018518518518518545
+          },
+          "color": "#A34B34",
+          "text": null,
+          "font": null,
+          "size_pt": null,
+          "weight": null,
+          "letter_spacing_pt": 0.0,
+          "align": "left",
+          "rotation": 0.0
+        },
+        {
+          "kind": "rect",
+          "rect": {
+            "x": 0.9781249999999999,
+            "y": 0.037037037037037035,
+            "w": 0.0010416666666667185,
+            "h": 0.17777777777777778
+          },
+          "color": "#A34B34",
+          "text": null,
+          "font": null,
+          "size_pt": null,
+          "weight": null,
+          "letter_spacing_pt": 0.0,
+          "align": "left",
+          "rotation": 0.0
+        },
+        {
+          "kind": "rect",
+          "rect": {
+            "x": 0.020833333333333332,
+            "y": 0.9611111111111111,
+            "w": 0.1,
+            "h": 0.0018518518518518823
+          },
+          "color": "#A34B34",
+          "text": null,
+          "font": null,
+          "size_pt": null,
+          "weight": null,
+          "letter_spacing_pt": 0.0,
+          "align": "left",
+          "rotation": 0.0
+        },
+        {
+          "kind": "rect",
+          "rect": {
+            "x": 0.020833333333333332,
+            "y": 0.7851851851851852,
+            "w": 0.0010416666666666664,
+            "h": 0.1777777777777778
+          },
+          "color": "#A34B34",
+          "text": null,
+          "font": null,
+          "size_pt": null,
+          "weight": null,
+          "letter_spacing_pt": 0.0,
+          "align": "left",
+          "rotation": 0.0
+        },
+        {
+          "kind": "round_rect",
+          "rect": {
+            "x": 0.6452224819979164,
+            "y": 0.0,
+            "w": 0.009956977411638923,
+            "h": 0.015679255510783856
+          },
+          "color": "#8F4330",
+          "text": null,
+          "font": null,
+          "size_pt": null,
+          "weight": null,
+          "letter_spacing_pt": 0.0,
+          "align": "left",
+          "rotation": 48.41104402975179
+        },
+        {
+          "kind": "round_rect",
+          "rect": {
+            "x": 0.45809344605659136,
+            "y": 0.027113413469245035,
+            "w": 0.008868362603243418,
+            "h": 0.015765977961321676
+          },
+          "color": "#8F4330",
+          "text": null,
+          "font": null,
+          "size_pt": null,
+          "weight": null,
+          "letter_spacing_pt": 0.0,
+          "align": "left",
+          "rotation": 48.31710936524905
+        },
+        {
+          "kind": "round_rect",
+          "rect": {
+            "x": 0.8467898318563433,
+            "y": 0.0014617254371168432,
+            "w": 0.013203685447418456,
+            "h": 0.02347321857318834
+          },
+          "color": "#8F4330",
+          "text": null,
+          "font": null,
+          "size_pt": null,
+          "weight": null,
+          "letter_spacing_pt": 0.0,
+          "align": "left",
+          "rotation": 36.74269686383195
+        },
+        {
+          "kind": "round_rect",
+          "rect": {
+            "x": 0.6809535594792882,
+            "y": 0.9308541414258933,
+            "w": 0.006969528711245676,
+            "h": 0.012390273264436757
+          },
+          "color": "#8F4330",
+          "text": null,
+          "font": null,
+          "size_pt": null,
+          "weight": null,
+          "letter_spacing_pt": 0.0,
+          "align": "left",
+          "rotation": 36.511946581536904
+        },
+        {
+          "kind": "round_rect",
+          "rect": {
+            "x": 0.5809109151926047,
+            "y": 0.9862631092227443,
+            "w": 0.0060594036981153065,
+            "h": 0.010772273241093866
+          },
+          "color": "#8F4330",
+          "text": null,
+          "font": null,
+          "size_pt": null,
+          "weight": null,
+          "letter_spacing_pt": 0.0,
+          "align": "left",
+          "rotation": 36.8191424862016
+        },
+        {
+          "kind": "round_rect",
+          "rect": {
+            "x": 0.72,
+            "y": 0.3592592592592593,
+            "w": 0.28,
+            "h": 0.0222222222222222
+          },
+          "color": "#623026",
+          "text": null,
+          "font": null,
+          "size_pt": null,
+          "weight": null,
+          "letter_spacing_pt": 0.0,
+          "align": "left",
+          "rotation": -18.0
+        },
+        {
+          "kind": "round_rect",
+          "rect": {
+            "x": 0.72,
+            "y": 0.41111111111111115,
+            "w": 0.28,
+            "h": 0.0222222222222222
+          },
+          "color": "#623026",
+          "text": null,
+          "font": null,
+          "size_pt": null,
+          "weight": null,
+          "letter_spacing_pt": 0.0,
+          "align": "left",
+          "rotation": -18.0
+        },
+        {
+          "kind": "round_rect",
+          "rect": {
+            "x": 0.72,
+            "y": 0.462962962962963,
+            "w": 0.28,
+            "h": 0.0222222222222222
+          },
+          "color": "#623026",
+          "text": null,
+          "font": null,
+          "size_pt": null,
+          "weight": null,
+          "letter_spacing_pt": 0.0,
+          "align": "left",
+          "rotation": -18.0
+        },
+        {
+          "kind": "round_rect",
+          "rect": {
+            "x": 0.72,
+            "y": 0.5148148148148148,
+            "w": 0.28,
+            "h": 0.022222222222222254
+          },
+          "color": "#623026",
+          "text": null,
+          "font": null,
+          "size_pt": null,
+          "weight": null,
+          "letter_spacing_pt": 0.0,
+          "align": "left",
+          "rotation": -18.0
+        },
+        {
+          "kind": "round_rect",
+          "rect": {
+            "x": 0.72,
+            "y": 0.5666666666666667,
+            "w": 0.28,
+            "h": 0.022222222222222254
+          },
+          "color": "#623026",
+          "text": null,
+          "font": null,
+          "size_pt": null,
+          "weight": null,
+          "letter_spacing_pt": 0.0,
+          "align": "left",
+          "rotation": -18.0
+        },
+        {
+          "kind": "round_rect",
+          "rect": {
+            "x": 0.72,
+            "y": 0.6185185185185186,
+            "w": 0.28,
+            "h": 0.022222222222222254
+          },
+          "color": "#623026",
+          "text": null,
+          "font": null,
+          "size_pt": null,
+          "weight": null,
+          "letter_spacing_pt": 0.0,
+          "align": "left",
+          "rotation": -18.0
+        },
+        {
+          "kind": "ellipse",
+          "rect": {
+            "x": 0.9603125,
+            "y": 0.6916666666666667,
+            "w": 0.009375,
+            "h": 0.016666666666666666
+          },
+          "color": "#9F4933",
+          "text": null,
+          "font": null,
+          "size_pt": null,
+          "weight": null,
+          "letter_spacing_pt": 0.0,
+          "align": "left",
+          "rotation": 0.0
+        },
+        {
+          "kind": "ellipse",
+          "rect": {
+            "x": 0.9528807748972442,
+            "y": 0.7492295201106423,
+            "w": 0.005208333333333333,
+            "h": 0.009259259259259259
+          },
+          "color": "#9F4933",
+          "text": null,
+          "font": null,
+          "size_pt": null,
+          "weight": null,
+          "letter_spacing_pt": 0.0,
+          "align": "left",
+          "rotation": 0.0
+        },
+        {
+          "kind": "ellipse",
+          "rect": {
+            "x": 0.9257841809816518,
+            "y": 0.7948891025373659,
+            "w": 0.005208333333333333,
+            "h": 0.009259259259259259
+          },
+          "color": "#9F4933",
+          "text": null,
+          "font": null,
+          "size_pt": null,
+          "weight": null,
+          "letter_spacing_pt": 0.0,
+          "align": "left",
+          "rotation": 0.0
+        },
+        {
+          "kind": "ellipse",
+          "rect": {
+            "x": 0.8852312623789695,
+            "y": 0.8253978601312181,
+            "w": 0.005208333333333333,
+            "h": 0.009259259259259259
+          },
+          "color": "#9F4933",
+          "text": null,
+          "font": null,
+          "size_pt": null,
+          "weight": null,
+          "letter_spacing_pt": 0.0,
+          "align": "left",
+          "rotation": 0.0
+        },
+        {
+          "kind": "ellipse",
+          "rect": {
+            "x": 0.8373958333333333,
+            "y": 0.836111111111111,
+            "w": 0.005208333333333333,
+            "h": 0.009259259259259259
+          },
+          "color": "#9F4933",
+          "text": null,
+          "font": null,
+          "size_pt": null,
+          "weight": null,
+          "letter_spacing_pt": 0.0,
+          "align": "left",
+          "rotation": 0.0
+        },
+        {
+          "kind": "ellipse",
+          "rect": {
+            "x": 0.7874770709543638,
+            "y": 0.8216941564275144,
+            "w": 0.009375,
+            "h": 0.016666666666666666
+          },
+          "color": "#9F4933",
+          "text": null,
+          "font": null,
+          "size_pt": null,
+          "weight": null,
+          "letter_spacing_pt": 0.0,
+          "align": "left",
+          "rotation": 0.0
+        },
+        {
+          "kind": "ellipse",
+          "rect": {
+            "x": 0.749007485685015,
+            "y": 0.7948891025373659,
+            "w": 0.005208333333333333,
+            "h": 0.009259259259259259
+          },
+          "color": "#9F4933",
+          "text": null,
+          "font": null,
+          "size_pt": null,
+          "weight": null,
+          "letter_spacing_pt": 0.0,
+          "align": "left",
+          "rotation": 0.0
+        },
+        {
+          "kind": "ellipse",
+          "rect": {
+            "x": 0.7219108917694225,
+            "y": 0.7492295201106423,
+            "w": 0.005208333333333333,
+            "h": 0.009259259259259259
+          },
+          "color": "#9F4933",
+          "text": null,
+          "font": null,
+          "size_pt": null,
+          "weight": null,
+          "letter_spacing_pt": 0.0,
+          "align": "left",
+          "rotation": 0.0
+        },
+        {
+          "kind": "ellipse",
+          "rect": {
+            "x": 0.7123958333333333,
+            "y": 0.6953703703703703,
+            "w": 0.005208333333333333,
+            "h": 0.009259259259259259
+          },
+          "color": "#9F4933",
+          "text": null,
+          "font": null,
+          "size_pt": null,
+          "weight": null,
+          "letter_spacing_pt": 0.0,
+          "align": "left",
+          "rotation": 0.0
+        },
+        {
+          "kind": "ellipse",
+          "rect": {
+            "x": 0.7219108917694225,
+            "y": 0.6415112206300985,
+            "w": 0.005208333333333333,
+            "h": 0.009259259259259259
+          },
+          "color": "#9F4933",
+          "text": null,
+          "font": null,
+          "size_pt": null,
+          "weight": null,
+          "letter_spacing_pt": 0.0,
+          "align": "left",
+          "rotation": 0.0
+        },
+        {
+          "kind": "ellipse",
+          "rect": {
+            "x": 0.7469241523516815,
+            "y": 0.5921479344996711,
+            "w": 0.009375,
+            "h": 0.016666666666666666
+          },
+          "color": "#9F4933",
+          "text": null,
+          "font": null,
+          "size_pt": null,
+          "weight": null,
+          "letter_spacing_pt": 0.0,
+          "align": "left",
+          "rotation": 0.0
+        },
+        {
+          "kind": "ellipse",
+          "rect": {
+            "x": 0.789560404287697,
+            "y": 0.5653428806095225,
+            "w": 0.005208333333333333,
+            "h": 0.009259259259259259
+          },
+          "color": "#9F4933",
+          "text": null,
+          "font": null,
+          "size_pt": null,
+          "weight": null,
+          "letter_spacing_pt": 0.0,
+          "align": "left",
+          "rotation": 0.0
+        },
+        {
+          "kind": "ellipse",
+          "rect": {
+            "x": 0.8373958333333333,
+            "y": 0.5546296296296296,
+            "w": 0.005208333333333333,
+            "h": 0.009259259259259259
+          },
+          "color": "#9F4933",
+          "text": null,
+          "font": null,
+          "size_pt": null,
+          "weight": null,
+          "letter_spacing_pt": 0.0,
+          "align": "left",
+          "rotation": 0.0
+        },
+        {
+          "kind": "ellipse",
+          "rect": {
+            "x": 0.8852312623789695,
+            "y": 0.5653428806095225,
+            "w": 0.005208333333333333,
+            "h": 0.009259259259259259
+          },
+          "color": "#9F4933",
+          "text": null,
+          "font": null,
+          "size_pt": null,
+          "weight": null,
+          "letter_spacing_pt": 0.0,
+          "align": "left",
+          "rotation": 0.0
+        },
+        {
+          "kind": "ellipse",
+          "rect": {
+            "x": 0.9257841809816517,
+            "y": 0.5958516382033747,
+            "w": 0.005208333333333333,
+            "h": 0.009259259259259259
+          },
+          "color": "#9F4933",
+          "text": null,
+          "font": null,
+          "size_pt": null,
+          "weight": null,
+          "letter_spacing_pt": 0.0,
+          "align": "left",
+          "rotation": 0.0
+        },
+        {
+          "kind": "ellipse",
+          "rect": {
+            "x": 0.9507974415639109,
+            "y": 0.6378075169263947,
+            "w": 0.009375,
+            "h": 0.016666666666666666
+          },
+          "color": "#9F4933",
+          "text": null,
+          "font": null,
+          "size_pt": null,
+          "weight": null,
+          "letter_spacing_pt": 0.0,
+          "align": "left",
+          "rotation": 0.0
+        },
+        {
+          "kind": "round_rect",
+          "rect": {
+            "x": 0.8,
+            "y": 0.09,
+            "w": 0.11,
+            "h": 0.06
+          },
+          "color": "#DC6341",
+          "text": null,
+          "font": null,
+          "size_pt": null,
+          "weight": null,
+          "letter_spacing_pt": 0.0,
+          "align": "left",
+          "rotation": 5.0
+        },
+        {
+          "kind": "text",
+          "rect": {
+            "x": 0.8,
+            "y": 0.09,
+            "w": 0.11,
+            "h": 0.06
+          },
+          "color": "#251719",
+          "text": "狐 火",
+          "font": "body",
+          "size_pt": 12.0,
+          "weight": 700,
+          "letter_spacing_pt": 0.0,
+          "align": "center",
+          "rotation": 5.0
+        }
+      ]
+    },
+    {
+      "theme_id": "enterprise-growth",
+      "layout_id": "cover",
+      "slide_index": 2,
+      "occupied_id": "two_column",
+      "occupied": [
+        {
+          "x": 0.05416666666666667,
+          "y": 0.07777777777777778,
+          "w": 0.8916666666666667,
+          "h": 0.14
+        },
+        {
+          "x": 0.05416666666666667,
+          "y": 0.2177777777777778,
+          "w": 0.43583333333333335,
+          "h": 0.7007407407407407
+        },
+        {
+          "x": 0.51,
+          "y": 0.2177777777777778,
+          "w": 0.43583333333333335,
+          "h": 0.7007407407407407
+        }
+      ],
+      "expected_shapes": [
+        {
+          "kind": "ellipse",
+          "rect": {
+            "x": 0.6491666666666667,
+            "y": 0.39851851851851855,
+            "w": 0.5416666666666666,
+            "h": 0.9629629629629629
+          },
+          "color": "#112434",
+          "text": null,
+          "font": null,
+          "size_pt": null,
+          "weight": null,
+          "letter_spacing_pt": 0.0,
+          "align": "left",
+          "rotation": 0.0
+        },
+        {
+          "kind": "ellipse",
+          "rect": {
+            "x": 0.716875,
+            "y": 0.518888888888889,
+            "w": 0.40625,
+            "h": 0.7222222222222222
+          },
+          "color": "#122837",
+          "text": null,
+          "font": null,
+          "size_pt": null,
+          "weight": null,
+          "letter_spacing_pt": 0.0,
+          "align": "left",
+          "rotation": 0.0
+        },
+        {
+          "kind": "ellipse",
+          "rect": {
+            "x": 0.7845833333333334,
+            "y": 0.6392592592592593,
+            "w": 0.2708333333333333,
+            "h": 0.48148148148148145
+          },
+          "color": "#132D3B",
+          "text": null,
+          "font": null,
+          "size_pt": null,
+          "weight": null,
+          "letter_spacing_pt": 0.0,
+          "align": "left",
+          "rotation": 0.0
+        },
+        {
+          "kind": "ellipse",
+          "rect": {
+            "x": 0.8522916666666667,
+            "y": 0.7596296296296297,
+            "w": 0.13541666666666666,
+            "h": 0.24074074074074073
+          },
+          "color": "#14313E",
+          "text": null,
+          "font": null,
+          "size_pt": null,
+          "weight": null,
+          "letter_spacing_pt": 0.0,
+          "align": "left",
+          "rotation": 0.0
+        },
+        {
+          "kind": "rect",
+          "rect": {
+            "x": 0.0,
+            "y": 0.0,
+            "w": 0.16,
+            "h": 0.005555555555555556
+          },
+          "color": "#34C9B2",
+          "text": null,
+          "font": null,
+          "size_pt": null,
+          "weight": null,
+          "letter_spacing_pt": 0.0,
+          "align": "left",
+          "rotation": 0.0
+        },
+        {
+          "kind": "rect",
+          "rect": {
+            "x": 0.9020833333333333,
+            "y": 0.9638888888888889,
+            "w": 0.07916666666666661,
+            "h": 0.002777777777777768
+          },
+          "color": "#1E6465",
+          "text": null,
+          "font": null,
+          "size_pt": null,
+          "weight": null,
+          "letter_spacing_pt": 0.0,
+          "align": "left",
+          "rotation": 0.0
+        },
+        {
+          "kind": "rect",
+          "rect": {
+            "x": 0.9796874999999999,
+            "y": 0.825925925925926,
+            "w": 0.0015625000000000222,
+            "h": 0.14074074074074072
+          },
+          "color": "#1E6465",
+          "text": null,
+          "font": null,
+          "size_pt": null,
+          "weight": null,
+          "letter_spacing_pt": 0.0,
+          "align": "left",
+          "rotation": 0.0
+        },
+        {
+          "kind": "rect",
+          "rect": {
+            "x": 0.025,
+            "y": 0.044444444444444446,
+            "w": 0.95,
+            "h": 0.0018518518518518545
+          },
+          "color": "#32525E",
+          "text": null,
+          "font": null,
+          "size_pt": null,
+          "weight": null,
+          "letter_spacing_pt": 0.0,
+          "align": "left",
+          "rotation": 0.0
+        },
+        {
+          "kind": "rect",
+          "rect": {
+            "x": 0.025,
+            "y": 0.9537037037037037,
+            "w": 0.95,
+            "h": 0.0018518518518518823
+          },
+          "color": "#32525E",
+          "text": null,
+          "font": null,
+          "size_pt": null,
+          "weight": null,
+          "letter_spacing_pt": 0.0,
+          "align": "left",
+          "rotation": 0.0
+        },
+        {
+          "kind": "rect",
+          "rect": {
+            "x": 0.025,
+            "y": 0.044444444444444446,
+            "w": 0.0010416666666666664,
+            "h": 0.9111111111111111
+          },
+          "color": "#32525E",
+          "text": null,
+          "font": null,
+          "size_pt": null,
+          "weight": null,
+          "letter_spacing_pt": 0.0,
+          "align": "left",
+          "rotation": 0.0
+        },
+        {
+          "kind": "rect",
+          "rect": {
+            "x": 0.9739583333333333,
+            "y": 0.044444444444444446,
+            "w": 0.0010416666666667185,
+            "h": 0.9111111111111111
+          },
+          "color": "#32525E",
+          "text": null,
+          "font": null,
+          "size_pt": null,
+          "weight": null,
+          "letter_spacing_pt": 0.0,
+          "align": "left",
+          "rotation": 0.0
+        },
+        {
+          "kind": "round_rect",
+          "rect": {
+            "x": 0.025,
+            "y": 0.044444444444444446,
+            "w": 0.01458333333333333,
+            "h": 0.02592592592592593
+          },
+          "color": "#32525E",
+          "text": null,
+          "font": null,
+          "size_pt": null,
+          "weight": null,
+          "letter_spacing_pt": 0.0,
+          "align": "left",
+          "rotation": 0.0
+        },
+        {
+          "kind": "round_rect",
+          "rect": {
+            "x": 0.9604166666666667,
+            "y": 0.044444444444444446,
+            "w": 0.014583333333333282,
+            "h": 0.02592592592592593
+          },
+          "color": "#32525E",
+          "text": null,
+          "font": null,
+          "size_pt": null,
+          "weight": null,
+          "letter_spacing_pt": 0.0,
+          "align": "left",
+          "rotation": 0.0
+        },
+        {
+          "kind": "round_rect",
+          "rect": {
+            "x": 0.025,
+            "y": 0.9296296296296297,
+            "w": 0.01458333333333333,
+            "h": 0.025925925925925908
+          },
+          "color": "#32525E",
+          "text": null,
+          "font": null,
+          "size_pt": null,
+          "weight": null,
+          "letter_spacing_pt": 0.0,
+          "align": "left",
+          "rotation": 0.0
+        },
+        {
+          "kind": "round_rect",
+          "rect": {
+            "x": 0.9604166666666667,
+            "y": 0.9296296296296297,
+            "w": 0.014583333333333282,
+            "h": 0.025925925925925908
+          },
+          "color": "#32525E",
+          "text": null,
+          "font": null,
+          "size_pt": null,
+          "weight": null,
+          "letter_spacing_pt": 0.0,
+          "align": "left",
+          "rotation": 0.0
+        },
+        {
+          "kind": "round_rect",
+          "rect": {
+            "x": 0.76,
+            "y": 0.38703703703703707,
+            "w": 0.24,
+            "h": 0.01851851851851849
+          },
+          "color": "#18454D",
+          "text": null,
+          "font": null,
+          "size_pt": null,
+          "weight": null,
+          "letter_spacing_pt": 0.0,
+          "align": "left",
+          "rotation": -14.0
+        },
+        {
+          "kind": "round_rect",
+          "rect": {
+            "x": 0.76,
+            "y": 0.43888888888888894,
+            "w": 0.24,
+            "h": 0.018518518518518545
+          },
+          "color": "#18454D",
+          "text": null,
+          "font": null,
+          "size_pt": null,
+          "weight": null,
+          "letter_spacing_pt": 0.0,
+          "align": "left",
+          "rotation": -14.0
+        },
+        {
+          "kind": "round_rect",
+          "rect": {
+            "x": 0.76,
+            "y": 0.49074074074074076,
+            "w": 0.24,
+            "h": 0.018518518518518545
+          },
+          "color": "#18454D",
+          "text": null,
+          "font": null,
+          "size_pt": null,
+          "weight": null,
+          "letter_spacing_pt": 0.0,
+          "align": "left",
+          "rotation": -14.0
+        },
+        {
+          "kind": "round_rect",
+          "rect": {
+            "x": 0.76,
+            "y": 0.5425925925925926,
+            "w": 0.24,
+            "h": 0.01851851851851849
+          },
+          "color": "#18454D",
+          "text": null,
+          "font": null,
+          "size_pt": null,
+          "weight": null,
+          "letter_spacing_pt": 0.0,
+          "align": "left",
+          "rotation": -14.0
+        },
+        {
+          "kind": "round_rect",
+          "rect": {
+            "x": 0.76,
+            "y": 0.5944444444444444,
+            "w": 0.24,
+            "h": 0.01851851851851849
+          },
+          "color": "#18454D",
+          "text": null,
+          "font": null,
+          "size_pt": null,
+          "weight": null,
+          "letter_spacing_pt": 0.0,
+          "align": "left",
+          "rotation": -14.0
+        },
+        {
+          "kind": "round_rect",
+          "rect": {
+            "x": 0.9712057516883458,
+            "y": 0.3140926803137021,
+            "w": 0.0162002094143342,
+            "h": 0.005184067012586946
+          },
+          "color": "#1B5358",
+          "text": null,
+          "font": null,
+          "size_pt": null,
+          "weight": null,
+          "letter_spacing_pt": 0.0,
+          "align": "left",
+          "rotation": 64.68105616047978
+        },
+        {
+          "kind": "round_rect",
+          "rect": {
+            "x": 0.15878710578084185,
+            "y": 0.034127981251493716,
+            "w": 0.009502641691263608,
+            "h": 0.003040845341204357
+          },
+          "color": "#1B5358",
+          "text": null,
+          "font": null,
+          "size_pt": null,
+          "weight": null,
+          "letter_spacing_pt": 0.0,
+          "align": "left",
+          "rotation": 71.20915191248059
+        },
+        {
+          "kind": "round_rect",
+          "rect": {
+            "x": 0.78,
+            "y": 0.09,
+            "w": 0.14,
+            "h": 0.05
+          },
+          "color": "#2FB1A0",
+          "text": null,
+          "font": null,
+          "size_pt": null,
+          "weight": null,
+          "letter_spacing_pt": 0.0,
+          "align": "left",
+          "rotation": 0.0
+        },
+        {
+          "kind": "text",
+          "rect": {
+            "x": 0.78,
+            "y": 0.09,
+            "w": 0.14,
+            "h": 0.05
+          },
+          "color": "#102031",
+          "text": "STRATEGY",
+          "font": "body",
+          "size_pt": 9.0,
+          "weight": 700,
+          "letter_spacing_pt": 0.0,
+          "align": "center",
+          "rotation": 0.0
+        }
+      ]
+    },
+    {
+      "theme_id": "science-lab",
+      "layout_id": "cover",
+      "slide_index": 2,
+      "occupied_id": "two_column",
+      "occupied": [
+        {
+          "x": 0.05416666666666667,
+          "y": 0.07777777777777778,
+          "w": 0.8916666666666667,
+          "h": 0.14
+        },
+        {
+          "x": 0.05416666666666667,
+          "y": 0.2177777777777778,
+          "w": 0.43583333333333335,
+          "h": 0.7007407407407407
+        },
+        {
+          "x": 0.51,
+          "y": 0.2177777777777778,
+          "w": 0.43583333333333335,
+          "h": 0.7007407407407407
+        }
+      ],
+      "expected_shapes": [
+        {
+          "kind": "ellipse",
+          "rect": {
+            "x": 0.7008333333333334,
+            "y": 0.4325925925925926,
+            "w": 0.4583333333333333,
+            "h": 0.8148148148148148
+          },
+          "color": "#F5FAFF",
+          "text": null,
+          "font": null,
+          "size_pt": null,
+          "weight": null,
+          "letter_spacing_pt": 0.0,
+          "align": "left",
+          "rotation": 0.0
+        },
+        {
+          "kind": "ellipse",
+          "rect": {
+            "x": 0.758125,
+            "y": 0.5344444444444444,
+            "w": 0.34375,
+            "h": 0.6111111111111112
+          },
+          "color": "#F3F9FE",
+          "text": null,
+          "font": null,
+          "size_pt": null,
+          "weight": null,
+          "letter_spacing_pt": 0.0,
+          "align": "left",
+          "rotation": 0.0
+        },
+        {
+          "kind": "ellipse",
+          "rect": {
+            "x": 0.8154166666666667,
+            "y": 0.6362962962962962,
+            "w": 0.22916666666666666,
+            "h": 0.4074074074074074
+          },
+          "color": "#F1F8FE",
+          "text": null,
+          "font": null,
+          "size_pt": null,
+          "weight": null,
+          "letter_spacing_pt": 0.0,
+          "align": "left",
+          "rotation": 0.0
+        },
+        {
+          "kind": "ellipse",
+          "rect": {
+            "x": 0.8727083333333334,
+            "y": 0.7381481481481481,
+            "w": 0.11458333333333333,
+            "h": 0.2037037037037037
+          },
+          "color": "#EFF7FD",
+          "text": null,
+          "font": null,
+          "size_pt": null,
+          "weight": null,
+          "letter_spacing_pt": 0.0,
+          "align": "left",
+          "rotation": 0.0
+        },
+        {
+          "kind": "rect",
+          "rect": {
+            "x": 0.0,
+            "y": 0.0,
+            "w": 0.12,
+            "h": 0.004629629629629629
+          },
+          "color": "#2582C5",
+          "text": null,
+          "font": null,
+          "size_pt": null,
+          "weight": null,
+          "letter_spacing_pt": 0.0,
+          "align": "left",
+          "rotation": 0.0
+        },
+        {
+          "kind": "rect",
+          "rect": {
+            "x": 0.90625,
+            "y": 0.03333333333333333,
+            "w": 0.07499999999999996,
+            "h": 0.001388888888888891
+          },
+          "color": "#C2D9E9",
+          "text": null,
+          "font": null,
+          "size_pt": null,
+          "weight": null,
+          "letter_spacing_pt": 0.0,
+          "align": "left",
+          "rotation": 0.0
+        },
+        {
+          "kind": "rect",
+          "rect": {
+            "x": 0.98046875,
+            "y": 0.03333333333333333,
+            "w": 0.0007812499999999556,
+            "h": 0.13333333333333333
+          },
+          "color": "#C2D9E9",
+          "text": null,
+          "font": null,
+          "size_pt": null,
+          "weight": null,
+          "letter_spacing_pt": 0.0,
+          "align": "left",
+          "rotation": 0.0
+        },
+        {
+          "kind": "ellipse",
+          "rect": {
+            "x": 0.9742708333333334,
+            "y": 0.335,
+            "w": 0.005625000000000001,
+            "h": 0.01
+          },
+          "color": "#92C1E3",
+          "text": null,
+          "font": null,
+          "size_pt": null,
+          "weight": null,
+          "letter_spacing_pt": 0.0,
+          "align": "left",
+          "rotation": 0.0
+        },
+        {
+          "kind": "ellipse",
+          "rect": {
+            "x": 0.9716511376299448,
+            "y": 0.37495434388914894,
+            "w": 0.003125,
+            "h": 0.005555555555555556
+          },
+          "color": "#92C1E3",
+          "text": null,
+          "font": null,
+          "size_pt": null,
+          "weight": null,
+          "letter_spacing_pt": 0.0,
+          "align": "left",
+          "rotation": 0.0
+        },
+        {
+          "kind": "ellipse",
+          "rect": {
+            "x": 0.9602111747908773,
+            "y": 0.411037390780423,
+            "w": 0.003125,
+            "h": 0.005555555555555556
+          },
+          "color": "#92C1E3",
+          "text": null,
+          "font": null,
+          "size_pt": null,
+          "weight": null,
+          "letter_spacing_pt": 0.0,
+          "align": "left",
+          "rotation": 0.0
+        },
+        {
+          "kind": "ellipse",
+          "rect": {
+            "x": 0.9417009260872303,
+            "y": 0.44389436060122667,
+            "w": 0.003125,
+            "h": 0.005555555555555556
+          },
+          "color": "#92C1E3",
+          "text": null,
+          "font": null,
+          "size_pt": null,
+          "weight": null,
+          "letter_spacing_pt": 0.0,
+          "align": "left",
+          "rotation": 0.0
+        },
+        {
+          "kind": "ellipse",
+          "rect": {
+            "x": 0.9169293782093811,
+            "y": 0.4720892461051568,
+            "w": 0.003125,
+            "h": 0.005555555555555556
+          },
+          "color": "#92C1E3",
+          "text": null,
+          "font": null,
+          "size_pt": null,
+          "weight": null,
+          "letter_spacing_pt": 0.0,
+          "align": "left",
+          "rotation": 0.0
+        },
+        {
+          "kind": "ellipse",
+          "rect": {
+            "x": 0.8857291666666668,
+            "y": 0.49216757327939814,
+            "w": 0.005625000000000001,
+            "h": 0.01
+          },
+          "color": "#92C1E3",
+          "text": null,
+          "font": null,
+          "size_pt": null,
+          "weight": null,
+          "letter_spacing_pt": 0.0,
+          "align": "left",
+          "rotation": 0.0
+        },
+        {
+          "kind": "ellipse",
+          "rect": {
+            "x": 0.8531592594205636,
+            "y": 0.5098213677720835,
+            "w": 0.003125,
+            "h": 0.005555555555555556
+          },
+          "color": "#92C1E3",
+          "text": null,
+          "font": null,
+          "size_pt": null,
+          "weight": null,
+          "letter_spacing_pt": 0.0,
+          "align": "left",
+          "rotation": 0.0
+        },
+        {
+          "kind": "ellipse",
+          "rect": {
+            "x": 0.816947748703647,
+            "y": 0.5177095291594274,
+            "w": 0.003125,
+            "h": 0.005555555555555556
+          },
+          "color": "#92C1E3",
+          "text": null,
+          "font": null,
+          "size_pt": null,
+          "weight": null,
+          "letter_spacing_pt": 0.0,
+          "align": "left",
+          "rotation": 0.0
+        },
+        {
+          "kind": "ellipse",
+          "rect": {
+            "x": 0.7799272512963531,
+            "y": 0.5177095291594275,
+            "w": 0.003125,
+            "h": 0.005555555555555556
+          },
+          "color": "#92C1E3",
+          "text": null,
+          "font": null,
+          "size_pt": null,
+          "weight": null,
+          "letter_spacing_pt": 0.0,
+          "align": "left",
+          "rotation": 0.0
+        },
+        {
+          "kind": "ellipse",
+          "rect": {
+            "x": 0.7437157405794365,
+            "y": 0.5098213677720835,
+            "w": 0.003125,
+            "h": 0.005555555555555556
+          },
+          "color": "#92C1E3",
+          "text": null,
+          "font": null,
+          "size_pt": null,
+          "weight": null,
+          "letter_spacing_pt": 0.0,
+          "align": "left",
+          "rotation": 0.0
+        },
+        {
+          "kind": "ellipse",
+          "rect": {
+            "x": 0.7086458333333334,
+            "y": 0.4921675732793982,
+            "w": 0.005625000000000001,
+            "h": 0.01
+          },
+          "color": "#92C1E3",
+          "text": null,
+          "font": null,
+          "size_pt": null,
+          "weight": null,
+          "letter_spacing_pt": 0.0,
+          "align": "left",
+          "rotation": 0.0
+        },
+        {
+          "kind": "ellipse",
+          "rect": {
+            "x": 0.6799456217906189,
+            "y": 0.4720892461051568,
+            "w": 0.003125,
+            "h": 0.005555555555555556
+          },
+          "color": "#92C1E3",
+          "text": null,
+          "font": null,
+          "size_pt": null,
+          "weight": null,
+          "letter_spacing_pt": 0.0,
+          "align": "left",
+          "rotation": 0.0
+        },
+        {
+          "kind": "ellipse",
+          "rect": {
+            "x": 0.6551740739127697,
+            "y": 0.44389436060122667,
+            "w": 0.003125,
+            "h": 0.005555555555555556
+          },
+          "color": "#92C1E3",
+          "text": null,
+          "font": null,
+          "size_pt": null,
+          "weight": null,
+          "letter_spacing_pt": 0.0,
+          "align": "left",
+          "rotation": 0.0
+        },
+        {
+          "kind": "ellipse",
+          "rect": {
+            "x": 0.6366638252091228,
+            "y": 0.411037390780423,
+            "w": 0.003125,
+            "h": 0.005555555555555556
+          },
+          "color": "#92C1E3",
+          "text": null,
+          "font": null,
+          "size_pt": null,
+          "weight": null,
+          "letter_spacing_pt": 0.0,
+          "align": "left",
+          "rotation": 0.0
+        },
+        {
+          "kind": "ellipse",
+          "rect": {
+            "x": 0.6252238623700552,
+            "y": 0.37495434388914894,
+            "w": 0.003125,
+            "h": 0.005555555555555556
+          },
+          "color": "#92C1E3",
+          "text": null,
+          "font": null,
+          "size_pt": null,
+          "weight": null,
+          "letter_spacing_pt": 0.0,
+          "align": "left",
+          "rotation": 0.0
+        },
+        {
+          "kind": "ellipse",
+          "rect": {
+            "x": 0.6201041666666667,
+            "y": 0.33500000000000013,
+            "w": 0.005625000000000001,
+            "h": 0.01
+          },
+          "color": "#92C1E3",
+          "text": null,
+          "font": null,
+          "size_pt": null,
+          "weight": null,
+          "letter_spacing_pt": 0.0,
+          "align": "left",
+          "rotation": 0.0
+        },
+        {
+          "kind": "ellipse",
+          "rect": {
+            "x": 0.6252238623700552,
+            "y": 0.2994901005552956,
+            "w": 0.003125,
+            "h": 0.005555555555555556
+          },
+          "color": "#92C1E3",
+          "text": null,
+          "font": null,
+          "size_pt": null,
+          "weight": null,
+          "letter_spacing_pt": 0.0,
+          "align": "left",
+          "rotation": 0.0
+        },
+        {
+          "kind": "ellipse",
+          "rect": {
+            "x": 0.6366638252091228,
+            "y": 0.2634070536640215,
+            "w": 0.003125,
+            "h": 0.005555555555555556
+          },
+          "color": "#92C1E3",
+          "text": null,
+          "font": null,
+          "size_pt": null,
+          "weight": null,
+          "letter_spacing_pt": 0.0,
+          "align": "left",
+          "rotation": 0.0
+        },
+        {
+          "kind": "ellipse",
+          "rect": {
+            "x": 0.6551740739127697,
+            "y": 0.2305500838432179,
+            "w": 0.003125,
+            "h": 0.005555555555555556
+          },
+          "color": "#92C1E3",
+          "text": null,
+          "font": null,
+          "size_pt": null,
+          "weight": null,
+          "letter_spacing_pt": 0.0,
+          "align": "left",
+          "rotation": 0.0
+        },
+        {
+          "kind": "ellipse",
+          "rect": {
+            "x": 0.6799456217906188,
+            "y": 0.20235519833928778,
+            "w": 0.003125,
+            "h": 0.005555555555555556
+          },
+          "color": "#92C1E3",
+          "text": null,
+          "font": null,
+          "size_pt": null,
+          "weight": null,
+          "letter_spacing_pt": 0.0,
+          "align": "left",
+          "rotation": 0.0
+        },
+        {
+          "kind": "ellipse",
+          "rect": {
+            "x": 0.7086458333333333,
+            "y": 0.17783242672060193,
+            "w": 0.005625000000000001,
+            "h": 0.01
+          },
+          "color": "#92C1E3",
+          "text": null,
+          "font": null,
+          "size_pt": null,
+          "weight": null,
+          "letter_spacing_pt": 0.0,
+          "align": "left",
+          "rotation": 0.0
+        },
+        {
+          "kind": "ellipse",
+          "rect": {
+            "x": 0.7437157405794363,
+            "y": 0.16462307667236104,
+            "w": 0.003125,
+            "h": 0.005555555555555556
+          },
+          "color": "#92C1E3",
+          "text": null,
+          "font": null,
+          "size_pt": null,
+          "weight": null,
+          "letter_spacing_pt": 0.0,
+          "align": "left",
+          "rotation": 0.0
+        },
+        {
+          "kind": "ellipse",
+          "rect": {
+            "x": 0.7799272512963529,
+            "y": 0.1567349152850171,
+            "w": 0.003125,
+            "h": 0.005555555555555556
+          },
+          "color": "#92C1E3",
+          "text": null,
+          "font": null,
+          "size_pt": null,
+          "weight": null,
+          "letter_spacing_pt": 0.0,
+          "align": "left",
+          "rotation": 0.0
+        },
+        {
+          "kind": "ellipse",
+          "rect": {
+            "x": 0.816947748703647,
+            "y": 0.15673491528501707,
+            "w": 0.003125,
+            "h": 0.005555555555555556
+          },
+          "color": "#92C1E3",
+          "text": null,
+          "font": null,
+          "size_pt": null,
+          "weight": null,
+          "letter_spacing_pt": 0.0,
+          "align": "left",
+          "rotation": 0.0
+        },
+        {
+          "kind": "ellipse",
+          "rect": {
+            "x": 0.8531592594205636,
+            "y": 0.16462307667236104,
+            "w": 0.003125,
+            "h": 0.005555555555555556
+          },
+          "color": "#92C1E3",
+          "text": null,
+          "font": null,
+          "size_pt": null,
+          "weight": null,
+          "letter_spacing_pt": 0.0,
+          "align": "left",
+          "rotation": 0.0
+        },
+        {
+          "kind": "ellipse",
+          "rect": {
+            "x": 0.8857291666666668,
+            "y": 0.1778324267206019,
+            "w": 0.005625000000000001,
+            "h": 0.01
+          },
+          "color": "#92C1E3",
+          "text": null,
+          "font": null,
+          "size_pt": null,
+          "weight": null,
+          "letter_spacing_pt": 0.0,
+          "align": "left",
+          "rotation": 0.0
+        },
+        {
+          "kind": "ellipse",
+          "rect": {
+            "x": 0.9169293782093813,
+            "y": 0.20235519833928778,
+            "w": 0.003125,
+            "h": 0.005555555555555556
+          },
+          "color": "#92C1E3",
+          "text": null,
+          "font": null,
+          "size_pt": null,
+          "weight": null,
+          "letter_spacing_pt": 0.0,
+          "align": "left",
+          "rotation": 0.0
+        },
+        {
+          "kind": "ellipse",
+          "rect": {
+            "x": 0.9417009260872303,
+            "y": 0.23055008384321785,
+            "w": 0.003125,
+            "h": 0.005555555555555556
+          },
+          "color": "#92C1E3",
+          "text": null,
+          "font": null,
+          "size_pt": null,
+          "weight": null,
+          "letter_spacing_pt": 0.0,
+          "align": "left",
+          "rotation": 0.0
+        },
+        {
+          "kind": "ellipse",
+          "rect": {
+            "x": 0.9602111747908773,
+            "y": 0.2634070536640215,
+            "w": 0.003125,
+            "h": 0.005555555555555556
+          },
+          "color": "#92C1E3",
+          "text": null,
+          "font": null,
+          "size_pt": null,
+          "weight": null,
+          "letter_spacing_pt": 0.0,
+          "align": "left",
+          "rotation": 0.0
+        },
+        {
+          "kind": "ellipse",
+          "rect": {
+            "x": 0.9716511376299448,
+            "y": 0.2994901005552956,
+            "w": 0.003125,
+            "h": 0.005555555555555556
+          },
+          "color": "#92C1E3",
+          "text": null,
+          "font": null,
+          "size_pt": null,
+          "weight": null,
+          "letter_spacing_pt": 0.0,
+          "align": "left",
+          "rotation": 0.0
+        },
+        {
+          "kind": "ellipse",
+          "rect": {
+            "x": 0.10027802939318159,
+            "y": 0.9779227236290118,
+            "w": 0.006314667057692228,
+            "h": 0.011226074769230628
+          },
+          "color": "#ABCFEA",
+          "text": null,
+          "font": null,
+          "size_pt": null,
+          "weight": null,
+          "letter_spacing_pt": 0.0,
+          "align": "left",
+          "rotation": 0.0
+        },
+        {
+          "kind": "ellipse",
+          "rect": {
+            "x": 0.49753982190571455,
+            "y": 0.39582994995957793,
+            "w": 0.003470889039939114,
+            "h": 0.006170469404336203
+          },
+          "color": "#ABCFEA",
+          "text": null,
+          "font": null,
+          "size_pt": null,
+          "weight": null,
+          "letter_spacing_pt": 0.0,
+          "align": "left",
+          "rotation": 0.0
+        },
+        {
+          "kind": "ellipse",
+          "rect": {
+            "x": 0.14480031491281503,
+            "y": 0.014203485722774294,
+            "w": 0.005486296489349721,
+            "h": 0.009753415981066172
+          },
+          "color": "#ABCFEA",
+          "text": null,
+          "font": null,
+          "size_pt": null,
+          "weight": null,
+          "letter_spacing_pt": 0.0,
+          "align": "left",
+          "rotation": 0.0
+        },
+        {
+          "kind": "round_rect",
+          "rect": {
+            "x": 0.78,
+            "y": 0.09,
+            "w": 0.15,
+            "h": 0.05
+          },
+          "color": "#4293CD",
+          "text": null,
+          "font": null,
+          "size_pt": null,
+          "weight": null,
+          "letter_spacing_pt": 0.0,
+          "align": "left",
+          "rotation": 0.0
+        },
+        {
+          "kind": "text",
+          "rect": {
+            "x": 0.78,
+            "y": 0.09,
+            "w": 0.15,
+            "h": 0.05
+          },
+          "color": "#F7FBFF",
+          "text": "LAB / SCIENCE",
+          "font": "body",
+          "size_pt": 8.5,
+          "weight": 700,
+          "letter_spacing_pt": 0.0,
+          "align": "center",
+          "rotation": 0.0
         }
       ]
     }

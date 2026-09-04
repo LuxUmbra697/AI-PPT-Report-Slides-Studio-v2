@@ -29,6 +29,8 @@ services:
       REDIS_URL: redis://redis:6379/0
     volumes:
       - ./shared:/shared:ro
+      - ./Template:/Template:ro
+      - media_data:/backend/var/storage
     depends_on:
       postgres: { condition: service_healthy }
       redis: { condition: service_healthy }
@@ -42,6 +44,8 @@ services:
       REDIS_URL: redis://redis:6379/0
     volumes:
       - ./shared:/shared:ro
+      - ./Template:/Template:ro
+      - media_data:/backend/var/storage
     depends_on:
       postgres: { condition: service_healthy }
       redis: { condition: service_healthy }
@@ -58,3 +62,4 @@ services:
 
 volumes:
   postgres_data:
+  media_data:

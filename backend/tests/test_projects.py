@@ -39,8 +39,73 @@ async def test_create_project_applies_defaults(client: AsyncClient) -> None:
     assert project["page_count"] == 8
     assert project["tone"] == "professional"
     assert project["theme_id"] == "ivory"
+    assert project["output_format"] == "ppt"
+    assert project["html_style_prompt"] is None
+    assert project["html_style"] == {}
     assert project["status"] == "draft"
     assert project["sources"] == []
+
+
+@pytest.mark.asyncio
+async def test_create_html_project_stores_output_choice_and_style_prompt(
+    client: AsyncClient,
+) -> None:
+    headers = await _sign_up(client)
+    project = await _create_project(
+        client,
+        headers,
+        output_format="html",
+        html_style_prompt="二次元星空科技发布会，卡片依次入场",
+    )
+
+    assert project["output_format"] == "html"
+    assert project["html_style_prompt"] == "二次元星空科技发布会，卡片依次入场"
+
+
+@pytest.mark.asyncio
+async def test_html_project_isolated_from_ppt_visual_configuration(client: AsyncClient) -> None:
+    headers = await _sign_up(client)
+    project = await _create_project(
+        client,
+        headers,
+        output_format="html",
+        # HTML 创建不应验证、存储或显示客户端传来的 PPT 主题。
+        theme_id="not-a-ppt-theme",
+    )
+    assert project["theme_id"] == "ivory"
+    assert project["external_template_id"] is None
+    assert project["theme_overrides"] == {}
+
+    create_with_template = await client.post(
+        "/api/v1/projects",
+        json={
+            "title": "不应混入模板",
+            "page_count": 5,
+            "output_format": "html",
+            "external_template_id": "any-ppt-template",
+        },
+        headers=headers,
+    )
+    assert create_with_template.status_code == 422
+
+    for path, payload in (
+        (f"/api/v1/projects/{project['id']}", {"theme_id": "midnight"}),
+        (f"/api/v1/projects/{project['id']}/theme", {"theme_id": "midnight"}),
+        (f"/api/v1/projects/{project['id']}/theme", {"external_template_id": "any-ppt-template"}),
+        (f"/api/v1/projects/{project['id']}", {"output_format": "ppt"}),
+    ):
+        response = await client.patch(path, json=payload, headers=headers)
+        assert response.status_code == 409, response.text
+
+    # 非视觉的项目字段仍可正常更新。
+    updated = await client.patch(
+        f"/api/v1/projects/{project['id']}",
+        json={"page_count": 9, "html_style_prompt": "像一本会呼吸的星际航行日志"},
+        headers=headers,
+    )
+    assert updated.status_code == 200, updated.text
+    assert updated.json()["page_count"] == 9
+    assert updated.json()["html_style_prompt"] == "像一本会呼吸的星际航行日志"
 
 
 @pytest.mark.asyncio
@@ -65,6 +130,62 @@ async def test_unknown_theme_is_rejected(client: AsyncClient) -> None:
         "/api/v1/projects", json={"title": "主题不存在", "theme_id": "nope"}, headers=headers
     )
     assert response.status_code == 422
+
+
+@pytest.mark.asyncio
+async def test_detected_external_template_can_be_applied(client: AsyncClient) -> None:
+    templates = (await client.get("/api/v1/design/external-templates")).json()
+    if not templates:
+        pytest.skip("Template 文件夹中没有可供集成测试的 PPTX")
+
+    headers = await _sign_up(client)
+    project = await _create_project(client, headers)
+    template = templates[0]
+
+    response = await client.patch(
+        f"/api/v1/projects/{project['id']}/theme",
+        json={"external_template_id": template["id"]},
+        headers=headers,
+    )
+
+    assert response.status_code == 200, response.text
+    applied = response.json()
+    assert applied["external_template_id"] == template["id"]
+    assert applied["theme_id"] == template["style_profile"]["base_theme_id"]
+    assert (
+        applied["theme_overrides"]["palette"]["background"]
+        == template["style_profile"]["overrides"]["palette"]["background"]
+    )
+
+
+@pytest.mark.asyncio
+async def test_external_template_inspection_exposes_native_layers(client: AsyncClient) -> None:
+    templates = (await client.get("/api/v1/design/external-templates")).json()
+    if not templates:
+        pytest.skip("Template 文件夹中没有可供集成测试的 PPTX")
+
+    template = templates[0]
+    response = await client.get(
+        f"/api/v1/design/external-templates/{template['id']}/inspection"
+    )
+
+    assert response.status_code == 200, response.text
+    inspection = response.json()
+    assert len(inspection["slides"]) == template["slide_count"]
+    assert inspection["slides"][0]["elements"]
+    first_element = inspection["slides"][0]["elements"][0]
+    assert {"rect", "z_index", "source_layer", "kind", "role"} <= first_element.keys()
+    assert first_element["source_layer"] in {"master", "layout", "slide"}
+    picture = next(
+        (item for page in inspection["slides"] for item in page["elements"] if item["asset_id"]),
+        None,
+    )
+    assert picture is not None
+    asset = await client.get(
+        f"/api/v1/design/external-templates/{template['id']}/assets/{picture['asset_id']}"
+    )
+    assert asset.status_code == 200
+    assert asset.content
 
 
 @pytest.mark.asyncio

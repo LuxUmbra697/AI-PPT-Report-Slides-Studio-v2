@@ -246,7 +246,7 @@ def run_regression(
 def format_report(report: RegressionReport) -> str:
     """中文可读报告。"""
     lines: list[str] = []
-    lines.append("=== LuxUmbra Slides 固定回归集报告 ===")
+    lines.append("=== Slide Report Studio 固定回归集报告 ===")
     lines.append(
         f"度量路径：{'精确（Noto 字体就绪）' if report.fonts_precise else '估算（度量字体缺失）'}"
     )

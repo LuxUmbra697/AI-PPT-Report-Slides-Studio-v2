@@ -22,6 +22,25 @@ from app.domain.theme import load_themes  # noqa: E402
 LAYOUT_IDS = ("cover", "section", "bullets")
 SLIDE_INDEX = 2
 
+# 夹具验证的是“母题展开算法”而不是穷举全部配色。经典 4 套 + 二次元 5 套
+# 已覆盖 glow/grid/watermark/petal/chip/spark/diamond/orbit/sticker/frame/stripe，
+# 再补 dash 与 dot 两个代表即可。其余 38 套仍由后端主题全量测试负责校验。
+BASE_THEME_IDS = (
+    "ivory",
+    "midnight",
+    "obsidian",
+    "scholar",
+)
+EXTENDED_THEME_IDS = (
+    "anime-sakura-dream",
+    "anime-neon-idol",
+    "anime-shrine-spring",
+    "anime-celestial-library",
+    "anime-foxfire-festival",
+    "enterprise-growth",
+    "science-lab",
+)
+
 FIXTURE = SHARED_DIR / "ambient-fixtures" / "theme-cases.json"
 
 _TITLE_H = 0.14
@@ -52,7 +71,8 @@ OCCUPIED_CASES: dict[str, list[Rect]] = {
 
 
 def main() -> None:
-    cases = [
+    themes = load_themes()
+    base_cases = [
         {
             "theme_id": theme_id,
             "layout_id": layout_id,
@@ -64,10 +84,30 @@ def main() -> None:
                 for shape in iter_ambient_shapes(theme, layout_id, SLIDE_INDEX, occupied)
             ],
         }
-        for theme_id, theme in load_themes().items()
+        for theme_id in BASE_THEME_IDS
+        for theme in [themes[theme_id]]
         for layout_id in LAYOUT_IDS
         for occupied_id, occupied in OCCUPIED_CASES.items()
     ]
+    # 扩展母题每套取一个带内容避让的封面即可，避免把大批散点坐标重复写进仓库。
+    occupied = OCCUPIED_CASES["two_column"]
+    extended_cases = [
+        {
+            "theme_id": theme_id,
+            "layout_id": "cover",
+            "slide_index": SLIDE_INDEX,
+            "occupied_id": "two_column",
+            "occupied": [rect.model_dump() for rect in occupied],
+            "expected_shapes": [
+                shape.model_dump()
+                for shape in iter_ambient_shapes(
+                    themes[theme_id], "cover", SLIDE_INDEX, occupied
+                )
+            ],
+        }
+        for theme_id in EXTENDED_THEME_IDS
+    ]
+    cases = base_cases + extended_cases
 
     FIXTURE.parent.mkdir(parents=True, exist_ok=True)
     FIXTURE.write_text(

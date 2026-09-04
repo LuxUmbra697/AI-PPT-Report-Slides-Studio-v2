@@ -8,10 +8,12 @@ import { useConfirmAndGenerate } from '@/features/outline/useConfirmAndGenerate'
 import { useOutlineProgress } from '@/features/outline/useOutlineProgress'
 import { useUpdateProject } from '@/features/projects/api'
 import { PAGE_COUNT_RANGE, type ProjectDetail } from '@/features/projects/types'
+import { ExternalTemplateColumn } from '@/features/templates/ExternalTemplateColumn'
+import type { ExternalTemplate } from '@/features/templates/api'
 import { moveItem, useDragSort } from '@/hooks/useDragSort'
 import { errorMessage } from '@/lib/errors'
 import { cn } from '@/lib/utils'
-import { themeList } from '@/render/design'
+import { getThemeCategory, themeCategories, themeList } from '@/render/design'
 import { ThemeCover } from '@/render/ThemeCover'
 
 const MAX_KEY_POINTS = 5
@@ -84,14 +86,25 @@ export function OutlineWorkspace({ project }: { project: ProjectDetail }) {
 function OutlineEditor({ project, outline }: { project: ProjectDetail; outline: Outline }) {
   const [pages, setPages] = useState<OutlinePage[]>(outline.pages)
   const [themeId, setThemeId] = useState(project.theme_id)
+  const [externalTemplateId, setExternalTemplateId] = useState(project.external_template_id)
+  const [themeCategory, setThemeCategory] = useState(() => getThemeCategory(project.theme_id))
+  const visibleThemes = useMemo(
+    () => themeList.filter((theme) => getThemeCategory(theme.id) === themeCategory),
+    [themeCategory],
+  )
   const target = project.page_count
 
   const save = useUpdateOutline(project.id)
   const updateProject = useUpdateProject(project.id)
   const regenerate = useGenerateOutline(project.id)
-  const launch = useConfirmAndGenerate(project.id)
+  const launch = useConfirmAndGenerate(project.id, project.output_format)
+  const htmlMode = project.output_format === 'html'
 
   useEffect(() => setPages(outline.pages), [outline.pages, outline.revision])
+  useEffect(() => {
+    setThemeId(project.theme_id)
+    setExternalTemplateId(project.external_template_id)
+  }, [project.external_template_id, project.theme_id])
 
   const dirty = useMemo(
     () => JSON.stringify(pages) !== JSON.stringify(outline.pages),
@@ -137,12 +150,25 @@ function OutlineEditor({ project, outline }: { project: ProjectDetail; outline: 
     if (!countValid) {
       await updateProject.mutateAsync({ page_count: pages.length })
     }
-    // 确认成功后大纲状态变为 confirmed，页面自身会切到编辑工作台，无需跳转
+    // 确认成功后会按项目类型进入 HTML 报告或 PPT 页面生成，无需用户再点第二次。
     launch.mutate({
       revision: outline.revision,
       ...(dirty ? { pages: normalizePages(pages) } : {}),
-      ...(themeId === project.theme_id ? {} : { themeId }),
+      // HTML 的视觉只由创建页的风格提示词和来源材料决定；不让 PPT 主题或
+      // Template/ 参考文件混入这条独立生成链路。
+      ...(htmlMode || themeId === project.theme_id ? {} : { themeId }),
+      ...(htmlMode || externalTemplateId === project.external_template_id
+        ? {}
+        : { externalTemplateId }),
     })
+  }
+
+  const selectExternalTemplate = async (template: ExternalTemplate) => {
+    if (updateProject.isPending || template.id === externalTemplateId) return
+    const updated = await updateProject.mutateAsync({ external_template_id: template.id })
+    setThemeId(updated.theme_id)
+    setExternalTemplateId(updated.external_template_id)
+    setThemeCategory(getThemeCategory(updated.theme_id))
   }
 
   const actionError = launch.error ?? save.error ?? updateProject.error ?? regenerate.error
@@ -157,7 +183,7 @@ function OutlineEditor({ project, outline }: { project: ProjectDetail; outline: 
             countValid ? 'bg-surface-soft text-ink-muted' : 'bg-warning/12 text-warning',
           )}
         >
-          {pages.length} / {target} 页
+          {pages.length} / {target} {htmlMode ? '章节' : '页'}
         </span>
       }
       actions={
@@ -183,17 +209,22 @@ function OutlineEditor({ project, outline }: { project: ProjectDetail; outline: 
             onClick={() => void startGeneration()}
           >
             {launch.isPending ? <Loader2 className="size-4 animate-spin" /> : <Sparkles className="size-4" />}
-            {launch.isPending ? '启动中…' : '生成 PPT'}
+            {launch.isPending ? '启动中…' : htmlMode ? '生成 HTML 报告' : '生成 PPT'}
           </Button>
         </>
       }
     >
-      <div className="mx-auto grid max-w-6xl gap-8 px-6 py-8 lg:grid-cols-[minmax(0,1fr)_19rem]">
+      <div
+        className={cn(
+          'mx-auto grid w-full gap-8 px-6 py-8',
+          htmlMode ? 'max-w-4xl' : 'max-w-6xl lg:grid-cols-[minmax(0,1fr)_19rem]',
+        )}
+      >
         <div>
           <div className="mb-5">
             <h2 className="text-xl font-semibold tracking-tight">确认大纲</h2>
             <p className="mt-1.5 text-sm text-ink-muted">
-              改标题、改要点、增删页、拖拽排序，改完自动保存。确认后开始生成 16:9 页面。
+              改标题、改要点、{htmlMode ? '增删章节' : '增删页'}、拖拽排序，改完自动保存。确认后{htmlMode ? '直接生成 HTML 报告正文。' : '开始生成 16:9 页面。'}
             </p>
           </div>
 
@@ -226,13 +257,13 @@ function OutlineEditor({ project, outline }: { project: ProjectDetail; outline: 
               className="mt-3 flex w-full items-center justify-center gap-1.5 rounded-2xl border border-dashed border-line-strong py-3.5 text-[13px] text-ink-muted transition-colors hover:border-accent hover:text-accent"
             >
               <Plus className="size-4" />
-              添加一页
+              {htmlMode ? '添加章节' : '添加一页'}
             </button>
           )}
 
           {!countValid && (
             <p className="mt-3 text-center text-xs text-ink-muted">
-              页数已改为 {pages.length}，保存时会同步目标页数。
+              {htmlMode ? '章节数' : '页数'}已改为 {pages.length}，保存时会同步目标{htmlMode ? '章节数' : '页数'}。
             </p>
           )}
           {pages.length === PAGE_COUNT_RANGE.min && (
@@ -240,7 +271,7 @@ function OutlineEditor({ project, outline }: { project: ProjectDetail; outline: 
           )}
           {incomplete && (
             <p className="mt-3 text-center text-xs text-warning">
-              每页都需要标题、目标和至少两条要点。
+              每{htmlMode ? '个章节' : '页'}都需要标题、目标和至少两条要点。
             </p>
           )}
           {draftingPoint && (
@@ -248,17 +279,38 @@ function OutlineEditor({ project, outline }: { project: ProjectDetail; outline: 
           )}
         </div>
 
-        <aside className="flex flex-col gap-3 lg:sticky lg:top-20 lg:self-start">
+        {!htmlMode && <aside className="flex flex-col gap-3 lg:sticky lg:top-20 lg:self-start">
           <div>
             <h3 className="text-sm font-semibold tracking-tight">外观</h3>
-            <p className="mt-1 text-xs text-ink-muted">决定成品的字体、配色与气质；切换后点「生成 PPT」时生效</p>
+            <p className="mt-1 text-xs text-ink-muted">决定成品的字体、配色与气质；切换后会用于{htmlMode ? ' HTML 报告' : ' PPT'}。</p>
           </div>
-          {themeList.map((theme) => (
+          <div className="scrollbar-slim -mx-1 flex gap-1 overflow-x-auto px-1 pb-1">
+            {themeCategories.map((category) => (
+              <button
+                key={category}
+                type="button"
+                onClick={() => setThemeCategory(category)}
+                className={cn(
+                  'shrink-0 rounded-full border px-2.5 py-1 text-[11px] transition-colors',
+                  themeCategory === category
+                    ? 'border-accent bg-accent text-white'
+                    : 'border-line bg-surface text-ink-muted hover:border-line-strong',
+                )}
+              >
+                {category}
+              </button>
+            ))}
+          </div>
+          <p className="-mt-1 text-[11px] text-ink-muted">当前分类含 {visibleThemes.length} 套外观</p>
+          {visibleThemes.map((theme) => (
             <button
               key={theme.id}
               type="button"
               aria-pressed={theme.id === themeId}
-              onClick={() => setThemeId(theme.id)}
+              onClick={() => {
+                setThemeId(theme.id)
+                setExternalTemplateId(null)
+              }}
               className={cn(
                 'group overflow-hidden rounded-2xl border bg-surface text-left transition-all',
                 theme.id === themeId
@@ -273,10 +325,15 @@ function OutlineEditor({ project, outline }: { project: ProjectDetail; outline: 
               </div>
             </button>
           ))}
+          <ExternalTemplateColumn
+            selectedId={externalTemplateId}
+            disabled={persisting}
+            onSelect={selectExternalTemplate}
+          />
           <p className="mt-1 text-xs leading-relaxed text-ink-muted">
             配图会自动匹配；素材不可用时会退化为纯文字版式，不会留下空位。
           </p>
-        </aside>
+        </aside>}
       </div>
     </Shell>
   )

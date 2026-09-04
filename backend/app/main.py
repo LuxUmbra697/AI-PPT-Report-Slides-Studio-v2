@@ -20,7 +20,7 @@ async def lifespan(_app: FastAPI):
 
 def create_app() -> FastAPI:
     settings = get_settings()
-    app = FastAPI(title="LuxUmbra Slides API", lifespan=lifespan)
+    app = FastAPI(title="Slide Report Studio API", lifespan=lifespan)
     app.add_middleware(
         CORSMiddleware,
         allow_origins=settings.cors_origins,

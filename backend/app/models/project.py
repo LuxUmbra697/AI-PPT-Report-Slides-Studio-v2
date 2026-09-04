@@ -10,6 +10,8 @@ from app.core.db import Base
 
 ProjectStatus = Literal["draft", "outline_ready", "generating", "ready"]
 SourceKind = Literal["topic", "text", "document"]
+OutputFormat = Literal["ppt", "html"]
+HtmlReportStatus = Literal["idle", "generating", "ready", "failed"]
 
 
 class Project(Base):
@@ -28,12 +30,26 @@ class Project(Base):
     tone: Mapped[str] = mapped_column(String(32), nullable=False)
     page_count: Mapped[int] = mapped_column(Integer, nullable=False)
     theme_id: Mapped[str] = mapped_column(String(50), nullable=False)
+    # 选择 Template/ 中的参考 PPTX 时记录其稳定目录 id；实际渲染仍使用下方
+    # theme_id + theme_overrides，以确保导出的每个对象继续可编辑。
+    external_template_id: Mapped[str | None] = mapped_column(String(120), nullable=True)
     # 相对 theme_id 预设的局部覆盖；空对象表示纯预设
     theme_overrides: Mapped[dict] = mapped_column(JSONB, nullable=False, default=dict)
     # fixed=槽位布局；flex=布局树（新项目默认）
     layout_mode: Mapped[str] = mapped_column(String(16), nullable=False, default="flex")
     # 整份文字量：concise / medium / detailed
     content_density: Mapped[str] = mapped_column(String(16), nullable=False, default="medium")
+    # 创建时的主要交付物。PPT 与 HTML 后续走完全独立的生成和预览链路。
+    output_format: Mapped[str] = mapped_column(String(16), nullable=False, default="ppt")
+    # HTML 网页的自然语言审美提示，作为直出网页模型的设计方向。
+    html_style_prompt: Mapped[str | None] = mapped_column(Text, nullable=True)
+    # 旧版/PPT→HTML 导出的兼容样式字段；HTML 报告直出链路不读取此字段。
+    html_style: Mapped[dict] = mapped_column(JSONB, nullable=False, default=dict)
+    # HTML 项目有独立的正文生成链路，不创建 Slide 行，也不复用 PPT 页面任务。
+    html_report_status: Mapped[str] = mapped_column(String(16), nullable=False, default="idle")
+    html_report_job_id: Mapped[str | None] = mapped_column(String(100), nullable=True)
+    html_report_error: Mapped[str | None] = mapped_column(Text, nullable=True)
+    html_report_data: Mapped[dict] = mapped_column(JSONB, nullable=False, default=dict)
     status: Mapped[str] = mapped_column(String(32), nullable=False, default="draft")
 
     created_at: Mapped[datetime] = mapped_column(

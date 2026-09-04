@@ -1,15 +1,56 @@
-import { resolveColor, textStyleToCss } from '@/render/style'
+import { iterAmbientShapes, type AmbientShape } from '@/render/ambient'
+import type { CSSProperties } from 'react'
+import { resolveColor, textStyleToCss, webFontStack } from '@/render/style'
 import { CANVAS_HEIGHT_PT, CANVAS_WIDTH_PT, type Theme } from '@/render/types'
 
-/**
- * 主题封面：用主题自身的调色板与字体画一张 16:9 缩略卡。
- *
- * 选主题时用户要看到的是"成品长什么气质"，而不是主题名字，
- * 因此这里刻意复用渲染层的令牌解析，保证与真实页面同源。
- */
+type CoverVariant = NonNullable<Theme['visual']>['cover_variant']
+
+const VARIANT_LAYOUT: Record<CoverVariant, {
+  align: 'left' | 'center'
+  justify: 'center' | 'flex-end'
+  padding: string
+  titleWidth: string
+}> = {
+  editorial: { align: 'left', justify: 'center', padding: '8% 10%', titleWidth: '70%' },
+  split: { align: 'left', justify: 'center', padding: '8% 43% 8% 9%', titleWidth: '100%' },
+  poster: { align: 'left', justify: 'flex-end', padding: '8% 10% 10%', titleWidth: '76%' },
+  framed: { align: 'center', justify: 'center', padding: '12% 18%', titleWidth: '100%' },
+  spotlight: { align: 'left', justify: 'center', padding: '8% 36% 8% 9%', titleWidth: '100%' },
+  ribbon: { align: 'left', justify: 'flex-end', padding: '8% 36% 11% 9%', titleWidth: '100%' },
+}
+
+function shapeStyle(shape: AmbientShape): CSSProperties {
+  return {
+    position: 'absolute',
+    left: `${shape.rect.x * 100}%`,
+    top: `${shape.rect.y * 100}%`,
+    width: `${shape.rect.w * 100}%`,
+    height: `${shape.rect.h * 100}%`,
+    transform: shape.rotation ? `rotate(${shape.rotation}deg)` : undefined,
+    transformOrigin: 'center',
+    background: shape.kind === 'text' ? undefined : shape.color,
+    borderRadius: shape.kind === 'ellipse' ? '50%' : shape.kind === 'round_rect' ? '12cqw' : undefined,
+    color: shape.color,
+    display: shape.kind === 'text' ? 'flex' : undefined,
+    alignItems: shape.kind === 'text' ? 'center' : undefined,
+    justifyContent:
+      shape.kind === 'text'
+        ? shape.align === 'right'
+          ? 'flex-end'
+          : shape.align === 'center'
+            ? 'center'
+            : 'flex-start'
+        : undefined,
+  }
+}
+
+/** 主题封面缩略图直接渲染模板图元与构图变体，所见即导出结果。 */
 export function ThemeCover({ theme, title }: { theme: Theme; title: string }) {
   const display = textStyleToCss(theme, 'title')
   const caption = textStyleToCss(theme, 'caption')
+  const variant = theme.visual?.cover_variant ?? 'editorial'
+  const layout = VARIANT_LAYOUT[variant]
+  const ambient = iterAmbientShapes(theme, 'cover', 0)
 
   return (
     <div
@@ -22,36 +63,48 @@ export function ThemeCover({ theme, title }: { theme: Theme; title: string }) {
         overflow: 'hidden',
       }}
     >
-      <div
-        aria-hidden
-        style={{
-          position: 'absolute',
-          left: 0,
-          top: 0,
-          bottom: 0,
-          width: '2.2%',
-          background: resolveColor(theme, 'accent'),
-        }}
-      />
+      {ambient.map((shape, index) => (
+        <span
+          key={`${shape.kind}-${index}`}
+          aria-hidden
+          style={{
+            ...shapeStyle(shape),
+            fontFamily:
+              shape.kind === 'text'
+                ? webFontStack(shape.font === 'body' ? theme.fonts.body : theme.fonts.display)
+                : undefined,
+            fontSize: shape.kind === 'text' ? `${(shape.size_pt ?? 10) * 0.075}cqw` : undefined,
+            fontWeight: shape.weight,
+            whiteSpace: 'nowrap',
+          }}
+        >
+          {shape.kind === 'text' ? shape.text : null}
+        </span>
+      ))}
+
       <div
         style={{
           position: 'absolute',
           inset: 0,
+          zIndex: 2,
           display: 'flex',
           flexDirection: 'column',
-          justifyContent: 'center',
-          gap: '4cqh',
-          padding: '8% 9% 8% 12%',
+          justifyContent: layout.justify,
+          alignItems: layout.align === 'center' ? 'center' : 'flex-start',
+          gap: '3.2cqh',
+          padding: layout.padding,
+          textAlign: layout.align,
         }}
       >
-        <span style={{ ...caption, fontSize: '3.4cqw', letterSpacing: '0.18em' }}>
+        <span style={{ ...caption, fontSize: '3.1cqw', letterSpacing: '0.18em' }}>
           {theme.name}
         </span>
         <span
           style={{
             ...display,
-            fontSize: '9cqw',
-            lineHeight: 1.2,
+            width: layout.titleWidth,
+            fontSize: variant === 'poster' ? '10.2cqw' : '8.5cqw',
+            lineHeight: 1.14,
             display: '-webkit-box',
             WebkitLineClamp: 2,
             WebkitBoxOrient: 'vertical',
@@ -60,19 +113,20 @@ export function ThemeCover({ theme, title }: { theme: Theme; title: string }) {
         >
           {title}
         </span>
-        <div aria-hidden style={{ display: 'flex', flexDirection: 'column', gap: '2.4cqh' }}>
-          {[86, 64].map((width) => (
-            <span
-              key={width}
-              style={{
-                width: `${width}%`,
-                height: '1.6cqh',
-                background: resolveColor(theme, 'line_strong'),
-                opacity: 0.7,
-              }}
-            />
-          ))}
-        </div>
+        <span
+          aria-hidden
+          style={{
+            border: `1px solid ${resolveColor(theme, 'line_strong')}`,
+            borderRadius: '999px',
+            padding: '1.2cqh 2.1cqw',
+            color: resolveColor(theme, 'ink_muted'),
+            background: resolveColor(theme, 'surface'),
+            fontSize: '2.7cqw',
+            fontWeight: 700,
+          }}
+        >
+          {theme.visual?.content_variant ?? 'clean'} · {theme.visual?.transition ?? 'fade'}
+        </span>
       </div>
     </div>
   )

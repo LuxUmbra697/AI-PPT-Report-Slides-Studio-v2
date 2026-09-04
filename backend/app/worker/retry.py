@@ -12,7 +12,7 @@ from app.llm.errors import LLMNotConfiguredError
 
 __all__ = ["MAX_TRIES", "retry_after_failure"]
 
-MAX_TRIES = 2
+MAX_TRIES = 3
 # 模型侧多为瞬时抖动或采样不稳，隔几秒重来即可，不需要指数退避
 _RETRY_DELAY_SECONDS = 3.0
 

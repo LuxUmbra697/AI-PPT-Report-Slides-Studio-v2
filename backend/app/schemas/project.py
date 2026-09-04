@@ -13,6 +13,8 @@ Tone = Literal["professional", "plain", "punchy"]
 ProjectStatus = Literal["draft", "outline_ready", "generating", "ready"]
 SourceKind = Literal["topic", "text", "document"]
 ContentDensity = Literal["concise", "medium", "detailed"]
+OutputFormat = Literal["ppt", "html"]
+HtmlReportStatus = Literal["idle", "generating", "ready", "failed"]
 
 # 页数范围与文档给出的推荐区间一致：太少不成篇，太多单次生成不可控
 MIN_PAGE_COUNT = 5
@@ -33,8 +35,11 @@ class ProjectCreate(BaseModel):
     tone: Tone = "professional"
     page_count: int = Field(default=10, ge=MIN_PAGE_COUNT, le=MAX_PAGE_COUNT)
     theme_id: str = Field(default="ivory", max_length=50)
+    external_template_id: str | None = Field(default=None, max_length=120)
     layout_mode: LayoutMode = "flex"
     content_density: ContentDensity = "medium"
+    output_format: OutputFormat = "ppt"
+    html_style_prompt: str | None = Field(default=None, max_length=1200)
 
 
 class ProjectUpdate(BaseModel):
@@ -43,15 +48,36 @@ class ProjectUpdate(BaseModel):
     tone: Tone | None = None
     page_count: int | None = Field(default=None, ge=MIN_PAGE_COUNT, le=MAX_PAGE_COUNT)
     theme_id: str | None = Field(default=None, max_length=50)
+    external_template_id: str | None = Field(default=None, max_length=120)
     layout_mode: LayoutMode | None = None
     content_density: ContentDensity | None = None
+    output_format: OutputFormat | None = None
+    html_style_prompt: str | None = Field(default=None, max_length=1200)
 
 
 class ProjectThemeUpdate(BaseModel):
     """样式专用更新：不受大纲 confirmed 锁定。"""
 
     theme_id: str | None = Field(default=None, max_length=50)
+    external_template_id: str | None = Field(default=None, max_length=120)
     overrides: ThemeOverrides | None = None
+
+
+class HtmlStyleGenerateRequest(BaseModel):
+    """根据主题和用户描述重新生成安全的 HTML 展示样式。"""
+
+    prompt: str | None = Field(default=None, max_length=1200)
+
+
+class HtmlReportGenerateRequest(BaseModel):
+    regenerate: bool = False
+
+
+class HtmlReportPublic(BaseModel):
+    status: HtmlReportStatus
+    error: str | None = None
+    job_id: str | None = None
+    has_document: bool = False
 
 
 class SourcePublic(BaseModel):
@@ -77,9 +103,15 @@ class ProjectPublic(BaseModel):
     tone: Tone
     page_count: int
     theme_id: str
+    external_template_id: str | None = None
     theme_overrides: dict[str, Any] = Field(default_factory=dict)
     layout_mode: LayoutMode = "flex"
     content_density: ContentDensity = "medium"
+    output_format: OutputFormat = "ppt"
+    html_style_prompt: str | None = None
+    html_style: dict[str, Any] = Field(default_factory=dict)
+    html_report_status: HtmlReportStatus = "idle"
+    html_report_error: str | None = None
     status: ProjectStatus
     created_at: datetime
     updated_at: datetime

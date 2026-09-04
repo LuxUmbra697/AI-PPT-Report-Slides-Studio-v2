@@ -104,6 +104,9 @@ async def _load_generation_input(
             tone=project.tone,
             page_count=project.page_count,
             content_density=normalize_density(getattr(project, "content_density", None)),
+            output_format=(
+                project.output_format if project.output_format in ("ppt", "html") else "ppt"
+            ),
             sections=sections,
         )
         return payload, project_input_signature(project), project.outline.revision

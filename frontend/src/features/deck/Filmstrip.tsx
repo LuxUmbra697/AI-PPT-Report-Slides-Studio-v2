@@ -11,6 +11,7 @@ import {
 import { MenuItem, MenuPopover } from '@/components/ui/MenuPopover'
 import { useRetrySlide } from '@/features/deck/api'
 import { type DeckSlide, slideDisplayTitle, toRenderSlide } from '@/features/deck/types'
+import type { ExternalTemplateLayerSource } from '@/features/templates/ExternalTemplateLayer'
 import { useDragSort } from '@/hooks/useDragSort'
 import { cn } from '@/lib/utils'
 import { SlideView } from '@/render/SlideView'
@@ -32,6 +33,7 @@ export function Filmstrip({
   onInsert,
   onDuplicate,
   onDelete,
+  externalTemplate,
 }: {
   projectId: string
   slides: DeckSlide[]
@@ -44,6 +46,7 @@ export function Filmstrip({
   onInsert: (afterSlideId: string | null) => void
   onDuplicate: (slideId: string) => void
   onDelete: (slideId: string) => void
+  externalTemplate?: ExternalTemplateLayerSource | null
 }) {
   const drag = useDragSort((from, to) => {
     const ids = slides.map((slide) => slide.id)
@@ -76,6 +79,7 @@ export function Filmstrip({
           onInsert={() => onInsert(slide.id)}
           onDuplicate={() => onDuplicate(slide.id)}
           onDelete={() => onDelete(slide.id)}
+          externalTemplate={externalTemplate}
         />
       ))}
 
@@ -108,6 +112,7 @@ function FilmstripItem({
   onInsert,
   onDuplicate,
   onDelete,
+  externalTemplate,
 }: {
   projectId: string
   slide: DeckSlide
@@ -124,6 +129,7 @@ function FilmstripItem({
   onInsert: () => void
   onDuplicate: () => void
   onDelete: () => void
+  externalTemplate?: ExternalTemplateLayerSource | null
 }) {
   const retry = useRetrySlide(projectId)
   const warnings = slide.issues.filter((issue) => issue.severity === 'warning').length
@@ -146,7 +152,12 @@ function FilmstripItem({
       >
         <div style={{ aspectRatio: `${CANVAS_WIDTH_PT} / ${CANVAS_HEIGHT_PT}` }}>
           {slide.status === 'ready' ? (
-            <SlideView slide={toRenderSlide(slide)} theme={theme} slideIndex={index} />
+            <SlideView
+              slide={toRenderSlide(slide)}
+              theme={theme}
+              slideIndex={index}
+              externalTemplate={externalTemplate}
+            />
           ) : (
             <Placeholder status={slide.status} />
           )}

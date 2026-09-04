@@ -52,7 +52,7 @@ class DeepSeekOutlineGenerator:
         try:
             draft = await self._chat.complete(
                 OutlineDraft,
-                system=self._system_prompt(),
+                system=self._system_prompt(payload.output_format),
                 user=self._user_prompt(payload),
                 purpose="生成大纲",
             )
@@ -63,7 +63,7 @@ class DeepSeekOutlineGenerator:
         self._validate_draft(draft, page_count=payload.page_count, allowed_refs=allowed_refs)
         return draft
 
-    def _system_prompt(self) -> str:
+    def _system_prompt(self, output_format: str = "ppt") -> str:
         layout_list = ", ".join(sorted(self._layout_ids))
         roles = ", ".join(PAGE_ROLES)
         preferred = [layout for layout in _PREFERRED_MULTI_SLOT if layout in self._layout_ids]
@@ -72,6 +72,18 @@ class DeepSeekOutlineGenerator:
             "避免整份都用单栏 bullets。"
             if preferred
             else "7. 内容页避免整份都用单栏 bullets。"
+        )
+        html_mode = output_format == "html"
+        planning_target = "HTML 报告章节" if html_mode else "PPT 大纲"
+        layout_rule = (
+            "4. layout_id 只作为兼容字段保存，统一填写 bullets；它不会触发 PPT 页面生成。\n"
+            if html_mode
+            else f"4. layout_id 只能从以下合法值中选择：{layout_list}。\n"
+        )
+        visual_rule = (
+            "8. visual 可留 null；HTML 报告会根据正文和主题组织视觉，不需要规划配图槽位。"
+            if html_mode
+            else _VISUAL_RULE
         )
         example = {
             "pages": [
@@ -87,7 +99,8 @@ class DeepSeekOutlineGenerator:
             ]
         }
         return (
-            "你是 PPT 大纲规划助手。必须只输出一个 JSON 对象，不要 Markdown，不要额外说明。\n"
+            f"你是 {planning_target} 规划助手。必须只输出一个 JSON 对象，"
+            "不要 Markdown，不要额外说明。\n"
             "JSON 结构必须为：\n"
             '{"pages":[{"title":"...","objective":"...","key_points":["..."],'
             '"source_refs":["S1:1"],"layout_id":"cover","page_role":"cover","visual":null}]}\n'
@@ -97,12 +110,12 @@ class DeepSeekOutlineGenerator:
             "2. 每页 key_points 数量必须在 2–5 个之间；每条必须是可展开的事实/结论，"
             "禁止「介绍背景」「概述内容」这类空点。\n"
             "3. source_refs 只能使用用户提供的 ref，不得编造。\n"
-            f"4. layout_id 只能从以下合法值中选择：{layout_list}。\n"
+            f"{layout_rule}"
             f"5. page_role 必须是以下之一：{roles}。"
             "首屏多为 cover，中间多为 content，可选 toc/section，收尾可用 summary。\n"
             "6. title/objective/key_points 使用中文，信息具体，避免空话。\n"
-            f"{multi_slot_rule}\n"
-            f"{_VISUAL_RULE}"
+            f"{'' if html_mode else multi_slot_rule + chr(10)}"
+            f"{visual_rule}"
         )
 
     def _user_prompt(self, payload: OutlineGenerationInput) -> str:
@@ -122,10 +135,12 @@ class DeepSeekOutlineGenerator:
             "tone": payload.tone,
             "page_count": payload.page_count,
             "content_density": payload.content_density,
+            "output_format": payload.output_format,
             "sections": sections_payload,
         }
         return (
-            "请根据以下项目参数与来源小节生成大纲 JSON。\n"
+            "请根据以下项目参数与来源小节生成"
+            f"{'HTML 报告章节' if payload.output_format == 'html' else 'PPT'}大纲 JSON。\n"
             f"{outline_density_hint(payload.content_density)}\n"
             f"{json.dumps(body, ensure_ascii=False)}"
         )

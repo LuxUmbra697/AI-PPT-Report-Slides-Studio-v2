@@ -22,8 +22,12 @@ from app.models.project import Project, ProjectOutline, ProjectSource
 from app.models.slide import Slide as SlideRow
 from app.render.pptx import render_deck_to_pptx
 from app.render.verify import verify_pptx
+from app.services.media import media_url, store_image
 
 PPTX_MEDIA_TYPE = "application/vnd.openxmlformats-officedocument.presentationml.presentation"
+HTML_MEDIA_TYPE = "text/html"
+MARKDOWN_MEDIA_TYPE = "text/markdown"
+PDF_MEDIA_TYPE = "application/pdf"
 
 
 @pytest.fixture
@@ -129,6 +133,34 @@ async def _seed_ready_project(
         record.status = "ready" if status == "ready" else "generating"
         await session.commit()
 
+    return project_id, headers
+
+
+async def _seed_ready_html_report() -> tuple[str, dict[str, str]]:
+    """落库 HTML 报告成品；它刻意不创建 Slide 行，验证不会走 PPT 页面生成链路。"""
+    transport = ASGITransport(app=app)
+    async with AsyncClient(transport=transport, base_url="http://test") as client:
+        headers = await _sign_up(client)
+        created = await client.post(
+            "/api/v1/projects",
+            json={"title": "HTML 报告测试", "page_count": 5, "output_format": "html"},
+            headers=headers,
+        )
+        assert created.status_code == 201, created.text
+        project_id = created.json()["id"]
+
+    async with async_session_factory() as session:
+        record = await session.get(Project, uuid.UUID(project_id))
+        assert record is not None
+        record.html_report_status = "ready"
+        record.html_report_data = {
+            "document_html": '<!doctype html><html data-luxumbra-ai-document="true">'
+            "<head><title>HTML 报告测试</title></head><body><main>"
+            "<h1>AI 直出网页</h1><p>报告正文不会先生成 Slide 记录。</p>"
+            "</main></body></html>",
+        }
+        record.status = "ready"
+        await session.commit()
     return project_id, headers
 
 
@@ -305,6 +337,127 @@ async def test_export_endpoint_returns_pptx(client: AsyncClient) -> None:
     assert len(presentation.slides) == 1
     assert presentation.slide_width == Pt(CANVAS_WIDTH_PT)
     assert presentation.slide_height == Pt(CANVAS_HEIGHT_PT)
+
+
+@pytest.mark.asyncio
+async def test_export_endpoint_returns_html_markdown_and_pdf(client: AsyncClient) -> None:
+    project_id, headers = await _seed_ready_project(title="多格式导出")
+
+    html = await client.get(f"/api/v1/projects/{project_id}/deck/export/html", headers=headers)
+    assert html.status_code == 200, html.text
+    assert html.headers["content-type"].startswith(HTML_MEDIA_TYPE)
+    assert b"<!doctype html>" in html.content.lower()
+    assert b"IntersectionObserver" in html.content
+    assert "增长复盘" in html.content.decode("utf-8")
+
+    markdown = await client.get(
+        f"/api/v1/projects/{project_id}/deck/export/markdown", headers=headers
+    )
+    assert markdown.status_code == 200, markdown.text
+    assert markdown.headers["content-type"].startswith(MARKDOWN_MEDIA_TYPE)
+    assert "# 多格式导出" in markdown.content.decode("utf-8")
+
+    pdf = await client.get(f"/api/v1/projects/{project_id}/deck/export/pdf", headers=headers)
+    assert pdf.status_code == 200, pdf.text
+    assert pdf.headers["content-type"].startswith(PDF_MEDIA_TYPE)
+    assert pdf.content.startswith(b"%PDF")
+
+
+@pytest.mark.asyncio
+async def test_html_report_only_exports_html_without_creating_ppt_slides(
+    client: AsyncClient,
+) -> None:
+    project_id, headers = await _seed_ready_html_report()
+
+    html = await client.get(f"/api/v1/projects/{project_id}/deck/export/html", headers=headers)
+    assert html.status_code == 200, html.text
+    assert "报告正文不会先生成 Slide 记录" in html.content.decode("utf-8")
+    assert 'data-luxumbra-ai-document="true"' in html.content.decode("utf-8")
+    assert 'data-luxumbra-top-target="true"' in html.content.decode("utf-8")
+    assert 'data-luxumbra-hash-navigation="true"' not in html.content.decode("utf-8")
+
+    for endpoint in ("/deck/export/markdown", "/deck/export/pdf", "/deck/export"):
+        response = await client.get(f"/api/v1/projects/{project_id}{endpoint}", headers=headers)
+        assert response.status_code == 409, response.text
+
+
+@pytest.mark.asyncio
+async def test_html_report_export_inlines_project_images_for_offline_use(
+    client: AsyncClient,
+) -> None:
+    project_id, headers = await _seed_ready_html_report()
+    async with async_session_factory() as session:
+        record = await session.get(Project, uuid.UUID(project_id))
+        assert record is not None
+        key = store_image(
+            user_id=record.user_id,
+            project_id=record.id,
+            data=(
+                b"\x89PNG\r\n\x1a\n\x00\x00\x00\rIHDR\x00\x00\x00\x01\x00\x00\x00\x01"
+                b"\x08\x02\x00\x00\x00\x90wS\xde\x00\x00\x00\x0cIDATx\x9cc\xf8\x0f\x00"
+                b"\x00\x01\x01\x00\x05\x18\xd8N\x00\x00\x00\x00IEND\xaeB`\x82"
+            ),
+            extension=".png",
+        )
+        image_url = media_url(key)
+        record.html_report_data = {
+            "document_html": (
+                "<!doctype html><html><head></head><body>"
+                f'<main><img src="{image_url}" alt="离线图片"></main>'
+                "</body></html>"
+            )
+        }
+        await session.commit()
+
+    response = await client.get(f"/api/v1/projects/{project_id}/deck/export/html", headers=headers)
+
+    assert response.status_code == 200, response.text
+    content = response.content.decode("utf-8")
+    assert image_url not in content
+    assert "data:image/png;base64," in content
+
+
+@pytest.mark.asyncio
+async def test_html_report_preview_renders_without_slide_records(client: AsyncClient) -> None:
+    project_id, headers = await _seed_ready_html_report()
+
+    status_response = await client.get(
+        f"/api/v1/projects/{project_id}/html-report", headers=headers
+    )
+    assert status_response.status_code == 200, status_response.text
+    assert status_response.json()["status"] == "ready"
+    assert status_response.json()["has_document"] is True
+
+    preview = await client.get(f"/api/v1/projects/{project_id}/html-report/render", headers=headers)
+    assert preview.status_code == 200, preview.text
+    assert preview.headers["content-type"].startswith("text/html")
+    assert "报告正文不会先生成 Slide 记录" in preview.content.decode("utf-8")
+    assert 'data-luxumbra-ai-document="true"' in preview.content.decode("utf-8")
+    assert 'data-luxumbra-top-target="true"' in preview.content.decode("utf-8")
+    assert 'data-luxumbra-hash-navigation="true"' in preview.content.decode("utf-8")
+
+
+@pytest.mark.asyncio
+async def test_legacy_html_report_is_not_rendered_through_the_old_template(
+    client: AsyncClient,
+) -> None:
+    project_id, headers = await _seed_ready_html_report()
+    async with async_session_factory() as session:
+        record = await session.get(Project, uuid.UUID(project_id))
+        assert record is not None
+        record.html_report_data = {"summary": "旧版结构化报告", "sections": []}
+        await session.commit()
+
+    status_response = await client.get(
+        f"/api/v1/projects/{project_id}/html-report", headers=headers
+    )
+    assert status_response.status_code == 200, status_response.text
+    assert status_response.json()["has_document"] is False
+
+    for endpoint in ("/html-report/render", "/deck/export/html"):
+        response = await client.get(f"/api/v1/projects/{project_id}{endpoint}", headers=headers)
+        assert response.status_code == 409, response.text
+        assert "重新生成" in response.json()["detail"]
 
 
 @pytest.mark.asyncio

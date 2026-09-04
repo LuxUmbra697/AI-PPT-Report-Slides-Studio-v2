@@ -2,6 +2,7 @@ import { LogOut, Plus } from 'lucide-react'
 import { type ReactNode, useEffect, useRef, useState } from 'react'
 import { Link, useLocation, useNavigate } from 'react-router'
 import { BrandMark } from '@/components/BrandMark'
+import { UiThemePicker } from '@/components/UiThemePicker'
 import { Button } from '@/components/ui/Button'
 import { useAuthStore } from '@/features/auth/store'
 
@@ -13,18 +14,19 @@ export function AppShell({ children }: { children: ReactNode }) {
 
   return (
     <div className="flex min-h-screen flex-col">
-      <header className="sticky top-0 z-30 border-b border-line bg-surface/80 backdrop-blur-md">
+      <header className="anime-header sticky top-0 z-30 border-b border-line bg-surface/80 backdrop-blur-md">
         <div className="mx-auto flex h-14 max-w-6xl items-center justify-between gap-4 px-6">
           <Link to="/projects" className="flex items-center gap-2.5">
             <BrandMark className="size-7" />
-            <span className="text-[15px] font-semibold tracking-tight">LuxUmbra Slides</span>
+            <span className="text-[15px] font-semibold tracking-tight">Slide Report Studio</span>
           </Link>
 
           <div className="flex items-center gap-2">
+            <UiThemePicker />
             {!onCreate && (
               <Button size="sm" onClick={() => navigate('/create')}>
                 <Plus className="size-4" />
-                新建 PPT
+                新建作品
               </Button>
             )}
             <UserMenu />

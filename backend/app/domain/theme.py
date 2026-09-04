@@ -28,6 +28,7 @@ __all__ = [
     "Palette",
     "Shape",
     "TextStyle",
+    "TemplateVisual",
     "Theme",
     "ThemeOverrides",
     "dump_overrides",
@@ -113,6 +114,19 @@ class Shape(BaseModel):
     bullet_marker: Literal["rule", "dot", "index"]
 
 
+class TemplateVisual(BaseModel):
+    """模板级构图元数据：控制封面预览、内容皮肤和导出切页方式。"""
+
+    family: str = "classic"
+    cover_variant: Literal[
+        "editorial", "split", "poster", "framed", "spotlight", "ribbon"
+    ] = "editorial"
+    content_variant: Literal[
+        "clean", "cards", "notebook", "dashboard", "magazine", "panel"
+    ] = "clean"
+    transition: Literal["none", "fade", "push", "wipe", "split"] = "fade"
+
+
 class Theme(BaseModel):
     id: str
     name: str
@@ -123,6 +137,7 @@ class Theme(BaseModel):
     shape: Shape
     # 氛围层：每页自动铺的装饰母题，换主题就换一套气质
     ambient: list[AmbientMotif] = []
+    visual: TemplateVisual = TemplateVisual()
 
     def color(self, token: str) -> str:
         # 元素覆盖可能把 color 写成 hex，渲染时透传即可
@@ -218,10 +233,76 @@ class ThemeOverrides(BaseModel):
 def load_themes() -> dict[str, Theme]:
     themes: dict[str, Theme] = {}
     for path in sorted(THEMES_DIR.glob("*.json")):
+        # catalog.json 是基于已有主题的轻量变体索引，不是一份完整 Theme。
+        # 先跳过，等所有底座主题加载完再展开，确保导出端与前端都只维护一份配色数据。
+        if path.name in {"catalog.json", "visuals.json"}:
+            continue
         theme = Theme.model_validate(json.loads(path.read_text(encoding="utf-8")))
         if theme.id != path.stem:
             raise ValueError(f"主题 id 与文件名不一致：{path.name} 内声明为 {theme.id}")
         themes[theme.id] = theme
+
+    catalog_path = THEMES_DIR / "catalog.json"
+    if catalog_path.exists():
+        catalog = json.loads(catalog_path.read_text(encoding="utf-8"))
+        visuals_path = THEMES_DIR / "visuals.json"
+        visuals = (
+            json.loads(visuals_path.read_text(encoding="utf-8"))
+            if visuals_path.exists()
+            else {}
+        )
+        families = visuals.get("families", {}) if isinstance(visuals, dict) else {}
+        active_theme_ids = (
+            set(visuals.get("active_theme_ids", [])) if isinstance(visuals, dict) else set()
+        )
+        category_families = (
+            visuals.get("category_families", {}) if isinstance(visuals, dict) else {}
+        )
+        preset_families = visuals.get("preset_families", {}) if isinstance(visuals, dict) else {}
+        presets = catalog.get("presets", []) if isinstance(catalog, dict) else []
+        if not isinstance(presets, list):
+            raise ValueError("主题目录 catalog.json 的 presets 必须是数组")
+        for raw in presets:
+            if not isinstance(raw, dict):
+                raise ValueError("主题目录 catalog.json 的每项预设必须是对象")
+            theme_id = raw.get("id")
+            base_id = raw.get("base")
+            if not isinstance(theme_id, str) or not theme_id:
+                raise ValueError("主题目录 catalog.json 的预设缺少 id")
+            # catalog 保留完整设计资产，运行时只下发精选库，避免选择器出现大量近似模板。
+            # 空列表表示兼容旧配置：继续加载 catalog 中所有主题。
+            if active_theme_ids and theme_id not in active_theme_ids:
+                continue
+            if theme_id in themes:
+                raise ValueError(f"主题目录 catalog.json 中有重复 id：{theme_id}")
+            if not isinstance(base_id, str) or base_id not in themes:
+                raise ValueError(f"主题目录 catalog.json 的 {theme_id} 引用了未知底座：{base_id}")
+
+            # 每一项只写与底座不同的令牌；展开后仍是完整 Theme，因此不影响既有
+            # 校验、预览、PPTX 渲染或主题微调接口。
+            data = themes[base_id].model_dump()
+            data["id"] = theme_id
+            data["name"] = raw.get("name", theme_id)
+            data["description"] = raw.get("description", "")
+            if isinstance(raw.get("palette"), dict):
+                data["palette"].update(raw["palette"])
+            if isinstance(raw.get("shape"), dict):
+                data["shape"].update(raw["shape"])
+            if isinstance(raw.get("ambient"), list):
+                data["ambient"] = raw["ambient"]
+            family_id = preset_families.get(theme_id) or category_families.get(raw.get("category"))
+            family = families.get(family_id, {}) if isinstance(families, dict) else {}
+            if isinstance(family, dict):
+                family_ambient = family.get("ambient", [])
+                if isinstance(family_ambient, list):
+                    data["ambient"] = [*data.get("ambient", []), *family_ambient]
+                data["visual"] = {
+                    "family": family_id or "classic",
+                    "cover_variant": family.get("cover_variant", "editorial"),
+                    "content_variant": family.get("content_variant", "clean"),
+                    "transition": family.get("transition", "fade"),
+                }
+            themes[theme_id] = Theme.model_validate(data)
     if not themes:
         raise RuntimeError(f"未在 {THEMES_DIR} 找到任何主题定义")
     return themes

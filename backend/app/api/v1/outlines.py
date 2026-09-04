@@ -170,6 +170,12 @@ async def confirm_outline(
 
     outline.status = "confirmed"
     outline.revision += 1
+    if project.output_format == "html":
+        # 重新确认过的大纲必须产出一份新报告；旧报告不能悄悄继续显示或阻断入队。
+        project.html_report_status = "idle"
+        project.html_report_job_id = None
+        project.html_report_error = None
+        project.html_report_data = {}
     project.status = "outline_ready"
     await session.commit()
     await session.refresh(outline)
@@ -189,6 +195,12 @@ async def unconfirm_outline(
 
     outline.status = "draft"
     outline.revision += 1
+    if project.output_format == "html":
+        # 取消确认会让可能在路上的报告结果失效；worker 会据此丢弃迟到结果。
+        project.html_report_status = "idle"
+        project.html_report_job_id = None
+        project.html_report_error = None
+        project.html_report_data = {}
     project.status = "draft"
     await session.commit()
     await session.refresh(outline)

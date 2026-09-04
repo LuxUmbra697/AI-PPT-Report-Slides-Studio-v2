@@ -1,5 +1,6 @@
 import { AlertTriangle } from 'lucide-react'
 import type { BlockSelection } from '@/features/deck/editorTypes'
+import type { ExternalTemplateLayerSource } from '@/features/templates/ExternalTemplateLayer'
 import { SlidePage } from '@/features/deck/SlidePage'
 import type { DeckSlide } from '@/features/deck/types'
 import { useSlideVisibility } from '@/features/deck/useSlideVisibility'
@@ -21,6 +22,7 @@ export function SlideStage({
   onActiveChange,
   onOpenRelayout,
   onZoom,
+  externalTemplate,
 }: {
   projectId: string
   slides: DeckSlide[]
@@ -36,6 +38,7 @@ export function SlideStage({
   onActiveChange: (slideId: string) => void
   onOpenRelayout: () => void
   onZoom: (delta: 1 | -1) => void
+  externalTemplate?: ExternalTemplateLayerSource | null
 }) {
   const { scrollerRef, bindSlideEl } = useSlideVisibility({
     slides,
@@ -69,6 +72,7 @@ export function SlideStage({
               }
               onOpenRelayout={onOpenRelayout}
               bindEl={bindSlideEl}
+              externalTemplate={externalTemplate}
             />
           ))}
         </div>

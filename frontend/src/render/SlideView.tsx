@@ -1,9 +1,14 @@
 import { iterAmbientShapes, type AmbientShape } from '@/render/ambient'
 import { BlockView } from '@/render/BlockView'
+import {
+  ExternalTemplateLayer,
+  type ExternalTemplateLayerSource,
+} from '@/features/templates/ExternalTemplateLayer'
 import { getLayout } from '@/render/design'
 import { solve, type FlexContainer } from '@/render/flexLayout'
 import { iterSkinDecorations, type SkinDecoration } from '@/render/flexSkin'
 import { pt, rectToStyle, resolveColor, webFontStack } from '@/render/style'
+import { iterTemplateDecorations } from '@/render/templateSkin'
 import {
   CANVAS_HEIGHT_PT,
   CANVAS_WIDTH_PT,
@@ -29,6 +34,8 @@ interface SlideViewProps {
   overflowSlotIds?: ReadonlySet<string> | string[]
   /** 页序，供主题氛围层的页码水印使用 */
   slideIndex?: number
+  /** 已选外部模板的母版/版式/页面视觉层；内容块仍可编辑。 */
+  externalTemplate?: ExternalTemplateLayerSource | null
 }
 
 type PlacedEntry = { rect: Rect; text_style?: string | null }
@@ -94,6 +101,7 @@ export function SlideView({
   overflowMode = 'clip',
   overflowSlotIds,
   slideIndex = 0,
+  externalTemplate = null,
 }: SlideViewProps) {
   const flex = isFlexMode(slide)
   const layout = flex ? null : getLayout(slide.layout_id)
@@ -104,6 +112,11 @@ export function SlideView({
     theme,
     slide.layout_id,
     slideIndex,
+    occupiedRects(slide.blocks, placements, layout),
+  )
+  const templateDecorations = iterTemplateDecorations(
+    theme,
+    slide.layout_id,
     occupiedRects(slide.blocks, placements, layout),
   )
   const skinDecorations = flex ? iterSkinDecorations(slide.layout_tree) : []
@@ -128,9 +141,22 @@ export function SlideView({
         onSelectBlock(null)
       }}
     >
-      <AmbientLayer shapes={ambient} theme={theme} />
+      {externalTemplate ? (
+        <ExternalTemplateLayer source={externalTemplate} slideIndex={slideIndex} />
+      ) : (
+        <AmbientLayer shapes={ambient} theme={theme} />
+      )}
 
-      {!flex &&
+      {!externalTemplate && templateDecorations.map((decoration, index) => (
+        <SkinDecorationView
+          key={`template-${decoration.kind}-${index}`}
+          decoration={decoration}
+          theme={theme}
+        />
+      ))}
+
+      {!externalTemplate &&
+        !flex &&
         layout!.decorations.map((decoration, index) => (
           <div
             key={`${decoration.type}-${index}`}
@@ -142,7 +168,8 @@ export function SlideView({
           />
         ))}
 
-      {flex &&
+      {!externalTemplate &&
+        flex &&
         skinDecorations.map((decoration, index) => (
           <SkinDecorationView
             key={`skin-${decoration.kind}-${index}`}
@@ -298,6 +325,8 @@ function AmbientShapeView({ shape, theme }: { shape: AmbientShape; theme: Theme 
     ...rectToStyle(shape.rect),
     zIndex: 0,
     pointerEvents: 'none',
+    transform: shape.rotation ? `rotate(${shape.rotation}deg)` : undefined,
+    transformOrigin: 'center',
   } as const
 
   if (shape.kind !== 'text') {
@@ -307,7 +336,7 @@ function AmbientShapeView({ shape, theme }: { shape: AmbientShape; theme: Theme 
         style={{
           ...base,
           background: shape.color,
-          borderRadius: shape.kind === 'ellipse' ? '50%' : undefined,
+          borderRadius: shape.kind === 'ellipse' ? '50%' : shape.kind === 'round_rect' ? pt(7) : undefined,
         }}
       />
     )

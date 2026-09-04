@@ -24,6 +24,8 @@ import { RelayoutDock } from '@/features/deck/RelayoutPanel'
 import { SlideStage } from '@/features/deck/SlideStage'
 import { useDeckProgress } from '@/features/deck/useDeckProgress'
 import type { ProjectDetail } from '@/features/projects/types'
+import { useExternalTemplateInspection } from '@/features/templates/api'
+import type { ExternalTemplateLayerSource } from '@/features/templates/ExternalTemplateLayer'
 import { errorMessage } from '@/lib/errors'
 import { resolveTheme, type ThemeOverrides } from '@/render/themeOverrides'
 
@@ -35,6 +37,11 @@ export function EditorWorkspace({ project }: { project: ProjectDetail }) {
   const deckQuery = useDeck(project.id)
   const deck = deckQuery.data
   const slides = deck?.slides ?? []
+  const templateInspection = useExternalTemplateInspection(project.external_template_id)
+  const externalTemplate: ExternalTemplateLayerSource | null =
+    project.external_template_id && templateInspection.data
+      ? { templateId: project.external_template_id, inspection: templateInspection.data }
+      : null
   // deck.status 是主信号；project.status 只覆盖「已入队但页仍 pending / 页间空隙」。
   // deck 已 ready 时不再信过期的 project.generating，避免顶栏卡在「取消生成」。
   const generating =
@@ -195,6 +202,7 @@ export function EditorWorkspace({ project }: { project: ProjectDetail }) {
               duplicateSlide.mutate(slideId, { onSuccess: focusResult })
             }
             onDelete={setRemovingId}
+            externalTemplate={externalTemplate}
           />
         )}
 
@@ -226,6 +234,7 @@ export function EditorWorkspace({ project }: { project: ProjectDetail }) {
                 Math.min(Math.max(current + delta, 0), ZOOM_STEPS.length - 1),
               )
             }
+            externalTemplate={externalTemplate}
           />
         )}
 
@@ -271,6 +280,7 @@ export function EditorWorkspace({ project }: { project: ProjectDetail }) {
             slides.filter((slide) => slide.status === 'ready').findIndex((slide) => slide.id === activeId),
           )}
           onClose={() => setPresenting(false)}
+          externalTemplate={externalTemplate}
         />
       )}
 

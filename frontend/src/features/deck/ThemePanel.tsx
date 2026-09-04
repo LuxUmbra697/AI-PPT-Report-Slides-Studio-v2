@@ -1,12 +1,14 @@
 import { useQueryClient } from '@tanstack/react-query'
 import { Check, RotateCcw } from 'lucide-react'
-import { useEffect, useId, useRef, useState } from 'react'
+import { useEffect, useId, useMemo, useRef, useState } from 'react'
 import { Button } from '@/components/ui/Button'
 import { useUpdateProjectTheme } from '@/features/projects/api'
 import type { ProjectDetail } from '@/features/projects/types'
+import { ExternalTemplateColumn } from '@/features/templates/ExternalTemplateColumn'
+import type { ExternalTemplate } from '@/features/templates/api'
 import { errorMessage } from '@/lib/errors'
 import { cn } from '@/lib/utils'
-import { themeList } from '@/render/design'
+import { getThemeCategory, themeCategories, themeList } from '@/render/design'
 import { ThemeCover } from '@/render/ThemeCover'
 import {
   BULLET_MARKERS,
@@ -43,14 +45,25 @@ export function ThemePanel({
   const update = useUpdateProjectTheme(project.id)
   const [draft, setDraft] = useState<ThemeOverrides>(() => asOverrides(project.theme_overrides))
   const [themeId, setThemeId] = useState(project.theme_id)
+  const [externalTemplateId, setExternalTemplateId] = useState(project.external_template_id)
+  const [category, setCategory] = useState(() => getThemeCategory(project.theme_id))
   const timerRef = useRef<number | null>(null)
   const skipNextSync = useRef(false)
   const detailKey = ['projects', project.id] as const
 
-  const paintProject = (nextThemeId: string, nextOverrides: ThemeOverrides) => {
+  const paintProject = (
+    nextThemeId: string,
+    nextOverrides: ThemeOverrides,
+    nextExternalTemplateId = externalTemplateId,
+  ) => {
     queryClient.setQueryData<ProjectDetail>(detailKey, (current) =>
       current
-        ? { ...current, theme_id: nextThemeId, theme_overrides: nextOverrides }
+        ? {
+            ...current,
+            theme_id: nextThemeId,
+            theme_overrides: nextOverrides,
+            external_template_id: nextExternalTemplateId,
+          }
         : current,
     )
   }
@@ -61,8 +74,10 @@ export function ThemePanel({
       return
     }
     setThemeId(project.theme_id)
+    setExternalTemplateId(project.external_template_id)
     setDraft(asOverrides(project.theme_overrides))
-  }, [project.theme_id, project.theme_overrides])
+    setCategory(getThemeCategory(project.theme_id))
+  }, [project.theme_id, project.external_template_id, project.theme_overrides])
 
   useEffect(
     () => () => {
@@ -93,18 +108,39 @@ export function ThemePanel({
   }
 
   const selectPreset = (id: string) => {
-    if (busy || id === themeId) return
+    if (busy || (id === themeId && !externalTemplateId)) return
     if (timerRef.current != null) window.clearTimeout(timerRef.current)
     setThemeId(id)
+    setExternalTemplateId(null)
     setDraft({})
-    paintProject(id, {})
+    paintProject(id, {}, null)
     skipNextSync.current = true
-    update.mutate({ theme_id: id, overrides: {} })
+    update.mutate({ theme_id: id, external_template_id: null, overrides: {} })
+  }
+
+  const selectExternalTemplate = (template: ExternalTemplate) => {
+    if (busy || template.id === externalTemplateId) return
+    if (timerRef.current != null) window.clearTimeout(timerRef.current)
+    update.mutate(
+      { external_template_id: template.id },
+      {
+        onSuccess: (next) => {
+          setThemeId(next.theme_id)
+          setExternalTemplateId(next.external_template_id)
+          setDraft(asOverrides(next.theme_overrides))
+          setCategory(getThemeCategory(next.theme_id))
+        },
+      },
+    )
   }
 
   const resetOverrides = () => {
     if (busy) return
     if (timerRef.current != null) window.clearTimeout(timerRef.current)
+    if (externalTemplateId) {
+      update.mutate({ external_template_id: externalTemplateId })
+      return
+    }
     setDraft({})
     paintProject(themeId, {})
     skipNextSync.current = true
@@ -138,6 +174,10 @@ export function ThemePanel({
   }
 
   const hasOverrides = Object.keys(draft).length > 0
+  const visibleThemes = useMemo(
+    () => themeList.filter((theme) => getThemeCategory(theme.id) === category),
+    [category],
+  )
 
   return (
     <section aria-labelledby={titleId} className="flex flex-col gap-5">
@@ -151,9 +191,29 @@ export function ThemePanel({
       </div>
 
       <div className="flex flex-col gap-2">
-        <p className="text-xs font-medium text-ink-soft">预设</p>
+        <div className="flex items-center justify-between gap-2">
+          <p className="text-xs font-medium text-ink-soft">预设</p>
+          <span className="text-[11px] text-ink-muted">{visibleThemes.length} 套</span>
+        </div>
+        <div className="scrollbar-slim -mx-1 flex gap-1 overflow-x-auto px-1 pb-1">
+          {themeCategories.map((item) => (
+            <button
+              key={item}
+              type="button"
+              onClick={() => setCategory(item)}
+              className={cn(
+                'shrink-0 rounded-full border px-2.5 py-1 text-[11px] transition-colors',
+                item === category
+                  ? 'border-accent bg-accent text-white'
+                  : 'border-line bg-surface text-ink-muted hover:border-line-strong',
+              )}
+            >
+              {item}
+            </button>
+          ))}
+        </div>
         <div className="flex flex-col gap-2">
-          {themeList.map((theme) => (
+          {visibleThemes.map((theme) => (
             <button
               key={theme.id}
               type="button"
@@ -177,6 +237,12 @@ export function ThemePanel({
           ))}
         </div>
       </div>
+
+      <ExternalTemplateColumn
+        selectedId={externalTemplateId}
+        disabled={busy}
+        onSelect={selectExternalTemplate}
+      />
 
       <div className="flex flex-col gap-2.5">
         <p className="text-xs font-medium text-ink-soft">颜色</p>

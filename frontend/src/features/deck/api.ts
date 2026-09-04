@@ -382,16 +382,41 @@ export function useDeckQuality(projectId: string, enabled: boolean) {
   })
 }
 
-export function useExportDeck(projectId: string, fallbackName = 'export.pptx') {
+export type DeckExportFormat = 'pptx' | 'html' | 'markdown' | 'pdf'
+
+const EXPORT_CONFIG: Record<DeckExportFormat, { path: string; extension: string }> = {
+  pptx: { path: 'export', extension: 'pptx' },
+  html: { path: 'export/html', extension: 'html' },
+  markdown: { path: 'export/markdown', extension: 'md' },
+  pdf: { path: 'export/pdf', extension: 'pdf' },
+}
+
+interface DeckExportRequest {
+  format: DeckExportFormat
+  title: string
+  /** 由用户点击时同步打开，以免浏览器把异步 window.open 判为弹窗。 */
+  previewWindow?: Window | null
+}
+
+export function useExportDeck(projectId: string) {
   return useMutation({
-    mutationFn: async () => {
-      const response = await requestBinary(`/projects/${projectId}/deck/export`)
+    mutationFn: async ({ format, title, previewWindow }: DeckExportRequest) => {
+      const config = EXPORT_CONFIG[format]
+      const response = await requestBinary(`/projects/${projectId}/deck/${config.path}`)
       const blob = await response.blob()
       const filename = filenameFromDisposition(
         response.headers.get('content-disposition'),
-        fallbackName,
+        `${title}.${config.extension}`,
       )
+      if (previewWindow && format === 'html') {
+        const url = URL.createObjectURL(blob)
+        previewWindow.location.replace(url)
+        // 预览页仍在使用这个 URL；延迟释放以避免页面首次加载时被过早撤销。
+        window.setTimeout(() => URL.revokeObjectURL(url), 10 * 60 * 1000)
+        return { kind: 'preview' as const, filename }
+      }
       saveBlob(blob, filename)
+      return { kind: 'download' as const, filename }
     },
   })
 }

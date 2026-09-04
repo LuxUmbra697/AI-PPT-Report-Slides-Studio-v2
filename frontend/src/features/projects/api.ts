@@ -42,7 +42,11 @@ export function useUpdateProject(id: string) {
 export function useUpdateProjectTheme(id: string) {
   const queryClient = useQueryClient()
   return useMutation({
-    mutationFn: (body: { theme_id?: string; overrides?: ThemeOverrides }) =>
+    mutationFn: (body: {
+      theme_id?: string
+      external_template_id?: string | null
+      overrides?: ThemeOverrides
+    }) =>
       request<ProjectDetail>(`/projects/${id}/theme`, {
         method: 'PATCH',
         body: JSON.stringify(body),
@@ -78,6 +82,8 @@ export interface DraftInput {
   themeId: string
   layoutMode?: 'fixed' | 'flex'
   contentDensity?: 'concise' | 'medium' | 'detailed'
+  outputFormat: 'ppt' | 'html'
+  htmlStylePrompt?: string
   onStep?: (step: string) => void
 }
 
@@ -92,17 +98,24 @@ export function useCreateDraft() {
 
   return useMutation({
     mutationFn: async (input: DraftInput): Promise<ProjectDetail> => {
-      input.onStep?.('正在创建 PPT…')
-      const project = await request<ProjectDetail>('/projects', {
+      input.onStep?.(input.outputFormat === 'html' ? '正在创建 HTML 报告…' : '正在创建 PPT…')
+      let project = await request<ProjectDetail>('/projects', {
         method: 'POST',
-        body: JSON.stringify({
-          title: input.title,
-          audience: input.audience,
-          tone: input.tone,
-          page_count: input.pageCount,
-          theme_id: input.themeId,
-          layout_mode: input.layoutMode ?? 'flex',
-          content_density: input.contentDensity ?? 'medium',
+          body: JSON.stringify({
+            title: input.title,
+            audience: input.audience,
+            tone: input.tone,
+            page_count: input.pageCount,
+            // HTML 是独立网页交付物；不向其创建请求传递 PPT 主题与版式字段。
+            ...(input.outputFormat === 'ppt'
+              ? {
+                  theme_id: input.themeId,
+                  layout_mode: input.layoutMode ?? 'flex',
+                }
+              : {}),
+            content_density: input.contentDensity ?? 'medium',
+          output_format: input.outputFormat,
+          html_style_prompt: input.htmlStylePrompt?.trim() || null,
         }),
       })
 

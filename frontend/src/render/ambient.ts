@@ -6,7 +6,7 @@ import { CANVAS_HEIGHT_PT, CANVAS_WIDTH_PT, type Rect, type Theme } from '@/rend
 export type AmbientScope = 'cover' | 'section' | 'content'
 
 export type AmbientShape = {
-  kind: 'rect' | 'ellipse' | 'text'
+  kind: 'rect' | 'round_rect' | 'ellipse' | 'text'
   rect: Rect
   color: string
   text?: string | null
@@ -15,6 +15,7 @@ export type AmbientShape = {
   weight?: number | null
   letter_spacing_pt?: number
   align?: 'left' | 'center' | 'right'
+  rotation?: number
 }
 
 type MotifBase = {
@@ -57,6 +58,50 @@ export type AmbientMotif = MotifBase &
         weight?: number
         letter_spacing_pt?: number
         align?: 'left' | 'center' | 'right'
+      }
+    | {
+        motif: 'scatter'
+        symbol?: 'petal' | 'spark' | 'dot' | 'diamond' | 'dash' | 'chip'
+        count?: number
+        seed?: number
+        area?: Rect
+        min_size_pt?: number
+        max_size_pt?: number
+      }
+    | {
+        motif: 'orbit'
+        cx?: number
+        cy?: number
+        radius_x_pt?: number
+        radius_y_pt?: number
+        nodes?: number
+        dot_size_pt?: number
+        start_deg?: number
+      }
+    | {
+        motif: 'sticker'
+        rect: Rect
+        text: string
+        size_pt?: number
+        font?: 'display' | 'body'
+        weight?: number
+        align?: 'left' | 'center' | 'right'
+        rotation?: number
+        text_color?: string
+      }
+    | {
+        motif: 'frame'
+        inset_pt?: number
+        thickness_pt?: number
+        corner_size_pt?: number
+      }
+    | {
+        motif: 'stripe_field'
+        area?: Rect
+        count?: number
+        thickness_pt?: number
+        gap_pt?: number
+        rotation?: number
       }
   )
 
@@ -117,6 +162,16 @@ function expand(
       return glow(motif, base, background, strength)
     case 'watermark':
       return watermark(motif, color, slideIndex)
+    case 'scatter':
+      return scatter(motif, color, slideIndex)
+    case 'orbit':
+      return orbit(motif, color)
+    case 'sticker':
+      return sticker(motif, color, resolveColor(theme, motif.text_color ?? 'background'))
+    case 'frame':
+      return frameMotif(motif, color)
+    case 'stripe_field':
+      return stripeField(motif, color)
   }
 }
 
@@ -150,6 +205,11 @@ type CornerBracket = Extract<AmbientMotif, { motif: 'corner_bracket' }>
 type HairlineGrid = Extract<AmbientMotif, { motif: 'hairline_grid' }>
 type Glow = Extract<AmbientMotif, { motif: 'glow' }>
 type Watermark = Extract<AmbientMotif, { motif: 'watermark' }>
+type Scatter = Extract<AmbientMotif, { motif: 'scatter' }>
+type Orbit = Extract<AmbientMotif, { motif: 'orbit' }>
+type Sticker = Extract<AmbientMotif, { motif: 'sticker' }>
+type FrameMotif = Extract<AmbientMotif, { motif: 'frame' }>
+type StripeField = Extract<AmbientMotif, { motif: 'stripe_field' }>
 
 function edgeBand(motif: EdgeBand, color: string): AmbientShape[] {
   const [start, end] = [motif.start ?? 0, motif.end ?? 1].sort((a, b) => a - b) as [number, number]
@@ -245,16 +305,134 @@ function watermark(motif: Watermark, color: string, slideIndex: number): Ambient
   ]
 }
 
+function randomValues(seed: number): () => number {
+  let state = seed >>> 0
+  return () => {
+    state = (Math.imul(1664525, state) + 1013904223) >>> 0
+    return state / 4294967296
+  }
+}
+
+function scatter(motif: Scatter, color: string, slideIndex: number): AmbientShape[] {
+  const rand = randomValues((motif.seed ?? 17) + slideIndex * 7919)
+  const [low, high] = [motif.min_size_pt ?? 4, motif.max_size_pt ?? 12].sort((a, b) => a - b)
+  const area = motif.area ?? FULL_CANVAS
+  const shapes: AmbientShape[] = []
+  for (let index = 0; index < (motif.count ?? 12); index += 1) {
+    const size = low + rand() * (high - low)
+    const x = area.x + rand() * area.w
+    const y = area.y + rand() * area.h
+    const rotation = rand() * 180 - 90
+    const w = size / CANVAS_WIDTH_PT
+    const h = size / CANVAS_HEIGHT_PT
+    switch (motif.symbol ?? 'dot') {
+      case 'petal':
+        shapes.push(...fill(x - w / 2, y - h * 0.75, w, h * 1.5, color, 'ellipse', rotation))
+        break
+      case 'dot':
+        shapes.push(...fill(x - w / 2, y - h / 2, w, h, color, 'ellipse'))
+        break
+      case 'diamond':
+        shapes.push(...fill(x - w / 2, y - h / 2, w, h, color, 'round_rect', 45 + rotation * 0.15))
+        break
+      case 'dash':
+        shapes.push(...fill(x - w, y - h * 0.18, w * 2, h * 0.36, color, 'round_rect', rotation))
+        break
+      case 'chip':
+        shapes.push(...fill(x - w / 2, y - h / 2, w, h, color, 'round_rect', rotation * 0.2))
+        shapes.push(...fill(x - w * 0.12, y - h * 0.12, w * 0.24, h * 0.24, color))
+        break
+      case 'spark':
+        shapes.push(...fill(x - w, y - h * 0.12, w * 2, h * 0.24, color, 'round_rect', rotation))
+        shapes.push(...fill(x - w * 0.12, y - h, w * 0.24, h * 2, color, 'round_rect', rotation))
+        shapes.push(...fill(x - w * 0.2, y - h * 0.2, w * 0.4, h * 0.4, color, 'ellipse'))
+        break
+    }
+  }
+  return shapes
+}
+
+function orbit(motif: Orbit, color: string): AmbientShape[] {
+  const shapes: AmbientShape[] = []
+  const rx = (motif.radius_x_pt ?? 120) / CANVAS_WIDTH_PT
+  const ry = (motif.radius_y_pt ?? 72) / CANVAS_HEIGHT_PT
+  const dotW = (motif.dot_size_pt ?? 3) / CANVAS_WIDTH_PT
+  const dotH = (motif.dot_size_pt ?? 3) / CANVAS_HEIGHT_PT
+  const nodes = motif.nodes ?? 18
+  const start = ((motif.start_deg ?? 0) * Math.PI) / 180
+  for (let index = 0; index < nodes; index += 1) {
+    const angle = start + (Math.PI * 2 * index) / nodes
+    const x = (motif.cx ?? 0.82) + Math.cos(angle) * rx
+    const y = (motif.cy ?? 0.2) + Math.sin(angle) * ry
+    const scale = index % 5 === 0 ? 1.8 : 1
+    shapes.push(...fill(x - (dotW * scale) / 2, y - (dotH * scale) / 2, dotW * scale, dotH * scale, color, 'ellipse'))
+  }
+  return shapes
+}
+
+function sticker(motif: Sticker, color: string, textColor: string): AmbientShape[] {
+  return [
+    { kind: 'round_rect', rect: motif.rect, color, rotation: motif.rotation ?? 0 },
+    {
+      kind: 'text',
+      rect: motif.rect,
+      color: textColor,
+      text: motif.text,
+      font: motif.font ?? 'body',
+      size_pt: motif.size_pt ?? 11,
+      weight: motif.weight ?? 700,
+      align: motif.align ?? 'center',
+      rotation: motif.rotation ?? 0,
+    },
+  ]
+}
+
+function frameMotif(motif: FrameMotif, color: string): AmbientShape[] {
+  const ix = (motif.inset_pt ?? 24) / CANVAS_WIDTH_PT
+  const iy = (motif.inset_pt ?? 24) / CANVAS_HEIGHT_PT
+  const tx = (motif.thickness_pt ?? 1) / CANVAS_WIDTH_PT
+  const ty = (motif.thickness_pt ?? 1) / CANVAS_HEIGHT_PT
+  const cx = (motif.corner_size_pt ?? 18) / CANVAS_WIDTH_PT
+  const cy = (motif.corner_size_pt ?? 18) / CANVAS_HEIGHT_PT
+  const width = Math.max(0, 1 - 2 * ix)
+  const height = Math.max(0, 1 - 2 * iy)
+  const shapes = [
+    ...fill(ix, iy, width, ty, color),
+    ...fill(ix, 1 - iy - ty, width, ty, color),
+    ...fill(ix, iy, tx, height, color),
+    ...fill(1 - ix - tx, iy, tx, height, color),
+  ]
+  for (const [x, y] of [[ix, iy], [1 - ix - cx, iy], [ix, 1 - iy - cy], [1 - ix - cx, 1 - iy - cy]]) {
+    shapes.push(...fill(x, y, cx, cy, color, 'round_rect'))
+  }
+  return shapes
+}
+
+function stripeField(motif: StripeField, color: string): AmbientShape[] {
+  const shapes: AmbientShape[] = []
+  const area = motif.area ?? FULL_CANVAS
+  const count = motif.count ?? 5
+  const thickness = (motif.thickness_pt ?? 8) / CANVAS_HEIGHT_PT
+  const gap = (motif.gap_pt ?? 14) / CANVAS_HEIGHT_PT
+  const total = count * thickness + Math.max(0, count - 1) * gap
+  const start = area.y + (area.h - total) / 2
+  for (let index = 0; index < count; index += 1) {
+    shapes.push(...fill(area.x, start + index * (thickness + gap), area.w, thickness, color, 'round_rect', motif.rotation ?? -12))
+  }
+  return shapes
+}
+
 function fill(
   x: number,
   y: number,
   w: number,
   h: number,
   color: string,
-  kind: 'rect' | 'ellipse' = 'rect',
+  kind: 'rect' | 'round_rect' | 'ellipse' = 'rect',
+  rotation = 0,
 ): AmbientShape[] {
-  const rect = kind === 'rect' ? clip(x, y, w, h) : bleed(x, y, w, h)
-  return rect ? [{ kind, rect, color }] : []
+  const rect = kind === 'ellipse' ? bleed(x, y, w, h) : clip(x, y, w, h)
+  return rect ? [{ kind, rect, color, rotation }] : []
 }
 
 /** 矩形按画布收边。轴对齐矩形的外接框求交就是它自己的裁剪，几何无损。 */

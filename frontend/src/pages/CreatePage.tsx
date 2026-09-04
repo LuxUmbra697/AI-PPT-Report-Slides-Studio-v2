@@ -28,16 +28,22 @@ const PLACEHOLDER: Record<DraftMode, string> = {
 const TITLE_MAX = 60
 
 /** 标题由输入内容推出来，用户不必先给文件起名；生成大纲期间可再改 */
-function deriveTitle(mode: DraftMode, content: string, files: File[]): string {
+function deriveTitle(
+  mode: DraftMode,
+  content: string,
+  files: File[],
+  outputFormat: 'ppt' | 'html',
+): string {
+  const untitled = outputFormat === 'html' ? '未命名 HTML 报告' : '未命名 PPT'
   if (mode === 'document') {
     const first = files[0]?.name ?? ''
-    return first.replace(/\.[^.]+$/, '').slice(0, TITLE_MAX) || '未命名 PPT'
+    return first.replace(/\.[^.]+$/, '').slice(0, TITLE_MAX) || untitled
   }
   const line = content
     .split('\n')
     .map((item) => item.trim())
     .find((item) => item.length > 0)
-  return (line ?? '').slice(0, TITLE_MAX) || '未命名 PPT'
+  return (line ?? '').slice(0, TITLE_MAX) || untitled
 }
 
 export default function CreatePage() {
@@ -52,6 +58,8 @@ export default function CreatePage() {
   const [contentDensity, setContentDensity] = useState<'concise' | 'medium' | 'detailed'>(
     'medium',
   )
+  const [outputFormat, setOutputFormat] = useState<'ppt' | 'html'>('ppt')
+  const [htmlStylePrompt, setHtmlStylePrompt] = useState('')
   const [step, setStep] = useState<string | null>(null)
   const create = useCreateDraft()
 
@@ -65,13 +73,15 @@ export default function CreatePage() {
         mode,
         content: content.trim(),
         files,
-        title: deriveTitle(mode, content, files),
+        title: deriveTitle(mode, content, files, outputFormat),
         audience: audience.trim() || null,
         tone,
         pageCount,
         themeId: DEFAULT_THEME_ID,
         layoutMode,
         contentDensity,
+        outputFormat,
+        htmlStylePrompt,
         onStep: setStep,
       },
       {
@@ -82,14 +92,42 @@ export default function CreatePage() {
   }
 
   return (
-    <div className="bg-aurora min-h-[calc(100vh-3.5rem)] px-6 py-14">
+    <div className="anime-create bg-aurora min-h-[calc(100vh-3.5rem)] px-6 py-14">
       <div className="mx-auto max-w-3xl">
+        <p className="anime-kicker text-center">CREATE A LITTLE MAGIC</p>
         <h1 className="text-center text-[clamp(1.75rem,4vw,2.5rem)] font-semibold tracking-tight">
-          想做一份什么 PPT？
+          想做一份什么{outputFormat === 'html' ? ' HTML 报告' : ' PPT'}？
         </h1>
         <p className="mt-3 text-center text-sm text-ink-muted">
-          先确认大纲，再生成 16:9 页面，导出为可编辑的 PPTX
+          {outputFormat === 'html'
+            ? '先确认大纲，再由 AI 从零生成可滚动展示的完整 HTML、CSS 与 JavaScript'
+            : '先确认大纲，再生成 16:9 页面；后续仍可导出 HTML、Markdown 与 PDF'}
         </p>
+
+        <div className="mt-7 grid grid-cols-2 gap-2 rounded-2xl border border-line bg-surface/70 p-1.5 shadow-card">
+          {([
+            ['ppt', 'PPT 演示', '适合演讲、放映和继续编辑 PPTX'],
+            ['html', 'HTML 报告', '适合网页展示、滚动阅读和动效演示'],
+          ] as const).map(([value, label, hint]) => (
+            <button
+              key={value}
+              type="button"
+              disabled={busy}
+              onClick={() => setOutputFormat(value)}
+              className={cn(
+                'rounded-xl px-3 py-2.5 text-left transition-all disabled:cursor-not-allowed',
+                outputFormat === value
+                  ? 'bg-accent text-white shadow-sm'
+                  : 'text-ink-soft hover:bg-surface-soft',
+              )}
+            >
+              <span className="block text-sm font-semibold">{label}</span>
+              <span className={cn('mt-0.5 block text-xs', outputFormat === value ? 'text-white/80' : 'text-ink-muted')}>
+                {hint}
+              </span>
+            </button>
+          ))}
+        </div>
 
         <div className="mt-8 grid gap-2.5 sm:grid-cols-3">
           {MODES.map(({ mode: value, label, icon: Icon, hint }) => (
@@ -138,15 +176,36 @@ export default function CreatePage() {
             />
           )}
 
+          {outputFormat === 'html' && (
+            <div className="mt-3 border-t border-line/80 px-2 pt-3">
+              <label htmlFor="html-style-prompt" className="text-[13px] font-medium text-ink-soft">
+                HTML 风格与动效提示词（可选）
+              </label>
+              <textarea
+                id="html-style-prompt"
+                value={htmlStylePrompt}
+                disabled={busy}
+                rows={3}
+                maxLength={1200}
+                placeholder="例如：二次元星空科技发布会，深色渐变、漂浮光点、卡片依次入场，阅读节奏轻快"
+                onChange={(event) => setHtmlStylePrompt(event.target.value)}
+                className="mt-2 w-full resize-none rounded-2xl border border-line bg-surface-soft/70 px-3 py-2.5 text-sm leading-relaxed text-ink placeholder:text-ink-muted/70 focus:border-accent focus:outline-none"
+              />
+              <p className="mt-1.5 text-xs text-ink-muted">
+                风格提示词会直接作为网页创作方向；AI 会自行决定布局、配色、组件、图表与动效，不采用 PPT 模板。
+              </p>
+            </div>
+          )}
+
           <div className="mt-3 flex flex-wrap items-center gap-1.5 border-t border-line/80 pt-3">
             <PillSelect
-              label="页数"
+              label={outputFormat === 'html' ? '章节数' : '页数'}
               disabled={busy}
               value={pageCount}
               options={PAGE_COUNT_OPTIONS}
               onChange={(next) => setPageCount(Number(next))}
             />
-            <PillSelect
+            {outputFormat === 'ppt' && <PillSelect
               label="排版"
               disabled={busy}
               value={layoutMode}
@@ -155,7 +214,7 @@ export default function CreatePage() {
                 { value: 'fixed', label: '固定版式', description: '槽位稳定，适合可控版面' },
               ]}
               onChange={(next) => setLayoutMode(next as 'fixed' | 'flex')}
-            />
+            />}
             <PillSelect
               label="文字量"
               disabled={busy}
@@ -185,9 +244,11 @@ export default function CreatePage() {
               onChange={(event) => setAudience(event.target.value)}
               className="h-9 w-40 rounded-full bg-surface-soft/90 px-3.5 text-[13px] text-ink-soft ring-1 ring-transparent transition-all placeholder:text-ink-muted hover:bg-white hover:ring-line hover:shadow-sm focus:bg-white focus:ring-line focus:outline-none disabled:opacity-45"
             />
-            <span className="inline-flex h-9 items-center rounded-full bg-surface-soft/90 px-3 text-[13px] font-medium text-ink-muted">
-              16:9
-            </span>
+            {outputFormat === 'ppt' && (
+              <span className="inline-flex h-9 items-center rounded-full bg-surface-soft/90 px-3 text-[13px] font-medium text-ink-muted">
+                16:9
+              </span>
+            )}
 
             <Button
               size="md"
@@ -196,7 +257,7 @@ export default function CreatePage() {
               className="ml-auto"
             >
               {busy ? <Loader2 className="size-4 animate-spin" /> : null}
-              {busy ? '生成中…' : '生成大纲'}
+              {busy ? '生成中…' : outputFormat === 'html' ? '生成 HTML 大纲' : '生成 PPT 大纲'}
               {!busy && <ArrowRight className="size-4" />}
             </Button>
           </div>

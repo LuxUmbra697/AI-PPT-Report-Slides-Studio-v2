@@ -1,0 +1,48 @@
+name: Bug report
+description: Tell us what did not work so it can be reproduced and fixed.
+title: "[Bug]: "
+labels:
+  - bug
+body:
+  - type: markdown
+    attributes:
+      value: "Please remove credentials, personal data, generated private documents, and server information before submitting."
+  - type: input
+    id: version
+    attributes:
+      label: Version or commit
+      description: Release tag, commit hash, or local branch.
+    validations:
+      required: true
+  - type: dropdown
+    id: workspace
+    attributes:
+      label: Affected workspace
+      options:
+        - PPT workflow
+        - HTML report workflow
+        - Template analysis
+        - Export or download
+        - Authentication or projects
+        - Other
+    validations:
+      required: true
+  - type: textarea
+    id: reproduce
+    attributes:
+      label: Steps to reproduce
+      placeholder: "1. ...\n2. ...\n3. ..."
+    validations:
+      required: true
+  - type: textarea
+    id: expected
+    attributes:
+      label: Expected behaviour
+    validations:
+      required: true
+  - type: textarea
+    id: actual
+    attributes:
+      label: Actual behaviour and safe logs/screenshots
+    validations:
+      required: true

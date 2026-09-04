@@ -8,6 +8,7 @@ from app.images.pipeline import create_image_pipeline
 from app.llm.base import OutlineGenerator, SlideEditGenerator, SlideGenerator
 from app.llm.client import create_chat_model
 from app.llm.deepseek import DeepSeekOutlineGenerator
+from app.llm.html_report import DeepSeekHtmlDocumentGenerator
 from app.llm.relayout import DeepSeekRelayoutGenerator
 from app.llm.slide import DeepSeekSlideGenerator
 from app.llm.slide_edit import DeepSeekSlideEditGenerator
@@ -24,6 +25,16 @@ def create_outline_generator(model: BaseChatModel | None = None) -> OutlineGener
 def create_slide_generator(model: BaseChatModel | None = None) -> SlideGenerator:
     settings = get_settings()
     return DeepSeekSlideGenerator(
+        model=model or create_chat_model(),
+        api_key=settings.llm_api_key,
+    )
+
+
+def create_html_document_generator(
+    model: BaseChatModel | None = None,
+) -> DeepSeekHtmlDocumentGenerator:
+    settings = get_settings()
+    return DeepSeekHtmlDocumentGenerator(
         model=model or create_chat_model(),
         api_key=settings.llm_api_key,
     )
@@ -51,6 +62,7 @@ async def startup(ctx: dict[str, Any]) -> None:
     ctx["chat_model"] = model
     ctx["outline_generator"] = create_outline_generator(model)
     ctx["slide_generator"] = create_slide_generator(model)
+    ctx["html_document_generator"] = create_html_document_generator(model)
 
     http_client = httpx.AsyncClient(trust_env=False, proxy=None)
     ctx["http_client"] = http_client

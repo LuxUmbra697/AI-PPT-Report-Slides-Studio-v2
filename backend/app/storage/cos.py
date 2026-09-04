@@ -29,7 +29,14 @@ class CosStorage:
         self._client.put_object(Bucket=self.bucket, Key=key, Body=data)
 
     def load(self, key: str) -> bytes:
-        response = self._client.get_object(Bucket=self.bucket, Key=key)
+        try:
+            response = self._client.get_object(Bucket=self.bucket, Key=key)
+        except Exception as error:
+            # COS SDK 对不存在对象抛 CosServiceError，而本地驱动使用 FileNotFoundError。
+            # 在驱动边界归一化，媒体 API 与 PPT 导出才无需依赖特定云厂商的异常类型。
+            if getattr(error, "status_code", None) == 404 or "NoSuchKey" in str(error):
+                raise FileNotFoundError(key) from error
+            raise
         return response["Body"].get_raw_stream().read()
 
     def delete(self, key: str) -> None:

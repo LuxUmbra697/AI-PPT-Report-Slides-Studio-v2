@@ -1,8 +1,8 @@
-import { AlertTriangle, CheckCircle2, Download, Loader2, RotateCcw, XCircle } from 'lucide-react'
+import { AlertTriangle, CheckCircle2, Download, ExternalLink, Loader2, RotateCcw, XCircle } from 'lucide-react'
 import { useState } from 'react'
 import { Button } from '@/components/ui/Button'
 import { Dialog } from '@/components/ui/Dialog'
-import { useDeckQuality, useExportDeck } from '@/features/deck/api'
+import { type DeckExportFormat, useDeckQuality, useExportDeck } from '@/features/deck/api'
 import { classifyExportError, type ExportFailure } from '@/features/deck/exportErrors'
 import type { Deck, DeckSlide, ExportCheckReport, StructureIssue } from '@/features/deck/types'
 import { errorMessage } from '@/lib/errors'
@@ -14,6 +14,17 @@ type CheckState =
   | { kind: 'incomplete' }
   | { kind: 'blocked'; errorCount: number }
   | { kind: 'ready'; warningCount: number }
+
+const EXPORT_OPTIONS: Array<{
+  value: DeckExportFormat
+  label: string
+  description: string
+}> = [
+  { value: 'pptx', label: 'PPTX', description: '原生可编辑演示文稿' },
+  { value: 'html', label: 'HTML', description: '单文件网页展示与动效' },
+  { value: 'markdown', label: 'Markdown', description: '可继续编辑的结构化文稿' },
+  { value: 'pdf', label: 'PDF', description: '静态阅读版，动画会降级' },
+]
 
 function resolveCheckState({
   report,
@@ -56,8 +67,10 @@ export function ExportDialog({
 }) {
   const settled = deck.status === 'ready' || deck.status === 'partial'
   const quality = useDeckQuality(projectId, settled)
-  const exporter = useExportDeck(projectId, `${deck.title}.pptx`)
+  const exporter = useExportDeck(projectId)
   const [done, setDone] = useState(false)
+  const [format, setFormat] = useState<DeckExportFormat>('pptx')
+  const selectedFormat = EXPORT_OPTIONS.find((option) => option.value === format) ?? EXPORT_OPTIONS[0]
 
   const report = quality.data
   const issues = report?.issues ?? []
@@ -81,15 +94,15 @@ export function ExportDialog({
 
   return (
     <Dialog
-      title="导出 PPTX"
-      description="导出前会检查结构与文字溢出，通过后生成原生可编辑的文件"
+      title={`导出 ${selectedFormat.label}`}
+      description={`导出前会检查结构与文字溢出。${selectedFormat.description}`}
       onClose={onClose}
       footer={
         <>
           {done && !exporter.isPending && (
             <span className="mr-auto flex items-center gap-1.5 text-[13px] text-positive">
               <CheckCircle2 className="size-4" />
-              已开始下载
+              导出操作已完成
             </span>
           )}
           <Button variant="ghost" onClick={onClose}>
@@ -99,7 +112,10 @@ export function ExportDialog({
             disabled={!allowed || exporter.isPending}
             onClick={() => {
               setDone(false)
-              exporter.mutate(undefined, { onSuccess: () => setDone(true) })
+              exporter.mutate(
+                { format, title: deck.title },
+                { onSuccess: () => setDone(true) },
+              )
             }}
           >
             {exporter.isPending ? (
@@ -107,7 +123,7 @@ export function ExportDialog({
             ) : (
               <Download className="size-4" />
             )}
-            {exporter.isPending ? '正在导出…' : done ? '再导出一次' : '导出 PPTX'}
+            {exporter.isPending ? '正在导出…' : done ? '再导出一次' : `导出 ${selectedFormat.label}`}
           </Button>
         </>
       }
@@ -118,6 +134,57 @@ export function ExportDialog({
         </p>
       ) : (
         <div className="flex flex-col gap-4">
+          <section aria-label="导出格式">
+            <p className="mb-2 text-xs font-semibold text-ink-muted">选择交付格式</p>
+            <div className="grid grid-cols-2 gap-2">
+              {EXPORT_OPTIONS.map((option) => (
+                <button
+                  key={option.value}
+                  type="button"
+                  disabled={exporter.isPending}
+                  onClick={() => {
+                    setFormat(option.value)
+                    setDone(false)
+                  }}
+                  className={cn(
+                    'rounded-xl border px-3 py-2.5 text-left transition-all disabled:cursor-not-allowed',
+                    option.value === format
+                      ? 'border-accent bg-accent-soft text-accent'
+                      : 'border-line text-ink-soft hover:border-line-strong hover:bg-surface-soft',
+                  )}
+                >
+                  <span className="block text-sm font-semibold">{option.label}</span>
+                  <span className="mt-0.5 block text-xs leading-relaxed text-ink-muted">
+                    {option.description}
+                  </span>
+                </button>
+              ))}
+            </div>
+            {format === 'html' && (
+              <Button
+                variant="soft"
+                size="sm"
+                className="mt-3"
+                disabled={!allowed || exporter.isPending}
+                onClick={() => {
+                  const previewWindow = window.open('', '_blank')
+                  if (previewWindow) {
+                    previewWindow.document.title = `${deck.title} · HTML 预览`
+                    previewWindow.document.body.innerHTML = '<p style="font-family:sans-serif;padding:24px">正在准备 HTML 展示…</p>'
+                  }
+                  setDone(false)
+                  exporter.mutate(
+                    { format: 'html', title: deck.title, previewWindow },
+                    { onSuccess: () => setDone(true) },
+                  )
+                }}
+              >
+                <ExternalLink className="size-3.5" />
+                在新标签预览动效
+              </Button>
+            )}
+          </section>
+
           <Verdict
             state={state}
             retrying={quality.isFetching}

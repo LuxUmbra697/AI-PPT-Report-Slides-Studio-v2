@@ -35,6 +35,8 @@ class OutlineGenerationInput(BaseModel):
     # 上限跟着编辑器边界走：页面可以逐页手工增删，重新生成大纲时不该被旧上限卡住
     page_count: int = Field(ge=1, le=MAX_DECK_PAGE_COUNT)
     content_density: ContentDensity = DEFAULT_CONTENT_DENSITY
+    # HTML 项目使用同一份可确认的大纲，但措辞和后续生成目标不再是 PPT 页面。
+    output_format: Literal["ppt", "html"] = "ppt"
     sections: list[OutlineSourceSection] = Field(default_factory=list)
 
 

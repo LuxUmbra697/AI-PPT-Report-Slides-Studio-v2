@@ -72,7 +72,16 @@ export type Rect = Schemas['Rect']
  * 氛围层以 ambient.ts 里的 AmbientMotif 为准：schema 生成的版本把带默认值的
  * 字段标成必填，而 shared/themes/*.json 里这些字段本来就可以省略。
  */
-export type Theme = Omit<Schemas['Theme'], 'ambient'> & { ambient?: AmbientMotif[] }
+export type ThemeVisual = {
+  family: string
+  cover_variant: 'editorial' | 'split' | 'poster' | 'framed' | 'spotlight' | 'ribbon'
+  content_variant: 'clean' | 'cards' | 'notebook' | 'dashboard' | 'magazine' | 'panel'
+  transition: 'none' | 'fade' | 'push' | 'wipe' | 'split'
+}
+export type Theme = Omit<Schemas['Theme'], 'ambient'> & {
+  ambient?: AmbientMotif[]
+  visual?: ThemeVisual
+}
 export type TextStyle = Schemas['TextStyle']
 export type TextStyleName = NonNullable<Slot['text_style']>
 /** 色令牌从 palette 键派生；TextStyle.color 放宽后可能是 hex */

@@ -5,6 +5,7 @@ from typing import NamedTuple
 from pptx import Presentation
 from pptx.enum.shapes import MSO_SHAPE
 from pptx.enum.text import MSO_ANCHOR, PP_ALIGN
+from pptx.oxml.xmlchemy import OxmlElement
 from pptx.parts.image import Image as PptxImage
 from pptx.presentation import Presentation as PresentationType
 from pptx.shapes.base import BaseShape
@@ -37,6 +38,7 @@ from app.domain.geometry import (
 )
 from app.domain.layout import get_layout
 from app.domain.slide_geometry import placed_by_block_id
+from app.domain.template_skin import iter_template_decorations
 from app.domain.text_metrics import measure_bullets, measure_text
 from app.domain.theme import TextStyle, Theme, get_theme
 from app.render.chart import render_chart
@@ -51,6 +53,10 @@ from app.render.text import (
     write_paragraph,
 )
 from app.services.media import load_image, media_key_from_url
+from app.services.template_library import (
+    ExternalTemplateRenderLayer,
+    get_external_template_render_layer,
+)
 
 logger = logging.getLogger(__name__)
 
@@ -93,8 +99,9 @@ class PptxRenderer:
     不含任何位图截图，保证导出结果可以直接编辑。
     """
 
-    def __init__(self, theme: Theme) -> None:
+    def __init__(self, theme: Theme, *, external_template_id: str | None = None) -> None:
         self.theme = theme
+        self.external_template_id = external_template_id
 
     def render(self, deck: Deck) -> BytesIO:
         presentation = Presentation()
@@ -118,28 +125,44 @@ class PptxRenderer:
         pptx_slide = presentation.slides.add_slide(presentation.slide_layouts[BLANK_LAYOUT_INDEX])
 
         self._fill_background(pptx_slide)
+        self._apply_transition(pptx_slide)
+        external_layer = (
+            get_external_template_render_layer(self.external_template_id, slide_index)
+            if self.external_template_id
+            else None
+        )
+        if external_layer is not None:
+            self._render_external_template_layer(pptx_slide, external_layer)
 
         placements = placed_by_block_id(slide)
 
-        # 主题氛围层压在最底层，两端读同一份展开结果
+        # 外部模板已有母版、版式和页面装饰，不再叠加本项目的另一套装饰语言。
+        # 内容块仍由原生文本/形状生成，因此用户可以继续编辑。
         occupied = [placed.rect for placed in placements.values()]
-        for shape in iter_ambient_shapes(self.theme, slide.layout_id, slide_index, occupied):
-            self._render_ambient_shape(pptx_slide, shape)
+        if external_layer is None:
+            # 主题氛围层压在最底层，两端读同一份展开结果
+            for shape in iter_ambient_shapes(self.theme, slide.layout_id, slide_index, occupied):
+                self._render_ambient_shape(pptx_slide, shape)
 
-        # 固定布局装饰 vs flex preset 皮肤；均画在内容块之下
-        if slide.layout_mode == "flex" and slide.layout_tree is not None:
-            for decoration in iter_skin_decorations(slide.layout_tree):
+            for decoration in iter_template_decorations(
+                self.theme, slide.layout_id, occupied
+            ):
                 self._render_skin_decoration(pptx_slide, decoration)
-        else:
-            try:
-                layout = get_layout(slide.layout_id)
-            except KeyError:
-                layout = None
-            if layout is not None:
-                for decoration in layout.decorations:
-                    self._add_filled_rect(
-                        pptx_slide, decoration.rect, self.theme.color(decoration.color)
-                    )
+
+            # 固定布局装饰 vs flex preset 皮肤；均画在内容块之下
+            if slide.layout_mode == "flex" and slide.layout_tree is not None:
+                for decoration in iter_skin_decorations(slide.layout_tree):
+                    self._render_skin_decoration(pptx_slide, decoration)
+            else:
+                try:
+                    layout = get_layout(slide.layout_id)
+                except KeyError:
+                    layout = None
+                if layout is not None:
+                    for decoration in layout.decorations:
+                        self._add_filled_rect(
+                            pptx_slide, decoration.rect, self.theme.color(decoration.color)
+                        )
 
         for block in slide.blocks:
             placed = placements.get(block.id)
@@ -157,19 +180,81 @@ class PptxRenderer:
         pptx_slide.shapes._spTree.remove(shape._element)
         pptx_slide.shapes._spTree.insert(2, shape._element)
 
+    def _render_external_template_layer(
+        self, pptx_slide: PptxSlide, layer: ExternalTemplateRenderLayer
+    ) -> None:
+        """Render non-text source furniture below generated blocks as editable PPT objects."""
+
+        for element in layer.elements:
+            if element.rect.width <= 0 or element.rect.height <= 0:
+                continue
+            rect = BleedRect(
+                x=element.rect.left,
+                y=element.rect.top,
+                w=element.rect.width,
+                h=element.rect.height,
+            )
+            if element.kind == "picture" and element.asset_id:
+                asset = layer.assets.get(element.asset_id)
+                if asset is None:
+                    continue
+                try:
+                    left, top, width, height = (Emu(value) for value in rect.to_emu())
+                    picture = pptx_slide.shapes.add_picture(
+                        BytesIO(asset[1]), left, top, width, height
+                    )
+                    picture.name = f"外部模板图片：{element.asset_id}"
+                except Exception as error:
+                    logger.debug("无法写入外部模板图片 %s: %s", element.asset_id, error)
+                continue
+            if element.kind in {"shape", "line"} and element.colors:
+                shape = self._add_filled_rect(pptx_slide, rect, element.colors[0])
+                shape.name = f"外部模板装饰：{element.role}"
+
+    def _apply_transition(self, pptx_slide: PptxSlide) -> None:
+        """写入 PowerPoint 原生切页动画；不同模板家族可选择不同动效。"""
+        transition_name = self.theme.visual.transition
+        if transition_name == "none":
+            return
+
+        transition = OxmlElement("p:transition")
+        transition.set("spd", "med")
+        if transition_name == "push":
+            effect = OxmlElement("p:push")
+            effect.set("dir", "l")
+        elif transition_name == "wipe":
+            effect = OxmlElement("p:wipe")
+            effect.set("dir", "r")
+        elif transition_name == "split":
+            effect = OxmlElement("p:split")
+            effect.set("orient", "vert")
+            effect.set("dir", "out")
+        else:
+            effect = OxmlElement("p:fade")
+        transition.append(effect)
+        pptx_slide._element.insert_element_before(transition, "p:timing", "p:extLst")
+
     def _render_ambient_shape(self, pptx_slide: PptxSlide, shape: AmbientShape) -> None:
         if shape.kind == "text":
             self._add_ambient_text(pptx_slide, shape)
             return
-        oval = shape.kind == "ellipse"
-        drawn = self._add_filled_rect(
-            pptx_slide, shape.rect, shape.color, MSO_SHAPE.OVAL if oval else MSO_SHAPE.RECTANGLE
+        shape_type = (
+            MSO_SHAPE.OVAL
+            if shape.kind == "ellipse"
+            else MSO_SHAPE.ROUNDED_RECTANGLE
+            if shape.kind == "round_rect"
+            else MSO_SHAPE.RECTANGLE
         )
+        drawn = self._add_filled_rect(
+            pptx_slide, shape.rect, shape.color, shape_type
+        )
+        drawn.rotation = shape.rotation
         drawn.name = f"{AMBIENT_SHAPE_PREFIX}{shape.kind}"
 
     def _add_ambient_text(self, pptx_slide: PptxSlide, shape: AmbientShape) -> None:
         family = self.theme.fonts.display if shape.font == "display" else self.theme.fonts.body
         frame = self._add_textbox(pptx_slide, shape.rect, name=f"{AMBIENT_SHAPE_PREFIX}text")
+        frame._parent.rotation = shape.rotation
         frame.word_wrap = False
         frame.vertical_anchor = MSO_ANCHOR.MIDDLE
         paragraph = frame.paragraphs[0]
@@ -773,6 +858,7 @@ def render_deck_to_pptx(
     theme_id: str | None = None,
     *,
     theme: Theme | None = None,
+    external_template_id: str | None = None,
 ) -> BytesIO:
     resolved = theme or get_theme(theme_id or deck.theme_id)
-    return PptxRenderer(resolved).render(deck)
+    return PptxRenderer(resolved, external_template_id=external_template_id).render(deck)

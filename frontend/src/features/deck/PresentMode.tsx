@@ -1,6 +1,7 @@
 import { ChevronLeft, ChevronRight, Maximize2, Minimize2, X } from 'lucide-react'
 import { type ReactNode, useCallback, useEffect, useRef, useState } from 'react'
 import { type DeckSlide, toRenderSlide } from '@/features/deck/types'
+import type { ExternalTemplateLayerSource } from '@/features/templates/ExternalTemplateLayer'
 import { cn } from '@/lib/utils'
 import { SlideView } from '@/render/SlideView'
 import { CANVAS_HEIGHT_PT, CANVAS_WIDTH_PT, type Theme } from '@/render/types'
@@ -18,11 +19,13 @@ export function PresentMode({
   theme,
   startIndex,
   onClose,
+  externalTemplate,
 }: {
   slides: DeckSlide[]
   theme: Theme
   startIndex: number
   onClose: () => void
+  externalTemplate?: ExternalTemplateLayerSource | null
 }) {
   const [index, setIndex] = useState(startIndex)
   const [chromeVisible, setChromeVisible] = useState(true)
@@ -137,13 +140,21 @@ export function PresentMode({
       <div className="absolute inset-0 grid place-items-center overflow-hidden">
         <div
           key={slide.id}
-          className="present-slide-in overflow-hidden shadow-[0_0_0_1px_rgba(255,255,255,0.04)]"
+          className={cn(
+            `present-slide-${theme.visual?.transition ?? 'fade'}`,
+            'overflow-hidden shadow-[0_0_0_1px_rgba(255,255,255,0.04)]',
+          )}
           style={{
             width: `min(100vw, calc(100vh * ${ASPECT}))`,
             height: `min(100vh, calc(100vw / ${ASPECT}))`,
           }}
         >
-          <SlideView slide={toRenderSlide(slide)} theme={theme} slideIndex={clamp(index)} />
+          <SlideView
+            slide={toRenderSlide(slide)}
+            theme={theme}
+            slideIndex={clamp(index)}
+            externalTemplate={externalTemplate}
+          />
         </div>
       </div>
 

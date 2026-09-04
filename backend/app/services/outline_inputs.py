@@ -15,6 +15,8 @@ def _core_payload(project: Project) -> dict:
         "title": project.title,
         "audience": project.audience,
         "tone": project.tone,
+        # 输出类型决定大纲提示词与确认后的任务分支，必须参与过期判断。
+        "output_format": getattr(project, "output_format", "ppt"),
         "sources": [
             {
                 "id": str(source.id),

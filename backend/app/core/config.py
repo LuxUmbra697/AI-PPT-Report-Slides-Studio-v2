@@ -41,6 +41,22 @@ class Settings(BaseSettings):
     image_workspace_id: str = ""
     unsplash_access_key: str = ""
     image_timeout_seconds: float = 60
+    # HTML 报告也复用上述生图/图库链路，但在正文生成前只准备少量、与章节相关的
+    # 视觉素材。0 可关闭自动配图，失败时不会影响报告正文生成。
+    html_report_image_count: int = 2
+    # 下载单文件 HTML 时把项目媒体转为 data URI，避免离线打开时图片丢失。
+    # 上限防止一个异常报告制造过大的浏览器下载文件。
+    html_export_embed_media_max_mb: int = 24
+
+    # 外部 PPT 模板可按需调用 Qwen-VL 解读内嵌图片；默认复用百炼图片 Key，
+    # 因此已有 IMAGE_API_KEY 时不必再额外配置。留出独立项是为了支持分账密钥。
+    template_vision_api_key: str = ""
+    template_vision_base_url: str = "https://dashscope.aliyuncs.com/compatible-mode/v1"
+    # Qwen3-VL 是百炼当前 OpenAI-compatible 文档中列出的视觉模型。
+    template_vision_model: str = "qwen3-vl-plus"
+    # 每次显式解析会按重要度选择的独立图片资产数；每个 Qwen 请求最多携带 3 张。
+    # 24 足以覆盖常见封面、章节和正文插图，且不会让一次点击产生无限费用。
+    template_analysis_max_images: int = 24
 
     storage_driver: Literal["local", "cos"] = "local"
     storage_local_dir: str = str(REPO_ROOT / "backend" / "var" / "storage")
@@ -60,6 +76,10 @@ class Settings(BaseSettings):
     @property
     def max_image_bytes(self) -> int:
         return self.max_image_mb * 1024 * 1024
+
+    @property
+    def html_export_embed_media_max_bytes(self) -> int:
+        return self.html_export_embed_media_max_mb * 1024 * 1024
 
 
 @lru_cache
