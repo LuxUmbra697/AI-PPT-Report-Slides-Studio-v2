@@ -56,6 +56,9 @@ jobs:
       - name: Lint backend
         working-directory: backend
         run: uv run ruff check .
+      - name: Apply database migrations
+        working-directory: backend
+        run: uv run alembic upgrade head
       - name: Test backend
         working-directory: backend
         run: uv run pytest
