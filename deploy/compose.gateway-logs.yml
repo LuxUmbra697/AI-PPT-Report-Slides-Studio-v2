@@ -1,0 +1,13 @@
+# SEPARATE APPROVAL REQUIRED: nginx may be the gateway for multiple applications.
+# A log-driver change requires container recreation, not just nginx reload.
+# Never apply this overlay as part of routine Slide-only application maintenance.
+services:
+  nginx:
+    restart: unless-stopped
+    logging:
+      driver: json-file
+      options:
+        max-size: "3m"
+        max-file: "2"
+        mode: "non-blocking"
+        max-buffer-size: "256k"

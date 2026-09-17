@@ -1,0 +1,34 @@
+# OPT-IN ONLY: recreates Slide services when applied. Obtain maintenance approval.
+# Use AFTER docker-compose.prod.yml; do not apply with a bare `up -d`.
+# Bind the EXISTING Redis volume explicitly. Fail closed instead of creating one.
+x-slide-logging: &slide-logging
+  driver: json-file
+  options:
+    max-size: "3m"
+    max-file: "2"
+    mode: "non-blocking"
+    max-buffer-size: "256k"
+
+services:
+  api:
+    restart: unless-stopped
+    logging: *slide-logging
+    # Use the image's installed environment; no uv synchronization at startup.
+    # Keep warnings/errors while suppressing ordinary request logs.
+    command: ["/app/.venv/bin/uvicorn", "app.main:app", "--host", "0.0.0.0", "--port", "39800", "--no-access-log", "--log-level", "warning"]
+  worker:
+    restart: unless-stopped
+    logging: *slide-logging
+  postgres:
+    restart: unless-stopped
+    logging: *slide-logging
+  redis:
+    restart: unless-stopped
+    logging: *slide-logging
+    volumes:
+      - slide_existing_redis_data:/data
+
+volumes:
+  slide_existing_redis_data:
+    external: true
+    name: ${SLIDE_REDIS_DATA_VOLUME:?Set SLIDE_REDIS_DATA_VOLUME to the verified existing Redis /data volume}
